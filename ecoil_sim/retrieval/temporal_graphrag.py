@@ -105,24 +105,33 @@ class TemporalGraphRAG:
         eligible.sort(key=lambda item: (-item.score, item.entity_id))
         if len(eligible) <= max_agents:
             return eligible
-        buckets: Dict[str, List[RetrievedContext]] = {}
-        for ctx in eligible:  # already score-sorted, so buckets stay score-sorted
-            key = ctx.changed_neighbors[0] if ctx.changed_neighbors else ctx.entity_id
+        # Bucket by the SIGNAL COMBINATION that woke each candidate -- the sorted
+        # tuple of its sources. So "woken by crp only", "by rpoS only", and "by
+        # crp+rpoS" are three separate buckets. Round-robin across buckets then
+        # gives each combination a fair share, so a hub's unique targets are not
+        # starved by another hub's flood, and a multi-source candidate is not
+        # mis-attributed to a single source. Within a bucket, order is by score.
+        buckets: Dict[tuple, List[RetrievedContext]] = {}
+        for ctx in eligible:  # score order preserved within each bucket
+            key = tuple(sorted(set(ctx.changed_neighbors))) or (ctx.entity_id,)
             buckets.setdefault(key, []).append(ctx)
+        pointers: Dict[tuple, int] = {key: 0 for key in buckets}
         selected: Dict[str, RetrievedContext] = {}
-        depth = 0
         while len(selected) < max_agents:
             progressed = False
-            for queue in buckets.values():
-                if depth < len(queue):
-                    ctx = queue[depth]
-                    selected[ctx.entity_id] = ctx
-                    progressed = True
-                    if len(selected) >= max_agents:
-                        break
+            for key, queue in buckets.items():
+                if pointers[key] < len(queue):
+                    ctx = queue[pointers[key]]
+                    pointers[key] += 1
+                    if ctx.entity_id not in selected:
+                        selected[ctx.entity_id] = ctx
+                        progressed = True
+                        if len(selected) >= max_agents:
+                            break
+                    else:
+                        progressed = True
             if not progressed:
                 break
-            depth += 1
         return sorted(selected.values(), key=lambda item: (-item.score, item.entity_id))
 
     def _edge_weight(self, edge: Edge) -> float:

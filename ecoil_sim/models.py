@@ -22,6 +22,33 @@ def split_pipe(value: str) -> List[str]:
     return cleaned
 
 
+def alias_list(value: str) -> List[str]:
+    """Parse the aliases column, preserving multi-word aliases.
+
+    The aliases column is usually space-joined single-token synonyms
+    ("lacI b0345 JW0336"), but some sources contribute multi-word aliases
+    ("DNA gyrase subunit A"). We split on the real separators (| ; ,) to keep
+    multi-word chunks whole, then ALSO add each chunk's individual word tokens
+    so single-token lookups ("lacI", "b0345") still resolve. Dedup, order
+    preserved.
+    """
+    chunks = split_pipe(value)
+    out: List[str] = []
+    seen = set()
+
+    def _add(item: str) -> None:
+        item = item.strip()
+        if item and item.lower() not in seen:
+            seen.add(item.lower())
+            out.append(item)
+
+    for chunk in chunks:
+        _add(chunk)
+        for token in chunk.split():
+            _add(token)
+    return out
+
+
 @dataclass(frozen=True)
 class Entity:
     entity_id: str
@@ -50,7 +77,7 @@ class Entity:
             entity_id=row.get("entity_id", ""),
             entity_type=row.get("entity_type", ""),
             name=row.get("name", ""),
-            aliases=split_pipe(row.get("aliases", "").replace(" ", "|")),
+            aliases=alias_list(row.get("aliases", "")),
             default_state=row.get("default_state", ""),
             allowed_states=split_pipe(row.get("allowed_states", "")),
             annotation=row.get("annotation", ""),

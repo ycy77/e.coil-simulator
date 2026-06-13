@@ -14,6 +14,8 @@ from ecoil_sim.llm import AsyncVLLMClient, NameResolver, NullLLMClient, RuleBase
 from ecoil_sim.paths import PROJECT_ROOT
 from ecoil_sim.registry import RuleRegistry
 from ecoil_sim.report import Reporter
+from ecoil_sim.report.llm_report_agent import LLMReportAgent
+from ecoil_sim.sim.llm_perturbation import VLLMJsonCompleter
 from ecoil_sim.retrieval import TemporalGraphRAG
 from ecoil_sim.rules import FallbackPolicy
 from ecoil_sim.sim.perturbation import NaturalLanguagePerturbationParser
@@ -35,6 +37,7 @@ def main() -> int:
     parser.add_argument("--resume-run", type=Path, default=None, help="Use a previous run directory as the new round_0 baseline")
     parser.add_argument("--resume-round", type=int, default=None, help="Round number to resume from; defaults to the latest round")
     parser.add_argument("--use-llm", action="store_true")
+    parser.add_argument("--llm-report", action="store_true", help="After the run, have a global-view LLM agent write a biological report")
     parser.add_argument("--mock-llm", action="store_true", help="Use deterministic offline mock actions for propagation tests")
     parser.add_argument("--gpus", type=int, default=None, help="GPU count used to calculate agent/concurrency budget")
     parser.add_argument("--agents-per-gpu", type=int, default=None, help="Active-agent budget per GPU")
@@ -176,6 +179,22 @@ def main() -> int:
     if unresolved:
         print(f"unresolved_perturbations={unresolved}")
     print(narrative)
+    if args.llm_report:
+        llm_cfg = model_config.get("llm", {})
+        completer = VLLMJsonCompleter(
+            base_url=llm_cfg.get("base_url", "http://localhost:8000/v1"),
+            model=llm_cfg.get("model", ""),
+            api_key=llm_cfg.get("api_key", "EMPTY"),
+            max_tokens=int(llm_cfg.get("default_max_tokens", 1024)),
+        )
+        report_agent = LLMReportAgent(
+            completer, graph=graph, prompt_path=PROJECT_ROOT / "prompts/report_agent.system.md"
+        )
+        try:
+            print("\n===== LLM biological report (global view) =====")
+            print(report_agent.write_report(report))
+        except Exception as exc:  # never let the report agent crash a finished run
+            print(f"[llm-report] skipped: {exc}")
     print(f"structured_report={report}")
     return 0
 

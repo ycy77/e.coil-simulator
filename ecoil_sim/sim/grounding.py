@@ -83,27 +83,47 @@ class EntityGrounder:
         mention = (mention or "").strip()
         if not mention:
             return []
+        # Robust to imperfect mentions: score the full phrase, AND each token
+        # (for multi-word spans like "knock out recA" or "add ciprofloxacin").
+        # Token matches are only accepted at the name/alias tier, so a verb or
+        # stopword ("add", "knock") cannot surface via a weak annotation hit.
         m = mention.lower()
-        scored: List[Candidate] = []
+        # (query, is_full_phrase, token_only_strong)
+        queries = [(m, True, False)]
+        tokens = [t for t in re.split(r"\s+", m) if len(t) > 2]
+        if len(tokens) > 1:
+            queries.extend((t, False, True) for t in tokens)
+
+        best: Dict[str, tuple] = {}  # entity_id -> (is_full, adjusted_score, via)
         for entity in self._entities.values():
-            score, via = self._score(entity, m)
-            if score <= 0:
-                continue
-            # Prefer shorter, more specific names on ties.
-            score -= min(len(entity.name), 40) * 0.01
-            scored.append(
-                Candidate(
-                    entity_id=entity.entity_id,
-                    name=entity.name,
-                    entity_type=entity.entity_type,
-                    score=round(score, 3),
-                    matched_via=via,
-                    is_exogenous=entity.entity_id in self._exogenous,
-                    allowed_states=list(entity.allowed_states),
-                    annotation_excerpt=(entity.annotation or entity.notes or "")[:240],
-                )
+            for query, is_full, token_only_strong in queries:
+                score, via = self._score(entity, query)
+                if score <= 0:
+                    continue
+                if token_only_strong and score < _SCORE_NAME_WORD:
+                    continue
+                adjusted = score - min(len(entity.name), 40) * 0.01
+                key = (is_full, adjusted)
+                if entity.entity_id not in best or key > best[entity.entity_id][:2]:
+                    best[entity.entity_id] = (is_full, adjusted, via)
+
+        scored = [
+            Candidate(
+                entity_id=eid,
+                name=self._entities[eid].name,
+                entity_type=self._entities[eid].entity_type,
+                score=round(adj, 3),
+                matched_via=via,
+                is_exogenous=eid in self._exogenous,
+                allowed_states=list(self._entities[eid].allowed_states),
+                annotation_excerpt=(self._entities[eid].annotation or self._entities[eid].notes or "")[:240],
             )
-        scored.sort(key=lambda c: (-c.score, c.entity_id))
+            for eid, (is_full, adj, via) in best.items()
+        ]
+        # Full-phrase matches rank above token-only matches: a hit on the whole
+        # mention ("DNA gyrase" -> gyrA via annotation) is more specific than a
+        # generic token ("dna" -> the DNA metabolite).
+        scored.sort(key=lambda c: (0 if best[c.entity_id][0] else 1, -c.score, c.entity_id))
         return scored[:limit]
 
     def best(self, mention: str) -> Optional[Candidate]:

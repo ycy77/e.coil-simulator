@@ -70,13 +70,10 @@ def dry_run(grounder: EntityGrounder, text: str) -> int:
     mentions = [m.strip() for m in re.split(r",|;|\band\b|\n", text) if m.strip()]
     print(f"Offline grounding preview for {len(mentions)} clause(s):\n")
     for mention in mentions:
-        queries = [mention] + [tok for tok in re.split(r"\s+", mention) if len(tok) > 2]
-        best = {}
-        for q in queries:
-            for c in grounder.candidates(q, limit=5):
-                if c.entity_id not in best or c.score > best[c.entity_id].score:
-                    best[c.entity_id] = c
-        ranked = sorted(best.values(), key=lambda c: (-c.score, c.entity_id))[:5]
+        # The grounder already handles verb-prefixed spans (token fallback at
+        # name/alias tier), so a stopword like "add" no longer outranks the
+        # real agent.
+        ranked = grounder.candidates(mention, limit=5)
         print(f"  \"{mention}\":")
         if not ranked:
             print("      (no candidates — likely exogenous; the LLM would supply the target concept)")

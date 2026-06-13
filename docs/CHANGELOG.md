@@ -3,6 +3,44 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-13d — bug fixes (P1/P2) + global-view report agent
+
+### Fixed
+* **Phenotype false positives** (`reporter.py`). `_response_pattern_match` now
+  (a) gates on the pattern's driving `signals` — a pattern only matches if the
+  upstream sources it requires actually changed (a LacI-only run no longer
+  scores the L2 `lac_dual_signal` pattern 1.0), and (b) scores
+  `expected_abundance` on the abundance axis (no more cross-matching state vs
+  abundance).
+* **efficiency lost on resume / initial profile** (`temporal_state.py`).
+  `from_snapshot` and `apply_initial_profile` now read/write the `efficiency`
+  field; sequential perturbation runs no longer silently drop transcription
+  efficiency.
+* **Fragile grounding** (`grounding.py`). `EntityGrounder.candidates` now falls
+  back to token-level matching (name/alias tier only) so `"knock out recA"` →
+  recA and `"add ciprofloxacin"` → ciprofloxacin even if the LLM passes a raw
+  span; full-phrase matches rank above generic single-token matches
+  (`"DNA gyrase"` → gyrA, not the DNA metabolite).
+* **Multi-word aliases destroyed** (`models.py`). New `alias_list()` keeps
+  multi-word aliases whole AND adds their tokens, instead of replacing every
+  space with `|`. `DNA gyrase` survives; `lacI b0345 JW0336` still tokenizes.
+* **`--dry-run` misleading** (`parse_perturbation.py`) — now uses the hardened
+  grounder, so a verb/stopword no longer outranks the real agent.
+* **Fair retrieval** (`temporal_graphrag.py`). Candidates are now bucketed by
+  their signal COMBINATION (crp-only / rpoS-only / crp+rpoS each a bucket) and
+  round-robined, so a hub's unique targets are not starved and multi-source
+  candidates are not mis-attributed to one source.
+
+### Added — global-view report agent
+* `ecoil_sim/report/llm_report_agent.py` `LLMReportAgent` + `prompts/report_agent.system.md`.
+  After the run, a single agent with the FULL global view (perturbation sources,
+  round-by-round propagation, causal chains, final states, phenotype matches +
+  the involved entities' annotations) writes a grounded biological report. LLM
+  injected (testable offline); wired into `main.py --llm-report`. No
+  deterministic fallback narrative — without an LLM, the existing
+  `Reporter.render_narrative` stands.
+* Tests: `tests/test_report_agent.py`. Suite 55 → 57.
+
 ## session-2026-06-13c — LLM perturbation intake (offline scaffolding)
 
 The product front door: user enters a perturbation by chat text or uploaded

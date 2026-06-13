@@ -300,22 +300,48 @@ class Reporter:
         }
         results = []
         for pattern_id, spec in self.phenotype_db.items():
-            expected = spec.get("expected_states", {}) if isinstance(spec, dict) else {}
-            if not isinstance(expected, dict) or not expected:
+            if not isinstance(spec, dict):
                 continue
+            expected_states = spec.get("expected_states", {})
+            expected_abundance = spec.get("expected_abundance", {})
+            expected_states = expected_states if isinstance(expected_states, dict) else {}
+            expected_abundance = expected_abundance if isinstance(expected_abundance, dict) else {}
+            if not expected_states and not expected_abundance:
+                continue
+
+            # Gate on the scenario's driving signals: a pattern only matches if
+            # the upstream sources it requires actually changed in this run.
+            # Without this, a LacI-only run spuriously matched the L2
+            # lac_dual_signal pattern (which also requires CRP-cAMP to be low).
+            required_sources = self._pattern_signal_sources(spec)
+            if required_sources and not required_sources.issubset(changed_entities):
+                continue
+
             matched = 0
             checked = 0
             touched = 0
             details = {}
-            for entity_id, wanted in expected.items():
+            # Compare states against expected_states and abundance against
+            # expected_abundance -- on their own axes, no cross-matching.
+            for entity_id, wanted in expected_states.items():
                 observed = state.states.get(entity_id)
                 if not observed:
                     continue
                 checked += 1
                 touched += 1 if entity_id in changed_entities else 0
-                ok = observed.state == wanted or observed.abundance_label == wanted
+                ok = observed.state == wanted
                 matched += 1 if ok else 0
-                details[entity_id] = {"expected": wanted, "observed": observed.state, "match": ok}
+                details[entity_id] = {"axis": "state", "expected": wanted, "observed": observed.state, "match": ok}
+            for entity_id, wanted in expected_abundance.items():
+                observed = state.states.get(entity_id)
+                if not observed:
+                    continue
+                checked += 1
+                touched += 1 if entity_id in changed_entities else 0
+                ok = observed.abundance_label == wanted
+                matched += 1 if ok else 0
+                details[entity_id] = {"axis": "abundance", "expected": wanted, "observed": observed.abundance_label, "match": ok}
+
             if checked and touched and matched:
                 results.append(
                     {
@@ -324,12 +350,32 @@ class Reporter:
                         "matched": matched,
                         "total": checked,
                         "touched": touched,
+                        "required_signals_present": bool(required_sources),
                         "similarity": round(matched / checked, 3),
                         "details": details,
                     }
                 )
         results.sort(key=lambda item: (-item["similarity"], item["pattern_id"]))
         return {"status": "ok", "matches": results[:10]}
+
+    @staticmethod
+    def _pattern_signal_sources(spec: Dict) -> set:
+        """Upstream source entities a pattern's ``signals`` block requires.
+
+        These are the perturbation that *defines* the scenario; if they did not
+        change in the run, the run is not an instance of this phenotype.
+        """
+        sources: set = set()
+        signals = spec.get("signals", {})
+        if not isinstance(signals, dict):
+            return sources
+        for sigs in signals.values():
+            if not isinstance(sigs, list):
+                continue
+            for sig in sigs:
+                if isinstance(sig, dict) and sig.get("from"):
+                    sources.add(sig["from"])
+        return sources
 
     def agent_replay_prompt(self, state: TemporalState, entity_id: str, question: str) -> str:
         entity = self.graph.entities.get(entity_id) if self.graph else None
