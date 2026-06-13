@@ -101,6 +101,11 @@ class PromptBuilder:
                 "entity_id": neighbor_id,
                 "state": neighbor.state,
                 "abundance_label": neighbor.abundance_label,
+                # ``efficiency`` is the gene's transcription-rate axis.
+                # Without it the LLM cannot see that a gene is ``expressed``
+                # but starved of activator, and overestimates the encoded
+                # protein's abundance.
+                "efficiency": neighbor.efficiency,
             }
 
         deduped_rules = self._dedupe_rules(context.rules)[:12]

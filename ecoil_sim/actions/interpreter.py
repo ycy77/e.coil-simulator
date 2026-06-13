@@ -329,16 +329,27 @@ class ActionInterpreter:
 
     @staticmethod
     def _shift_abundance(current: str, direction: str, strength: int) -> str:
+        """Shift abundance by strength steps.
+
+        strength=0 is a no-op (matches direction=none semantics).
+        Earlier versions forced a minimum step of 1, contradicting the
+        prompt guidance that strength: 1 keeps abundance "modest":
+        without this fix the abundance always moved at least one step up,
+        so the LLM could not express "gene expressed but low efficiency
+        keep abundance roughly unchanged".
+        """
         labels = ["absent", "low", "medium", "high"]
         current = current if current in labels else "medium"
         idx = labels.index(current)
-        step = max(1, strength)
+        step = max(0, int(strength))
         if direction == "up":
             idx = min(len(labels) - 1, idx + step)
         elif direction == "down":
             idx = max(0, idx - step)
         elif direction == "set":
             idx = min(len(labels) - 1, step)
+        else:
+            return labels[idx]
         return labels[idx]
 
     @staticmethod

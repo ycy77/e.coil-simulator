@@ -83,15 +83,28 @@ Action selection policy:
   inactive/absent, emit ``direction: "down"``.
 - If the current agent is the target of an `encodes` edge, map higher
   source gene expression to `change_abundance` with `direction: "up"`,
-  and lower to `direction: "down"`. You may also consider the source
-  gene's `efficiency`: if the gene is ``expressed`` but has ``low
-  efficiency``, you can use ``strength: 1`` instead of the default
-  ``strength: 2`` to keep the protein abundance modest.
+  and lower to `direction: "down"`. You MUST also consider the source
+  gene's `efficiency`:
+    - Gene ``expressed`` + efficiency ``high``   -> ``direction: "up"``, ``strength: 2`` (abundance escalates to ``high``)
+    - Gene ``expressed`` + efficiency ``medium`` -> ``direction: "up"``, ``strength: 1`` (abundance becomes ``high``)
+    - Gene ``expressed`` + efficiency ``low``    -> ``direction: "up"``, ``strength: 0`` (abundance stays at ``medium``; promoter open but rate starved)
+    - Gene ``overexpressed``                     -> ``direction: "up"``, ``strength: 2`` (full induction)
+    - Gene ``repressed`` or absent               -> ``direction: "down"``, ``strength: 2`` (abundance collapses to ``low``)
+  ``strength: 0`` with ``direction: "up"`` is the canonical
+  "promoter open, activator missing" call. Do NOT emit ``strength: 1``
+  in this case.
 - If the current small-molecule agent is connected by `is_product_of`,
   use `produce`; if connected by `is_substrate_of`, use `consume`.
-- Use `strength: 1` unless a candidate rule explicitly supports a
-  stronger effect. With multiple same-direction signals, you may use
-  `strength: 2` to indicate the reinforced signal.
+- Strength semantics are NOT optional. Always reason about the strength you emit:
+    - `strength: 0` = no-op / hold current state (e.g. "promoter open, activator missing")
+    - `strength: 1` = one-step change (e.g. gene single-activator activation)
+    - `strength: 2` = reinforced change. USE ``strength: 2`` whenever two or
+      more upstream signals arrive from different sources in the SAME
+      direction (co-aligned repression release, co-aligned activation, etc.).
+      This is the "the cell heard this from two places" signal and is the
+      only way to escalate gene state to ``overexpressed`` (strength>=2)
+      in this codebase.
+  Do NOT default to ``strength: 1`` when two signals agree.
 - Return `{"actions": []}` only when none of the candidate rules apply.
 
 Two-step reasoning policy (when a gene receives both represses and

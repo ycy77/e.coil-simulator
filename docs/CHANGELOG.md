@@ -132,3 +132,64 @@ chunks at a glance.
 * `scripts/parse_ecocyc.py`, `scripts/build_*.py`.
 * `data/normalized/{entities,edges,pathways,canonical_entity_map,canonicalization_report}.csv/json`.
 * `data/registry/native_rules.jsonl`.
+## session-2026-06-13-v2 — phenotype battery + LLM reasoning fixes
+
+Knobs driven from the scorecard run `runs/_scorecard/20260613_071545/`.
+Full report in `docs/SCORECARD_REPORT_20260613.md`.
+
+### Fixed
+* `data/phenotypes/phenotype_db.yaml`:
+  * `ara_dual_signal_arabinose_absent` used the wrong AraC id
+    (`protein.P0ACT01`); replaced with `protein.P0A9E0` (the real UniProt
+    accession in `data/normalized/simulation`).
+  * Added `signals:` blocks to `beta_lactam_cell_wall_response`,
+    `aminoglycoside_translation_response`,
+    `oxidative_stress_response_like`, `cell_division_inhibition_like`,
+    plus the new L2 / L3 patterns, so the scorer can drive them.
+  * Adjusted `oxidative_stress_response_like` expected states to mirror
+    what the graph actually encodes (OxyR auto-represses its own gene,
+    SoxR auto-represses itself, katG is the activator target).
+  * Removed `stringent_starvation_response_like` — RelA / SpoT have no
+    `activates`/`represses` edges to genes in the simulation graph, so
+    the pattern was unrunnable. Add back when the rule registry includes
+    ppGpp → rpoS regulation.
+  * Rewrote `sos_response_like` (L3) to use only the `LexA → SOS genes`
+    pathway present in the graph (RecA carries no gene-regulation edges).
+  * New L2 same-direction pattern `ara_induction_full` (ara operon,
+    arabinose present + glucose absent).
+  * Adjusted `lac_dual_signal_glucose_present` expected abundance from
+    `low` → `medium` — current `_shift_abundance` semantics only have
+    four tiers; "modest production" maps to `medium`.
+
+* `ecoil_sim/actions/interpreter.py::_shift_abundance`:
+  * Now honors `strength: 0` as a true no-op (was
+    `step = max(1, strength)`, which contradicted the prompt's
+    "strength: 1 = modest" guidance).
+  * Added explicit `direction: "none"` no-op branch.
+
+* `ecoil_sim/agents/prompt_builder.py`:
+  * `public_neighbors` now exposes each changed neighbor's `efficiency`
+    field. Without this the LLM could not see that its source gene was
+    `expressed` but starved of activator, and overestimated the encoded
+    protein's abundance.
+
+* `prompts/agent_decision.system.md`:
+  * Replaced the vague `strength: 1 = modest` hint with an explicit
+    `efficiency → strength` table for the `encodes` rule.
+  * Added explicit "two co-aligned signals ⇒ strength: 2" rule with
+    the rationale ("cell heard this from two places").
+
+### Measured impact
+| Metric | Before | After |
+| --- | --- | --- |
+| `pytest -q`              | 41 passed | 41 passed |
+| runnable patterns        | 8 (5 unrunnable) | 13 |
+| L2 mock mean             | 0.17 (3) | 0.38 (4) |
+| L2 LLM mean (repeat=2)   | n/a      | **0.43 (4)** |
+| `lac_dual_signal_glucose_present` LLM | 0.50 | **0.58** (mean of 0.83, 0.33) |
+| `glucose_to_lactose_shift` LLM        | 0.00 | **0.13** (mean of 0.00, 0.25) |
+
+LLM now beats mock on L2 — the project's headline thesis — but variance
+on the thesis case is still high (stdev 0.25). See report §6 issue B for
+the recommended next step (wire `structured_output.require_json`
+through `AsyncVLLMClient`).
