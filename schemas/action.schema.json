@@ -17,6 +17,7 @@
             "enum": [
               "change_abundance",
               "change_mrna_abundance",
+              "change_efficiency",
               "change_activity",
               "bind",
               "unbind",

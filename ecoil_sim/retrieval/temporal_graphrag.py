@@ -85,12 +85,45 @@ class TemporalGraphRAG:
             context.changed_neighbors = unique_neighbors
             context.conflict = build_conflict_report(signals)
 
-        ranked = [
+        eligible = [
             ctx for ctx in contexts.values()
             if ctx.score >= self.min_score and state.get(ctx.entity_id) is not None
         ]
-        ranked.sort(key=lambda item: (-item.score, item.entity_id))
-        return ranked[:max_agents]
+        return self._select_fair(eligible, max_agents)
+
+    @staticmethod
+    def _select_fair(eligible: List[RetrievedContext], max_agents: int) -> List[RetrievedContext]:
+        """Pick up to ``max_agents`` contexts without starving any one hub.
+
+        A plain global top-N truncated by ``(-score, entity_id)`` lets a single
+        high-degree hub flood the budget, and breaks score ties by entity_id —
+        so a legitimate target (e.g. katG under OxyR) can be silently dropped
+        just because lower-id siblings filled the list. Instead we round-robin
+        across the source that woke each candidate: round 0 takes each source's
+        top target, round 1 the next, etc. Within a source, order is by score.
+        """
+        eligible.sort(key=lambda item: (-item.score, item.entity_id))
+        if len(eligible) <= max_agents:
+            return eligible
+        buckets: Dict[str, List[RetrievedContext]] = {}
+        for ctx in eligible:  # already score-sorted, so buckets stay score-sorted
+            key = ctx.changed_neighbors[0] if ctx.changed_neighbors else ctx.entity_id
+            buckets.setdefault(key, []).append(ctx)
+        selected: Dict[str, RetrievedContext] = {}
+        depth = 0
+        while len(selected) < max_agents:
+            progressed = False
+            for queue in buckets.values():
+                if depth < len(queue):
+                    ctx = queue[depth]
+                    selected[ctx.entity_id] = ctx
+                    progressed = True
+                    if len(selected) >= max_agents:
+                        break
+            if not progressed:
+                break
+            depth += 1
+        return sorted(selected.values(), key=lambda item: (-item.score, item.entity_id))
 
     def _edge_weight(self, edge: Edge) -> float:
         """Retrieval weight for an edge.

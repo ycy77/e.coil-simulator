@@ -68,6 +68,7 @@ from ecoil_sim.llm import (  # noqa: E402
     RuleBasedMockLLM,
     compute_signals,
     build_conflict_report,
+    load_guided_json,
 )
 from ecoil_sim.paths import PROJECT_ROOT  # noqa: E402
 from ecoil_sim.registry import RuleRegistry  # noqa: E402
@@ -259,6 +260,8 @@ async def run_one(
             max_tokens=int(llm_cfg.get("decision_max_tokens", 256)),
             temperature=float(llm_cfg.get("temperature", 0.2)),
             top_p=float(llm_cfg.get("top_p", 0.8)),
+            guided_json=load_guided_json(model_cfg, PROJECT_ROOT),
+            enable_thinking=bool(llm_cfg.get("enable_thinking", False)),
         )
     engine, store_root = make_engine(deps, llm_client, store_root)
     state = await engine.run(

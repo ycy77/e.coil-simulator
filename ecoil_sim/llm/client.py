@@ -22,8 +22,28 @@ import json
 import re
 from typing import Any, Dict, Iterable, List, Optional
 
+from pathlib import Path
+
 from ecoil_sim.llm.response_parser import parse_llm_output
 from ecoil_sim.validation import ActionValidator
+
+
+def load_guided_json(model_config: Dict[str, Any], project_root: Path) -> Optional[Dict[str, Any]]:
+    """Return the JSON schema to constrain decoding, or None if disabled.
+
+    Reads the ``structured_output`` block of the model config
+    (configs/model.qwen35_9b.yaml). When ``require_json`` is set, loads
+    ``schema_file`` (the action wrapper schema) so callers can pass it as
+    ``guided_json`` to :class:`AsyncVLLMClient`.
+    """
+    structured = model_config.get("structured_output", {}) or {}
+    if not structured.get("require_json"):
+        return None
+    schema_rel = structured.get("schema_file", "schemas/action.schema.json")
+    schema_path = Path(project_root) / schema_rel
+    if not schema_path.exists():
+        return None
+    return json.loads(schema_path.read_text(encoding="utf-8"))
 
 
 class NullLLMClient:
@@ -228,6 +248,9 @@ class AsyncVLLMClient:
         validator: ActionValidator | None = None,
         raw_content_log_limit: int = 4000,
         thinking_kw: str = "think",
+        guided_json: Optional[Dict[str, Any]] = None,
+        guided_decoding_backend: str = "",
+        enable_thinking: bool = False,
     ) -> None:
         self.base_url = base_url.rstrip("/")
         self.model = model
@@ -241,6 +264,34 @@ class AsyncVLLMClient:
         self.validator = validator or ActionValidator()
         self.raw_content_log_limit = raw_content_log_limit
         self.thinking_kw = thinking_kw
+        # When set, the request constrains generation to this JSON schema so the
+        # model cannot emit malformed/ambiguous actions (vLLM `guided_json`).
+        self.guided_json = guided_json
+        self.guided_decoding_backend = guided_decoding_backend
+        self.enable_thinking = enable_thinking
+
+    def _build_payload(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
+        """Build the chat-completions request body.
+
+        vLLM's OpenAI-compatible server reads extension fields
+        (``chat_template_kwargs``, ``guided_json``) as TOP-LEVEL request keys.
+        A nested ``extra_body`` only works through the OpenAI Python SDK, which
+        flattens it; a raw POST (what we do) would have vLLM ignore it. So these
+        go at the top level.
+        """
+        payload: Dict[str, Any] = {
+            "model": self.model,
+            "messages": messages,
+            "max_tokens": self.max_tokens,
+            "temperature": self.temperature,
+            "top_p": self.top_p,
+            "chat_template_kwargs": {"enable_thinking": self.enable_thinking},
+        }
+        if self.guided_json:
+            payload["guided_json"] = self.guided_json
+            if self.guided_decoding_backend:
+                payload["guided_decoding_backend"] = self.guided_decoding_backend
+        return payload
 
     async def batch_chat(self, batches: Iterable[List[Dict[str, str]]]) -> List[Dict[str, Any]]:
         prompts = list(batches)
@@ -256,17 +307,7 @@ class AsyncVLLMClient:
 
     async def _one(self, client, semaphore: asyncio.Semaphore, messages: List[Dict[str, str]]) -> Dict[str, Any]:
         async with semaphore:
-            payload = {
-                "model": self.model,
-                "messages": messages,
-                "max_tokens": self.max_tokens,
-                "temperature": self.temperature,
-                "top_p": self.top_p,
-                "extra_body": {
-                    "chat_template_kwargs": {"enable_thinking": False},
-                    "enable_thinking": False,
-                },
-            }
+            payload = self._build_payload(messages)
             headers = {
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",

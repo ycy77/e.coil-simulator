@@ -3,6 +3,78 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-13c — LLM perturbation intake (offline scaffolding)
+
+The product front door: user enters a perturbation by chat text or uploaded
+file → LLM parses + grounds it to canonical graph entry points → user confirms →
+run. No hand-written drug→target table (decisions to the model; the existing
+`perturbation_knowledge.yaml` and fallback rules are left as test/baseline
+scaffolding for now, not touched).
+
+### Added (offline-verifiable; the LLM call is GPU-host-only)
+* `ecoil_sim/sim/grounding.py` — `EntityGrounder`: ranks graph + perturbagen
+  entities for a free-text mention (name/alias matches rank above annotation
+  mentions so `recA` grounds to recA, not recB/recC).
+* `ecoil_sim/sim/llm_perturbation.py` — `LLMPerturbationParser`
+  (extract→ground→resolve→validate, LLM injected for testability) +
+  `VLLMJsonCompleter` (real call) + `PerturbationProposal` (confirm render +
+  engine changes). Deterministic guard rejects ids not in the graph and
+  target_states outside `allowed_states`.
+* `schemas/perturbation_intake.schema.json` (guided_json contract),
+  `prompts/perturbation_parse.system.md`, `prompts/perturbation_ground.system.md`.
+* `scripts/parse_perturbation.py` — both input adapters (`--text`, `--file`) over
+  one grounding+confirm core; `--dry-run` previews grounding offline.
+* Tests: `tests/test_grounding.py` (grounder on real graph + parser orchestration
+  and guards with a stub LLM). Suite 50 → 55.
+* Remote TODO recorded in `docs/REMOTE_WORK_PLAN.md` Phase 5 (run vs vLLM, web
+  endpoints, confirm UI).
+
+## session-2026-06-13b — guided decoding, fair retrieval, redundancy cleanup
+
+Follows the remote scorecard report (`docs/SCORECARD_REPORT_20260613.md`),
+acting on its hand-off priorities 1 and 2.
+
+### Added / Changed (decision quality + scaling)
+* **Guided decoding wired** (`ecoil_sim/llm/client.py`). `AsyncVLLMClient` now
+  sends `guided_json` (the action schema) at the top level of the request, so
+  the model is constrained to valid JSON actions — this targets the ~0.25 L2
+  variance the report attributed to free-form decoding. Request building is now
+  a testable `_build_payload`. Fixed a latent bug: the old `extra_body` block
+  was nested under a key vLLM ignores on a raw POST (so `enable_thinking` never
+  actually reached the server); extension fields are now top-level.
+  Loaded via `load_guided_json()` from the model config's `structured_output`
+  block; wired into `main.py`, `scripts/score_phenotypes.py`,
+  `scripts/eval_baseline.py`.
+* **`schemas/action.schema.json`** — added the missing `change_efficiency`
+  action type. Without it, guided decoding would have forbidden a valid action
+  the two-axis gene model needs. A test now asserts the schema enum is a
+  superset of `ActionValidator.ACTION_TYPES`.
+* **Fair candidate selection** (`ecoil_sim/retrieval/temporal_graphrag.py`).
+  Replaced the global top-N truncation (which broke score ties by `entity_id`,
+  systematically dropping high-id targets) with round-robin selection across
+  the source hub, so a high-degree regulator can't starve another hub's
+  targets. `scripts/score_phenotypes.py` default `--max-active-agents` 32 → 128.
+* Note on report issue C (katG never wakes under OxyR): root cause is a
+  **missing edge** — OxyR→katG does not exist in the baseline graph (OxyR only
+  carries auto-regulation). This is a Phase-4 RegulonDB-structure gap, not a
+  retriever bug. The fairness fix still removes the entity_id starvation class.
+
+### Removed (redundant tracked files, ~95 MB, zero functional impact)
+* `data/normalized/*.pre_canonical_v2` (3 backup files, 16.8 MB).
+* Top-level `data/enriched/entities_enriched_v2*.{jsonl,csv}` +
+  `enrichment_report_v2.json` (78 MB) — byte-identical duplicates of
+  `data/enriched/_v2/`, which is the copy the web backend actually reads
+  (`web/backend/main.py:64`). Verified no code reads the top-level v2 files.
+* Left in place (NOT redundant): v1 enriched files (read by audit/verify/sim/
+  web fallback), `data/enriched/_v2/` (web primary), `data/normalized/_v2`
+  (web fallback), first-gen scripts (docs mark them "preserved"),
+  `obsidian_vault/` (user vault), `runs/` + the ssh-config file (already
+  gitignored, untracked local scratch).
+
+### Tests
+* 41 → 50. Added `tests/test_vllm_payload.py` (guided-decoding payload + schema
+  coverage) and `tests/test_retrieval_fairness.py` (hub starvation).
+
 ## session-2026-06-13 — runnability fixes + engine↔baseline reconciliation
 
 ### Fixed (foundation — the project did not run out of the box)

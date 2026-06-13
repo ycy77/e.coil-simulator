@@ -10,7 +10,7 @@ from ecoil_sim.actions import ActionInterpreter
 from ecoil_sim.agents import PromptBuilder
 from ecoil_sim.config import load_yaml_like
 from ecoil_sim.graph import StaticGraph
-from ecoil_sim.llm import AsyncVLLMClient, NameResolver, NullLLMClient, RuleBasedMockLLM
+from ecoil_sim.llm import AsyncVLLMClient, NameResolver, NullLLMClient, RuleBasedMockLLM, load_guided_json
 from ecoil_sim.paths import PROJECT_ROOT
 from ecoil_sim.registry import RuleRegistry
 from ecoil_sim.report import Reporter
@@ -114,6 +114,8 @@ def main() -> int:
             max_tokens=int(llm_cfg.get("decision_max_tokens", 256)),
             temperature=float(llm_cfg.get("temperature", 0.2)),
             top_p=float(llm_cfg.get("top_p", 0.8)),
+            guided_json=load_guided_json(model_config, PROJECT_ROOT),
+            enable_thinking=bool(llm_cfg.get("enable_thinking", False)),
         )
     else:
         llm_client = NullLLMClient()

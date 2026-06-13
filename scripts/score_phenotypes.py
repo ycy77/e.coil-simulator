@@ -61,7 +61,7 @@ from ecoil_sim.actions import ActionInterpreter  # noqa: E402
 from ecoil_sim.agents import PromptBuilder  # noqa: E402
 from ecoil_sim.config import load_yaml_like  # noqa: E402
 from ecoil_sim.graph import StaticGraph  # noqa: E402
-from ecoil_sim.llm import AsyncVLLMClient, NameResolver, RuleBasedMockLLM  # noqa: E402
+from ecoil_sim.llm import AsyncVLLMClient, NameResolver, RuleBasedMockLLM, load_guided_json  # noqa: E402
 from ecoil_sim.registry import RuleRegistry  # noqa: E402
 from ecoil_sim.retrieval import TemporalGraphRAG  # noqa: E402
 from ecoil_sim.rules import FallbackPolicy  # noqa: E402
@@ -82,7 +82,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--level", choices=("L0", "L1", "L2", "L3", "L4", "all"), default="all")
     p.add_argument("--pattern", default=None, help="Run only this pattern id")
     p.add_argument("--rounds", type=int, default=4)
-    p.add_argument("--max-active-agents", type=int, default=32)
+    p.add_argument("--max-active-agents", type=int, default=128)
     p.add_argument("--repeat", type=int, default=1, help="Repeats per pattern (LLM variance)")
     p.add_argument("--output-root", type=Path, default=Path("runs/_scorecard"))
     return p.parse_args()
@@ -185,6 +185,8 @@ def make_llm_client(deps: Dict):
         max_tokens=int(llm_cfg.get("decision_max_tokens", 256)),
         temperature=float(llm_cfg.get("temperature", 0.2)),
         top_p=float(llm_cfg.get("top_p", 0.8)),
+        guided_json=load_guided_json(deps["model_config"], PROJECT_ROOT),
+        enable_thinking=bool(llm_cfg.get("enable_thinking", False)),
     )
 
 

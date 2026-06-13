@@ -184,6 +184,44 @@ The graph is the cell's rule-set. Higher-value graph work:
 
 ---
 
+## Phase 5 — Perturbation intake (the product front door)
+
+The end-user enters a perturbation by **chat text or uploaded file**; the model
+parses it, **grounds it to canonical graph entry points**, the user **confirms**,
+then the simulation runs. No hand-written drug→target table — the LLM infers
+targets from entity annotations (decisions to the model; judgment to humans at
+the confirm step).
+
+Built offline this session (verified without vLLM):
+- `ecoil_sim/sim/grounding.py` — `EntityGrounder`: ranks graph + perturbagen
+  entities for a mention (name/alias ≫ annotation). Tested: `recA`→gene.b2699,
+  "DNA gyrase"→gyrA/gyrB, "penicillin-binding protein"→PBPs.
+- `ecoil_sim/sim/llm_perturbation.py` — `LLMPerturbationParser` (extract→ground→
+  resolve→validate) with the LLM injected; `VLLMJsonCompleter` for the real call;
+  `PerturbationProposal.render()` for the confirm block; `.to_engine_changes()`
+  feeds the engine. Deterministic guard: drops any `entity_id` not in the graph
+  or `target_state` outside `allowed_states`.
+- `schemas/perturbation_intake.schema.json` (guided_json contract),
+  `prompts/perturbation_{parse,ground}.system.md`.
+- `scripts/parse_perturbation.py` — both adapters: `--text` (chat), `--file`
+  (upload); `--dry-run` previews grounding offline.
+
+Remote work to finish it:
+1. **Run it against vLLM** and tune the two prompts:
+   `python scripts/parse_perturbation.py --text "knock out recA, add 2mg/L ciprofloxacin" --emit-changes`
+   Check: cipro grounds to gyrA/gyrB (`exogenous`), recA to gene.b2699, and
+   `target_state`s are valid. The drug→target inference quality lives entirely in
+   `prompts/perturbation_parse.system.md` (`target_concepts`) — iterate there.
+2. **Web endpoints** (`web/backend/`): `POST /api/perturbation/parse` (body: text
+   or uploaded file) → returns `PerturbationProposal` JSON for the UI to render;
+   `POST /api/perturbation/run` (body: confirmed/edited perturbations) → kicks off
+   a run via the engine. Reuse `LLMPerturbationParser`.
+3. **Confirm UI** (`web/frontend/`): show grounded entry points + targets +
+   evidence; let the user edit/approve before running. This is the human-judgment
+   boundary — do not auto-run.
+4. The offline `--dry-run` token preview is noisy on multi-word concepts (it has
+   no LLM to clean mentions); that is preview-only and not the production path.
+
 ## Guardrails (do not violate)
 
 - **No silent fallback.** If the LLM/endpoint is unreachable, fail loudly. Do not
