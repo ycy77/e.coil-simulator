@@ -1,0 +1,9 @@
+profile_id: glucose_logarithmic_aerobic_growth
+description: 'LLM-generated draft initial condition for: glucose logarithmic aerobic
+  growth'
+source: llm_inference
+confidence: low
+review_status: dry_run_prompts_only
+overrides: {}
+candidate_entities: 20
+prompt_file: /Users/ycy/Desktop/e.coil/data/initial_conditions/generated/glucose_log_phase.llm_draft.prompts.json

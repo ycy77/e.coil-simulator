@@ -1,0 +1,50 @@
+---
+entity_id: "molecule.ecocyc.Flavonol-glucosyl-glucosyl-glucosides"
+entity_type: "small_molecule"
+name: "a flavonol 3-O-(β-D-glucosyl-(1->2)-β-D-glucosyl (1->2)-β-D-glucoside)"
+source_database: "EcoCyc"
+source_id: "Flavonol-glucosyl-glucosyl-glucosides"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+---
+
+# a flavonol 3-O-(β-D-glucosyl-(1->2)-β-D-glucosyl (1->2)-β-D-glucoside)
+
+`molecule.ecocyc.Flavonol-glucosyl-glucosyl-glucosides`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:Flavonol-glucosyl-glucosyl-glucosides`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+EcoCyc compound Flavonol-glucosyl-glucosyl-glucosides
+
+## Annotation
+
+EcoCyc compound Flavonol-glucosyl-glucosyl-glucosides
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:Flavonol-glucosyl-glucosyl-glucosides`
+- `SEED:cpd11242`
+- `CHEBI:52143`
+- `METANETX:MNXM3275`
+- `LIGAND-CPD:C15582`

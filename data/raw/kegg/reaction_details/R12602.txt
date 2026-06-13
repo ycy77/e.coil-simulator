@@ -1,0 +1,17 @@
+ENTRY       R12602                      Reaction
+NAME        lipoyl:hydroperoxide oxidoreductase
+DEFINITION  [Protein]-N6-[(R)-dihydrolipoyl]-L-lysine + ROOH <=> Protein N6-(lipoyl)lysine + H2O + ROH
+EQUATION    C16832 + C15498 <=> C16237 + C00001 + C01335
+RCLASS      RC00583  C16237_C16832
+ENZYME      1.11.1.28
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.11  Acting on a peroxide as acceptor
+               1.11.1  Peroxidases
+                1.11.1.28
+                 R12602  [Protein]-N6-[(R)-dihydrolipoyl]-L-lysine + ROOH <=> Protein N6-(lipoyl)lysine + H2O + ROH
+            IUBMB reaction hierarchy [BR:br08202]
+             1. Oxidoreductase reactions
+              1.11.1.28
+               R12602  [Protein]-N6-[(R)-dihydrolipoyl]-L-lysine <=> Protein N6-(lipoyl)lysine
+///

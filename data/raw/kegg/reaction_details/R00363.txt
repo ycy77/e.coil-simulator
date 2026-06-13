@@ -1,0 +1,16 @@
+ENTRY       R00363                      Reaction
+NAME        oxaloacetate keto-enol-isomerase
+DEFINITION  Oxaloacetate <=> 2-Hydroxyethylenedicarboxylate
+EQUATION    C00036 <=> C03981
+RCLASS      RC01564  C00036_C03981
+ENZYME      5.3.2.2
+PATHWAY     rn00620  Pyruvate metabolism
+BRITE       Enzymatic reactions [BR:br08201]
+             5. Isomerase reactions
+              5.3  Intramolecular oxidoreductases
+               5.3.2  Interconverting keto- and enol-groups
+                5.3.2.2
+                 R00363  Oxaloacetate <=> 2-Hydroxyethylenedicarboxylate
+ORTHOLOGY   K29029  oxaloacetate tautomerase [EC:5.3.2.2]
+DBLINKS     RHEA: 16024
+///

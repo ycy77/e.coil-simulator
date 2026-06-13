@@ -1,0 +1,243 @@
+# Optional response-pattern database used by ReportAgent and the offline
+# evaluation baseline.
+#
+# "Phenotype" here does not mean the simulator must force a biological label.
+# It is only a curated comparison rubric: after a run, the reporter and the
+# eval script can ask whether the final changed-state pattern resembles a
+# known response.
+#
+# Patterns are tagged with a ``signal_level`` so the evaluator can bucket
+# them by signal complexity:
+#
+#   L0  no signal            (baseline, no expected change)
+#   L1  single signal        (mock and LLM should both get it right)
+#   L2  two signals,         (LLM is the only path that can resolve)
+#       direction conflict
+#   L3  three+ signals,      (only LLM with annotation can reason)
+#       complex conflict
+#   L4  graph-external       (LLM must reason from annotation alone)
+#       inference
+#
+# L2+ patterns are the ones that prove the LLM is adding real value over
+# the deterministic mock. If mock and LLM tie on L2, the LLM is not paying
+# for itself.
+
+# ===========================================================================
+# L0 — baseline / no signal
+# ===========================================================================
+
+no_signal_baseline:
+  description: |
+    No perturbation applied; agents should remain at their initial profile
+    values. This is the negative control that proves the simulator does not
+    produce spurious changes on its own.
+  signal_level: L0
+  expected_states: {}
+  expected_abundance: {}
+
+# ===========================================================================
+# L1 — single signal, no conflict
+# ===========================================================================
+
+lac_operon_derepression_like:
+  description: |
+    L1 single-signal pattern: LacI is inhibited alone, so lacZYA genes
+    should become expressed. No competing activator/deactivator is in play
+    in this scenario.
+  signal_level: L1
+  signals:
+    gene.b0344:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+    gene.b0343:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+    gene.b0342:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+  expected_states:
+    gene.b0344: expressed  # lacZ
+    gene.b0343: expressed  # lacY
+    gene.b0342: expressed  # lacA
+
+lacI_active_repression_like:
+  description: |
+    L1 single-signal pattern: LacI is set to active; lacZYA genes should
+    be repressed.
+  signal_level: L1
+  signals:
+    gene.b0344:
+      - {from: protein.P03023, edge: represses, state: active}
+    gene.b0343:
+      - {from: protein.P03023, edge: represses, state: active}
+    gene.b0342:
+      - {from: protein.P03023, edge: represses, state: active}
+  expected_states:
+    gene.b0344: repressed
+    gene.b0343: repressed
+    gene.b0342: repressed
+
+lactose_induction_like:
+  description: |
+    L1 single-signal pattern: lactose induction. We model it here as a
+    direct perturbation on LacI (which is what allolactose binding does
+    in real biology). LacZYA become expressed and the LacZ/Y/A proteins
+    accumulate.
+  signal_level: L1
+  signals:
+    gene.b0344:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+    gene.b0343:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+    gene.b0342:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+  expected_states:
+    gene.b0344: expressed
+    gene.b0343: expressed
+    gene.b0342: expressed
+  expected_abundance:
+    protein.P00722: high   # LacZ
+    protein.P02920: high   # LacY
+    protein.P07464: high   # LacA
+
+# ===========================================================================
+# L2 — two signals, direction conflict
+# These are the patterns that prove the LLM earns its keep.
+# ===========================================================================
+
+lac_dual_signal_glucose_present:
+  description: |
+    L2 conflict pattern: lactose is added AND glucose is present.
+    Signal 1: allolactose binds LacI → repression released (pushes UP)
+    Signal 2: CRP-cAMP is low because glucose is high (pushes DOWN)
+    Net effect: lacZYA are only weakly expressed; the simulator should not
+    treat this as full induction.
+  signal_level: L2
+  signals:
+    gene.b0344:
+      - {from: protein.P03023, edge: represses, state: inhibited}  # release UP
+      - {from: protein.P0ACJ8, edge: activates, state: low}        # loss of activation DOWN
+    gene.b0343:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+      - {from: protein.P0ACJ8, edge: activates, state: low}
+    gene.b0342:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+      - {from: protein.P0ACJ8, edge: activates, state: low}
+  expected_states:
+    gene.b0344: expressed
+    gene.b0343: expressed
+    gene.b0342: expressed
+  expected_abundance:
+    protein.P00722: low       # LacZ abundance stays low; CRP-cAMP is the bottleneck
+    protein.P02920: low
+    protein.P07464: low
+  notes: |
+    The mock fallback would follow the first matching edge in iteration
+    order, which is usually the represses edge from LacI. It would emit
+    "expressed" for the gene state but does not know to keep abundance
+    low because of CRP-cAMP starvation. The LLM should reason that the
+    promoter is unblocked but the transcriptional activator is missing,
+    so abundance should be only "low".
+
+ara_dual_signal_arabinose_absent:
+  description: |
+    L2 conflict pattern: arabinose is absent; AraC is in its default
+    repressor conformation. araBAD genes should remain repressed even
+    though CRP-cAMP is available.
+  signal_level: L2
+  signals:
+    gene.b0061:
+      - {from: protein.P0ACT01, edge: represses, state: active}     # AraC default repressor
+      - {from: protein.P0ACJ8, edge: activates, state: medium}     # CRP-cAMP activating
+  expected_states:
+    gene.b0061: repressed
+    gene.b0062: repressed
+    gene.b0063: repressed
+
+glucose_to_lactose_shift:
+  description: |
+    L2 conflict pattern: glucose is removed AND lactose is added.
+    Signal 1: catabolite repression released (CRP-cAMP rises) → pushes UP
+    Signal 2: allolactose binds LacI → repression released → pushes UP
+    Both signals are co-aligned in direction (both UP), so this is
+    actually L1 in terms of conflict — but it tests that the simulator
+    can compose two independent signals into a coherent strong UP
+    response.
+  signal_level: L2
+  signals:
+    gene.b0344:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+      - {from: protein.P0ACJ8, edge: activates, state: high}
+    gene.b0343:
+      - {from: protein.P03023, edge: represses, state: inhibited}
+      - {from: protein.P0ACJ8, edge: activates, state: high}
+  expected_states:
+    gene.b0344: overexpressed
+    gene.b0343: overexpressed
+  expected_abundance:
+    protein.P00722: high
+    protein.P02920: high
+  notes: |
+    Same-direction dual signal — mock should be able to handle this
+    by aggregating, but it requires the mock policy to know how to
+    scale strength.
+
+# ===========================================================================
+# L3 — three or more signals, complex conflict
+# ===========================================================================
+
+# Note: more L3 patterns will be added once we have AraC / LexA / RecA
+# operators in the graph. The current graph collapses operator sites
+# (lacO, araO, etc.) into direct repressor edges, which limits L3
+# coverage today.
+
+# ===========================================================================
+# Reference: existing curated patterns (kept for backward compat)
+# ===========================================================================
+
+beta_lactam_cell_wall_response:
+  description: Beta-lactam-like response pattern; penicillin-binding proteins involved in peptidoglycan cross-linking are inhibited.
+  signal_level: L1
+  expected_states:
+    protein.P02918: inhibited  # mrcA / PBP1A
+    protein.P02919: inhibited  # mrcB / PBP1B
+    protein.P0AD65: inhibited  # mrdA / PBP2
+    protein.P0AD68: inhibited  # ftsI / PBP3
+
+aminoglycoside_translation_response:
+  description: Aminoglycoside-like response pattern; 30S ribosomal proteins linked to streptomycin response or translational accuracy are inhibited.
+  signal_level: L1
+  expected_states:
+    protein.P0A7S3: inhibited  # rpsL / S12
+    protein.P0A7V8: inhibited  # rpsD / S4
+
+sos_response_like:
+  description: SOS-response-like pattern with RecA/SulA induction and LexA pathway involvement.
+  signal_level: L3
+  expected_states:
+    gene.b2699: overexpressed  # recA
+    gene.b0958: overexpressed  # sulA
+    gene.b4043: overexpressed  # lexA
+  notes: |
+    True L3 — requires AND/OR composition. Currently the simulator
+    cannot represent the AND condition, so this pattern is informational
+    and tracks long-term progress.
+
+oxidative_stress_response_like:
+  description: Oxidative-stress-like response pattern involving peroxide and superoxide regulators.
+  signal_level: L1
+  expected_states:
+    gene.b3961: overexpressed  # oxyR
+    gene.b4063: overexpressed  # soxR
+    gene.b3942: overexpressed  # katG
+
+stringent_starvation_response_like:
+  description: Starvation/stringent-response-like pattern involving stationary-phase sigma factor and ppGpp metabolism.
+  signal_level: L1
+  expected_states:
+    gene.b2741: overexpressed  # rpoS
+    gene.b2784: overexpressed  # relA
+    gene.b3650: overexpressed  # spoT
+
+cell_division_inhibition_like:
+  description: Cell-division inhibition-like pattern centered on FtsZ ring assembly impairment.
+  signal_level: L1
+  expected_states:
+    protein.P0A9A6: inhibited  # ftsZ

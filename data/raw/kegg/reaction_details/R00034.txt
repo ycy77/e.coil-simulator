@@ -1,0 +1,17 @@
+ENTRY       R00034                      Reaction
+NAME        cyclobutadipyrimidine (in DNA) pyrimidine-lyase
+DEFINITION  Cyclobutadipyrimidine <=> 2 Pyrimidine 5'-deoxynucleotide
+EQUATION    C03103 <=> 2 C08249
+COMMENT     general reaction (see R08765)
+ENZYME      4.1.99.3
+BRITE       Enzymatic reactions [BR:br08201]
+             4. Lyase reactions
+              4.1  Carbon-carbon lyases
+               4.1.99  Other carbon-carbon lyases
+                4.1.99.3
+                 R00034  Cyclobutadipyrimidine <=> 2 Pyrimidine 5'-deoxynucleotide
+            IUBMB reaction hierarchy [BR:br08202]
+             4. Lyase reactions
+              4.1.99.3
+               R00034  Cyclobutadipyrimidine <=> Pyrimidine 5'-deoxynucleotide
+///

@@ -1,0 +1,41 @@
+ENTRY       eco04146                    Pathway
+NAME        Peroxisome - Escherichia coli K-12 MG1655
+DESCRIPTION Peroxisomes are essential organelles that play a key role in redox signalling and lipid homeostasis. They contribute to many crucial metabolic processes such as fatty acid oxidation, biosynthesis of ether lipids and free radical detoxification. The biogenesis of peroxisomes starts with the early peroxins PEX3, PEX16 and PEX19 and proceeds via several steps. The import of membrane proteins into peroxisomes needs PEX19 for recognition, targeting and insertion via docking at PEX3. Matrix proteins in the cytosol are recognized by peroxisomal targeting signals (PTS) and transported to the docking complex at the peroxisomal membrane. Peroxisomes' deficiencies lead to severe and often fatal inherited peroxisomal disorders (PD). PDs are usually classified in two groups. The first group is disorders of peroxisome biogenesis which include Zellweger syndrome, and the second group is single peroxisomal enzyme deficiencies.
+CLASS       Cellular Processes; Transport and catabolism
+PATHWAY_MAP eco04146  Peroxisome
+DBLINKS     GO: 0005777
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b1136  icd; isocitrate dehydrogenase [KO:K00031] [EC:1.1.1.42]
+            b1646  sodC; superoxide dismutase (Cu-Zn) [KO:K04565] [EC:1.15.1.1]
+            b1656  sodB; superoxide dismutase (Fe) [KO:K04564] [EC:1.15.1.1]
+            b1732  katE; catalase HPII [KO:K03781] [EC:1.11.1.6]
+            b1805  fadD; long-chain-fatty-acid--CoA ligase [KO:K01897] [EC:6.2.1.3]
+            b3908  sodA; superoxide dismutase (Mn) [KO:K04564] [EC:1.15.1.1]
+            b3996  nudC; RNA decapping hydrolase [KO:K03426] [EC:3.6.1.22]
+REFERENCE   PMID:17055078
+  AUTHORS   Wanders RJ, Waterham HR
+  TITLE     Peroxisomal disorders: the single peroxisomal enzyme deficiencies.
+  JOURNAL   Biochim Biophys Acta 1763:1707-20 (2006)
+            DOI:10.1016/j.bbamcr.2006.08.010
+REFERENCE   PMID:17055079
+  AUTHORS   Steinberg SJ, Dodt G, Raymond GV, Braverman NE, Moser AB, Moser HW
+  TITLE     Peroxisome biogenesis disorders.
+  JOURNAL   Biochim Biophys Acta 1763:1733-48 (2006)
+            DOI:10.1016/j.bbamcr.2006.09.010
+REFERENCE   PMID:17010456
+  AUTHORS   Rottensteiner H, Theodoulou FL
+  TITLE     The ins and outs of peroxisomes: co-ordination of membrane transport and peroxisomal metabolism.
+  JOURNAL   Biochim Biophys Acta 1763:1527-40 (2006)
+            DOI:10.1016/j.bbamcr.2006.08.012
+REFERENCE   PMID:16631601
+  AUTHORS   Iida R, Yasuda T, Tsubota E, Takatsuka H, Matsuki T, Kishi K
+  TITLE     Human Mpv17-like protein is localized in peroxisomes and regulates expression of antioxidant enzymes.
+  JOURNAL   Biochem Biophys Res Commun 344:948-54 (2006)
+            DOI:10.1016/j.bbrc.2006.04.008
+REL_PATHWAY eco00071  Fatty acid degradation
+            eco00230  Purine metabolism
+            eco00564  Glycerophospholipid metabolism
+            eco00565  Ether lipid metabolism
+            eco00900  Terpenoid backbone biosynthesis
+KO_PATHWAY  ko04146
+///

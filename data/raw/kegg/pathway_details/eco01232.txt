@@ -1,0 +1,13 @@
+ENTRY       eco01232          Overview  Pathway
+NAME        Nucleotide metabolism - Escherichia coli K-12 MG1655
+PATHWAY_MAP eco01232  Nucleotide metabolism
+MODULE      eco_M00049  Adenine ribonucleotide biosynthesis, IMP => ADP,ATP [PATH:eco01232]
+            eco_M00050  Guanine ribonucleotide biosynthesis, IMP => GDP,GTP [PATH:eco01232]
+            eco_M00052  Pyrimidine ribonucleotide biosynthesis, UMP => UDP/UTP,CDP/CTP [PATH:eco01232]
+            eco_M00053  Deoxyribonucleotide biosynthesis, ADP/GDP/CDP/UDP => dATP/dGTP/dCTP/dUTP [PATH:eco01232]
+            eco_M00938  Pyrimidine deoxyribonucleotide biosynthesis, UDP => dTTP [PATH:eco01232]
+            eco_M00958  Adenine ribonucleotide degradation, AMP => Urate [PATH:eco01232]
+            eco_M00959  Guanine ribonucleotide degradation, GMP => Urate [PATH:eco01232]
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+KO_PATHWAY  ko01232
+///

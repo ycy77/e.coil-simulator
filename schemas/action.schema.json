@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E.coil action proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["actions"],
+  "properties": {
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action_type", "rule_id", "targets", "direction", "strength", "reason"],
+        "properties": {
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "change_abundance",
+              "change_mrna_abundance",
+              "change_activity",
+              "bind",
+              "unbind",
+              "assemble_complex",
+              "disassemble_complex",
+              "move_between_locations",
+              "consume",
+              "produce",
+              "mark_inhibited",
+              "mark_mutated",
+              "sleep",
+              "no_op"
+            ]
+          },
+          "rule_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "targets": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 0
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["up", "down", "set", "none"]
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500
+          }
+        }
+      }
+    }
+  }
+}

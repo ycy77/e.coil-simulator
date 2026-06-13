@@ -1,0 +1,70 @@
+ENTRY       R11945                      Reaction
+NAME        NADH:ubiquinone oxidoreductase
+DEFINITION  Ubiquinone + NADH + H+ + 4 H+ <=> Ubiquinol + NAD+ + 4 H+
+EQUATION    C00399 + C00004 + C00080 + 4 C00080 <=> C00390 + C00003 + 4 C00080
+COMMENT     electron transport complex I
+RCLASS      RC00061  C00390_C00399
+ENZYME      7.1.1.2
+PATHWAY     rn01100  Metabolic pathways
+MODULE      M00142  NADH:ubiquinone oxidoreductase, mitochondria
+            M00143  NADH dehydrogenase (ubiquinone) Fe-S protein/flavoprotein complex, mitochondria
+            M00144  NADH:quinone oxidoreductase, prokaryotes
+            M00145  NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria
+            M00146  NADH dehydrogenase (ubiquinone) 1 alpha subcomplex
+            M00147  NADH dehydrogenase (ubiquinone) 1 beta subcomplex
+BRITE       Enzymatic reactions [BR:br08201]
+             7. Translocase reactions
+              7.1  Catalysing the translocation of protons
+               7.1.1  Linked to oxidoreductase reactions
+                7.1.1.2
+                 R11945  Ubiquinone + NADH + H+ + 4 H+ <=> Ubiquinol + NAD+ + 4 H+
+ORTHOLOGY   K00330  NADH-quinone oxidoreductase subunit A [EC:7.1.1.2]
+            K00331  NADH-quinone oxidoreductase subunit B [EC:7.1.1.2]
+            K00332  NADH-quinone oxidoreductase subunit C [EC:7.1.1.2]
+            K00333  NADH-quinone oxidoreductase subunit D [EC:7.1.1.2]
+            K00334  NADH-quinone oxidoreductase subunit E [EC:7.1.1.2]
+            K00335  NADH-quinone oxidoreductase subunit F [EC:7.1.1.2]
+            K00336  NADH-quinone oxidoreductase subunit G [EC:7.1.1.2]
+            K00337  NADH-quinone oxidoreductase subunit H [EC:7.1.1.2]
+            K00338  NADH-quinone oxidoreductase subunit I [EC:7.1.1.2]
+            K00339  NADH-quinone oxidoreductase subunit J [EC:7.1.1.2]
+            K00340  NADH-quinone oxidoreductase subunit K [EC:7.1.1.2]
+            K00341  NADH-quinone oxidoreductase subunit L [EC:7.1.1.2]
+            K00342  NADH-quinone oxidoreductase subunit M [EC:7.1.1.2]
+            K00343  NADH-quinone oxidoreductase subunit N [EC:7.1.1.2]
+            K03878  NADH-ubiquinone oxidoreductase chain 1 [EC:7.1.1.2]
+            K03879  NADH-ubiquinone oxidoreductase chain 2 [EC:7.1.1.2]
+            K03880  NADH-ubiquinone oxidoreductase chain 3 [EC:7.1.1.2]
+            K03881  NADH-ubiquinone oxidoreductase chain 4 [EC:7.1.1.2]
+            K03882  NADH-ubiquinone oxidoreductase chain 4L [EC:7.1.1.2]
+            K03883  NADH-ubiquinone oxidoreductase chain 5 [EC:7.1.1.2]
+            K03884  NADH-ubiquinone oxidoreductase chain 6 [EC:7.1.1.2]
+            K03934  NADH dehydrogenase (ubiquinone) Fe-S protein 1 [EC:7.1.1.2]
+            K03935  NADH dehydrogenase (ubiquinone) Fe-S protein 2 [EC:7.1.1.2]
+            K03936  NADH dehydrogenase (ubiquinone) Fe-S protein 3 [EC:7.1.1.2]
+            K03940  NADH dehydrogenase (ubiquinone) Fe-S protein 7 [EC:7.1.1.2]
+            K03941  NADH dehydrogenase (ubiquinone) Fe-S protein 8 [EC:7.1.1.2]
+            K03942  NADH dehydrogenase (ubiquinone) flavoprotein 1 [EC:7.1.1.2]
+            K03943  NADH dehydrogenase (ubiquinone) flavoprotein 2 [EC:7.1.1.2]
+            K05572  NAD(P)H-quinone oxidoreductase subunit 1 [EC:7.1.1.2]
+            K05573  NAD(P)H-quinone oxidoreductase subunit 2 [EC:7.1.1.2]
+            K05574  NAD(P)H-quinone oxidoreductase subunit 3 [EC:7.1.1.2]
+            K05575  NAD(P)H-quinone oxidoreductase subunit 4 [EC:7.1.1.2]
+            K05576  NAD(P)H-quinone oxidoreductase subunit 4L [EC:7.1.1.2]
+            K05577  NAD(P)H-quinone oxidoreductase subunit 5 [EC:7.1.1.2]
+            K05578  NAD(P)H-quinone oxidoreductase subunit 6 [EC:7.1.1.2]
+            K05579  NAD(P)H-quinone oxidoreductase subunit H [EC:7.1.1.2]
+            K05580  NAD(P)H-quinone oxidoreductase subunit I [EC:7.1.1.2]
+            K05581  NAD(P)H-quinone oxidoreductase subunit J [EC:7.1.1.2]
+            K05582  NAD(P)H-quinone oxidoreductase subunit K [EC:7.1.1.2]
+            K05583  NAD(P)H-quinone oxidoreductase subunit L [EC:7.1.1.2]
+            K05584  NAD(P)H-quinone oxidoreductase subunit M [EC:7.1.1.2]
+            K05585  NAD(P)H-quinone oxidoreductase subunit N [EC:7.1.1.2]
+            K05586  bidirectional [NiFe] hydrogenase diaphorase subunit [EC:7.1.1.2]
+            K05587  bidirectional [NiFe] hydrogenase diaphorase subunit [EC:7.1.1.2]
+            K05588  bidirectional [NiFe] hydrogenase diaphorase subunit [EC:7.1.1.2]
+            K13378  NADH-quinone oxidoreductase subunit C/D [EC:7.1.1.2]
+            K13380  NADH-quinone oxidoreductase subunit B/C/D [EC:7.1.1.2]
+            K15863  NADH-quinone oxidoreductase subunit L/M [EC:7.1.1.2]
+DBLINKS     RHEA: 29094
+///

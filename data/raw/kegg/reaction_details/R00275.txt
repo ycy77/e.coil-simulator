@@ -1,0 +1,13 @@
+ENTRY       R00275                      Reaction
+NAME        superoxide:superoxide oxidoreductase
+DEFINITION  2 Superoxide + 2 H+ <=> Hydrogen peroxide + Oxygen
+EQUATION    2 C00704 + 2 C00080 <=> C00027 + C00007
+ENZYME      1.15.1.1
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.15  Acting on superoxide as acceptor
+               1.15.1  Acting on superoxide as acceptor (only sub-subclass identified to date)
+                1.15.1.1
+                 R00275  2 Superoxide + 2 H+ <=> Hydrogen peroxide + Oxygen
+DBLINKS     RHEA: 20699
+///

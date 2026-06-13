@@ -1,0 +1,14 @@
+ENTRY       R12625                      Reaction
+NAME        (Z)-3-ureidoacrylate amidohydrolase
+DEFINITION  Ureidoacrylate + H2O <=> Aminoacrylate + CO2 + Ammonia
+EQUATION    C20254 + C00001 <=> C20253 + C00011 + C00014
+COMMENT     two-step reaction (see R09980+R07316)
+RCLASS      RC02737  C20253_C20254
+ENZYME      3.5.1.110
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.1  In linear amides
+                3.5.1.110
+                 R12625  Ureidoacrylate + H2O <=> Aminoacrylate + CO2 + Ammonia
+///

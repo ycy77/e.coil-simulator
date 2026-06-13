@@ -1,0 +1,18 @@
+ENTRY       R00378                      Reaction
+NAME        deoxythymidine triphosphate:DNA deoxynucleotidyltransferase (DNA-directed)
+DEFINITION  dTTP + DNA <=> Diphosphate + DNA
+EQUATION    C00459 + C00039 <=> C00013 + C00039
+RCLASS      RC02795  C00039_C00459
+ENZYME      2.7.7.7
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.7
+                 R00378  dTTP + DNA <=> Diphosphate + DNA
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.7
+               R00379  Deoxynucleoside triphosphate
+                R00378  dTTP
+///

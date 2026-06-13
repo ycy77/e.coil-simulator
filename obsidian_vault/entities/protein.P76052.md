@@ -1,0 +1,59 @@
+---
+entity_id: "protein.P76052"
+entity_type: "protein"
+name: "abgB"
+source_database: "UniProt"
+source_id: "P76052"
+default_state: "active"
+allowed_states: "active|inhibited|degraded|sequestered"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/protein
+  - source/UniProt
+aliases:
+  - "abgB ydaI b1337 JW1331 ECK1333"
+---
+
+# abgB
+
+`protein.P76052`
+
+## Static
+
+- Type: `protein`
+- Source: `UniProt:P76052`
+- Default state: `active`
+- Allowed states: `active|inhibited|degraded|sequestered`
+
+## Enriched Summary
+
+FUNCTION: Component of the p-aminobenzoyl-glutamate hydrolase multicomponent enzyme system which catalyzes the cleavage of p-aminobenzoyl-glutamate (PABA-GLU) to form p-aminobenzoate (PABA) and glutamate. AbgAB does not degrade dipeptides and the physiological role of abgABT should be clarified. {ECO:0000269|PubMed:17307853, ECO:0000269|PubMed:20190044}. AbgB: "p-aminobenzoyl-glutamate utilization"
+
+## Biological Role
+
+Component of p-aminobenzoyl-glutamate hydrolase (complex.ecocyc.CPLX0-7844).
+
+## Annotation
+
+FUNCTION: Component of the p-aminobenzoyl-glutamate hydrolase multicomponent enzyme system which catalyzes the cleavage of p-aminobenzoyl-glutamate (PABA-GLU) to form p-aminobenzoate (PABA) and glutamate. AbgAB does not degrade dipeptides and the physiological role of abgABT should be clarified. {ECO:0000269|PubMed:17307853, ECO:0000269|PubMed:20190044}.
+
+## Outgoing Edges (1)
+
+- `is_component_of` --> [[complex.ecocyc.CPLX0-7844|complex.ecocyc.CPLX0-7844]] `EcoCyc` `database` - EcoCyc component coefficient=2 | EcoCyc protcplxs.col coefficient=2
+
+## Incoming Edges (1)
+
+- `encodes` <-- [[gene.b1337|gene.b1337]] `UniProt|EcoCyc` `database` - EcoCyc gene PRODUCT
+
+## External IDs
+
+- `UniProt:P76052`
+- `KEGG:ecj:JW1331;eco:b1337;ecoc:C3026_07830;`
+- `GeneID:945950;`
+- `GO:GO:0005737; GO:0016805; GO:0046657; GO:0046982; GO:0071713; GO:1902494`
+- `EC:3.5.1.-`
+
+## Notes
+
+p-aminobenzoyl-glutamate hydrolase subunit B (EC 3.5.1.-) (PABA-GLU hydrolase) (PGH)

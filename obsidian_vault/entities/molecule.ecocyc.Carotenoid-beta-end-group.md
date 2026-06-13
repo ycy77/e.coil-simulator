@@ -1,0 +1,48 @@
+---
+entity_id: "molecule.ecocyc.Carotenoid-beta-end-group"
+entity_type: "small_molecule"
+name: "a carotenoid β-end group"
+source_database: "EcoCyc"
+source_id: "Carotenoid-beta-end-group"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+---
+
+# a carotenoid β-end group
+
+`molecule.ecocyc.Carotenoid-beta-end-group`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:Carotenoid-beta-end-group`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+EcoCyc compound Carotenoid-beta-end-group
+
+## Annotation
+
+EcoCyc compound Carotenoid-beta-end-group
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:Carotenoid-beta-end-group`
+- `SEED:cpd26677`
+- `METANETX:MNXM10891`

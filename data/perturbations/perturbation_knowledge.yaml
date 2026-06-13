@@ -1,0 +1,61 @@
+# Read-only database-backed perturbation seed file.
+# Targets must be canonical entity_id values from data/normalized/entities.csv.
+#
+# Source vocabulary:
+#   database      -> persistent knowledge from UniProt/KEGG/RegulonDB/EcoCyc-derived graph data
+#   llm_inference -> temporary targets/effects inferred during one simulation session
+
+beta_lactam:
+  keywords: [氨苄青霉素, 青霉素, ampicillin, penicillin, beta-lactam, β-内酰胺]
+  targets:
+    - protein.P02918   # mrcA / PBP1A
+    - protein.P02919   # mrcB / PBP1B
+    - protein.P0AD65   # mrdA / PBP2
+    - protein.P0AD68   # ftsI / PBP3
+  effect: inhibited
+  confidence: high
+  source: database
+  reason: beta-lactam antibiotics target penicillin-binding proteins involved in peptidoglycan synthesis.
+
+aminoglycoside:
+  keywords: [链霉素, 庆大霉素, streptomycin, gentamicin, aminoglycoside]
+  targets:
+    - protein.P0A7S3   # rpsL / ribosomal protein S12
+    - protein.P0A7V8   # rpsD / ribosomal protein S4
+  effect: inhibited
+  confidence: medium
+  source: database
+  reason: aminoglycoside perturbation is mapped to 30S ribosomal proteins as direct translation-related targets.
+
+antibiotic_stress:
+  keywords: [抗生素压力, antibiotic stress]
+  targets:
+    - gene.b2699       # recA
+    - gene.b4043       # lexA
+    - gene.b0958       # sulA
+  effect: overexpressed
+  confidence: medium
+  source: database
+  reason: generic antibiotic stress seed mapped to SOS/stress response genes.
+
+oxidative_stress:
+  keywords: [氧化压力, 过氧化氢, H2O2, hydrogen peroxide, oxidative stress]
+  targets:
+    - gene.b3961       # oxyR
+    - gene.b4063       # soxR
+    - gene.b3942       # katG
+  effect: overexpressed
+  confidence: medium
+  source: database
+  reason: oxidative stress seed mapped to oxidative stress response genes.
+
+nutrient_starvation:
+  keywords: [营养缺乏, 饥饿, starvation, glucose depletion, 碳源缺乏]
+  targets:
+    - gene.b2741       # rpoS
+    - gene.b2784       # relA
+    - gene.b3650       # spoT
+  effect: overexpressed
+  confidence: medium
+  source: database
+  reason: nutrient starvation seed mapped to general stress and stringent response genes.

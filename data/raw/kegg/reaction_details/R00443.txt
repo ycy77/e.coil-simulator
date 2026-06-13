@@ -1,0 +1,29 @@
+ENTRY       R00443                      Reaction
+NAME        UTP:RNA uridylyltransferase
+DEFINITION  UTP + RNA <=> Diphosphate + RNA
+EQUATION    C00075 + C00046 <=> C00013 + C00046
+COMMENT     DNA-directed (ec 2.7.7.6)
+            RNA-directed (ec 2.7.7.48)
+            non-template (ec 2.7.7.52)
+RCLASS      RC02795  C00046_C00075
+ENZYME      2.7.7.6         2.7.7.48        2.7.7.52
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.6
+                 R00443  UTP + RNA <=> Diphosphate + RNA
+                2.7.7.48
+                 R00443  UTP + RNA <=> Diphosphate + RNA
+                2.7.7.52
+                 R00443  UTP + RNA <=> Diphosphate + RNA
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.6
+               R00444  Nucleoside triphosphate
+                R00443  UTP
+              2.7.7.48
+               R00444  Nucleoside triphosphate
+                R00443  UTP
+DBLINKS     RHEA: 14788
+///

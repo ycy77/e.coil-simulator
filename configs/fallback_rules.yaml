@@ -1,0 +1,164 @@
+# Deterministic fallback policy for the action interpreter.
+#
+# When the LLM returns no valid action, the interpreter walks these rules
+# in order and applies the first match. The LLM never sees this file; it is
+# pure insurance for the propagation chain.
+#
+# Key design rule: the mock is NOT a priority judge. Rules below all
+# carry ``conflict_free_only: true`` (the default) which means the rule
+# refuses to fire when the candidate agent has direction-conflicting
+# incoming signals. In that case the interpreter returns no action and
+# the LLM is given a clear "you are receiving conflicting signals, read
+# your annotation" hint via the prompt.
+#
+# Relations that don't produce a direction signal (encodes, is_product_of,
+# is_substrate_of) keep ``conflict_free_only: true`` but they are not
+# direction-sensitive so the conflict detector will almost never trigger
+# on them. The flag is conservative: when in doubt, yield to the LLM.
+#
+# Conventions:
+#   * ``relation`` matches the edge relation_type
+#     (represses / activates / encodes / is_product_of / ...)
+#   * ``active_source`` is the template when source is in active_states
+#   * ``inactive_source`` is the template when source is in inactive_states
+#   * ``requires_target_role`` is "downstream" (current agent is target)
+#     or "upstream" (current agent is source)
+#   * ``target_entity_type`` and ``source_entity_type`` are optional filters
+#   * ``conflict_free_only`` defaults to true. Set to false only for
+#     non-direction-sensitive rules.
+
+enabled: true
+max_candidates_per_call: 8
+
+inactive_states:
+  - inhibited
+  - degraded
+  - sequestered
+  - knocked_out
+  - mutated
+  - repressed
+  - absent
+  - low
+  - impaired
+  - disrupted
+  - disassembled
+
+active_states:
+  - active
+  - expressed
+  - overexpressed
+  - assembled
+  - medium
+  - high
+
+rules:
+  - name: repressor_activity_propagation
+    relation: represses
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: change_activity
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: an active repressor reduces the target's activity"
+    inactive_source:
+      action_type: change_activity
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: an inactive/absent repressor relieves the target"
+
+  - name: activator_activity_propagation
+    relation: activates
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: change_activity
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: an active activator raises the target's activity"
+    inactive_source:
+      action_type: change_activity
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: an inactive/absent activator lowers the target's activity"
+
+  - name: gene_to_protein_abundance
+    relation: encodes
+    target_entity_type: protein
+    requires_target_role: downstream
+    # encodes doesn't produce a direction conflict in the same axis as
+    # represses/activates, but we still default to true for safety.
+    conflict_free_only: true
+    active_source:
+      action_type: change_abundance
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: expressed coding gene raises protein abundance"
+    inactive_source:
+      action_type: change_abundance
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: repressed coding gene lowers protein abundance"
+
+  - name: gene_to_rna_activity
+    relation: encodes
+    target_entity_type: rna
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: change_mrna_abundance
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: expressed coding gene raises RNA abundance"
+    inactive_source:
+      action_type: change_mrna_abundance
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: repressed coding gene lowers RNA abundance"
+
+  - name: product_propagation_to_metabolite
+    relation: is_product_of
+    target_entity_type: small_molecule
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: produce
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: active producer raises metabolite abundance"
+    inactive_source:
+      action_type: produce
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: inactive producer lowers metabolite abundance"
+
+  - name: substrate_propagation_from_metabolite
+    relation: is_substrate_of
+    target_entity_type: small_molecule
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: consume
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: active consumer drains substrate"
+    inactive_source:
+      action_type: consume
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: inactive consumer restores substrate"
+
+  - name: inhibition_target_activity
+    relation: inhibits
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: mark_inhibited
+      direction: none
+      strength: 1
+      reason: "deterministic fallback: active inhibitor marks the target as inhibited"
+    inactive_source:
+      action_type: change_activity
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: inactive inhibitor relieves the target"

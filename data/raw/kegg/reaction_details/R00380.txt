@@ -1,0 +1,18 @@
+ENTRY       R00380                      Reaction
+NAME        S-adenosyl-L-methionine:DNA (cytosine-5-)-methyltransferase
+DEFINITION  S-Adenosyl-L-methionine + DNA <=> S-Adenosyl-L-homocysteine + 5-Methylcytosine in DNA
+EQUATION    C00019 + C00039 <=> C00021 + C02967
+COMMENT     see R04858
+ENZYME      2.1.1.37
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.1  Transferring one-carbon groups
+               2.1.1  Methyltransferases
+                2.1.1.37
+                 R00380  S-Adenosyl-L-methionine + DNA <=> S-Adenosyl-L-homocysteine + 5-Methylcytosine in DNA
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.1.1.37
+               R00380  DNA
+DBLINKS     RHEA: 13684
+///

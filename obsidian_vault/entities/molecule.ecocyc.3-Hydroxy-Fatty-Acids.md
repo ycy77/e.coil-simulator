@@ -1,0 +1,50 @@
+---
+entity_id: "molecule.ecocyc.3-Hydroxy-Fatty-Acids"
+entity_type: "small_molecule"
+name: "a 3-hydroxy fatty acid"
+source_database: "EcoCyc"
+source_id: "3-Hydroxy-Fatty-Acids"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+  - "β-hydroxy fatty acid"
+  - "3-OH fatty acid"
+  - "β-OH fatty acid"
+---
+
+# a 3-hydroxy fatty acid
+
+`molecule.ecocyc.3-Hydroxy-Fatty-Acids`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:3-Hydroxy-Fatty-Acids`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+EcoCyc compound 3-Hydroxy-Fatty-Acids
+
+## Annotation
+
+EcoCyc compound 3-Hydroxy-Fatty-Acids
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:3-Hydroxy-Fatty-Acids`
+- `CHEBI:59845`

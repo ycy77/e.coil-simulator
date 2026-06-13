@@ -1,0 +1,13 @@
+ENTRY       R12583                      Reaction
+NAME        5-methylaminomethyl-2-(Se-phospho)selenouridine34 phosphohydrolase
+DEFINITION  5-Methylaminomethyl-2-(Se-phospho)selenouridine in tRNA + H2O <=> 5-Methylaminomethyl-2-selenouridine in tRNA + Orthophosphate
+EQUATION    C22267 + C00001 <=> C22268 + C00009
+ENZYME      2.9.1.3
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.9  Transferring selenium-containing groups
+               2.9.1  Selenotransferases
+                2.9.1.3
+                 R12583  5-Methylaminomethyl-2-(Se-phospho)selenouridine in tRNA + H2O <=> 5-Methylaminomethyl-2-selenouridine in tRNA + Orthophosphate
+DBLINKS     RHEA: 60179
+///

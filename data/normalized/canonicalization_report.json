@@ -1,0 +1,158 @@
+{
+  "input_counts": {
+    "entities": 24418,
+    "edges": 60623,
+    "pathways": 615
+  },
+  "output_counts": {
+    "entities": 24369,
+    "edges": 47203,
+    "pathways": 615
+  },
+  "small_molecule_canonicalization": {
+    "reviewed_exact_name_candidates": 69,
+    "canonicalized": 49,
+    "rejected": {
+      "multiple_ecocyc_same_name": 11,
+      "multiple_kegg_same_name": 4,
+      "generic_or_unsafe_name": 2,
+      "possible_stereochemistry_conflict": 3
+    },
+    "examples": [
+      {
+        "old_entity_id": "molecule.ecocyc.D-tagatose",
+        "canonical_entity_id": "molecule.C00795",
+        "name": "d tagatose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.L-sorbose",
+        "canonical_entity_id": "molecule.C00247",
+        "name": "l sorbose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.Dihydroquercetins",
+        "canonical_entity_id": "molecule.C01617",
+        "name": "taxifolin"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.Sorbose-phosphates",
+        "canonical_entity_id": "molecule.C02888",
+        "name": "sorbose 1 phosphate"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.Heme-d1",
+        "canonical_entity_id": "molecule.C22339",
+        "name": "heme d1"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.CPD-24813",
+        "canonical_entity_id": "molecule.C00085",
+        "name": "d fructose 6 phosphate"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.D-Rhamnose",
+        "canonical_entity_id": "molecule.C01684",
+        "name": "d rhamnose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.L-Lyxose",
+        "canonical_entity_id": "molecule.C01508",
+        "name": "l lyxose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.L-fucoses",
+        "canonical_entity_id": "molecule.C01019",
+        "name": "l fucose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.THRYROXINE",
+        "canonical_entity_id": "molecule.C01829",
+        "name": "thyroxine"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.CPD-13545",
+        "canonical_entity_id": "molecule.C01674",
+        "name": "chitobiose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.Citronellols",
+        "canonical_entity_id": "molecule.C11386",
+        "name": "citronellol"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.D-Glucose",
+        "canonical_entity_id": "molecule.C00031",
+        "name": "d glucose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.Arabinose-5P",
+        "canonical_entity_id": "molecule.C01112",
+        "name": "d arabinose 5 phosphate"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.CPD-26204",
+        "canonical_entity_id": "molecule.C00513",
+        "name": "cdp glycerol"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.D-fructose-1-phosphate",
+        "canonical_entity_id": "molecule.C01094",
+        "name": "d fructose 1 phosphate"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.L-Gulose",
+        "canonical_entity_id": "molecule.C15923",
+        "name": "l gulose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.CELLULOSE",
+        "canonical_entity_id": "molecule.C00760",
+        "name": "cellulose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.D-RIBULOSE",
+        "canonical_entity_id": "molecule.C00309",
+        "name": "d ribulose"
+      },
+      {
+        "old_entity_id": "molecule.ecocyc.L-ARABINOSE",
+        "canonical_entity_id": "molecule.C00259",
+        "name": "l arabinose"
+      }
+    ]
+  },
+  "edge_canonicalization": {
+    "invalid_edges_removed": 4584,
+    "invalid_edges_by_relation": {
+      "encodes": 113,
+      "catalyzes": 3450,
+      "is_substrate_of": 119,
+      "is_product_of": 125,
+      "represses": 101,
+      "activates": 212,
+      "participates_in": 449,
+      "self_edge_after_canonicalization": 15
+    },
+    "duplicate_edge_groups_collapsed": 8427,
+    "duplicate_edge_rows_removed": 8836
+  },
+  "pathway_duplicate_report": {
+    "same_name_groups": 1,
+    "groups": [
+      {
+        "normalized_name": "pentose phosphate pathway",
+        "members": [
+          {
+            "pathway_id": "eco00030",
+            "source": "KEGG"
+          },
+          {
+            "pathway_id": "ecocyc.PENTOSE-P-PWY",
+            "source": "EcoCyc"
+          }
+        ]
+      }
+    ],
+    "policy": "Pathways are retained as source-specific metadata; exact/near equivalence is reported but not merged."
+  }
+}

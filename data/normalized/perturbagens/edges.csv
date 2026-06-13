@@ -1,0 +1,14 @@
+source_id,relation_type,target_id,direction,evidence,source_database,source_record_id,notes,reaction_id,reactants,products,ec_number,pathway
+complex.ecocyc.CPLX0-7927,produces,molecule.ecocyc.CPD-13314,directed,database,EcoCyc,ENZRXN0-7454,EcoCyc enzymatic reaction,reaction.ecocyc.RXN0-6676,molecule.C00005|molecule.C00080|molecule.ecocyc.CPD-6602,molecule.ecocyc.CPD-13314,,ecocyc.PWY0-1527
+complex.ecocyc.CPLX0-7927,consumes,molecule.ecocyc.CPD-6602,directed,database,EcoCyc,ENZRXN0-7454,EcoCyc enzymatic reaction,reaction.ecocyc.RXN0-6676,molecule.ecocyc.CPD-6602,molecule.C00006|molecule.ecocyc.CPD-13314,,ecocyc.PWY0-1527
+complex.ecocyc.CPLX0-7927,produces,molecule.ecocyc.CPD-13315,directed,database,EcoCyc,ENZRXN0-7455,EcoCyc enzymatic reaction,reaction.ecocyc.RXN0-6677,molecule.C00005|molecule.C00080|molecule.ecocyc.CPD-13314,molecule.ecocyc.CPD-13315,,ecocyc.PWY0-1527
+complex.ecocyc.CPLX0-7927,consumes,molecule.ecocyc.CPD-13314,directed,database,EcoCyc,ENZRXN0-7455,EcoCyc enzymatic reaction,reaction.ecocyc.RXN0-6677,molecule.ecocyc.CPD-13314,molecule.C00006|molecule.ecocyc.CPD-13315,,ecocyc.PWY0-1527
+complex.ecocyc.CPLX0-8097,produces,molecule.ecocyc.Peptide-Antibiotics,directed,database,EcoCyc,TRANS-ENZRXN-30,EcoCyc enzymatic reaction,reaction.ecocyc.TRANS-RXN-205A,molecule.C00080|molecule.ecocyc.Peptide-Antibiotics,molecule.ecocyc.Peptide-Antibiotics,,
+complex.ecocyc.CPLX0-8097,consumes,molecule.ecocyc.Peptide-Antibiotics,directed,database,EcoCyc,TRANS-ENZRXN-30,EcoCyc enzymatic reaction,reaction.ecocyc.TRANS-RXN-205A,molecule.ecocyc.Peptide-Antibiotics,molecule.C00080|molecule.ecocyc.Peptide-Antibiotics,,
+complex.ecocyc.CPLX0-8097,transports,molecule.ecocyc.Peptide-Antibiotics,directed,database,EcoCyc,CPLX0-8097,EcoCyc transporters.col equation,,,,,
+molecule.C00120,binds,protein.ecocyc.PROPIONYL-COA-CARBOXY-MONOMER,directed,database,EcoCyc,PROPIONYL-COA-CARBOXY-ENZRXN,EcoCyc enzymatic reaction cofactor,,,,,
+molecule.ecocyc.CPD-20901,is_component_of,complex.ecocyc.CPLX0-8953,directed,database,EcoCyc,CPLX0-8953,EcoCyc component coefficient=,,,,,
+molecule.ecocyc.CPD-21022,is_component_of,complex.ecocyc.CPLX0-8952,directed,database,EcoCyc,CPLX0-8952,EcoCyc component coefficient=,,,,,
+molecule.ecocyc.CPD0-2712,is_component_of,complex.ecocyc.CPLX0-9750,directed,database,EcoCyc,CPLX0-9750,EcoCyc component coefficient=,,,,,
+molecule.ecocyc.TRIS,is_component_of,complex.ecocyc.CPLX0-8599,directed,database,EcoCyc,CPLX0-8599,EcoCyc component coefficient=,,,,,
+protein.P76113,is_component_of,complex.ecocyc.CPLX0-7927,directed,database,EcoCyc,CPLX0-7927,EcoCyc component coefficient=2 | EcoCyc protcplxs.col coefficient=2,,,,,

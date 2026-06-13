@@ -1,0 +1,18 @@
+ENTRY       R03743                      Reaction
+NAME        beta-lactamhydrolase
+DEFINITION  beta-Lactam + H2O <=> Substituted beta-amino acid
+EQUATION    C01866 + C00001 <=> C03806
+COMMENT     Penicillin Biosynthesis and Metabolism
+ENZYME      3.5.2.6
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.2  In cyclic amides
+                3.5.2.6
+                 R03743  beta-Lactam + H2O <=> Substituted beta-amino acid
+            IUBMB reaction hierarchy [BR:br08202]
+             3. Hydrolase reactions
+              3.5.2.6
+               R03743  beta-Lactam <=> Substituted beta-amino acid
+DBLINKS     RHEA: 20404
+///

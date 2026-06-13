@@ -1,0 +1,28 @@
+ENTRY       R10866                      Reaction
+NAME        pyruvate:flavodoxin 2-oxidoreductase (CoA-acetylating)
+DEFINITION  Pyruvate + CoA + Oxidized flavodoxin <=> Acetyl-CoA + CO2 + Reduced flavodoxin
+EQUATION    C00022 + C00010 + C02869 <=> C00024 + C00011 + C02745
+COMMENT     nifJ
+RCLASS      RC00004  C00010_C00024
+            RC02742  C00022_C00024
+ENZYME      1.2.8.1
+PATHWAY     rn00620  Pyruvate metabolism
+            rn00720  Other carbon fixation pathways
+            rn01100  Metabolic pathways
+            rn01120  Microbial metabolism in diverse environments
+            rn01200  Carbon metabolism
+            rn01210  2-Oxocarboxylic acid metabolism
+MODULE      M00173  Reductive citrate cycle (Arnon-Buchanan cycle)
+            M00307  Pyruvate oxidation, pyruvate => acetyl-CoA
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.2  Acting on the aldehyde or oxo group of donors
+               1.2.8  With a flavin or flavoprotein as acceptor
+                1.2.8.1
+                 R10866  Pyruvate + CoA + Oxidized flavodoxin <=> Acetyl-CoA + CO2 + Reduced flavodoxin
+ORTHOLOGY   K03737  pyruvate-ferredoxin/flavodoxin oxidoreductase [EC:1.2.7.1 1.2.8.1]
+            K28726  pyruvate synthase (flavodoxin) subunit A [EC:1.2.8.1]
+            K28727  pyruvate synthase (flavodoxin) subunit B [EC:1.2.8.1]
+            K28728  pyruvate synthase (flavodoxin) subunit C [EC:1.2.8.1]
+            K28729  pyruvate synthase (flavodoxin) subunit D [EC:1.2.8.1]
+///

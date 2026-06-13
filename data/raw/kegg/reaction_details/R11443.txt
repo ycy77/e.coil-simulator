@@ -1,0 +1,15 @@
+ENTRY       R11443                      Reaction
+NAME        L-leucyl-tRNA(Leu):[protein] N-terminal L-lysine leucyltransferase
+DEFINITION  L-Leucyl-tRNA + L-Lysyl-protein <=> tRNA(Leu) + L-Leucyl-L-lysyl-protein
+EQUATION    C02047 + C21388 <=> C01645 + C21387
+RCLASS      RC00064  C21387_C21388
+ENZYME      2.3.2.6
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.2  Aminoacyltransferases
+                2.3.2.6
+                 R11443  L-Leucyl-tRNA + L-Lysyl-protein <=> tRNA(Leu) + L-Leucyl-L-lysyl-protein
+ORTHOLOGY   K00684  leucyl/phenylalanyl-tRNA---protein transferase [EC:2.3.2.6]
+DBLINKS     RHEA: 12343
+///

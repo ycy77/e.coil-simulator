@@ -1,0 +1,57 @@
+---
+entity_id: "molecule.ecocyc.CPD-24931"
+entity_type: "small_molecule"
+name: "β-D-tagatopyranose"
+source_database: "EcoCyc"
+source_id: "CPD-24931"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+---
+
+# β-D-tagatopyranose
+
+`molecule.ecocyc.CPD-24931`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:CPD-24931`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+EcoCyc compound CPD-24931
+
+## Biological Role
+
+Consumed as substrate in 1 reaction(s).
+
+## Annotation
+
+EcoCyc compound CPD-24931
+
+## Outgoing Edges (1)
+
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22723|reaction.ecocyc.RXN-22723]] `EcoCyc` `database` - EcoCyc reaction LEFT
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:CPD-24931`
+- `HMDB:HMDB0003418`
+- `PUBCHEM:14408225`
+- `CHEBI:49092`
+
+## Notes
+
+(C 6)

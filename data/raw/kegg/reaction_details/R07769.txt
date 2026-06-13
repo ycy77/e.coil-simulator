@@ -1,0 +1,16 @@
+ENTRY       R07769                      Reaction
+NAME        lipoyl-[acp]:protein N6-lipoyltransferase
+DEFINITION  Lipoyl-[acp] + [Lipoyl-carrier protein]-L-lysine <=> Protein N6-(lipoyl)lysine + Acyl-carrier protein
+EQUATION    C16239 + C16240 <=> C16237 + C00229
+RCLASS      RC00039  C00229_C16239
+            RC00992  C16237_C16240
+            RC02867  C16237_C16239
+ENZYME      2.3.1.181
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.1  Transferring groups other than aminoacyl groups
+                2.3.1.181
+                 R07769  Lipoyl-[acp] + [Lipoyl-carrier protein]-L-lysine <=> Protein N6-(lipoyl)lysine + Acyl-carrier protein
+ORTHOLOGY   K03801  lipoyl(octanoyl) transferase [EC:2.3.1.181]
+///

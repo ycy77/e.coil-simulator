@@ -1,0 +1,14 @@
+ENTRY       R02866                      Reaction
+NAME        sorbitol-6-phosphate phosphohydrolase
+DEFINITION  Sorbitol 6-phosphate + H2O <=> D-Sorbitol + Orthophosphate
+EQUATION    C01096 + C00001 <=> C00794 + C00009
+RCLASS      RC00017  C00794_C01096
+ENZYME      3.1.3.50
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.1  Acting on ester bonds
+               3.1.3  Phosphoric-monoester hydrolases
+                3.1.3.50
+                 R02866  Sorbitol 6-phosphate + H2O <=> D-Sorbitol + Orthophosphate
+DBLINKS     RHEA: 24583
+///

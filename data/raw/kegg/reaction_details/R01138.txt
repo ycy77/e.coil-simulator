@@ -1,0 +1,18 @@
+ENTRY       R01138                      Reaction
+NAME        dATP:pyruvate 2-O-phosphotransferase
+DEFINITION  dATP + Pyruvate <=> dADP + Phosphoenolpyruvate
+EQUATION    C00131 + C00022 <=> C00206 + C00074
+RCLASS      RC00002  C00131_C00206
+            RC00015  C00022_C00074
+ENZYME      2.7.1.40
+PATHWAY     rn01100  Metabolic pathways
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.1  Phosphotransferases with an alcohol group as acceptor
+                2.7.1.40
+                 R01138  dATP + Pyruvate <=> dADP + Phosphoenolpyruvate
+ORTHOLOGY   K00873  pyruvate kinase [EC:2.7.1.40]
+            K12406  pyruvate kinase isozymes R/L [EC:2.7.1.40]
+DBLINKS     RHEA: 30730
+///

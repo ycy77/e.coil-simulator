@@ -1,0 +1,13 @@
+ENTRY       R11485                      Reaction
+NAME        flavodoxin:NADP+ oxidoreductase
+DEFINITION  Reduced flavodoxin + NADP+ <=> Oxidized flavodoxin + NADPH + H+
+EQUATION    C02745 + C00006 <=> C02869 + C00005 + C00080
+ENZYME      1.19.1.1
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.19  Acting on reduced flavodoxin as donor
+               1.19.1  With NAD+ or NADP+ as acceptor
+                1.19.1.1
+                 R11485  Reduced flavodoxin + NADP+ <=> Oxidized flavodoxin + NADPH + H+
+DBLINKS     RHEA: 50759
+///

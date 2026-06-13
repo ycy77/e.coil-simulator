@@ -1,0 +1,59 @@
+ENTRY       eco00670                    Pathway
+NAME        One carbon pool by folate - Escherichia coli K-12 MG1655
+CLASS       Metabolism; Metabolism of cofactors and vitamins
+PATHWAY_MAP eco00670  One carbon pool by folate
+MODULE      eco_M00126  Tetrahydrofolate biosynthesis, GTP => THF [PATH:eco00670]
+            eco_M00555  Betaine biosynthesis, choline => betaine [PATH:eco00670]
+            eco_M00621  Glycine cleavage system [PATH:eco00670]
+DBLINKS     GO: 0035999
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0048  folA; dihydrofolate reductase [KO:K00287] [EC:1.5.1.3]
+            b0116  lpd; lipoamide dehydrogenase [KO:K00382] [EC:1.8.1.4]
+            b0261  mmuM; CP4-6 prophage; homocysteine S-methyltransferase [KO:K00547] [EC:2.1.1.10]
+            b0311  betA; choline dehydrogenase [KO:K00108] [EC:1.1.99.1]
+            b0312  betB; betaine aldehyde dehydrogenase [KO:K00130] [EC:1.2.1.8]
+            b0529  folD; bifunctional methylenetetrahydrofolate dehydrogenase/methenyltetrahydrofolate cyclohydrolase [KO:K01491] [EC:1.5.1.5 3.5.4.9]
+            b1232  purU; formyltetrahydrofolate deformylase [KO:K01433] [EC:3.5.1.10]
+            b1606  folM; dihydromonapterin reductase [KO:K13938] [EC:1.5.1.50 1.5.1.3]
+            b2500  purN; phosphoribosylglycinamide formyltransferase 1 [KO:K11175] [EC:2.1.2.2]
+            b2551  glyA; serine hydroxymethyltransferase [KO:K00600] [EC:2.1.2.1]
+            b2827  thyA; thymidylate synthase [KO:K00560] [EC:2.1.1.45]
+            b2903  gcvP; glycine decarboxylase [KO:K00281] [EC:1.4.4.2]
+            b2904  gcvH; glycine cleavage system H protein [KO:K02437]
+            b2905  gcvT; aminomethyltransferase [KO:K00605] [EC:2.1.2.10]
+            b2912  fau; putative 5-formyltetrahydrofolate cyclo-ligase [KO:K01934] [EC:6.3.3.2]
+            b2942  metK; methionine adenosyltransferase [KO:K00789] [EC:2.5.1.6]
+            b3941  metF; 5,10-methylenetetrahydrofolate reductase [KO:K00297] [EC:1.5.1.54]
+            b4006  purH; bifunctional AICAR transformylase/IMP cyclohydrolase [KO:K00602] [EC:2.1.2.3 3.5.4.10]
+            b4019  metH; cobalamin-dependent methionine synthase [KO:K00548] [EC:2.1.1.13]
+COMPOUND    C00002  ATP
+            C00019  S-Adenosyl-L-methionine
+            C00021  S-Adenosyl-L-homocysteine
+            C00037  Glycine
+            C00065  L-Serine
+            C00073  L-Methionine
+            C00097  L-Cysteine
+            C00101  Tetrahydrofolate
+            C00114  Choline
+            C00143  5,10-Methylenetetrahydrofolate
+            C00155  L-Homocysteine
+            C00212  Adenosine
+            C00213  Sarcosine
+            C00234  10-Formyltetrahydrofolate
+            C00364  dTMP
+            C00365  dUMP
+            C00415  Dihydrofolate
+            C00440  5-Methyltetrahydrofolate
+            C00445  5,10-Methenyltetrahydrofolate
+            C00504  Folate
+            C00576  Betaine aldehyde
+            C00664  5-Formiminotetrahydrofolate
+            C00719  Betaine
+            C01026  N,N-Dimethylglycine
+            C02291  L-Cystathionine
+            C03479  Folinic acid
+REL_PATHWAY eco00260  Glycine, serine and threonine metabolism
+            eco00270  Cysteine and methionine metabolism
+            eco00790  Folate biosynthesis
+KO_PATHWAY  ko00670
+///

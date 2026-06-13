@@ -1,0 +1,14 @@
+ENTRY       R11959                      Reaction
+NAME        2-O-(alpha-D-glucopyranosyl)-D-glycerate:phosphate alpha-D-glucosyltransferase (configuration-retaining)
+DEFINITION  2-O-(alpha-D-Glucopyranosyl)-D-glycerate + Orthophosphate <=> D-Glucose 1-phosphate + D-Glycerate
+EQUATION    C19792 + C00009 <=> C00103 + C00258
+RCLASS      RC00397  C00258_C19792
+ENZYME      2.4.1.352
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.1  Hexosyltransferases
+                2.4.1.352
+                 R11959  2-O-(alpha-D-Glucopyranosyl)-D-glycerate + Orthophosphate <=> D-Glucose 1-phosphate + D-Glycerate
+ORTHOLOGY   K22597  glucosylglycerate phosphorylase [EC:2.4.1.352]
+///

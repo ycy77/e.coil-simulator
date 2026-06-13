@@ -1,0 +1,32 @@
+graph:
+  normalized_dir: data/normalized
+  registry_dir: data/registry
+  edge_weights: configs/edge_weights.yaml
+
+simulation:
+  max_rounds: 5
+  initial_profile: data/initial_conditions/glucose_log_phase.yaml
+  # Steady-state detection is report metadata only. It must not stop a run.
+  steady_state_patience: 2
+  retrieval_radius: 2
+  min_retrieval_score: 0.20
+  store_root: runs
+
+resources:
+  default_gpus: 2
+  agents_per_gpu: 50
+
+llm:
+  enabled: false
+  max_concurrency_per_gpu: 50
+  timeout_seconds: 120
+  max_retries: 2
+
+fallback:
+  policy: configs/fallback_rules.yaml
+
+report:
+  phenotype_db: data/phenotypes/phenotype_db.yaml
+
+perturbation:
+  knowledge_base: data/perturbations/perturbation_knowledge.yaml

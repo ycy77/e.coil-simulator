@@ -1,0 +1,50 @@
+old_entity_id,canonical_entity_id,reason,confidence
+molecule.ecocyc.1-AMINO-PROPAN-2-OL,molecule.C03194,exact normalized molecule name match: r 1 aminopropan 2 ol,medium
+molecule.ecocyc.2-Acyl-glycero-3-phosphoethanolamine,molecule.C05973,exact normalized molecule name match: 2 acyl sn glycero 3 phosphoethanolamine,medium
+molecule.ecocyc.Arabinose-5P,molecule.C01112,exact normalized molecule name match: d arabinose 5 phosphate,medium
+molecule.ecocyc.CELLULOSE,molecule.C00760,exact normalized molecule name match: cellulose,medium
+molecule.ecocyc.CPD-1244,molecule.C02995,exact normalized molecule name match: maltose 6 phosphate,medium
+molecule.ecocyc.CPD-12524,molecule.C00333,exact normalized molecule name match: d galacturonate,medium
+molecule.ecocyc.CPD-12537,molecule.C00905,exact normalized molecule name match: d fructuronate,medium
+molecule.ecocyc.CPD-12548,molecule.C00190,exact normalized molecule name match: udp d xylose,medium
+molecule.ecocyc.CPD-12693,molecule.C22383,exact normalized molecule name match: 2s 2 3 dihydroxypropane 1 sulfonate,medium
+molecule.ecocyc.CPD-13469,molecule.C00352,exact normalized molecule name match: d glucosamine 6 phosphate,medium
+molecule.ecocyc.CPD-13545,molecule.C01674,exact normalized molecule name match: chitobiose,medium
+molecule.ecocyc.CPD-14020,molecule.C04346,exact normalized molecule name match: dtdp 4 amino 4 6 dideoxy d galactose,medium
+molecule.ecocyc.CPD-14736,molecule.C00328,exact normalized molecule name match: l kynurenine,medium
+molecule.ecocyc.CPD-16168,molecule.C00357,exact normalized molecule name match: n acetyl d glucosamine 6 phosphate,medium
+molecule.ecocyc.CPD-183,molecule.C01424,exact normalized molecule name match: gallate,medium
+molecule.ecocyc.CPD-18346,molecule.C21945,exact normalized molecule name match: cis vaccenoyl coa,medium
+molecule.ecocyc.CPD-20340,molecule.C21016,exact normalized molecule name match: ophthalmate,medium
+molecule.ecocyc.CPD-21382,molecule.C03589,exact normalized molecule name match: 4 hydroxy 2 oxopentanoate,medium
+molecule.ecocyc.CPD-24813,molecule.C00085,exact normalized molecule name match: d fructose 6 phosphate,medium
+molecule.ecocyc.CPD-25849,molecule.C02225,exact normalized molecule name match: 2 methylcitrate,medium
+molecule.ecocyc.CPD-26204,molecule.C00513,exact normalized molecule name match: cdp glycerol,medium
+molecule.ecocyc.CPD-3604,molecule.C01132,exact normalized molecule name match: n acetyl d galactosamine,medium
+molecule.ecocyc.CPD-6982,molecule.C22038,exact normalized molecule name match: r 3 3 4 dihydroxyphenyl lactate,medium
+molecule.ecocyc.CPD0-1083,molecule.C15930,exact normalized molecule name match: l galactonate,medium
+molecule.ecocyc.CPD0-1281,molecule.C21982,exact normalized molecule name match: lipid ivb,medium
+molecule.ecocyc.Citronellols,molecule.C11386,exact normalized molecule name match: citronellol,medium
+molecule.ecocyc.D-Galactose,molecule.C00124,exact normalized molecule name match: d galactose,medium
+molecule.ecocyc.D-Glucose,molecule.C00031,exact normalized molecule name match: d glucose,medium
+molecule.ecocyc.D-RIBULOSE,molecule.C00309,exact normalized molecule name match: d ribulose,medium
+molecule.ecocyc.D-Rhamnose,molecule.C01684,exact normalized molecule name match: d rhamnose,medium
+molecule.ecocyc.D-fructose-1-phosphate,molecule.C01094,exact normalized molecule name match: d fructose 1 phosphate,medium
+molecule.ecocyc.D-tagatose,molecule.C00795,exact normalized molecule name match: d tagatose,medium
+molecule.ecocyc.Dihydroquercetins,molecule.C01617,exact normalized molecule name match: taxifolin,medium
+molecule.ecocyc.Glucose-6-phosphate,molecule.C00092,exact normalized molecule name match: d glucose 6 phosphate,medium
+molecule.ecocyc.Heme-d1,molecule.C22339,exact normalized molecule name match: heme d1,medium
+molecule.ecocyc.L-1-GLYCERO-PHOSPHORYLCHOLINE,molecule.C00670,exact normalized molecule name match: sn glycero 3 phosphocholine,medium
+molecule.ecocyc.L-ARABINOSE,molecule.C00259,exact normalized molecule name match: l arabinose,medium
+molecule.ecocyc.L-Galactose,molecule.C01825,exact normalized molecule name match: l galactose,medium
+molecule.ecocyc.L-Gulose,molecule.C15923,exact normalized molecule name match: l gulose,medium
+molecule.ecocyc.L-Lyxose,molecule.C01508,exact normalized molecule name match: l lyxose,medium
+molecule.ecocyc.L-PHOSPHINOTHRICIN,molecule.C04650,exact normalized molecule name match: l phosphinothricin,medium
+molecule.ecocyc.L-fucoses,molecule.C01019,exact normalized molecule name match: l fucose,medium
+molecule.ecocyc.L-sorbose,molecule.C00247,exact normalized molecule name match: l sorbose,medium
+molecule.ecocyc.MANDELONITRILE,molecule.C00561,exact normalized molecule name match: mandelonitrile,medium
+molecule.ecocyc.SO3,molecule.C00094,exact normalized molecule name match: sulfite,medium
+molecule.ecocyc.Sorbose-phosphates,molecule.C02888,exact normalized molecule name match: sorbose 1 phosphate,medium
+molecule.ecocyc.THRYROXINE,molecule.C01829,exact normalized molecule name match: thyroxine,medium
+molecule.ecocyc.UDP-L-arabinofuranose,molecule.C18094,exact normalized molecule name match: udp l arabinofuranose,medium
+molecule.ecocyc.toluates,molecule.C01454,exact normalized molecule name match: toluate,medium

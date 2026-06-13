@@ -1,0 +1,441 @@
+---
+entity_id: "protein.P0ACJ0"
+entity_type: "protein"
+name: "lrp"
+source_database: "UniProt"
+source_id: "P0ACJ0"
+default_state: "active"
+allowed_states: "active|inhibited|degraded|sequestered"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/protein
+  - source/UniProt
+aliases:
+  - "lrp alsB ihb livR oppI b0889 JW0872"
+---
+
+# lrp
+
+`protein.P0ACJ0`
+
+## Static
+
+- Type: `protein`
+- Source: `UniProt:P0ACJ0`
+- Default state: `active`
+- Allowed states: `active|inhibited|degraded|sequestered`
+
+## Enriched Summary
+
+FUNCTION: Mediates a global response to leucine. Exogenous leucine affects the expression of a number of different operons; lrp mediates this effect for at least some of these operons. For example it is regulator of the branched-chain amino acid transport genes. Lrp, "Leucine-responsive regulatory protein," is a dual transcriptional regulator for at least 10% of the genes in Escherichia coli . These genes are involved in amino acid biosynthesis and catabolism, nutrient transport, pili synthesis, and other cellular functions, including 1-carbon metabolism . In addition, Lrp affects nearly three-fourths of the genes induced upon entry into stationary phase . Lrp might also play a topological role in dynamic DNA packaging . Using a machine learning framework that integrates and analyzes data from 10 different sources, it was determined that Lrp is involved in antibiotic resistance in E. coli, and this was confirmed in Salmonella enterica . Lrp can act as a repressor or activator for its target genes. Binding of leucine can affect these activities in three different ways: leucine either potentiates, antagonizes, or has no discernible effect upon Lrp action . It is believed that Lrp senses the presence of rich nutrition based on the concentration of leucine and positively regulates genes that function during famine and negatively regulates genes that function during a feast...
+
+## Biological Role
+
+Component of DNA-binding transcriptional dual regulator Lrp-L-leucine (complex.ecocyc.MONOMER0-155).
+
+## Annotation
+
+FUNCTION: Mediates a global response to leucine. Exogenous leucine affects the expression of a number of different operons; lrp mediates this effect for at least some of these operons. For example it is regulator of the branched-chain amino acid transport genes.
+
+## Outgoing Edges (384)
+
+- `activates` --> [[gene.b0005|gene.b0005]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0057|gene.b0057]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0074|gene.b0074]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0075|gene.b0075]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0076|gene.b0076]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0077|gene.b0077]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=ilvI; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0078|gene.b0078]] `RegulonDB` `C` - regulator=Lrp; target=ilvH; function=-+
+- `activates` --> [[gene.b0119|gene.b0119]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0126|gene.b0126]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0139|gene.b0139]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0190|gene.b0190]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0287|gene.b0287]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0306|gene.b0306]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0379|gene.b0379]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0382|gene.b0382]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0383|gene.b0383]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0437|gene.b0437]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0450|gene.b0450]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0557|gene.b0557]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0565|gene.b0565]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0579|gene.b0579]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0628|gene.b0628]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0656|gene.b0656]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0674|gene.b0674]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0752|gene.b0752]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0753|gene.b0753]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0754|gene.b0754]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0762|gene.b0762]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0763|gene.b0763]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0791|gene.b0791]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0803|gene.b0803]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0809|gene.b0809]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0811|gene.b0811]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0854|gene.b0854]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0863|gene.b0863]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0864|gene.b0864]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0877|gene.b0877]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0881|gene.b0881]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0907|gene.b0907]] `RegulonDB` `C` - regulator=Lrp; target=serC; function=-+
+- `activates` --> [[gene.b0908|gene.b0908]] `RegulonDB` `C` - regulator=Lrp; target=aroA; function=-+
+- `activates` --> [[gene.b0928|gene.b0928]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0958|gene.b0958]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0966|gene.b0966]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1020|gene.b1020]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1060|gene.b1060]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1110|gene.b1110]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1116|gene.b1116]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=lolC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1188|gene.b1188]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1189|gene.b1189]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1241|gene.b1241]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1284|gene.b1284]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1323|gene.b1323]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1341|gene.b1341]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1380|gene.b1380]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1428|gene.b1428]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1431|gene.b1431]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1482|gene.b1482]] `RegulonDB` `C` - regulator=Lrp; target=osmC; function=-+
+- `activates` --> [[gene.b1498|gene.b1498]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1525|gene.b1525]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1535|gene.b1535]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1603|gene.b1603]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1604|gene.b1604]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1612|gene.b1612]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1642|gene.b1642]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1664|gene.b1664]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1732|gene.b1732]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1733|gene.b1733]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1748|gene.b1748]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1760|gene.b1760]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1783|gene.b1783]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1811|gene.b1811]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1849|gene.b1849]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1907|gene.b1907]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1922|gene.b1922]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1987|gene.b1987]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1988|gene.b1988]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2013|gene.b2013]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2156|gene.b2156]] `RegulonDB` `S` - regulator=Lrp; target=lysP; function=-+
+- `activates` --> [[gene.b2225|gene.b2225]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2289|gene.b2289]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=lrhA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2290|gene.b2290]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2310|gene.b2310]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2342|gene.b2342]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2344|gene.b2344]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2412|gene.b2412]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2499|gene.b2499]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2502|gene.b2502]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2535|gene.b2535]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2572|gene.b2572]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2659|gene.b2659]] `RegulonDB` `S` - regulator=Lrp; target=glaH; function=+
+- `activates` --> [[gene.b2660|gene.b2660]] `RegulonDB` `S` - regulator=Lrp; target=lhgD; function=+
+- `activates` --> [[gene.b2661|gene.b2661]] `RegulonDB` `S` - regulator=Lrp; target=gabD; function=+
+- `activates` --> [[gene.b2662|gene.b2662]] `RegulonDB` `S` - regulator=Lrp; target=gabT; function=+
+- `activates` --> [[gene.b2663|gene.b2663]] `RegulonDB` `S` - regulator=Lrp; target=gabP; function=+
+- `activates` --> [[gene.b2669|gene.b2669]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=stpA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2670|gene.b2670]] `RegulonDB` `C` - regulator=Lrp; target=alaE; function=-+
+- `activates` --> [[gene.b2779|gene.b2779]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2784|gene.b2784]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2844|gene.b2844]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yqeF; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2903|gene.b2903]] `RegulonDB` `S` - regulator=Lrp; target=gcvP; function=+
+- `activates` --> [[gene.b2904|gene.b2904]] `RegulonDB` `S` - regulator=Lrp; target=gcvH; function=+
+- `activates` --> [[gene.b2905|gene.b2905]] `RegulonDB` `S` - regulator=Lrp; target=gcvT; function=-+
+- `activates` --> [[gene.b2913|gene.b2913]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=serA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2923|gene.b2923]] `RegulonDB` `S` - regulator=Lrp; target=argO; function=+
+- `activates` --> [[gene.b2957|gene.b2957]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ansB; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2975|gene.b2975]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3006|gene.b3006]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3023|gene.b3023]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3024|gene.b3024]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3044|gene.b3044]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3073|gene.b3073]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3129|gene.b3129]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3179|gene.b3179]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3212|gene.b3212]] `RegulonDB` `C` - regulator=Lrp; target=gltB; function=+
+- `activates` --> [[gene.b3213|gene.b3213]] `RegulonDB` `C` - regulator=Lrp; target=gltD; function=+
+- `activates` --> [[gene.b3214|gene.b3214]] `RegulonDB` `C` - regulator=Lrp; target=gltF; function=+
+- `activates` --> [[gene.b3237|gene.b3237]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3267|gene.b3267]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3292|gene.b3292]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3293|gene.b3293]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3304|gene.b3304]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3348|gene.b3348]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3427|gene.b3427]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yzgL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3439|gene.b3439]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3448|gene.b3448]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3458|gene.b3458]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3459|gene.b3459]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3460|gene.b3460]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3515|gene.b3515]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3523|gene.b3523]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yhjE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3527|gene.b3527]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3535|gene.b3535]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3544|gene.b3544]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3546|gene.b3546]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3572|gene.b3572]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=avtA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3602|gene.b3602]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3617|gene.b3617]] `RegulonDB` `C` - regulator=Lrp; target=kbl; function=-+
+- `activates` --> [[gene.b3655|gene.b3655]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3686|gene.b3686]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3687|gene.b3687]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3744|gene.b3744]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3766|gene.b3766]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3824|gene.b3824]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3869|gene.b3869]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3870|gene.b3870]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3930|gene.b3930]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3995|gene.b3995]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4014|gene.b4014]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=aceB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4040|gene.b4040]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4050|gene.b4050]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4057|gene.b4057]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4062|gene.b4062]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4090|gene.b4090]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4109|gene.b4109]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4111|gene.b4111]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4131|gene.b4131]] `RegulonDB` `S` - regulator=Lrp; target=cadA; function=+
+- `activates` --> [[gene.b4132|gene.b4132]] `RegulonDB` `S` - regulator=Lrp; target=cadB; function=+
+- `activates` --> [[gene.b4139|gene.b4139]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=aspA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4140|gene.b4140]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4141|gene.b4141]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4143|gene.b4143]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4179|gene.b4179]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4190|gene.b4190]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4206|gene.b4206]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4216|gene.b4216]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4243|gene.b4243]] `RegulonDB` `C` - regulator=Lrp; target=ridA; function=-+
+- `activates` --> [[gene.b4244|gene.b4244]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4314|gene.b4314]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=fimA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4315|gene.b4315]] `RegulonDB` `C` - regulator=Lrp; target=fimI; function=+
+- `activates` --> [[gene.b4316|gene.b4316]] `RegulonDB` `C` - regulator=Lrp; target=fimC; function=+
+- `activates` --> [[gene.b4317|gene.b4317]] `RegulonDB` `C` - regulator=Lrp; target=fimD; function=+
+- `activates` --> [[gene.b4318|gene.b4318]] `RegulonDB` `C` - regulator=Lrp; target=fimF; function=+
+- `activates` --> [[gene.b4319|gene.b4319]] `RegulonDB` `C` - regulator=Lrp; target=fimG; function=+
+- `activates` --> [[gene.b4320|gene.b4320]] `RegulonDB` `C` - regulator=Lrp; target=fimH; function=+
+- `activates` --> [[gene.b4334|gene.b4334]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4387|gene.b4387]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4388|gene.b4388]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=serB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4452|gene.b4452]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4554|gene.b4554]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4596|gene.b4596]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4838|gene.b4838]] `RegulonDB` `C` - regulator=Lrp; target=fimR2; function=+
+- `is_component_of` --> [[complex.ecocyc.MONOMER0-155|complex.ecocyc.MONOMER0-155]] `EcoCyc` `database` - EcoCyc component coefficient=
+- `represses` --> [[gene.b0001|gene.b0001]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=thrL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0074|gene.b0074]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0076|gene.b0076]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0077|gene.b0077]] `RegulonDB` `C` - regulator=Lrp; target=ilvI; function=-+
+- `represses` --> [[gene.b0078|gene.b0078]] `RegulonDB` `C` - regulator=Lrp; target=ilvH; function=-+
+- `represses` --> [[gene.b0093|gene.b0093]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ftsQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0237|gene.b0237]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=pepD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0238|gene.b0238]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0401|gene.b0401]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=brnQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0415|gene.b0415]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0416|gene.b0416]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0465|gene.b0465]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0577|gene.b0577]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0600|gene.b0600]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0658|gene.b0658]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0673|gene.b0673]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0707|gene.b0707]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0741|gene.b0741]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0742|gene.b0742]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0753|gene.b0753]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0754|gene.b0754]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0762|gene.b0762]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0767|gene.b0767]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0791|gene.b0791]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0802|gene.b0802]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ybiJ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0808|gene.b0808]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0820|gene.b0820]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0853|gene.b0853]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0854|gene.b0854]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0863|gene.b0863]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0864|gene.b0864]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0868|gene.b0868]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ybjS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0886|gene.b0886]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0888|gene.b0888]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0889|gene.b0889]] `RegulonDB` `S` - regulator=Lrp; target=lrp; function=-
+- `represses` --> [[gene.b0891|gene.b0891]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0893|gene.b0893]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0899|gene.b0899]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ycaM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0907|gene.b0907]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=serC; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0908|gene.b0908]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=aroA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0914|gene.b0914]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0931|gene.b0931]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1054|gene.b1054]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1055|gene.b1055]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1063|gene.b1063]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1133|gene.b1133]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1182|gene.b1182]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1188|gene.b1188]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1190|gene.b1190]] `RegulonDB` `C` - regulator=Lrp; target=dadX; function=-
+- `represses` --> [[gene.b1197|gene.b1197]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1200|gene.b1200]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1242|gene.b1242]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1243|gene.b1243]] `RegulonDB` `S` - regulator=Lrp; target=oppA; function=-
+- `represses` --> [[gene.b1244|gene.b1244]] `RegulonDB` `S` - regulator=Lrp; target=oppB; function=-
+- `represses` --> [[gene.b1245|gene.b1245]] `RegulonDB` `S` - regulator=Lrp; target=oppC; function=-
+- `represses` --> [[gene.b1246|gene.b1246]] `RegulonDB` `S` - regulator=Lrp; target=oppD; function=-
+- `represses` --> [[gene.b1247|gene.b1247]] `RegulonDB` `S` - regulator=Lrp; target=oppF; function=-
+- `represses` --> [[gene.b1273|gene.b1273]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yciN; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1274|gene.b1274]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1275|gene.b1275]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1323|gene.b1323]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1333|gene.b1333]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=uspE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1341|gene.b1341]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1482|gene.b1482]] `RegulonDB` `C` - regulator=Lrp; target=osmC; function=-+
+- `represses` --> [[gene.b1493|gene.b1493]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1534|gene.b1534]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1613|gene.b1613]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1634|gene.b1634]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=dtpA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1642|gene.b1642]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1702|gene.b1702]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1710|gene.b1710]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1732|gene.b1732]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1748|gene.b1748]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1761|gene.b1761]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1781|gene.b1781]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1786|gene.b1786]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1798|gene.b1798]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=leuE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1812|gene.b1812]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1814|gene.b1814]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=sdaA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1847|gene.b1847]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1866|gene.b1866]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1876|gene.b1876]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1907|gene.b1907]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1922|gene.b1922]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1956|gene.b1956]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1957|gene.b1957]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2013|gene.b2013]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2119|gene.b2119]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yehL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2156|gene.b2156]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=lysP; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2184|gene.b2184]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2208|gene.b2208]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2209|gene.b2209]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=eco; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2210|gene.b2210]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=mqo; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2215|gene.b2215]] `RegulonDB` `S` - regulator=Lrp; target=ompC; function=-
+- `represses` --> [[gene.b2288|gene.b2288]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2298|gene.b2298]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yfcC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2317|gene.b2317]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2342|gene.b2342]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2343|gene.b2343]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yfcZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2442|gene.b2442]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2498|gene.b2498]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2499|gene.b2499]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2501|gene.b2501]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2502|gene.b2502]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2535|gene.b2535]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2605|gene.b2605]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2670|gene.b2670]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=alaE; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2697|gene.b2697]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2796|gene.b2796]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=sdaC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2817|gene.b2817]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2818|gene.b2818]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2845|gene.b2845]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2905|gene.b2905]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=gcvT; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2911|gene.b2911]] `RegulonDB` `S` - regulator=Lrp; target=ssrS; function=-
+- `represses` --> [[gene.b2912|gene.b2912]] `RegulonDB` `S` - regulator=Lrp; target=fau; function=-
+- `represses` --> [[gene.b2913|gene.b2913]] `RegulonDB` `S` - regulator=Lrp; target=serA; function=-+
+- `represses` --> [[gene.b2914|gene.b2914]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2924|gene.b2924]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2942|gene.b2942]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=metK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2957|gene.b2957]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ansB; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2961|gene.b2961]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2975|gene.b2975]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3023|gene.b3023]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3024|gene.b3024]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3025|gene.b3025]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3072|gene.b3072]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3073|gene.b3073]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3089|gene.b3089]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3161|gene.b3161]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=mtr; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3162|gene.b3162]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3180|gene.b3180]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3202|gene.b3202]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3203|gene.b3203]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3204|gene.b3204]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3210|gene.b3210]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3237|gene.b3237]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3238|gene.b3238]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3304|gene.b3304]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3305|gene.b3305]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3306|gene.b3306]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3430|gene.b3430]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3439|gene.b3439]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3459|gene.b3459]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3460|gene.b3460]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3491|gene.b3491]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3496|gene.b3496]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3515|gene.b3515]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3544|gene.b3544]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3555|gene.b3555]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3572|gene.b3572]] `RegulonDB` `S` - regulator=Lrp; target=avtA; function=-+
+- `represses` --> [[gene.b3617|gene.b3617]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=kbl; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3673|gene.b3673]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3734|gene.b3734]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3735|gene.b3735]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3756|gene.b3756]] `RegulonDB` `S` - regulator=Lrp; target=rrsC; function=-
+- `represses` --> [[gene.b3757|gene.b3757]] `RegulonDB` `S` - regulator=Lrp; target=gltU; function=-
+- `represses` --> [[gene.b3758|gene.b3758]] `RegulonDB` `S` - regulator=Lrp; target=rrlC; function=-
+- `represses` --> [[gene.b3759|gene.b3759]] `RegulonDB` `S` - regulator=Lrp; target=rrfC; function=-
+- `represses` --> [[gene.b3769|gene.b3769]] `RegulonDB` `C` - regulator=Lrp; target=ilvM; function=-
+- `represses` --> [[gene.b3770|gene.b3770]] `RegulonDB` `C` - regulator=Lrp; target=ilvE; function=-
+- `represses` --> [[gene.b3771|gene.b3771]] `RegulonDB` `C` - regulator=Lrp; target=ilvD; function=-
+- `represses` --> [[gene.b3772|gene.b3772]] `RegulonDB` `C` - regulator=Lrp; target=ilvA; function=-
+- `represses` --> [[gene.b3786|gene.b3786]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3851|gene.b3851]] `RegulonDB` `S` - regulator=Lrp; target=rrsA; function=-
+- `represses` --> [[gene.b3855|gene.b3855]] `RegulonDB` `S` - regulator=Lrp; target=rrfA; function=-
+- `represses` --> [[gene.b3863|gene.b3863]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3910|gene.b3910]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3962|gene.b3962]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3968|gene.b3968]] `RegulonDB` `S` - regulator=Lrp; target=rrsB; function=-
+- `represses` --> [[gene.b3969|gene.b3969]] `RegulonDB` `S` - regulator=Lrp; target=gltT; function=-
+- `represses` --> [[gene.b3970|gene.b3970]] `RegulonDB` `S` - regulator=Lrp; target=rrlB; function=-
+- `represses` --> [[gene.b3971|gene.b3971]] `RegulonDB` `S` - regulator=Lrp; target=rrfB; function=-
+- `represses` --> [[gene.b3994|gene.b3994]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4019|gene.b4019]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4045|gene.b4045]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yjbJ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4055|gene.b4055]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4056|gene.b4056]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yjbQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4077|gene.b4077]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4129|gene.b4129]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=lysU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4139|gene.b4139]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=aspA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4140|gene.b4140]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4142|gene.b4142]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4143|gene.b4143]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4153|gene.b4153]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4154|gene.b4154]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4156|gene.b4156]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yjeM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4179|gene.b4179]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4187|gene.b4187]] `RegulonDB` `S` - regulator=Lrp; target=aidB; function=-
+- `represses` --> [[gene.b4206|gene.b4206]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4208|gene.b4208]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=cycA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4216|gene.b4216]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4217|gene.b4217]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=ytfK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4243|gene.b4243]] `RegulonDB|EcoCyc` `C` - regulator=Lrp; target=ridA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4325|gene.b4325]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=yjiC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4326|gene.b4326]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4334|gene.b4334]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4376|gene.b4376]] `RegulonDB|EcoCyc` `S` - regulator=Lrp; target=osmY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4383|gene.b4383]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4397|gene.b4397]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4439|gene.b4439]] `RegulonDB` `S` - regulator=Lrp; target=micF; function=-
+- `represses` --> [[gene.b4669|gene.b4669]] `RegulonDB` `C` - regulator=Lrp; target=ilvX; function=-
+- `represses` --> [[gene.b4691|gene.b4691]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+
+## Incoming Edges (1)
+
+- `encodes` <-- [[gene.b0889|gene.b0889]] `UniProt|EcoCyc` `database` - EcoCyc gene PRODUCT
+
+## External IDs
+
+- `UniProt:P0ACJ0`
+- `KEGG:ecj:JW0872;eco:b0889;ecoc:C3026_05505;`
+- `GeneID:949051;97187953;99777801;`
+- `GO:GO:0000976; GO:0001216; GO:0001217; GO:0005829; GO:0006355; GO:0006524; GO:0032993; GO:0042802; GO:0043201; GO:0043565; GO:0045892`
+
+## Notes
+
+Leucine-responsive regulatory protein

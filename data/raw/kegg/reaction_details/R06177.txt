@@ -1,0 +1,17 @@
+ENTRY       R06177                      Reaction
+DEFINITION  G10555 + G10557(n) <=> di-trans,poly-cis-Undecaprenyl diphosphate + G10557(n+1)
+EQUATION    G10555 + G10557(n) <=> C04574 + G10557(n+1)
+REMARK      Same as: R04519
+ENZYME      2.4.99.28
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.99  Transferring other glycosyl groups
+                2.4.99.28
+                 R06177  G10555 + G10557(n) <=> di-trans,poly-cis-Undecaprenyl diphosphate + G10557(n+1)
+            Glycosyltransferase reactions [br08203.html]
+             Other reactions
+              R06177
+ORTHOLOGY   K05364  penicillin-binding protein A
+            K05365  penicillin-binding protein 1B [EC:2.4.99.28 3.4.16.4]
+///

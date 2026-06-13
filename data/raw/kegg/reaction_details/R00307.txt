@@ -1,0 +1,29 @@
+ENTRY       R00307                      Reaction
+NAME        alpha-D-glucose aldose-ketose-isomerase
+DEFINITION  alpha-D-Glucose <=> alpha-D-Fructofuranose
+EQUATION    C00267 <=> C22502
+RCLASS      RC00376  C00267_C22502
+ENZYME      5.3.1.5
+BRITE       Enzymatic reactions [BR:br08201]
+             5. Isomerase reactions
+              5.3  Intramolecular oxidoreductases
+               5.3.1  Interconverting aldoses and ketoses, and related compounds
+                5.3.1.5
+                 R00307  alpha-D-Glucose <=> alpha-D-Fructofuranose
+ORTHOLOGY   K01805  xylose isomerase [EC:5.3.1.5]
+REFERENCE   1  [PMID:5550812]
+  AUTHORS   Schray KJ, Rose IA.
+  TITLE     Anomeric specificity and mechanism of two pentose isomerases.
+  JOURNAL   Biochemistry 10:1058-62 (1971)
+            DOI:10.1021/bi00782a019
+REFERENCE   2  [PMID:20541506]
+  AUTHORS   Kovalevsky AY, Hanson L, Fisher SZ, Mustyakimov M, Mason SA, Forsyth VT, Blakeley MP, Keen DA, Wagner T, Carrell HL, Katz AK, Glusker JP, Langan P.
+  TITLE     Metal ion roles and the movement of hydrogen during reaction catalyzed by D-xylose isomerase: a joint x-ray and neutron diffraction study.
+  JOURNAL   Structure 18:688-99 (2010)
+            DOI:10.1016/j.str.2010.03.011
+REFERENCE   3  [PMID:2229064]
+  AUTHORS   Lee CY, Bagdasarian M, Meng MH, Zeikus JG.
+  TITLE     Catalytic mechanism of xylose (glucose) isomerase from Clostridium thermosulfurogenes. Characterization of the structural gene and function of active site histidine.
+  JOURNAL   J Biol Chem 265:19082-90 (1990)
+DBLINKS     RHEA: 28549
+///

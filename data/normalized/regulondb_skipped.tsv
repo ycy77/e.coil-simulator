@@ -1,0 +1,6 @@
+source	regulator	target
+NetworkRegulatorGene	S6:S18 ribosomal subunit complex	priB
+NetworkRegulatorGene	S6:S18 ribosomal subunit complex	rplI
+NetworkRegulatorGene	S6:S18 ribosomal subunit complex	rpsF
+NetworkRegulatorGene	S6:S18 ribosomal subunit complex	rpsR
+NetworkRegulatorGene	Fur	mcbA

@@ -1,0 +1,88 @@
+species:
+  name: Escherichia coli K-12 MG1655
+  common_name: E. coli MG1655
+  taxon_id: 511145
+
+preferred_sources:
+  genes:
+    - NCBI RefSeq
+    - EcoCyc
+  proteins:
+    - UniProt
+    - EcoCyc
+  pathways:
+    - KEGG
+    - EcoCyc
+  regulation:
+    - RegulonDB
+    - EcoCyc
+  compounds:
+    - KEGG Compound
+    - ChEBI
+  localization:
+    - UniProt
+    - EcoCyc
+
+licensed_sources:
+  ecocyc:
+    status: license_acquired
+    credential_policy: environment_variables_only
+    raw_dir: data/raw/ecocyc
+    env:
+      flatfiles_url: BIOCYC_FLATFILES_URL
+      username: BIOCYC_FLATFILES_USER
+      password: BIOCYC_FLATFILES_PASSWORD
+    expected_flatfiles:
+      complexes:
+        - protcplx.dat
+      reactions:
+        - reactions.dat
+        - enzrxns.dat
+      pathways:
+        - pathways.dat
+      compounds:
+        - compounds.dat
+      proteins:
+        - proteins.dat
+      genes:
+        - genes.dat
+      regulation:
+        - regulation.dat
+        - promoters.dat
+        - transcription-units.dat
+    priority_uses:
+      - curated_complexes
+      - transport_reactions
+      - reaction_direction_and_participants
+      - operon_promoter_tu_structure
+      - curated_regulatory_rules
+      - response_pattern_annotations
+    citation_required: true
+
+priority_policy:
+  custom:
+    description: Project-specific experimental observations and manual overrides.
+  native:
+    description: Curated MG1655 rules from source databases.
+  basal:
+    description: General biochemical and spatial constraints.
+
+normalization:
+  canonical_entity_id:
+    gene: dna.{locus_tag}
+    protein: protein.{preferred_symbol}
+    complex: complex.{preferred_name}
+    molecule: molecule.{preferred_name}
+  abundance_labels:
+    - very_high
+    - high
+    - medium
+    - low
+    - trace
+    - none
+  locations:
+    - cytosol
+    - inner_membrane
+    - periplasm
+    - outer_membrane
+    - extracellular

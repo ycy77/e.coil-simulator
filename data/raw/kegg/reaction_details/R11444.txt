@@ -1,0 +1,15 @@
+ENTRY       R11444                      Reaction
+NAME        L-leucyl-tRNA(Leu):[protein] N-terminal L-arginine leucyltransferase
+DEFINITION  L-Leucyl-tRNA + L-Arginyl-protein <=> tRNA(Leu) + L-Leucyl-L-arginyl-protein
+EQUATION    C02047 + C16739 <=> C01645 + C21386
+RCLASS      RC00064  C16739_C21386
+ENZYME      2.3.2.6
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.2  Aminoacyltransferases
+                2.3.2.6
+                 R11444  L-Leucyl-tRNA + L-Arginyl-protein <=> tRNA(Leu) + L-Leucyl-L-arginyl-protein
+ORTHOLOGY   K00684  leucyl/phenylalanyl-tRNA---protein transferase [EC:2.3.2.6]
+DBLINKS     RHEA: 50419
+///

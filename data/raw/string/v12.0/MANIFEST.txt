@@ -1,0 +1,30 @@
+STRING raw download manifest
+created_at_utc=2026-06-12T10:49:24Z
+species_taxon_id=511145
+species_name=Escherichia coli str. K-12 substr. MG1655
+note=STRING protein links are protein/protein association networks; small molecules are not STRING nodes.
+
+file=species.v12.0.txt
+url=https://stringdb-downloads.org/download/species.v12.0.txt
+bytes=1023159
+sha256=4bb4c99c14db8d695decadf3b403a5b87ac490b468a842cbc54ec2e412400fec
+
+file=511145.protein.info.v12.0.txt.gz
+url=https://stringdb-downloads.org/download/protein.info.v12.0/511145.protein.info.v12.0.txt.gz
+bytes=300532
+sha256=f86c3ec473f9e27f08cb8341063e8173206cd0d0970b5764623a7fe73c3b1076
+
+file=511145.protein.aliases.v12.0.txt.gz
+url=https://stringdb-downloads.org/download/protein.aliases.v12.0/511145.protein.aliases.v12.0.txt.gz
+bytes=887275
+sha256=9379c356abd3c21a004edf19e5ef89a69dde9fb6dbc6e5f1f0c9275c1e323228
+
+file=511145.protein.links.detailed.v12.0.txt.gz
+url=https://stringdb-downloads.org/download/protein.links.detailed.v12.0/511145.protein.links.detailed.v12.0.txt.gz
+bytes=8646512
+sha256=15f0c77b7837a963bb5a13815e995cd1fea5cf39cf6960b526789bbb5cf6af49
+
+file=511145.protein.physical.links.detailed.v12.0.txt.gz
+url=https://stringdb-downloads.org/download/protein.physical.links.detailed.v12.0/511145.protein.physical.links.detailed.v12.0.txt.gz
+bytes=444685
+sha256=26b5e84e086b1c3959eadfe1168ba84a17f5e5faa658ac8070249d49e5d84690

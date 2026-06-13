@@ -1,0 +1,21 @@
+ENTRY       R00836                      Reaction
+NAME        UDP-glucose:D-glucose-6-phosphate 1-alpha-D-glucosyltransferase
+DEFINITION  UDP-glucose + D-Glucose 6-phosphate <=> UDP + alpha,alpha'-Trehalose 6-phosphate
+EQUATION    C00029 + C00092 <=> C00015 + C00689
+REMARK      Same as: R06043
+RCLASS      RC00005  C00015_C00029
+            RC00049  C00092_C00689
+            RC02748  C00029_C00689
+ENZYME      2.4.1.15
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.1  Hexosyltransferases
+                2.4.1.15
+                 R00836  UDP-glucose + D-Glucose 6-phosphate <=> UDP + alpha,alpha'-Trehalose 6-phosphate
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.4.1.15
+               R00836  D-Glucose 6-phosphate
+DBLINKS     RHEA: 18892
+///

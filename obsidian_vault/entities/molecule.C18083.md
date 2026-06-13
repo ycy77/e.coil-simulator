@@ -1,0 +1,60 @@
+---
+entity_id: "molecule.C18083"
+entity_type: "small_molecule"
+name: "Demethylsuberosin"
+source_database: "KEGG"
+source_id: "C18083"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/KEGG
+aliases:
+  - "Demethylsuberosin"
+  - "7-Demethylsuberosin"
+---
+
+# Demethylsuberosin
+
+`molecule.C18083`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `KEGG:C18083`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+KEGG compound: Demethylsuberosin; 7-Demethylsuberosin
+
+## Enriched Pathways
+
+- `eco00999` Biosynthesis of various plant secondary metabolites (KEGG)
+
+## Annotation
+
+KEGG compound: Demethylsuberosin; 7-Demethylsuberosin
+
+## Pathways
+
+- `eco00999` Biosynthesis of various plant secondary metabolites (KEGG)
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `KEGG:C18083`
+
+## Notes
+
+Included because it appears in at least one E. coli KEGG pathway.

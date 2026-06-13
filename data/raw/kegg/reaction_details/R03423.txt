@@ -1,0 +1,18 @@
+ENTRY       R03423                      Reaction
+NAME        nucleoside-2',3'-cyclic-phosphate 3'-nucleotidohydrolase
+DEFINITION  2',3'-Cyclic nucleotide + H2O <=> Nucleoside 3'-phosphate
+EQUATION    C01240 + C00001 <=> C03419
+RCLASS      RC00296  C01240_C03419
+ENZYME      3.1.4.16
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.1  Acting on ester bonds
+               3.1.4  Phosphoric-diester hydrolases
+                3.1.4.16
+                 R03423  2',3'-Cyclic nucleotide + H2O <=> Nucleoside 3'-phosphate
+            IUBMB reaction hierarchy [BR:br08202]
+             3. Hydrolase reactions
+              3.1.4.16
+               R03423  2',3'-Cyclic nucleotide <=> Nucleoside 3'-phosphate
+DBLINKS     RHEA: 19624
+///

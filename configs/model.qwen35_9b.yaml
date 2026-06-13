@@ -1,0 +1,33 @@
+llm:
+  provider: vllm_openai_compatible
+  base_url: http://localhost:8000/v1
+  api_key: EMPTY
+  model: /home/zkyd/data1/ycy/P_world/Qwen3.5-9B/Qwen/Qwen3_5-9B
+  served_model_name: /home/zkyd/data1/ycy/P_world/Qwen3.5-9B/Qwen/Qwen3_5-9B
+  chat_template: /home/zkyd/data1/ycy/P_world/primary world/qwen35_no_thinking.jinja
+  max_model_len: 65536
+  default_max_tokens: 512
+  decision_max_tokens: 512
+  temperature: 0.2
+  top_p: 0.8
+  enable_thinking: false
+  prefix_caching: true
+
+vllm_start:
+  conda_env: world
+  command: >
+    CUDA_VISIBLE_DEVICES=6,7 python -m vllm.entrypoints.openai.api_server
+    --model /home/zkyd/data1/ycy/P_world/Qwen3.5-9B/Qwen/Qwen3_5-9B
+    --served-model-name /home/zkyd/data1/ycy/P_world/Qwen3.5-9B/Qwen/Qwen3_5-9B
+    --port 8000
+    --tensor-parallel-size 2
+    --max-model-len 65536
+    --enable-prefix-caching
+    --trust-remote-code
+    --chat-template "/home/zkyd/data1/ycy/P_world/primary world/qwen35_no_thinking.jinja"
+
+structured_output:
+  require_json: true
+  schema_file: schemas/action.schema.json
+  strip_thinking_tokens: true
+  reject_unknown_fields: true

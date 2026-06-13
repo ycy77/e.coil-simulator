@@ -1,0 +1,60 @@
+---
+entity_id: "molecule.ecocyc.HEME_D"
+entity_type: "small_molecule"
+name: "heme d"
+source_database: "EcoCyc"
+source_id: "HEME_D"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+---
+
+# heme d
+
+`molecule.ecocyc.HEME_D`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:HEME_D`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+'Heme' is usually understood as any tetrapyrrolic chelate of iron. The terms 'ferroheme' and 'ferriheme' refer to the Fe(II) and Fe(III) oxidation states in heme (even though Fe(IV) is found as a catalytic intermediate in some systems). The term "HEME_D" has been used to describe the heme group found in two types of proteins: terminal oxidases such as the CYT-D-UBIOX-CPLX and APP-UBIOX-CPLX that predominate in TAX-562 at low levels of oxygen , and a family of catalase enzymes, such as HYDROPEROXIDII-CPLX from TAX-562 . Initial spectroscopy data on these enzymes suggested the presence of a γ-spirolactone at the saturated pyrrole ring III of the macrocycle in the C-6 position and a vicinal C-5 hydroxy group , although the relative orientation of these two groups was shown to be different in the two proteins (the two substituents have the more stable trans configuration in the terminal oxidases, but a cis configuration in HPII ). The absolute stereochemistry of the two chiral centers has not been reported . However, later data indicated that the actual form of HEME_D is a diol, and that lactonization was an artefact . The enzymes responsible for the conversion of PROTOHEME into HEME_D have never been identified. It has been proposed that the formation of CPD-23429 may be catalyzed by HPII itself , though formation of CPD-23430 has not been explained...
+
+## Biological Role
+
+Produced in 1 reaction(s). Binds cytochrome bd-II ubiquinol:oxygen oxidoreductase (complex.ecocyc.APP-UBIOX-CPLX), cytochrome bd-I ubiquinol:oxygen oxidoreductase (complex.ecocyc.CYT-D-UBIOX-CPLX).
+
+## Annotation
+
+'Heme' is usually understood as any tetrapyrrolic chelate of iron. The terms 'ferroheme' and 'ferriheme' refer to the Fe(II) and Fe(III) oxidation states in heme (even though Fe(IV) is found as a catalytic intermediate in some systems). The term "HEME_D" has been used to describe the heme group found in two types of proteins: terminal oxidases such as the CYT-D-UBIOX-CPLX and APP-UBIOX-CPLX that predominate in TAX-562 at low levels of oxygen , and a family of catalase enzymes, such as HYDROPEROXIDII-CPLX from TAX-562 . Initial spectroscopy data on these enzymes suggested the presence of a γ-spirolactone at the saturated pyrrole ring III of the macrocycle in the C-6 position and a vicinal C-5 hydroxy group , although the relative orientation of these two groups was shown to be different in the two proteins (the two substituents have the more stable trans configuration in the terminal oxidases, but a cis configuration in HPII ). The absolute stereochemistry of the two chiral centers has not been reported . However, later data indicated that the actual form of HEME_D is a diol, and that lactonization was an artefact . The enzymes responsible for the conversion of PROTOHEME into HEME_D have never been identified. It has been proposed that the formation of CPD-23429 may be catalyzed by HPII itself , though formation of CPD-23430 has not been explained.
+
+## Outgoing Edges (3)
+
+- `binds` --> [[complex.ecocyc.APP-UBIOX-CPLX|complex.ecocyc.APP-UBIOX-CPLX]] `EcoCyc` `database` - EcoCyc enzymatic reaction cofactor
+- `binds` --> [[complex.ecocyc.CYT-D-UBIOX-CPLX|complex.ecocyc.CYT-D-UBIOX-CPLX]] `EcoCyc` `database` - EcoCyc enzymatic reaction cofactor
+- `is_product_of` --> [[reaction.ecocyc.RXN-8073|reaction.ecocyc.RXN-8073]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:HEME_D`
+- `SEED:cpd15607`
+- `METANETX:MNXM56016`
+- `CHEBI:62811`
+- `PUBCHEM:46926174`
+
+## Notes
+
+(C 34)

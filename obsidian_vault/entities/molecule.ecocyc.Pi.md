@@ -1,0 +1,495 @@
+---
+entity_id: "molecule.ecocyc.Pi"
+entity_type: "small_molecule"
+name: "phosphate"
+source_database: "EcoCyc"
+source_id: "Pi"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+  - "inorganic phosphate"
+  - "phosphate-inorganic"
+  - "Pi"
+  - "orthophosphate"
+  - "PO43-"
+  - "HPO42-"
+  - "HPO4-2"
+  - "hydrogenphosphate"
+---
+
+# phosphate
+
+`molecule.ecocyc.Pi`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:Pi`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name "phosphate" even though the structure shown is that of hydrogenphosphate. The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name "phosphate" even though the structure shown is that of hydrogenphosphate.
+
+## Biological Role
+
+Consumed as substrate in 44 reaction(s). Produced in 345 reaction(s). Binds rph (protein.P0CG19).
+
+## Annotation
+
+The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name "phosphate" even though the structure shown is that of hydrogenphosphate.
+
+## Outgoing Edges (426)
+
+- `activates` --> [[reaction.ecocyc.ACETYLORNDEACET-RXN|reaction.ecocyc.ACETYLORNDEACET-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.CARDIOLIPSYN-RXN|reaction.ecocyc.CARDIOLIPSYN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.GSDEADENYLATION-RXN|reaction.ecocyc.GSDEADENYLATION-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.PRPPSYN-RXN|reaction.ecocyc.PRPPSYN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.PYROXALTRANSAM-RXN|reaction.ecocyc.PYROXALTRANSAM-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.RIBOKIN-RXN|reaction.ecocyc.RIBOKIN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `activates` --> [[reaction.ecocyc.UDP-NACMURALGLDAPLIG-RXN|reaction.ecocyc.UDP-NACMURALGLDAPLIG-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `binds` --> [[protein.P0CG19|protein.P0CG19]] `EcoCyc` `database` - EcoCyc enzymatic reaction cofactor
+- `is_product_of` --> [[reaction.ecocyc.2.5.1.19-RXN|reaction.ecocyc.2.5.1.19-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2.7.9.3-RXN|reaction.ecocyc.2.7.9.3-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2.9.1.1-RXN|reaction.ecocyc.2.9.1.1-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-DEHYDROQUINATE-SYNTHASE-RXN|reaction.ecocyc.3-DEHYDROQUINATE-SYNTHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-NUCLEOTID-RXN|reaction.ecocyc.3-NUCLEOTID-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-PHOSPHOGLYCERATE-PHOSPHATASE-RXN|reaction.ecocyc.3-PHOSPHOGLYCERATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.1.21.3-RXN|reaction.ecocyc.3.1.21.3-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.1.3.16-RXN|reaction.ecocyc.3.1.3.16-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.1.3.68-RXN|reaction.ecocyc.3.1.3.68-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.1.3.74-RXN|reaction.ecocyc.3.1.3.74-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.4.21.53-RXN|reaction.ecocyc.3.4.21.53-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.4.21.92-RXN|reaction.ecocyc.3.4.21.92-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.6.3.23-RXN|reaction.ecocyc.3.6.3.23-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.6.3.3-RXN|reaction.ecocyc.3.6.3.3-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.6.3.39-RXN|reaction.ecocyc.3.6.3.39-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3.6.3.53-RXN|reaction.ecocyc.3.6.3.53-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.325-BISPHOSPHATE-NUCLEOTIDASE-RXN|reaction.ecocyc.325-BISPHOSPHATE-NUCLEOTIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.4-NITROPHENYLPHOSPHATASE-RXN|reaction.ecocyc.4-NITROPHENYLPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.5-FORMYL-THF-CYCLO-LIGASE-RXN|reaction.ecocyc.5-FORMYL-THF-CYCLO-LIGASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.5-NUCLEOTID-RXN|reaction.ecocyc.5-NUCLEOTID-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.5-OXOPROLINASE-ATP-HYDROLYSING-RXN|reaction.ecocyc.5-OXOPROLINASE-ATP-HYDROLYSING-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.5.99.1.3-RXN|reaction.ecocyc.5.99.1.3-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-10-RXN|reaction.ecocyc.ABC-10-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-11-RXN|reaction.ecocyc.ABC-11-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-12-RXN|reaction.ecocyc.ABC-12-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-13-RXN|reaction.ecocyc.ABC-13-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-14-RXN|reaction.ecocyc.ABC-14-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-15-RXN|reaction.ecocyc.ABC-15-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-16-RXN|reaction.ecocyc.ABC-16-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-18-RXN|reaction.ecocyc.ABC-18-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-19-RXN|reaction.ecocyc.ABC-19-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-2-RXN|reaction.ecocyc.ABC-2-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-20-RXN|reaction.ecocyc.ABC-20-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-22-RXN|reaction.ecocyc.ABC-22-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-23-RXN|reaction.ecocyc.ABC-23-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-24-RXN|reaction.ecocyc.ABC-24-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-25-RXN|reaction.ecocyc.ABC-25-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-26-RXN|reaction.ecocyc.ABC-26-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-27-RXN|reaction.ecocyc.ABC-27-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-28-RXN|reaction.ecocyc.ABC-28-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-3-RXN|reaction.ecocyc.ABC-3-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-32-RXN|reaction.ecocyc.ABC-32-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-33-RXN|reaction.ecocyc.ABC-33-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-34-RXN|reaction.ecocyc.ABC-34-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-35-RXN|reaction.ecocyc.ABC-35-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-36-RXN|reaction.ecocyc.ABC-36-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-37-RXN|reaction.ecocyc.ABC-37-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-4-RXN|reaction.ecocyc.ABC-4-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-42-RXN|reaction.ecocyc.ABC-42-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-5-RXN|reaction.ecocyc.ABC-5-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-56-RXN|reaction.ecocyc.ABC-56-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-63-RXN|reaction.ecocyc.ABC-63-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-64-RXN|reaction.ecocyc.ABC-64-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-7-RXN|reaction.ecocyc.ABC-7-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-70-RXN|reaction.ecocyc.ABC-70-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-8-RXN|reaction.ecocyc.ABC-8-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ABC-9-RXN|reaction.ecocyc.ABC-9-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ACETYL-COA-CARBOXYLTRANSFER-RXN|reaction.ecocyc.ACETYL-COA-CARBOXYLTRANSFER-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ACID-PHOSPHATASE-RXN|reaction.ecocyc.ACID-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ACYLPHOSPHATASE-RXN|reaction.ecocyc.ACYLPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ADENYLOSUCCINATE-SYNTHASE-RXN|reaction.ecocyc.ADENYLOSUCCINATE-SYNTHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.AIRS-RXN|reaction.ecocyc.AIRS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ALKAPHOSPHA-RXN|reaction.ecocyc.ALKAPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.AMP-DEPHOSPHORYLATION-RXN|reaction.ecocyc.AMP-DEPHOSPHORYLATION-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ASPCARBTRANS-RXN|reaction.ecocyc.ASPCARBTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ATPASE-RXN|reaction.ecocyc.ATPASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ATPSYN-RXN|reaction.ecocyc.ATPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.BIOTIN-CARBOXYL-RXN|reaction.ecocyc.BIOTIN-CARBOXYL-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CARBPSYN-RXN|reaction.ecocyc.CARBPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CHEBDEP-RXN|reaction.ecocyc.CHEBDEP-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CHEYDEPHOS-RXN|reaction.ecocyc.CHEYDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CHORISMATE-SYNTHASE-RXN|reaction.ecocyc.CHORISMATE-SYNTHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CTPSYN-RXN|reaction.ecocyc.CTPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DAHPSYN-RXN|reaction.ecocyc.DAHPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DALADALALIG-RXN|reaction.ecocyc.DALADALALIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DEOXYNUCLEOTIDE-3-PHOSPHATASE-RXN|reaction.ecocyc.DEOXYNUCLEOTIDE-3-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DEPHOSICITDEHASE-RXN|reaction.ecocyc.DEPHOSICITDEHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DETHIOBIOTIN-SYN-RXN|reaction.ecocyc.DETHIOBIOTIN-SYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DIHYDROFOLATESYNTH-RXN|reaction.ecocyc.DIHYDROFOLATESYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DIHYDRONEOPTERIN-MONO-P-DEPHOS-RXN|reaction.ecocyc.DIHYDRONEOPTERIN-MONO-P-DEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN|reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.F16BDEPHOS-RXN|reaction.ecocyc.F16BDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.FGAMSYN-RXN|reaction.ecocyc.FGAMSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.FOLYLPOLYGLUTAMATESYNTH-RXN|reaction.ecocyc.FOLYLPOLYGLUTAMATESYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.FORMYLTHFGLUSYNTH-RXN|reaction.ecocyc.FORMYLTHFGLUSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GARTRANSFORMYL2-RXN|reaction.ecocyc.GARTRANSFORMYL2-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUCOSE-1-PHOSPHAT-RXN|reaction.ecocyc.GLUCOSE-1-PHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUCOSE-6-PHOSPHATASE-RXN|reaction.ecocyc.GLUCOSE-6-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUTAMINESYN-RXN|reaction.ecocyc.GLUTAMINESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUTATHIONE-SYN-RXN|reaction.ecocyc.GLUTATHIONE-SYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUTCYSLIG-RXN|reaction.ecocyc.GLUTCYSLIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLYCEROL-1-PHOSPHATASE-RXN|reaction.ecocyc.GLYCEROL-1-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLYCEROL-2-PHOSPHATASE-RXN|reaction.ecocyc.GLYCEROL-2-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLYRIBONUCSYN-RXN|reaction.ecocyc.GLYRIBONUCSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GPH-RXN|reaction.ecocyc.GPH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GSPSYN-RXN|reaction.ecocyc.GSPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GTP-CYCLOHYDRO-II-RXN|reaction.ecocyc.GTP-CYCLOHYDRO-II-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GUANOSINE-DIPHOSPHATASE-RXN|reaction.ecocyc.GUANOSINE-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.HISTIDPHOS-RXN|reaction.ecocyc.HISTIDPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.INORGPYROPHOSPHAT-RXN|reaction.ecocyc.INORGPYROPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.KDO-8PPHOSPHAT-RXN|reaction.ecocyc.KDO-8PPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.KDO-8PSYNTH-RXN|reaction.ecocyc.KDO-8PSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.LUMAZINESYN-RXN|reaction.ecocyc.LUMAZINESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.MANNITOL-1-PHOSPHATASE-RXN|reaction.ecocyc.MANNITOL-1-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.METHGLYSYN-RXN|reaction.ecocyc.METHGLYSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.NICOTINATEPRIBOSYLTRANS-RXN|reaction.ecocyc.NICOTINATEPRIBOSYLTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.NUCLEOSIDE-DIPHOSPHATASE-RXN|reaction.ecocyc.NUCLEOSIDE-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ORNCARBAMTRANSFER-RXN|reaction.ecocyc.ORNCARBAMTRANSFER-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.OXAMATE-CARBAMOYLTRANSFERASE-RXN|reaction.ecocyc.OXAMATE-CARBAMOYLTRANSFERASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PDXJ-RXN|reaction.ecocyc.PDXJ-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PEPSYNTH-RXN|reaction.ecocyc.PEPSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PGPPHOSPHA-RXN|reaction.ecocyc.PGPPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PHOSPHOAMIDASE-RXN|reaction.ecocyc.PHOSPHOAMIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PHOSPHOENOLPYRUVATE-PHOSPHATASE-RXN|reaction.ecocyc.PHOSPHOENOLPYRUVATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PHOSPHOGLYCERATE-PHOSPHATASE-RXN|reaction.ecocyc.PHOSPHOGLYCERATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PPPGPPHYDRO-RXN|reaction.ecocyc.PPPGPPHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PROPIONYL-COA-CARBOXY-RXN|reaction.ecocyc.PROPIONYL-COA-CARBOXY-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PROTEIN-TYROSINE-PHOSPHATASE-RXN|reaction.ecocyc.PROTEIN-TYROSINE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.QUINOLINATE-SYNTHA-RXN|reaction.ecocyc.QUINOLINATE-SYNTHA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RIBOPHOSPHAT-RXN|reaction.ecocyc.RIBOPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-10940|reaction.ecocyc.RXN-10940]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11109|reaction.ecocyc.RXN-11109]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11135|reaction.ecocyc.RXN-11135]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11277|reaction.ecocyc.RXN-11277]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11776|reaction.ecocyc.RXN-11776]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12195|reaction.ecocyc.RXN-12195]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12816|reaction.ecocyc.RXN-12816]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-13141|reaction.ecocyc.RXN-13141]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-13202|reaction.ecocyc.RXN-13202]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14002|reaction.ecocyc.RXN-14002]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14025|reaction.ecocyc.RXN-14025]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14026|reaction.ecocyc.RXN-14026]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14090|reaction.ecocyc.RXN-14090]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14115|reaction.ecocyc.RXN-14115]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14124|reaction.ecocyc.RXN-14124]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14126|reaction.ecocyc.RXN-14126]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14142|reaction.ecocyc.RXN-14142]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14143|reaction.ecocyc.RXN-14143]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14161|reaction.ecocyc.RXN-14161]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14181|reaction.ecocyc.RXN-14181]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14325|reaction.ecocyc.RXN-14325]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14455|reaction.ecocyc.RXN-14455]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14473|reaction.ecocyc.RXN-14473]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14483|reaction.ecocyc.RXN-14483]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14505|reaction.ecocyc.RXN-14505]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14509|reaction.ecocyc.RXN-14509]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14510|reaction.ecocyc.RXN-14510]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14511|reaction.ecocyc.RXN-14511]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14512|reaction.ecocyc.RXN-14512]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14513|reaction.ecocyc.RXN-14513]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14514|reaction.ecocyc.RXN-14514]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14521|reaction.ecocyc.RXN-14521]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14522|reaction.ecocyc.RXN-14522]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14523|reaction.ecocyc.RXN-14523]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14524|reaction.ecocyc.RXN-14524]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14525|reaction.ecocyc.RXN-14525]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14534|reaction.ecocyc.RXN-14534]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14552|reaction.ecocyc.RXN-14552]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15312|reaction.ecocyc.RXN-15312]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16009|reaction.ecocyc.RXN-16009]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16788|reaction.ecocyc.RXN-16788]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16910|reaction.ecocyc.RXN-16910]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16937|reaction.ecocyc.RXN-16937]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17104|reaction.ecocyc.RXN-17104]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17330|reaction.ecocyc.RXN-17330]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17489|reaction.ecocyc.RXN-17489]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17490|reaction.ecocyc.RXN-17490]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17493|reaction.ecocyc.RXN-17493]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17495|reaction.ecocyc.RXN-17495]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17724|reaction.ecocyc.RXN-17724]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17725|reaction.ecocyc.RXN-17725]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17745|reaction.ecocyc.RXN-17745]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17753|reaction.ecocyc.RXN-17753]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17943|reaction.ecocyc.RXN-17943]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18241|reaction.ecocyc.RXN-18241]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18710|reaction.ecocyc.RXN-18710]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19004|reaction.ecocyc.RXN-19004]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19022|reaction.ecocyc.RXN-19022]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19780|reaction.ecocyc.RXN-19780]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20426|reaction.ecocyc.RXN-20426]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20674|reaction.ecocyc.RXN-20674]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20757|reaction.ecocyc.RXN-20757]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20927|reaction.ecocyc.RXN-20927]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21067|reaction.ecocyc.RXN-21067]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21299|reaction.ecocyc.RXN-21299]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21408|reaction.ecocyc.RXN-21408]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22214|reaction.ecocyc.RXN-22214]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22326|reaction.ecocyc.RXN-22326]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22388|reaction.ecocyc.RXN-22388]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22427|reaction.ecocyc.RXN-22427]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22647|reaction.ecocyc.RXN-22647]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22735|reaction.ecocyc.RXN-22735]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22736|reaction.ecocyc.RXN-22736]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22956|reaction.ecocyc.RXN-22956]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24020|reaction.ecocyc.RXN-24020]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24177|reaction.ecocyc.RXN-24177]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24178|reaction.ecocyc.RXN-24178]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24977|reaction.ecocyc.RXN-24977]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24978|reaction.ecocyc.RXN-24978]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-25091|reaction.ecocyc.RXN-25091]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-5647|reaction.ecocyc.RXN-5647]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-5822|reaction.ecocyc.RXN-5822]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-7253|reaction.ecocyc.RXN-7253]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-7607|reaction.ecocyc.RXN-7607]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-7609|reaction.ecocyc.RXN-7609]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-7948|reaction.ecocyc.RXN-7948]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8638|reaction.ecocyc.RXN-8638]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8770|reaction.ecocyc.RXN-8770]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-1001|reaction.ecocyc.RXN0-1001]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-1061|reaction.ecocyc.RXN0-1061]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-11|reaction.ecocyc.RXN0-11]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-21|reaction.ecocyc.RXN0-21]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2281|reaction.ecocyc.RXN0-2281]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2361|reaction.ecocyc.RXN0-2361]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2621|reaction.ecocyc.RXN0-2621]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2921|reaction.ecocyc.RXN0-2921]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2941|reaction.ecocyc.RXN0-2941]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3|reaction.ecocyc.RXN0-3]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-312|reaction.ecocyc.RXN0-312]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3542|reaction.ecocyc.RXN0-3542]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3543|reaction.ecocyc.RXN0-3543]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3741|reaction.ecocyc.RXN0-3741]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3901|reaction.ecocyc.RXN0-3901]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-4261|reaction.ecocyc.RXN0-4261]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-4361|reaction.ecocyc.RXN0-4361]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-4522|reaction.ecocyc.RXN0-4522]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5073|reaction.ecocyc.RXN0-5073]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5074|reaction.ecocyc.RXN0-5074]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5114|reaction.ecocyc.RXN0-5114]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5185|reaction.ecocyc.RXN0-5185]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5186|reaction.ecocyc.RXN0-5186]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5187|reaction.ecocyc.RXN0-5187]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5205|reaction.ecocyc.RXN0-5205]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5291|reaction.ecocyc.RXN0-5291]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5292|reaction.ecocyc.RXN0-5292]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5408|reaction.ecocyc.RXN0-5408]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5418|reaction.ecocyc.RXN0-5418]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5462|reaction.ecocyc.RXN0-5462]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6368|reaction.ecocyc.RXN0-6368]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6435|reaction.ecocyc.RXN0-6435]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6562|reaction.ecocyc.RXN0-6562]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6726|reaction.ecocyc.RXN0-6726]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6727|reaction.ecocyc.RXN0-6727]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7022|reaction.ecocyc.RXN0-7022]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7068|reaction.ecocyc.RXN0-7068]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7083|reaction.ecocyc.RXN0-7083]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7092|reaction.ecocyc.RXN0-7092]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7115|reaction.ecocyc.RXN0-7115]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7185|reaction.ecocyc.RXN0-7185]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7186|reaction.ecocyc.RXN0-7186]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7249|reaction.ecocyc.RXN0-7249]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7250|reaction.ecocyc.RXN0-7250]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7251|reaction.ecocyc.RXN0-7251]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7283|reaction.ecocyc.RXN0-7283]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7291|reaction.ecocyc.RXN0-7291]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7297|reaction.ecocyc.RXN0-7297]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7299|reaction.ecocyc.RXN0-7299]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7309|reaction.ecocyc.RXN0-7309]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7329|reaction.ecocyc.RXN0-7329]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7332|reaction.ecocyc.RXN0-7332]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7337|reaction.ecocyc.RXN0-7337]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7339|reaction.ecocyc.RXN0-7339]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7348|reaction.ecocyc.RXN0-7348]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7362|reaction.ecocyc.RXN0-7362]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7388|reaction.ecocyc.RXN0-7388]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7395|reaction.ecocyc.RXN0-7395]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-742|reaction.ecocyc.RXN0-742]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7444|reaction.ecocyc.RXN0-7444]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7495|reaction.ecocyc.RXN0-7495]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN185E-10|reaction.ecocyc.RXN185E-10]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN1ZN3-10|reaction.ecocyc.RXN1ZN3-10]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN66-526|reaction.ecocyc.RXN66-526]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.S-ADENMETSYN-RXN|reaction.ecocyc.S-ADENMETSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.SAICARSYN-RXN|reaction.ecocyc.SAICARSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.SORBITOL-6-PHOSPHATASE-RXN|reaction.ecocyc.SORBITOL-6-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.SUCCCOASYN-RXN|reaction.ecocyc.SUCCCOASYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.SUGAR-PHOSPHATASE-RXN|reaction.ecocyc.SUGAR-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.THRESYN-RXN|reaction.ecocyc.THRESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.THYMIDYLATE-5-PHOSPHATASE-RXN|reaction.ecocyc.THYMIDYLATE-5-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-114|reaction.ecocyc.TRANS-RXN-114]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-1540|reaction.ecocyc.TRANS-RXN-1540]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-1594|reaction.ecocyc.TRANS-RXN-1594]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-2|reaction.ecocyc.TRANS-RXN-2]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-22|reaction.ecocyc.TRANS-RXN-22]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-236|reaction.ecocyc.TRANS-RXN-236]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-237|reaction.ecocyc.TRANS-RXN-237]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-238|reaction.ecocyc.TRANS-RXN-238]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-250|reaction.ecocyc.TRANS-RXN-250]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-283|reaction.ecocyc.TRANS-RXN-283]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-290|reaction.ecocyc.TRANS-RXN-290]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-291|reaction.ecocyc.TRANS-RXN-291]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-296|reaction.ecocyc.TRANS-RXN-296]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-297|reaction.ecocyc.TRANS-RXN-297]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-298|reaction.ecocyc.TRANS-RXN-298]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-312|reaction.ecocyc.TRANS-RXN-312]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-320|reaction.ecocyc.TRANS-RXN-320]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-324|reaction.ecocyc.TRANS-RXN-324]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-328|reaction.ecocyc.TRANS-RXN-328]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-33|reaction.ecocyc.TRANS-RXN-33]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-366|reaction.ecocyc.TRANS-RXN-366]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-371|reaction.ecocyc.TRANS-RXN-371]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-372|reaction.ecocyc.TRANS-RXN-372]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-377|reaction.ecocyc.TRANS-RXN-377]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-378|reaction.ecocyc.TRANS-RXN-378]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-383|reaction.ecocyc.TRANS-RXN-383]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-424|reaction.ecocyc.TRANS-RXN-424]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-452|reaction.ecocyc.TRANS-RXN-452]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-498|reaction.ecocyc.TRANS-RXN-498]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-510|reaction.ecocyc.TRANS-RXN-510]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-162|reaction.ecocyc.TRANS-RXN0-162]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-202|reaction.ecocyc.TRANS-RXN0-202]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-222|reaction.ecocyc.TRANS-RXN0-222]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-224|reaction.ecocyc.TRANS-RXN0-224]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-268|reaction.ecocyc.TRANS-RXN0-268]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-454|reaction.ecocyc.TRANS-RXN0-454]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-470|reaction.ecocyc.TRANS-RXN0-470]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-478|reaction.ecocyc.TRANS-RXN0-478]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-479|reaction.ecocyc.TRANS-RXN0-479]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-491|reaction.ecocyc.TRANS-RXN0-491]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-492|reaction.ecocyc.TRANS-RXN0-492]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-501|reaction.ecocyc.TRANS-RXN0-501]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-502|reaction.ecocyc.TRANS-RXN0-502]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-503|reaction.ecocyc.TRANS-RXN0-503]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-504|reaction.ecocyc.TRANS-RXN0-504]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-508|reaction.ecocyc.TRANS-RXN0-508]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-510|reaction.ecocyc.TRANS-RXN0-510]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-511|reaction.ecocyc.TRANS-RXN0-511]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-513|reaction.ecocyc.TRANS-RXN0-513]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-534|reaction.ecocyc.TRANS-RXN0-534]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-541|reaction.ecocyc.TRANS-RXN0-541]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-573|reaction.ecocyc.TRANS-RXN0-573]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-593|reaction.ecocyc.TRANS-RXN0-593]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-617|reaction.ecocyc.TRANS-RXN0-617]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-630|reaction.ecocyc.TRANS-RXN0-630]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-636|reaction.ecocyc.TRANS-RXN0-636]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-637|reaction.ecocyc.TRANS-RXN0-637]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-638|reaction.ecocyc.TRANS-RXN0-638]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TREHALOSEPHOSPHA-RXN|reaction.ecocyc.TREHALOSEPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRIPHOSPHATASE-RXN|reaction.ecocyc.TRIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UDP-NACMUR-ALA-LIG-RXN|reaction.ecocyc.UDP-NACMUR-ALA-LIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UDP-NACMURALA-GLU-LIG-RXN|reaction.ecocyc.UDP-NACMURALA-GLU-LIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UDP-NACMURALGLDAPAALIG-RXN|reaction.ecocyc.UDP-NACMURALGLDAPAALIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UDP-NACMURALGLDAPLIG-RXN|reaction.ecocyc.UDP-NACMURALGLDAPLIG-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UDPNACETYLGLUCOSAMENOLPYRTRANS-RXN|reaction.ecocyc.UDPNACETYLGLUCOSAMENOLPYRTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UNDECAPRENYL-DIPHOSPHATASE-RXN|reaction.ecocyc.UNDECAPRENYL-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_substrate_of` --> [[reaction.ecocyc.2.4.1.230-RXN|reaction.ecocyc.2.4.1.230-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.2.7.7.8-RXN|reaction.ecocyc.2.7.7.8-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.5-METHYLTHIOADENOSINE-PHOSPHORYLASE-RXN|reaction.ecocyc.5-METHYLTHIOADENOSINE-PHOSPHORYLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-27-RXN|reaction.ecocyc.ABC-27-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADENPHOSPHOR-RXN|reaction.ecocyc.ADENPHOSPHOR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN|reaction.ecocyc.ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DEOXYADENPHOSPHOR-RXN|reaction.ecocyc.DEOXYADENPHOSPHOR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DEOXYGUANPHOSPHOR-RXN|reaction.ecocyc.DEOXYGUANPHOSPHOR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DEOXYINOPHOSPHOR-RXN|reaction.ecocyc.DEOXYINOPHOSPHOR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GAPOXNPHOSPHN-RXN|reaction.ecocyc.GAPOXNPHOSPHN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUTSEMIALDEHYDROG-RXN|reaction.ecocyc.GLUTSEMIALDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYCOPHOSPHORYL-RXN|reaction.ecocyc.GLYCOPHOSPHORYL-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GSDEADENYLATION-RXN|reaction.ecocyc.GSDEADENYLATION-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.INOPHOSPHOR-RXN|reaction.ecocyc.INOPHOSPHOR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.N-ACETYLGLUTPREDUCT-RXN|reaction.ecocyc.N-ACETYLGLUTPREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PEPCARBOX-RXN|reaction.ecocyc.PEPCARBOX-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PHOSACETYLTRANS-RXN|reaction.ecocyc.PHOSACETYLTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PNP-RXN|reaction.ecocyc.PNP-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PTAALT-RXN|reaction.ecocyc.PTAALT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14284|reaction.ecocyc.RXN-14284]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14285|reaction.ecocyc.RXN-14285]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14286|reaction.ecocyc.RXN-14286]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-18999|reaction.ecocyc.RXN-18999]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21092|reaction.ecocyc.RXN-21092]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9590|reaction.ecocyc.RXN-9590]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5182|reaction.ecocyc.RXN0-5182]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5184|reaction.ecocyc.RXN0-5184]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5199|reaction.ecocyc.RXN0-5199]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6482|reaction.ecocyc.RXN0-6482]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7041|reaction.ecocyc.RXN0-7041]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7370|reaction.ecocyc.RXN0-7370]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7387|reaction.ecocyc.RXN0-7387]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.THYM-PHOSPH-RXN|reaction.ecocyc.THYM-PHOSPH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-114|reaction.ecocyc.TRANS-RXN-114]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-22|reaction.ecocyc.TRANS-RXN-22]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-33|reaction.ecocyc.TRANS-RXN-33]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-470|reaction.ecocyc.TRANS-RXN0-470]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-501|reaction.ecocyc.TRANS-RXN0-501]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-502|reaction.ecocyc.TRANS-RXN0-502]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-534|reaction.ecocyc.TRANS-RXN0-534]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRNA-NUCLEOTIDYLTRANSFERASE-RXN|reaction.ecocyc.TRNA-NUCLEOTIDYLTRANSFERASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.URA-PHOSPH-RXN|reaction.ecocyc.URA-PHOSPH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.URPHOS-RXN|reaction.ecocyc.URPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.XANTHOSINEPHOSPHORY-RXN|reaction.ecocyc.XANTHOSINEPHOSPHORY-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `represses` --> [[reaction.ecocyc.6PFRUCTPHOS-RXN|reaction.ecocyc.6PFRUCTPHOS-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.ACID-PHOSPHATASE-RXN|reaction.ecocyc.ACID-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.ACYLPHOSPHATASE-RXN|reaction.ecocyc.ACYLPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.AIRS-RXN|reaction.ecocyc.AIRS-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.ALKAPHOSPHA-RXN|reaction.ecocyc.ALKAPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.AMP-NUCLEOSID-RXN|reaction.ecocyc.AMP-NUCLEOSID-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.D-PPENTOMUT-RXN|reaction.ecocyc.D-PPENTOMUT-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.DAHPSYN-RXN|reaction.ecocyc.DAHPSYN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.DCTP-DEAM-RXN|reaction.ecocyc.DCTP-DEAM-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN|reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.F16BDEPHOS-RXN|reaction.ecocyc.F16BDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.GLUTAMIN-RXN|reaction.ecocyc.GLUTAMIN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.GSADENYLATION-RXN|reaction.ecocyc.GSADENYLATION-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.GTP-CYCLOHYDRO-I-RXN|reaction.ecocyc.GTP-CYCLOHYDRO-I-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.IMIDPHOSDEHYD-RXN|reaction.ecocyc.IMIDPHOSDEHYD-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.KDO-8PSYNTH-RXN|reaction.ecocyc.KDO-8PSYNTH-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.METHGLYSYN-RXN|reaction.ecocyc.METHGLYSYN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.ORNCARBAMTRANSFER-RXN|reaction.ecocyc.ORNCARBAMTRANSFER-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.PEPDEPHOS-RXN|reaction.ecocyc.PEPDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.PGPPHOSPHA-RXN|reaction.ecocyc.PGPPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.RXN-1381|reaction.ecocyc.RXN-1381]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.RXN-15513|reaction.ecocyc.RXN-15513]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.RXN0-313|reaction.ecocyc.RXN0-313]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.RXN0-5038|reaction.ecocyc.RXN0-5038]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.S-ADENMETSYN-RXN|reaction.ecocyc.S-ADENMETSYN-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.THIOSULFATE-SULFURTRANSFERASE-RXN|reaction.ecocyc.THIOSULFATE-SULFURTRANSFERASE-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.TRANSALDOL-RXN|reaction.ecocyc.TRANSALDOL-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.UDP-NACMURALA-GLU-LIG-RXN|reaction.ecocyc.UDP-NACMURALA-GLU-LIG-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+- `represses` --> [[reaction.ecocyc.URPHOS-RXN|reaction.ecocyc.URPHOS-RXN]] `EcoCyc` `database` - EcoCyc regulation TYPES=Regulation-of-Enzyme-Activity
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:Pi`
+- `REFMET:Phosphoric acid`
+- `BIGG:pi`
+- `PUBCHEM:3681305`
+- `CHEBI:43474`
+- `METABOLIGHTS:MTBLC43474`
+- `HMDB:HMDB00973`
+- `KNAPSACK:C00007408`
+- `CAS:14265-44-2`
+
+## Notes
+
+(H 1)

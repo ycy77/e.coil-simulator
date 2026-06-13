@@ -1,0 +1,16 @@
+ENTRY       R02108                      Reaction
+NAME        1,4-alpha-D-glucan glucanohydrolase
+DEFINITION  Starch + H2O <=> Dextrin + Starch
+EQUATION    C00369 + C00001 <=> C00721 + C00369
+REMARK      Same as: R06209
+ENZYME      3.2.1.1
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.2  Glycosylases
+               3.2.1  Glycosidases, i.e. enzymes that hydrolyse O- and S-glycosyl compounds
+                3.2.1.1
+                 R02108  Starch + H2O <=> Dextrin + Starch
+ORTHOLOGY   K01176  alpha-amylase [EC:3.2.1.1]
+            K05343  maltose alpha-D-glucosyltransferase / alpha-amylase [EC:5.4.99.16 3.2.1.1]
+            K07405  alpha-amylase [EC:3.2.1.1]
+///

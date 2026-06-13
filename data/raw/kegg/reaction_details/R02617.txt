@@ -1,0 +1,19 @@
+ENTRY       R02617                      Reaction
+NAME        2,3-dehydroacyl-CoA:sn-glycerol-3-phosphate O-acyltransferase
+DEFINITION  2,3-Dehydroacyl-CoA + sn-Glycerol 3-phosphate <=> CoA + 1-Acyl-sn-glycerol 3-phosphate
+EQUATION    C00605 + C00093 <=> C00010 + C00681
+RCLASS      RC00004  C00010_C00605
+            RC00041  C00093_C00681
+ENZYME      2.3.1.15
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.1  Transferring groups other than aminoacyl groups
+                2.3.1.15
+                 R02617  2,3-Dehydroacyl-CoA + sn-Glycerol 3-phosphate <=> CoA + 1-Acyl-sn-glycerol 3-phosphate
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.3.1.15
+               R00851  Acyl-CoA
+                R02617  2,3-Dehydroacyl-CoA
+///

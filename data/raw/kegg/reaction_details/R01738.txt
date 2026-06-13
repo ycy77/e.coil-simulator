@@ -1,0 +1,16 @@
+ENTRY       R01738                      Reaction
+NAME        D-gluconate:NAD+ 5-oxidoreductase
+DEFINITION  D-Gluconic acid + NAD+ <=> 5-Dehydro-D-gluconate + NADH + H+
+EQUATION    C00257 + C00003 <=> C01062 + C00004 + C00080
+COMMENT     NADP+ (see R01740)
+RCLASS      RC00001  C00003_C00004
+            RC00089  C00257_C01062
+ENZYME      1.1.1.69
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.1  Acting on the CH-OH group of donors
+               1.1.1  With NAD+ or NADP+ as acceptor
+                1.1.1.69
+                 R01738  D-Gluconic acid + NAD+ <=> 5-Dehydro-D-gluconate + NADH + H+
+DBLINKS     RHEA: 23943
+///

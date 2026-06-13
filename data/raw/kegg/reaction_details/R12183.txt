@@ -1,0 +1,12 @@
+ENTRY       R12183                      Reaction
+NAME        ATP:cob(II)alamin Cobeta-adenosyltransferase
+DEFINITION  2 ATP + 2 Cob(II)alamin + [Reduced NADPH---hemoprotein reductase] <=> 2 Triphosphate + 2 Cobamide coenzyme + [Oxidized NADPH---hemoprotein reductase]
+EQUATION    2 C00002 + 2 C00541 + C03024 <=> 2 C00536 + 2 C00194 + C03161
+ENZYME      2.5.1.17
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.5  Transferring alkyl or aryl groups, other than methyl groups
+               2.5.1  Transferring alkyl or aryl groups, other than methyl groups (only sub-subclass identified to date)
+                2.5.1.17
+                 R12183  2 ATP + 2 Cob(II)alamin + [Reduced NADPH---hemoprotein reductase] <=> 2 Triphosphate + 2 Cobamide coenzyme + [Oxidized NADPH---hemoprotein reductase]
+///

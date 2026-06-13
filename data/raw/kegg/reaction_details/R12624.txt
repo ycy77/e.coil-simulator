@@ -1,0 +1,13 @@
+ENTRY       R12624                      Reaction
+DEFINITION  Methylureidoacrylate + H2O <=> Methylaminoacrylate + Carbamate
+EQUATION    C20256 + C00001 <=> C20255 + C01563
+COMMENT     the first step of two-step reaction (see R12623, R12624+R07316)
+RCLASS      RC02737  C20255_C20256
+ENZYME      3.5.1.110
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.1  In linear amides
+                3.5.1.110
+                 R12624  Methylureidoacrylate + H2O <=> Methylaminoacrylate + Carbamate
+///

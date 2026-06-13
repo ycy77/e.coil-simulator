@@ -1,0 +1,12 @@
+ENTRY       R12635                      Reaction
+NAME        N4-acetylcytidine amidohydrolase
+DEFINITION  N4-Acetylcytidine + H2O <=> Cytidine + Acetate
+EQUATION    C22293 + C00001 <=> C00475 + C00033
+ENZYME      3.5.1.135
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.1  In linear amides
+                3.5.1.135
+                 R12635  N4-Acetylcytidine + H2O <=> Cytidine + Acetate
+///

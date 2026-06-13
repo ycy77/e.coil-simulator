@@ -1,0 +1,14 @@
+ENTRY       R12152                      Reaction
+DEFINITION  N-(5'-Phospho-D-1'-ribulosylformimino)-5-amino-1-(5''-phospho-D-ribosyl)-4-imidazolecarboxamide + Ammonia <=> 1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide + D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate + H2O
+EQUATION    C04916 + C00014 <=> C04677 + C04666 + C00001
+COMMENT     the second step of two-step reaction (see R04558, R00256+R12152)
+RCLASS      RC01190  C04677_C04916
+            RC01943  C04666_C04916
+ENZYME      4.3.2.10
+BRITE       Enzymatic reactions [BR:br08201]
+             4. Lyase reactions
+              4.3  Carbon-nitrogen lyases
+               4.3.2  Amidine-lyases
+                4.3.2.10
+                 R12152  N-(5'-Phospho-D-1'-ribulosylformimino)-5-amino-1-(5''-phospho-D-ribosyl)-4-imidazolecarboxamide + Ammonia <=> 1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide + D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate + H2O
+///

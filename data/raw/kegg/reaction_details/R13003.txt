@@ -1,0 +1,13 @@
+ENTRY       R13003                      Reaction
+NAME        ADP-L-glycero-beta-D-manno-heptose:an alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-[lipid A] 5-alpha-heptosyltransferase
+DEFINITION  ADP-L-glycero-beta-D-manno-heptose + G00651 <=> ADP + G06499
+EQUATION    C06398 + G00651 <=> C00008 + G06499
+ENZYME      2.4.99.23
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.99  Transferring other glycosyl groups
+                2.4.99.23
+                 R13003  ADP-L-glycero-beta-D-manno-heptose + G00651 <=> ADP + G06499
+DBLINKS     RHEA: 74070
+///

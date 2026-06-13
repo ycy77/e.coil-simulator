@@ -1,0 +1,26 @@
+ENTRY       R00441                      Reaction
+NAME        GTP:RNA guanylyltransferase (DNA-directed);
+            GTP:RNA guanylyltransferase (RNA-directed)
+DEFINITION  GTP + RNA <=> Diphosphate + RNA
+EQUATION    C00044 + C00046 <=> C00013 + C00046
+COMMENT     DNA-directed (ec 2.7.7.6)
+            RNA-directed (ec 2.7.7.48)
+RCLASS      RC02795  C00044_C00046
+ENZYME      2.7.7.6         2.7.7.48
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.6
+                 R00441  GTP + RNA <=> Diphosphate + RNA
+                2.7.7.48
+                 R00441  GTP + RNA <=> Diphosphate + RNA
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.6
+               R00444  Nucleoside triphosphate
+                R00441  GTP
+              2.7.7.48
+               R00444  Nucleoside triphosphate
+                R00441  GTP
+///

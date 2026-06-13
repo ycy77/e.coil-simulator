@@ -1,0 +1,79 @@
+ENTRY       eco00600                    Pathway
+NAME        Sphingolipid metabolism - Escherichia coli K-12 MG1655
+CLASS       Metabolism; Lipid metabolism
+PATHWAY_MAP eco00600  Sphingolipid metabolism
+DBLINKS     GO: 0006665
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0344  lacZ; beta-galactosidase [KO:K01190] [EC:3.2.1.23]
+            b2981  yghO; putative DNA-binding transcriptional regulator YghO [KO:K28560]
+            b3801  aslA; putative sulfatase AslA [KO:K01130] [EC:3.1.6.1]
+            b4119  melA; alpha-galactosidase [KO:K07406] [EC:3.2.1.22]
+COMPOUND    C00065  L-Serine
+            C00154  Palmitoyl-CoA
+            C00195  N-Acylsphingosine
+            C00319  Sphingosine
+            C00346  Ethanolamine phosphate
+            C00550  Sphingomyelin
+            C00836  Sphinganine
+            C01120  Sphinganine 1-phosphate
+            C01190  Glucosylceramide
+            C01290  Lactosylceramide
+            C01747  Psychosine
+            C02686  Galactosylceramide
+            C02934  3-Dehydrosphinganine
+            C02960  Ceramide 1-phosphate
+            C03108  D-Glucosylsphingosine
+            C03272  Globoside
+            C03405  Lactosylceramide sulfate
+            C03640  Sphingosyl-phosphocholine
+            C04730  GM3
+            C04737  alpha-D-Galactosyl-(1->4)-beta-D-galactosyl-(1->4)-beta-D-glucosyl-(1<->1)-ceramide
+            C04884  N-Acetyl-D-galactosaminyl-(N-acetylneuraminyl)-D-galactosyl-D-glucosylceramide
+            C04911  D-Galactosyl-N-acetyl-D-galactosaminyl-(N-acetylneuraminyl)-D-galactosyl-D-glucosylceramide
+            C05681  Ceramide 2-aminoethylphosphonate
+            C06062  Ceramide phosphoethanolamine
+            C06124  Sphingosine 1-phosphate
+            C06125  Sulfatide
+            C06126  Digalactosylceramide
+            C06127  Digalactosylceramide sulfate
+            C06128  GM4
+            C06135  GA2
+            C06136  GA1
+            C12126  Dihydroceramide
+            C12144  Phytosphingosine
+            C12145  Phytoceramide
+            C22467  Gangliotriaosylceramide-II3 sulfate
+            C23072  Oxidized ceramide
+REFERENCE   PMID:12011104
+  AUTHORS   Merrill AH Jr.
+  TITLE     De novo sphingolipid biosynthesis: a necessary, but dangerous, pathway.
+  JOURNAL   J Biol Chem 277:25843-6 (2002)
+            DOI:10.1074/jbc.R200009200
+REFERENCE   PMID:10652340
+  AUTHORS   Tani M, Okino N, Mitsutake S, Tanigawa T, Izu H, Ito M.
+  TITLE     Purification and characterization of a neutral ceramidase from mouse liver. A single protein catalyzes the reversible reaction in which ceramide is both hydrolyzed and synthesized.
+  JOURNAL   J Biol Chem 275:3462-8 (2000)
+            DOI:10.1074/jbc.275.5.3462
+REFERENCE   PMID:11305904
+  AUTHORS   Hannun YA, Luberto C, Argraves KM.
+  TITLE     Enzymes of sphingolipid metabolism: from modular to integrative signaling.
+  JOURNAL   Biochemistry 40:4893-903 (2001)
+            DOI:10.1021/bi002836k
+REFERENCE   PMID:1495423
+  AUTHORS   Merrill AH Jr, Wang E.
+  TITLE     Enzymes of ceramide biosynthesis.
+  JOURNAL   Methods Enzymol 209:427-37 (1992)
+            DOI:10.1016/0076-6879(92)09053-6
+REFERENCE   PMID:8457204
+  AUTHORS   Hirschberg K, Rodger J, Futerman AH.
+  TITLE     The long-chain sphingoid base of sphingolipids is acylated at the cytosolic surface of the endoplasmic reticulum in rat liver.
+  JOURNAL   Biochem J 290 ( Pt 3):751-7 (1993)
+            DOI:10.1042/bj2900751
+REFERENCE   PMID:10366774
+  AUTHORS   Dickson RC, Lester RL.
+  TITLE     Metabolism and selected functions of sphingolipids in the yeast Saccharomyces cerevisiae.
+  JOURNAL   Biochim Biophys Acta 1438:305-21 (1999)
+            DOI:10.1016/S1388-1981(99)00068-2
+REL_PATHWAY eco00260  Glycine, serine and threonine metabolism
+KO_PATHWAY  ko00600
+///

@@ -1,0 +1,18 @@
+ENTRY       R00284                      Reaction
+NAME        ammonia:acceptor oxidoreductase
+DEFINITION  Acceptor + Ammonia + H2O <=> Hydroxylamine + Reduced acceptor
+EQUATION    C00028 + C00014 + C00001 <=> C00192 + C00030
+RCLASS      RC02797  C00014_C00192
+ENZYME      1.7.99.1
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.7  Acting on other nitrogenous compounds as donors
+               1.7.99  With unknown physiological acceptors
+                1.7.99.1
+                 R00284  Acceptor + Ammonia + H2O <=> Hydroxylamine + Reduced acceptor
+            IUBMB reaction hierarchy [BR:br08202]
+             1. Oxidoreductase reactions
+              1.7.99.1
+               R00284  Acceptor <=> Reduced acceptor
+DBLINKS     RHEA: 22055
+///

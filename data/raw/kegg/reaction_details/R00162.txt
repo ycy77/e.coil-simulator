@@ -1,0 +1,56 @@
+ENTRY       R00162                      Reaction
+NAME        ATP:protein phosphotransferase;
+            ATP:protein phosphotransferase (Ca2+/calmodulin-dependent)
+DEFINITION  ATP + Protein <=> ADP + Phosphoprotein
+EQUATION    C00002 + C00017 <=> C00008 + C00562
+COMMENT     general reaction
+RCLASS      RC00002  C00002_C00008
+ENZYME      2.7.11.1        2.7.11.8        2.7.11.9        2.7.11.10       
+            2.7.11.11       2.7.11.12       2.7.11.13       2.7.11.17       
+            2.7.11.21       2.7.11.22       2.7.11.24       2.7.11.25       
+            2.7.11.30       2.7.12.1        2.7.12.2
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.11  Protein-serine/threonine kinases
+                2.7.11.1
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.8
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.9
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.10
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.11
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.12
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.13
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.17
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.21
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.22
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.24
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.25
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.11.30
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+               2.7.12  Dual-specificity kinases (those acting on Ser/Thr and Tyr residues)
+                2.7.12.1
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+                2.7.12.2
+                 R00162  ATP + Protein <=> ADP + Phosphoprotein
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.11.17
+               R00162  Protein <=> Phosphoprotein
+              2.7.12.1
+               R00162  Protein <=> Phosphoprotein
+              2.7.12.2
+               R00162  Protein <=> Phosphoprotein
+DBLINKS     RHEA: 17992 46611
+///

@@ -1,0 +1,625 @@
+---
+entity_id: "protein.Q47005"
+entity_type: "protein"
+name: "nac"
+source_database: "UniProt"
+source_id: "Q47005"
+default_state: "active"
+allowed_states: "active|inhibited|degraded|sequestered"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/protein
+  - source/UniProt
+aliases:
+  - "nac b1988 JW1967"
+---
+
+# nac
+
+`protein.Q47005`
+
+## Static
+
+- Type: `protein`
+- Source: `UniProt:Q47005`
+- Default state: `active`
+- Allowed states: `active|inhibited|degraded|sequestered`
+
+## Enriched Summary
+
+FUNCTION: Transcriptional activator for the hut, put and ure operons and repressor for the gdh and gltB operons in response to nitrogen limitation. Negative regulator of its own expression (By similarity). {ECO:0000250}. Nac, "Nitrogen assimilation control," regulates, without a coeffector, genes involved in nitrogen metabolism under nitrogen-limiting conditions . The genes regulated by Nac are transcribed by RNA polymerase σ70. By using synthetic gene circuits, it was suggested that Nac shows stabilization of RNA polymerase (RNAP) at a downstream repressing position, while activation at upstream positions occurs without stabilization . The genes regulated by Nac are coupled to the nitrogen regulatory (Ntr) system, which is σ54 dependent, through Nac, whose transcription is activated by NtrC . Using DNA microarray analyses, it was shown that Nac could affect the expression of 25 genes . This transcriptional regulator is negatively autoregulated and is expressed under nitrogen-limiting conditions . Inhibition of nac expression by CRISPRi reduced cellular fitness under treatment with the antibiotic pyocyanin . In a gene expression study during the transition from aerobic to anaerobic conditions, part of the regulatory cascade involving the protein Nac was analyzed...
+
+## Annotation
+
+FUNCTION: Transcriptional activator for the hut, put and ure operons and repressor for the gdh and gltB operons in response to nitrogen limitation. Negative regulator of its own expression (By similarity). {ECO:0000250}.
+
+## Outgoing Edges (572)
+
+- `activates` --> [[gene.b0075|gene.b0075]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=leuL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0167|gene.b0167]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=glnD; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0168|gene.b0168]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=map; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0209|gene.b0209]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yafD; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0210|gene.b0210]] `RegulonDB` `S` - regulator=Nac; target=yafE; function=-+
+- `activates` --> [[gene.b0211|gene.b0211]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0219|gene.b0219]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yafV; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0220|gene.b0220]] `RegulonDB` `S` - regulator=Nac; target=ivy; function=+
+- `activates` --> [[gene.b0224|gene.b0224]] `RegulonDB` `S` - regulator=Nac; target=dpaA; function=+
+- `activates` --> [[gene.b0287|gene.b0287]] `RegulonDB` `S` - regulator=Nac; target=yagU; function=+
+- `activates` --> [[gene.b0336|gene.b0336]] `RegulonDB` `C` - regulator=Nac; target=codB; function=+
+- `activates` --> [[gene.b0337|gene.b0337]] `RegulonDB` `C` - regulator=Nac; target=codA; function=+
+- `activates` --> [[gene.b0364|gene.b0364]] `RegulonDB` `S` - regulator=Nac; target=yaiS; function=+
+- `activates` --> [[gene.b0380|gene.b0380]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yaiZ; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0461|gene.b0461]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tomB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0506|gene.b0506]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=allR; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0511|gene.b0511]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=allW; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0536|gene.b0536]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=argU; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0544|gene.b0544]] `RegulonDB` `S` - regulator=Nac; target=ybcK; function=+
+- `activates` --> [[gene.b0557|gene.b0557]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=borD; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0581|gene.b0581]] `RegulonDB` `S` - regulator=Nac; target=ybdK; function=-+
+- `activates` --> [[gene.b0604|gene.b0604]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dsbG; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0605|gene.b0605]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ahpC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0644|gene.b0644]] `RegulonDB` `S` - regulator=Nac; target=ybeQ; function=+
+- `activates` --> [[gene.b0645|gene.b0645]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybeR; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0647|gene.b0647]] `RegulonDB` `S` - regulator=Nac; target=ybeT; function=+
+- `activates` --> [[gene.b0721|gene.b0721]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0726|gene.b0726]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sucA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0733|gene.b0733]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cydA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0735|gene.b0735]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybgE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0768|gene.b0768]] `RegulonDB` `S` - regulator=Nac; target=ybhD; function=+
+- `activates` --> [[gene.b0787|gene.b0787]] `RegulonDB` `S` - regulator=Nac; target=ybhM; function=+
+- `activates` --> [[gene.b0807|gene.b0807]] `RegulonDB` `S` - regulator=Nac; target=rlmF; function=+
+- `activates` --> [[gene.b0827|gene.b0827]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=moeA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0828|gene.b0828]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=iaaA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0840|gene.b0840]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0865|gene.b0865]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybjP; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0866|gene.b0866]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybjQ; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0884|gene.b0884]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0900|gene.b0900]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ycaN; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0901|gene.b0901]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ycaK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0929|gene.b0929]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b0938|gene.b0938]] `RegulonDB` `S` - regulator=Nac; target=elfA; function=+
+- `activates` --> [[gene.b1004|gene.b1004]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wrbA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1011|gene.b1011]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rutB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1024|gene.b1024]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pgaA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1060|gene.b1060]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bssS; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1135|gene.b1135]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rluE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1136|gene.b1136]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=icd; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1161|gene.b1161]] `RegulonDB` `S` - regulator=Nac; target=ycgX; function=+
+- `activates` --> [[gene.b1189|gene.b1189]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dadA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1201|gene.b1201]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dhaR; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1202|gene.b1202]] `RegulonDB` `S` - regulator=Nac; target=ycgV; function=+
+- `activates` --> [[gene.b1243|gene.b1243]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=oppA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1283|gene.b1283]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=osmB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1359|gene.b1359]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydaU; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1365|gene.b1365]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynaK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1422|gene.b1422]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydcI; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1440|gene.b1440]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydcS; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1441|gene.b1441]] `RegulonDB` `S` - regulator=Nac; target=ydcT; function=+
+- `activates` --> [[gene.b1442|gene.b1442]] `RegulonDB` `S` - regulator=Nac; target=ydcU; function=+
+- `activates` --> [[gene.b1443|gene.b1443]] `RegulonDB` `S` - regulator=Nac; target=ydcV; function=+
+- `activates` --> [[gene.b1444|gene.b1444]] `RegulonDB` `S` - regulator=Nac; target=patD; function=+
+- `activates` --> [[gene.b1527|gene.b1527]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yneK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1530|gene.b1530]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=marR; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1534|gene.b1534]] `RegulonDB` `S` - regulator=Nac; target=ydeE; function=+
+- `activates` --> [[gene.b1538|gene.b1538]] `RegulonDB` `S` - regulator=Nac; target=dcp; function=+
+- `activates` --> [[gene.b1583|gene.b1583]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynfB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1589|gene.b1589]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynfG; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1689|gene.b1689]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydiL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1707|gene.b1707]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rflP; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1723|gene.b1723]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pfkB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1758|gene.b1758]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynjF; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1824|gene.b1824]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1840|gene.b1840]] `RegulonDB` `S` - regulator=Nac; target=yebZ; function=-+
+- `activates` --> [[gene.b1841|gene.b1841]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yobA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1867|gene.b1867]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yecD; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1868|gene.b1868]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yecE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1888|gene.b1888]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cheA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1895|gene.b1895]] `RegulonDB` `S` - regulator=Nac; target=uspC; function=+
+- `activates` --> [[gene.b1902|gene.b1902]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ftnB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b1919|gene.b1919]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dcyD; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2038|gene.b2038]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rfbC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2054|gene.b2054]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wcaF; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2055|gene.b2055]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wcaE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2063|gene.b2063]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yegH; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2091|gene.b2091]] `RegulonDB` `S` - regulator=Nac; target=gatD; function=-+
+- `activates` --> [[gene.b2093|gene.b2093]] `RegulonDB` `S` - regulator=Nac; target=gatB; function=-+
+- `activates` --> [[gene.b2094|gene.b2094]] `RegulonDB` `S` - regulator=Nac; target=gatA; function=-+
+- `activates` --> [[gene.b2132|gene.b2132]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bglX; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2158|gene.b2158]] `RegulonDB` `S` - regulator=Nac; target=yeiH; function=+
+- `activates` --> [[gene.b2271|gene.b2271]] `RegulonDB` `S` - regulator=Nac; target=yfbL; function=+
+- `activates` --> [[gene.b2296|gene.b2296]] `RegulonDB` `S` - regulator=Nac; target=ackA; function=+
+- `activates` --> [[gene.b2372|gene.b2372]] `RegulonDB` `S` - regulator=Nac; target=yfdV; function=+
+- `activates` --> [[gene.b2419|gene.b2419]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfeK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2462|gene.b2462]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=eutS; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2504|gene.b2504]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfgG; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2537|gene.b2537]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hcaR; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2538|gene.b2538]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hcaE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2569|gene.b2569]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lepA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2602|gene.b2602]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfiL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2652|gene.b2652]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ileY; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2659|gene.b2659]] `RegulonDB` `S` - regulator=Nac; target=glaH; function=-+
+- `activates` --> [[gene.b2660|gene.b2660]] `RegulonDB` `S` - regulator=Nac; target=lhgD; function=-+
+- `activates` --> [[gene.b2661|gene.b2661]] `RegulonDB` `S` - regulator=Nac; target=gabD; function=+
+- `activates` --> [[gene.b2662|gene.b2662]] `RegulonDB` `S` - regulator=Nac; target=gabT; function=+
+- `activates` --> [[gene.b2663|gene.b2663]] `RegulonDB` `S` - regulator=Nac; target=gabP; function=+
+- `activates` --> [[gene.b2664|gene.b2664]] `RegulonDB` `S` - regulator=Nac; target=glaR; function=+
+- `activates` --> [[gene.b2806|gene.b2806]] `RegulonDB` `S` - regulator=Nac; target=rlmM; function=+
+- `activates` --> [[gene.b2823|gene.b2823]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ppdC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2838|gene.b2838]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lysA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2846|gene.b2846]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yqeH; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2848|gene.b2848]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yqeJ; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2849|gene.b2849]] `RegulonDB` `S` - regulator=Nac; target=yqeK; function=+
+- `activates` --> [[gene.b2923|gene.b2923]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=argO; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2933|gene.b2933]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cmtA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2934|gene.b2934]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cmtB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2971|gene.b2971]] `RegulonDB` `S` - regulator=Nac; target=yghG; function=+
+- `activates` --> [[gene.b2975|gene.b2975]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=glcA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b2987|gene.b2987]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pitB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3043|gene.b3043]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygiL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3074|gene.b3074]] `RegulonDB` `S` - regulator=Nac; target=ygjH; function=+
+- `activates` --> [[gene.b3120|gene.b3120]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yhaB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3137|gene.b3137]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=kbaY; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3173|gene.b3173]] `RegulonDB` `S` - regulator=Nac; target=yhbX; function=+
+- `activates` --> [[gene.b3211|gene.b3211]] `RegulonDB` `S` - regulator=Nac; target=yhcC; function=+
+- `activates` --> [[gene.b3214|gene.b3214]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gltF; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3222|gene.b3222]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nanK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3224|gene.b3224]] `RegulonDB` `S` - regulator=Nac; target=nanT; function=-+
+- `activates` --> [[gene.b3225|gene.b3225]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nanA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3334|gene.b3334]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gspM; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3335|gene.b3335]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gspO; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3336|gene.b3336]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bfr; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3446|gene.b3446]] `RegulonDB` `S` - regulator=Nac; target=yrhB; function=+
+- `activates` --> [[gene.b3457|gene.b3457]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=livH; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3471|gene.b3471]] `RegulonDB` `S` - regulator=Nac; target=yhhQ; function=+
+- `activates` --> [[gene.b3512|gene.b3512]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gadE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3513|gene.b3513]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mdtE; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3523|gene.b3523]] `RegulonDB` `S` - regulator=Nac; target=yhjE; function=+
+- `activates` --> [[gene.b3540|gene.b3540]] `RegulonDB` `S` - regulator=Nac; target=dppF; function=-+
+- `activates` --> [[gene.b3541|gene.b3541]] `RegulonDB` `S` - regulator=Nac; target=dppD; function=-+
+- `activates` --> [[gene.b3542|gene.b3542]] `RegulonDB` `S` - regulator=Nac; target=dppC; function=-+
+- `activates` --> [[gene.b3543|gene.b3543]] `RegulonDB` `S` - regulator=Nac; target=dppB; function=-+
+- `activates` --> [[gene.b3544|gene.b3544]] `RegulonDB` `S` - regulator=Nac; target=dppA; function=-+
+- `activates` --> [[gene.b3551|gene.b3551]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bisC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3558|gene.b3558]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=insK; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3561|gene.b3561]] `RegulonDB` `S` - regulator=Nac; target=wecH; function=+
+- `activates` --> [[gene.b3648|gene.b3648]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gmk; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3657|gene.b3657]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yicJ; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3658|gene.b3658]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=selC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3687|gene.b3687]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ibpA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3688|gene.b3688]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yidQ; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3703|gene.b3703]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rpmH; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3707|gene.b3707]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tnaC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3766|gene.b3766]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ilvL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3785|gene.b3785]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wzzE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3820|gene.b3820]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yigI; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3826|gene.b3826]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yigL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3829|gene.b3829]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=metE; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b3842|gene.b3842]] `RegulonDB` `S` - regulator=Nac; target=rfaH; function=+
+- `activates` --> [[gene.b3858|gene.b3858]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yihD; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4000|gene.b4000]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hupA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4001|gene.b4001]] `RegulonDB` `S` - regulator=Nac; target=yjaH; function=+
+- `activates` --> [[gene.b4060|gene.b4060]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjcB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4061|gene.b4061]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pdeC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4066|gene.b4066]] `RegulonDB` `S` - regulator=Nac; target=yjcF; function=+
+- `activates` --> [[gene.b4075|gene.b4075]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nrfF; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4076|gene.b4076]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nrfG; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4142|gene.b4142]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=groS; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4206|gene.b4206]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ytfB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4208|gene.b4208]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cycA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4214|gene.b4214]] `RegulonDB` `S` - regulator=Nac; target=cysQ; function=+
+- `activates` --> [[gene.b4216|gene.b4216]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ytfJ; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4219|gene.b4219]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=msrA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4246|gene.b4246]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pyrL; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4256|gene.b4256]] `RegulonDB` `S` - regulator=Nac; target=yjgM; function=+
+- `activates` --> [[gene.b4427|gene.b4427]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=micC; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4436|gene.b4436]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sibA; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4501|gene.b4501]] `RegulonDB` `S` - regulator=Nac; target=torI; function=+
+- `activates` --> [[gene.b4599|gene.b4599]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mgtS; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `activates` --> [[gene.b4687|gene.b4687]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=shoB; function=+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0031|gene.b0031]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dapB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0034|gene.b0034]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=caiF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0076|gene.b0076]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=leuO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0106|gene.b0106]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hofC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0109|gene.b0109]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nadC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0110|gene.b0110]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ampD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0135|gene.b0135]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yadC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0138|gene.b0138]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yadM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0139|gene.b0139]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=htrE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0162|gene.b0162]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cdaR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0192|gene.b0192]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nlpE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0193|gene.b0193]] `RegulonDB` `S` - regulator=Nac; target=yaeF; function=-
+- `represses` --> [[gene.b0208|gene.b0208]] `RegulonDB` `S` - regulator=Nac; target=yafC; function=-
+- `represses` --> [[gene.b0209|gene.b0209]] `RegulonDB` `S` - regulator=Nac; target=yafD; function=-+
+- `represses` --> [[gene.b0210|gene.b0210]] `RegulonDB` `S` - regulator=Nac; target=yafE; function=-+
+- `represses` --> [[gene.b0225|gene.b0225]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yafQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0226|gene.b0226]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dinJ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0232|gene.b0232]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yafN; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0233|gene.b0233]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yafO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0295|gene.b0295]] `RegulonDB` `S` - regulator=Nac; target=ykgL; function=-
+- `represses` --> [[gene.b0306|gene.b0306]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ykgE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0310|gene.b0310]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ykgH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0315|gene.b0315]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pdeL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0338|gene.b0338]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cynR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0339|gene.b0339]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cynT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0365|gene.b0365]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tauA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0369|gene.b0369]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hemB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0379|gene.b0379]] `RegulonDB` `S` - regulator=Nac; target=yaiY; function=-
+- `represses` --> [[gene.b0381|gene.b0381]] `RegulonDB` `S` - regulator=Nac; target=ddlA; function=-
+- `represses` --> [[gene.b0382|gene.b0382]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=iraP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0398|gene.b0398]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sbcD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0399|gene.b0399]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=phoB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0410|gene.b0410]] `RegulonDB` `S` - regulator=Nac; target=yajD; function=-
+- `represses` --> [[gene.b0416|gene.b0416]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nusB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0417|gene.b0417]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=thiL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0419|gene.b0419]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yajO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0473|gene.b0473]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=htpG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0475|gene.b0475]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hemH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0478|gene.b0478]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybaL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0498|gene.b0498]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybbC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0514|gene.b0514]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=glxK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0524|gene.b0524]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lpxH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0525|gene.b0525]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ppiB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0526|gene.b0526]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cysS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0537|gene.b0537]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=intD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0557|gene.b0557]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=borD; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0558|gene.b0558]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybcV; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0565|gene.b0565]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ompT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0569|gene.b0569]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nfrB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0581|gene.b0581]] `RegulonDB` `S` - regulator=Nac; target=ybdK; function=-+
+- `represses` --> [[gene.b0587|gene.b0587]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fepE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0607|gene.b0607]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=uspG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0608|gene.b0608]] `RegulonDB` `S` - regulator=Nac; target=ybdR; function=-
+- `represses` --> [[gene.b0639|gene.b0639]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nadD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0648|gene.b0648]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybeU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0704|gene.b0704]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybfC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0720|gene.b0720]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gltA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0726|gene.b0726]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sucA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0733|gene.b0733]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cydA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0736|gene.b0736]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybgC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0740|gene.b0740]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tolB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0769|gene.b0769]] `RegulonDB` `S` - regulator=Nac; target=ybhH; function=-
+- `represses` --> [[gene.b0770|gene.b0770]] `RegulonDB` `S` - regulator=Nac; target=ybhI; function=-
+- `represses` --> [[gene.b0806|gene.b0806]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mcbA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0813|gene.b0813]] `RegulonDB` `S` - regulator=Nac; target=rhtA; function=-
+- `represses` --> [[gene.b0866|gene.b0866]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybjQ; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0877|gene.b0877]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ybjX; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0878|gene.b0878]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=macA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0888|gene.b0888]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=trxB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0889|gene.b0889]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lrp; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0897|gene.b0897]] `RegulonDB` `S` - regulator=Nac; target=ycaC; function=-
+- `represses` --> [[gene.b0898|gene.b0898]] `RegulonDB` `S` - regulator=Nac; target=ycaD; function=-
+- `represses` --> [[gene.b0929|gene.b0929]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0937|gene.b0937]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ssuE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0941|gene.b0941]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=elfG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0957|gene.b0957]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ompA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b0992|gene.b0992]] `RegulonDB` `S` - regulator=Nac; target=yccM; function=-
+- `represses` --> [[gene.b0997|gene.b0997]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=torA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1020|gene.b1020]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=phoH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1025|gene.b1025]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dgcT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1053|gene.b1053]] `RegulonDB` `S` - regulator=Nac; target=mdtG; function=-
+- `represses` --> [[gene.b1096|gene.b1096]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pabC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1177|gene.b1177]] `RegulonDB` `S` - regulator=Nac; target=ycgJ; function=-
+- `represses` --> [[gene.b1188|gene.b1188]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ycgB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1200|gene.b1200]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dhaK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1214|gene.b1214]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ychA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1215|gene.b1215]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=kdsA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1222|gene.b1222]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=narX; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1223|gene.b1223]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=narK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1245|gene.b1245]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=oppC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1295|gene.b1295]] `RegulonDB` `S` - regulator=Nac; target=ymjA; function=-
+- `represses` --> [[gene.b1338|gene.b1338]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=abgA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1339|gene.b1339]] `RegulonDB` `S` - regulator=Nac; target=abgR; function=-
+- `represses` --> [[gene.b1358|gene.b1358]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydaT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1372|gene.b1372]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=stfR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1373|gene.b1373]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tfaR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1374|gene.b1374]] `RegulonDB` `S` - regulator=Nac; target=pinR; function=-
+- `represses` --> [[gene.b1377|gene.b1377]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ompN; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1384|gene.b1384]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1385|gene.b1385]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=feaB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1445|gene.b1445]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ortT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1446|gene.b1446]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydcY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1447|gene.b1447]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydcZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1449|gene.b1449]] `RegulonDB` `S` - regulator=Nac; target=curA; function=-
+- `represses` --> [[gene.b1453|gene.b1453]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ansP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1485|gene.b1485]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ddpC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1501|gene.b1501]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydeP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1502|gene.b1502]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydeQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1533|gene.b1533]] `RegulonDB` `S` - regulator=Nac; target=eamA; function=-
+- `represses` --> [[gene.b1544|gene.b1544]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydfK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1545|gene.b1545]] `RegulonDB` `S` - regulator=Nac; target=pinQ; function=-
+- `represses` --> [[gene.b1546|gene.b1546]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tfaQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1555|gene.b1555]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydfR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1582|gene.b1582]] `RegulonDB` `S` - regulator=Nac; target=ynfA; function=-
+- `represses` --> [[gene.b1586|gene.b1586]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynfD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1587|gene.b1587]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynfE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1588|gene.b1588]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynfF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1593|gene.b1593]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bidA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1602|gene.b1602]] `RegulonDB` `S` - regulator=Nac; target=pntB; function=-
+- `represses` --> [[gene.b1603|gene.b1603]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pntA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1604|gene.b1604]] `RegulonDB` `S` - regulator=Nac; target=ydgH; function=-
+- `represses` --> [[gene.b1620|gene.b1620]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=malI; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1622|gene.b1622]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=malY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1661|gene.b1661]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cfa; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1675|gene.b1675]] `RegulonDB` `S` - regulator=Nac; target=fumD; function=-
+- `represses` --> [[gene.b1690|gene.b1690]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydiM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1692|gene.b1692]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydiB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1693|gene.b1693]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=aroD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1695|gene.b1695]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydiO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1696|gene.b1696]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ydiP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1719|gene.b1719]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=thrS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1722|gene.b1722]] `RegulonDB` `S` - regulator=Nac; target=ydiY; function=-
+- `represses` --> [[gene.b1726|gene.b1726]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yniB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1727|gene.b1727]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hxpB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1741|gene.b1741]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cho; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1759|gene.b1759]] `RegulonDB` `S` - regulator=Nac; target=nudG; function=-
+- `represses` --> [[gene.b1760|gene.b1760]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ynjH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1761|gene.b1761]] `RegulonDB` `S` - regulator=Nac; target=gdhA; function=-
+- `represses` --> [[gene.b1814|gene.b1814]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sdaA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1827|gene.b1827]] `RegulonDB` `S` - regulator=Nac; target=kdgR; function=-
+- `represses` --> [[gene.b1828|gene.b1828]] `RegulonDB` `S` - regulator=Nac; target=yebQ; function=-
+- `represses` --> [[gene.b1829|gene.b1829]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=htpX; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1835|gene.b1835]] `RegulonDB` `S` - regulator=Nac; target=rsmF; function=-
+- `represses` --> [[gene.b1840|gene.b1840]] `RegulonDB` `S` - regulator=Nac; target=yebZ; function=-+
+- `represses` --> [[gene.b1841|gene.b1841]] `RegulonDB` `S` - regulator=Nac; target=yobA; function=-+
+- `represses` --> [[gene.b1842|gene.b1842]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=holE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1843|gene.b1843]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yobB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1857|gene.b1857]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=znuA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1901|gene.b1901]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=araF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1914|gene.b1914]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=uvrY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1915|gene.b1915]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yecF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1916|gene.b1916]] `RegulonDB` `S` - regulator=Nac; target=sdiA; function=-
+- `represses` --> [[gene.b1923|gene.b1923]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fliC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1924|gene.b1924]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fliD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1932|gene.b1932]] `RegulonDB` `S` - regulator=Nac; target=yedL; function=-
+- `represses` --> [[gene.b1951|gene.b1951]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rcsA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1961|gene.b1961]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dcm; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1967|gene.b1967]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hchA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1969|gene.b1969]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hprR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1976|gene.b1976]] `RegulonDB` `S` - regulator=Nac; target=mtfA; function=-
+- `represses` --> [[gene.b1977|gene.b1977]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=asnT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1981|gene.b1981]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=shiA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1982|gene.b1982]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=amn; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1988|gene.b1988]] `RegulonDB` `C` - regulator=Nac; target=nac; function=-
+- `represses` --> [[gene.b1989|gene.b1989]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=asnV; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1991|gene.b1991]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cobT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b1993|gene.b1993]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cobU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2016|gene.b2016]] `RegulonDB` `S` - regulator=Nac; target=yeeZ; function=-
+- `represses` --> [[gene.b2028|gene.b2028]] `RegulonDB` `S` - regulator=Nac; target=ugd; function=-
+- `represses` --> [[gene.b2041|gene.b2041]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rfbB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2060|gene.b2060]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wzc; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2061|gene.b2061]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wzb; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2062|gene.b2062]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=wza; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2073|gene.b2073]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yegL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2085|gene.b2085]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yegR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2091|gene.b2091]] `RegulonDB` `S` - regulator=Nac; target=gatD; function=-+
+- `represses` --> [[gene.b2093|gene.b2093]] `RegulonDB` `S` - regulator=Nac; target=gatB; function=-+
+- `represses` --> [[gene.b2094|gene.b2094]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gatA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2112|gene.b2112]] `RegulonDB` `S` - regulator=Nac; target=yehE; function=-
+- `represses` --> [[gene.b2133|gene.b2133]] `RegulonDB` `S` - regulator=Nac; target=dld; function=-
+- `represses` --> [[gene.b2149|gene.b2149]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mglA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2150|gene.b2150]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mglB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2156|gene.b2156]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lysP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2157|gene.b2157]] `RegulonDB` `S` - regulator=Nac; target=yeiE; function=-
+- `represses` --> [[gene.b2178|gene.b2178]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yejB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2181|gene.b2181]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yejG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2188|gene.b2188]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lapC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2194|gene.b2194]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ccmH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2200|gene.b2200]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ccmB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2201|gene.b2201]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ccmA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2202|gene.b2202]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=napC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2203|gene.b2203]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=napB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2236|gene.b2236]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfaE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2270|gene.b2270]] `RegulonDB` `S` - regulator=Nac; target=yfbK; function=-
+- `represses` --> [[gene.b2295|gene.b2295]] `RegulonDB` `S` - regulator=Nac; target=yfbV; function=-
+- `represses` --> [[gene.b2330|gene.b2330]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=prmB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2332|gene.b2332]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfcO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2333|gene.b2333]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfcP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2368|gene.b2368]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=emrK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2369|gene.b2369]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=evgA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2371|gene.b2371]] `RegulonDB` `S` - regulator=Nac; target=yfdE; function=-
+- `represses` --> [[gene.b2379|gene.b2379]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=alaC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2392|gene.b2392]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mntH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2393|gene.b2393]] `EcoCyc` `database` - EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2405|gene.b2405]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=xapR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2418|gene.b2418]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pdxK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2420|gene.b2420]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfeS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2503|gene.b2503]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pdeF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2505|gene.b2505]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfgH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2535|gene.b2535]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=csiE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2562|gene.b2562]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfhL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2568|gene.b2568]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lepB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2601|gene.b2601]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=aroF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2603|gene.b2603]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yfiR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2625|gene.b2625]] `RegulonDB` `S` - regulator=Nac; target=yfjI; function=-
+- `represses` --> [[gene.b2628|gene.b2628]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=abpA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2631|gene.b2631]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rnlB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2659|gene.b2659]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=glaH; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2660|gene.b2660]] `RegulonDB` `S` - regulator=Nac; target=lhgD; function=-+
+- `represses` --> [[gene.b2667|gene.b2667]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygaV; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2668|gene.b2668]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygaP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2671|gene.b2671]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygaC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2672|gene.b2672]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygaM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2682|gene.b2682]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygaZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2707|gene.b2707]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=srlR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2734|gene.b2734]] `RegulonDB` `S` - regulator=Nac; target=pphB; function=-
+- `represses` --> [[gene.b2747|gene.b2747]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ispD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2764|gene.b2764]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cysJ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2765|gene.b2765]] `RegulonDB` `S` - regulator=Nac; target=queD; function=-
+- `represses` --> [[gene.b2767|gene.b2767]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygcO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2768|gene.b2768]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygcP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2771|gene.b2771]] `RegulonDB` `S` - regulator=Nac; target=ygcS; function=-
+- `represses` --> [[gene.b2776|gene.b2776]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygcE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2788|gene.b2788]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gudX; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2794|gene.b2794]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=queF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2795|gene.b2795]] `RegulonDB` `S` - regulator=Nac; target=ppnN; function=-
+- `represses` --> [[gene.b2800|gene.b2800]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fucA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2821|gene.b2821]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ptrA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2824|gene.b2824]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygdB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2833|gene.b2833]] `RegulonDB` `S` - regulator=Nac; target=ygdR; function=-
+- `represses` --> [[gene.b2839|gene.b2839]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lysR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2841|gene.b2841]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=araE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2843|gene.b2843]] `RegulonDB` `S` - regulator=Nac; target=kduI; function=-
+- `represses` --> [[gene.b2851|gene.b2851]] `RegulonDB` `S` - regulator=Nac; target=ygeG; function=-
+- `represses` --> [[gene.b2866|gene.b2866]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=xdhA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2875|gene.b2875]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yqeB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2905|gene.b2905]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gcvT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2913|gene.b2913]] `RegulonDB` `S` - regulator=Nac; target=serA; function=-
+- `represses` --> [[gene.b2919|gene.b2919]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=scpB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2921|gene.b2921]] `RegulonDB` `S` - regulator=Nac; target=srsR; function=-
+- `represses` --> [[gene.b2957|gene.b2957]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ansB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2985|gene.b2985]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yghS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b2986|gene.b2986]] `RegulonDB` `S` - regulator=Nac; target=yghT; function=-
+- `represses` --> [[gene.b3012|gene.b3012]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dkgA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3027|gene.b3027]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygiZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3029|gene.b3029]] `RegulonDB` `S` - regulator=Nac; target=ygiN; function=-
+- `represses` --> [[gene.b3054|gene.b3054]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygiF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3055|gene.b3055]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ygiM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3078|gene.b3078]] `RegulonDB` `S` - regulator=Nac; target=ygjI; function=-
+- `represses` --> [[gene.b3092|gene.b3092]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=uxaC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3093|gene.b3093]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=exuT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3104|gene.b3104]] `RegulonDB` `S` - regulator=Nac; target=yhaI; function=-
+- `represses` --> [[gene.b3118|gene.b3118]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tdcA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3119|gene.b3119]] `RegulonDB` `S` - regulator=Nac; target=tdcR; function=-
+- `represses` --> [[gene.b3142|gene.b3142]] `RegulonDB` `S` - regulator=Nac; target=yraH; function=-
+- `represses` --> [[gene.b3157|gene.b3157]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ubiT; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3158|gene.b3158]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ubiU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3169|gene.b3169]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nusA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3170|gene.b3170]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rimP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3171|gene.b3171]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=metY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3174|gene.b3174]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=leuU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3175|gene.b3175]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=secG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3186|gene.b3186]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rplU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3187|gene.b3187]] `RegulonDB` `S` - regulator=Nac; target=ispB; function=-
+- `represses` --> [[gene.b3212|gene.b3212]] `RegulonDB` `S` - regulator=Nac; target=gltB; function=-
+- `represses` --> [[gene.b3213|gene.b3213]] `RegulonDB` `S` - regulator=Nac; target=gltD; function=-
+- `represses` --> [[gene.b3214|gene.b3214]] `RegulonDB` `S` - regulator=Nac; target=gltF; function=-+
+- `represses` --> [[gene.b3215|gene.b3215]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yhcA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3216|gene.b3216]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yhcD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3224|gene.b3224]] `RegulonDB` `S` - regulator=Nac; target=nanT; function=-+
+- `represses` --> [[gene.b3225|gene.b3225]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nanA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3250|gene.b3250]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mreC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3265|gene.b3265]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=acrE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3267|gene.b3267]] `RegulonDB` `S` - regulator=Nac; target=yhdV; function=-
+- `represses` --> [[gene.b3281|gene.b3281]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=aroE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3291|gene.b3291]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mscL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3328|gene.b3328]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gspG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3329|gene.b3329]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gspH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3337|gene.b3337]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bfd; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3369|gene.b3369]] `RegulonDB` `S` - regulator=Nac; target=yhfL; function=-
+- `represses` --> [[gene.b3383|gene.b3383]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yhfZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3405|gene.b3405]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ompR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3406|gene.b3406]] `RegulonDB` `S` - regulator=Nac; target=greB; function=-
+- `represses` --> [[gene.b3442|gene.b3442]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yhhZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3456|gene.b3456]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=livM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3458|gene.b3458]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=livK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3488|gene.b3488]] `RegulonDB` `S` - regulator=Nac; target=yhiJ; function=-
+- `represses` --> [[gene.b3495|gene.b3495]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=uspA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3500|gene.b3500]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gor; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3513|gene.b3513]] `RegulonDB` `S` - regulator=Nac; target=mdtE; function=-+
+- `represses` --> [[gene.b3514|gene.b3514]] `RegulonDB` `S` - regulator=Nac; target=mdtF; function=-
+- `represses` --> [[gene.b3516|gene.b3516]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=gadX; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3522|gene.b3522]] `RegulonDB` `S` - regulator=Nac; target=yhjD; function=-
+- `represses` --> [[gene.b3540|gene.b3540]] `RegulonDB` `S` - regulator=Nac; target=dppF; function=-+
+- `represses` --> [[gene.b3541|gene.b3541]] `RegulonDB` `S` - regulator=Nac; target=dppD; function=-+
+- `represses` --> [[gene.b3542|gene.b3542]] `RegulonDB` `S` - regulator=Nac; target=dppC; function=-+
+- `represses` --> [[gene.b3543|gene.b3543]] `RegulonDB` `S` - regulator=Nac; target=dppB; function=-+
+- `represses` --> [[gene.b3544|gene.b3544]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dppA; function=-+ | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3552|gene.b3552]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yiaD; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3617|gene.b3617]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=kbl; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3620|gene.b3620]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=waaF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3631|gene.b3631]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=waaG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3647|gene.b3647]] `RegulonDB` `S` - regulator=Nac; target=ligB; function=-
+- `represses` --> [[gene.b3649|gene.b3649]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rpoZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3669|gene.b3669]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=uhpA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3670|gene.b3670]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ilvN; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3702|gene.b3702]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dnaA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3708|gene.b3708]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tnaA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3709|gene.b3709]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tnaB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3712|gene.b3712]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yieE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3715|gene.b3715]] `RegulonDB` `S` - regulator=Nac; target=yieH; function=-
+- `represses` --> [[gene.b3716|gene.b3716]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cbrB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3717|gene.b3717]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cbrC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3720|gene.b3720]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bglH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3721|gene.b3721]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=bglB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3727|gene.b3727]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pstC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3728|gene.b3728]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pstS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3741|gene.b3741]] `RegulonDB` `S` - regulator=Nac; target=mnmG; function=-
+- `represses` --> [[gene.b3742|gene.b3742]] `RegulonDB` `S` - regulator=Nac; target=mioC; function=-
+- `represses` --> [[gene.b3743|gene.b3743]] `RegulonDB` `S` - regulator=Nac; target=asnC; function=-
+- `represses` --> [[gene.b3744|gene.b3744]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=asnA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3755|gene.b3755]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yieP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3765|gene.b3765]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yifB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3778|gene.b3778]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rep; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3821|gene.b3821]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pldA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3828|gene.b3828]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=metR; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3857|gene.b3857]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mobA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3860|gene.b3860]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=dsbA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3863|gene.b3863]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=polA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3864|gene.b3864]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=spf; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3867|gene.b3867]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hemN; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3872|gene.b3872]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yihL; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3876|gene.b3876]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yihO; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3878|gene.b3878]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yihQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3889|gene.b3889]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yiiE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3890|gene.b3890]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yiiF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3894|gene.b3894]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fdoG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3895|gene.b3895]] `RegulonDB` `S` - regulator=Nac; target=fdhD; function=-
+- `represses` --> [[gene.b3926|gene.b3926]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=glpK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3942|gene.b3942]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=katG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3954|gene.b3954]] `RegulonDB` `S` - regulator=Nac; target=yijO; function=-
+- `represses` --> [[gene.b3956|gene.b3956]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ppc; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3995|gene.b3995]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=rsd; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b3996|gene.b3996]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nudC; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4014|gene.b4014]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=aceB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4020|gene.b4020]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjbB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4040|gene.b4040]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ubiA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4056|gene.b4056]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjbQ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4077|gene.b4077]] `RegulonDB` `S` - regulator=Nac; target=gltP; function=-
+- `represses` --> [[gene.b4078|gene.b4078]] `RegulonDB` `S` - regulator=Nac; target=yjcO; function=-
+- `represses` --> [[gene.b4114|gene.b4114]] `RegulonDB` `S` - regulator=Nac; target=eptA; function=-
+- `represses` --> [[gene.b4129|gene.b4129]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=lysU; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4141|gene.b4141]] `RegulonDB` `S` - regulator=Nac; target=yjeH; function=-
+- `represses` --> [[gene.b4145|gene.b4145]] `RegulonDB` `S` - regulator=Nac; target=yjeJ; function=-
+- `represses` --> [[gene.b4149|gene.b4149]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=blc; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4156|gene.b4156]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjeM; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4169|gene.b4169]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=amiB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4172|gene.b4172]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=hfq; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4204|gene.b4204]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjfZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4207|gene.b4207]] `RegulonDB` `S` - regulator=Nac; target=fklB; function=-
+- `represses` --> [[gene.b4213|gene.b4213]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=cpdB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4217|gene.b4217]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ytfK; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4222|gene.b4222]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ytfP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4224|gene.b4224]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=chpS; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4237|gene.b4237]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=nrdG; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4245|gene.b4245]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=pyrB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4248|gene.b4248]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjgH; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4257|gene.b4257]] `RegulonDB` `S` - regulator=Nac; target=yjgN; function=-
+- `represses` --> [[gene.b4299|gene.b4299]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yjhI; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4346|gene.b4346]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=mcrB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4367|gene.b4367]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=fhuF; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4375|gene.b4375]] `RegulonDB` `S` - regulator=Nac; target=prfC; function=-
+- `represses` --> [[gene.b4376|gene.b4376]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=osmY; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4410|gene.b4410]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ecnA; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4411|gene.b4411]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=ecnB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4414|gene.b4414]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=tff; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4465|gene.b4465]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yggP; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4539|gene.b4539]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yoeB; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4542|gene.b4542]] `RegulonDB` `S` - regulator=Nac; target=yohO; function=-
+- `represses` --> [[gene.b4596|gene.b4596]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=yciZ; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+- `represses` --> [[gene.b4611|gene.b4611]] `RegulonDB|EcoCyc` `S` - regulator=Nac; target=sibE; function=- | EcoCyc regulation TYPES=Transcription-Factor-Binding
+
+## Incoming Edges (1)
+
+- `encodes` <-- [[gene.b1988|gene.b1988]] `UniProt|EcoCyc` `database` - EcoCyc gene PRODUCT
+
+## External IDs
+
+- `UniProt:Q47005`
+- `KEGG:ecj:JW1967;eco:b1988;ecoc:C3026_11220;`
+- `GeneID:946501;`
+- `GO:GO:0003677; GO:0003700; GO:0042128; GO:0045892; GO:0045893; GO:2000142`
+
+## Notes
+
+Nitrogen assimilation regulatory protein nac (Nitrogen assimilation control protein)

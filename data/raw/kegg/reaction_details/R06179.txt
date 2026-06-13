@@ -1,0 +1,15 @@
+ENTRY       R06179                      Reaction
+DEFINITION  G10553 + G10554(n) <=> di-trans,poly-cis-Undecaprenyl diphosphate + G10554(n+1)
+EQUATION    G10553 + G10554(n) <=> C04574 + G10554(n+1)
+REMARK      Same as: R06178
+ENZYME      2.4.99.28
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.99  Transferring other glycosyl groups
+                2.4.99.28
+                 R06179  G10553 + G10554(n) <=> di-trans,poly-cis-Undecaprenyl diphosphate + G10554(n+1)
+            Glycosyltransferase reactions [br08203.html]
+             Other reactions
+              R06179
+///

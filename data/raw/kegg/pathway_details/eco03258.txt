@@ -1,0 +1,51 @@
+ENTRY       eco03258                    Pathway
+NAME        Virion - Bacteriophage lambda - Escherichia coli K-12 MG1655
+CLASS       Genetic Information Processing; Information processing in viruses
+PATHWAY_MAP eco03258  Virion - Bacteriophage lambda
+DBLINKS     PDB: 7VI9 1TCZ 2KX4 3FZ2 6P3E
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0560  nohD; DLP12 prophage; putative DNA-packaging protein NohD [KO:K22014]
+            b1546  tfaQ; Qin prophage; putative tail fiber assembly protein TfaQ [KO:K26980]
+            b1548  nohA; Qin prophage; putative prophage DNA-packaging protein NohA [KO:K22014]
+REFERENCE   PMID:21943085
+  AUTHORS   Rajagopala SV, Casjens S, Uetz P
+  TITLE     The protein interaction map of bacteriophage lambda.
+  JOURNAL   BMC Microbiol 11:213 (2011)
+            DOI:10.1186/1471-2180-11-213
+REFERENCE   PMID:35026161
+  AUTHORS   Wang C, Zeng J, Wang J
+  TITLE     Structural basis of bacteriophage lambda capsid maturation.
+  JOURNAL   Structure 30:637-645.e3 (2022)
+            DOI:10.1016/j.str.2021.12.009
+REFERENCE   PMID:20660769
+  AUTHORS   Cardarelli L, Pell LG, Neudecker P, Pirani N, Liu A, Baker LA, Rubinstein JL, Maxwell KL, Davidson AR
+  TITLE     Phages have adapted the same protein fold to fulfill multiple functions in virion assembly.
+  JOURNAL   Proc Natl Acad Sci U S A 107:14384-9 (2010)
+            DOI:10.1073/pnas.1005822107
+REFERENCE   PMID:31711962
+  AUTHORS   Campbell PL, Duda RL, Nassur J, Conway JF, Huet A
+  TITLE     Mobile Loops and Electrostatic Interactions Maintain the Flexible Tail Tube of Bacteriophage Lambda.
+  JOURNAL   J Mol Biol 432:384-395 (2020)
+            DOI:10.1016/j.jmb.2019.10.031
+REFERENCE   PMID:23851014
+  AUTHORS   Xu J, Hendrix RW, Duda RL
+  TITLE     A balanced ratio of proteins from gene G and frameshift-extended gene GT is required for phage lambda tail assembly.
+  JOURNAL   J Mol Biol 425:3476-87 (2013)
+            DOI:10.1016/j.jmb.2013.07.002
+REFERENCE   PMID:23911548
+  AUTHORS   Xu J, Hendrix RW, Duda RL
+  TITLE     Chaperone-protein interactions that mediate assembly of the bacteriophage lambda tail to the correct length.
+  JOURNAL   J Mol Biol 426:1004-18 (2014)
+            DOI:10.1016/j.jmb.2013.06.040
+REFERENCE   PMID:22748812
+  AUTHORS   Hauser R, Blasche S, Dokland T, Haggard-Ljungquist E, von Brunn A, Salas M, Casjens S, Molineux I, Uetz P
+  TITLE     Bacteriophage protein-protein interactions.
+  JOURNAL   Adv Virus Res 83:219-98 (2012)
+            DOI:10.1016/B978-0-12-394438-2.00006-2
+REFERENCE   PMID:32384698
+  AUTHORS   Goulet A, Spinelli S, Mahony J, Cambillau C
+  TITLE     Conserved and Diverse Traits of Adhesion Devices from Siphoviridae Recognizing Proteinaceous or Saccharidic Receptors.
+  JOURNAL   Viruses 12:512 (2020)
+            DOI:10.3390/v12050512
+KO_PATHWAY  ko03258
+///

@@ -1,0 +1,19 @@
+ENTRY       eco01250          Overview  Pathway
+NAME        Biosynthesis of nucleotide sugars - Escherichia coli K-12 MG1655
+PATHWAY_MAP eco01250  Biosynthesis of nucleotide sugars
+MODULE      eco_M00063  CMP-KDO biosynthesis, ribulose-5P => CMP-KDO [PATH:eco01250]
+            eco_M00064  ADP-LDmanHep biosynthesis, sedoheptulose-7P => ADP-LDmanHep [PATH:eco01250]
+            eco_M00549  UDP-Glc biosynthesis, Glc => UDP-Glc [PATH:eco01250]
+            eco_M00554  UDP-Gal biosynthesis, Gal => UDP-Gal [PATH:eco01250]
+            eco_M00761  Und-P-alpha-L-Ara4N biosynthesis, UDP-Glc => UDP-L-Ara4FN => Und-P-alpha-L-Ara4N [PATH:eco01250]
+            eco_M00793  dTDP-L-Rha biosynthesis, Glc-1P => dTDP-L-Rha [PATH:eco01250]
+            eco_M00909  UDP-GlcNAc biosynthesis, prokaryotes, Fru-6P => UDP-GlcNAc [PATH:eco01250]
+            eco_M00995  UDP-MurNAc biosynthesis, Fru-6P => UDP-MurNAc [PATH:eco01250]
+            eco_M01000  GDP-Man biosynthesis, Fru-6P => GDP-Man [PATH:eco01250]
+            eco_M01004  UDP-Galf biosynthesis, UDP-Glc => UDP-Galf [PATH:eco01250]
+            eco_M01014  UDP-ManNAcA biosynthesis, UDP-GlcNAc => UDP-ManNAcA [PATH:eco01250]
+            eco_M01016  GDP-L-Fuc biosynthesis, GDP-Man => GDP-L-Fuc [PATH:eco01250]
+            eco_M01025  dTDP-D-Fuc4NAc biosynthesis, Glc-1P => dTDP-D-Fuc4NAc [PATH:eco01250]
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+KO_PATHWAY  ko01250
+///

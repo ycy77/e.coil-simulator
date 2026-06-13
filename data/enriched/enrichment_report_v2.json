@@ -1,0 +1,19 @@
+{
+  "input_entities": 24203,
+  "output_cards": 24203,
+  "by_type": {
+    "protein": 4458,
+    "small_molecule": 9841,
+    "reaction": 3874,
+    "gene": 4506,
+    "rna": 215,
+    "complex": 1309
+  },
+  "by_quality": {
+    "informative": 24203
+  },
+  "by_exogenous": {
+    "false": 19355,
+    "true": 4848
+  }
+}

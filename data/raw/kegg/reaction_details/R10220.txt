@@ -1,0 +1,13 @@
+ENTRY       R10220                      Reaction
+NAME        S-adenosyl-L-methionine:7-aminomethyl-7-deazaguanosine ribosyltransferase (ribosyl isomerizing; L-methionine, adenine releasing)
+DEFINITION  S-Adenosyl-L-methionine + tRNA 7-aminomethyl-7-carbaguanine <=> L-Methionine + Adenine + Epoxyqueuosine in tRNA
+EQUATION    C00019 + C20446 <=> C00073 + C00147 + C19647
+ENZYME      2.4.99.17
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.99  Transferring other glycosyl groups
+                2.4.99.17
+                 R10220  S-Adenosyl-L-methionine + tRNA 7-aminomethyl-7-carbaguanine <=> L-Methionine + Adenine + Epoxyqueuosine in tRNA
+ORTHOLOGY   K07568  S-adenosylmethionine:tRNA ribosyltransferase-isomerase [EC:2.4.99.17]
+///

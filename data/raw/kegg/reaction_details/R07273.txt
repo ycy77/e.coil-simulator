@@ -1,0 +1,22 @@
+ENTRY       R07273                      Reaction
+NAME        solanesyl-diphosphate:4-hydroxybenzoate nonaprenyltransferase
+DEFINITION  all-trans-Nonaprenyl diphosphate + 4-Hydroxybenzoate <=> Diphosphate + 3-Nonaprenyl-4-hydroxybenzoate
+EQUATION    C04145 + C00156 <=> C00013 + C03885
+RCLASS      RC00209  C00156_C03885
+            RC02895  C03885_C04145
+ENZYME      2.5.1.39
+PATHWAY     rn01110  Biosynthesis of secondary metabolites
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.5  Transferring alkyl or aryl groups, other than methyl groups
+               2.5.1  Transferring alkyl or aryl groups, other than methyl groups (only sub-subclass identified to date)
+                2.5.1.39
+                 R07273  all-trans-Nonaprenyl diphosphate + 4-Hydroxybenzoate <=> Diphosphate + 3-Nonaprenyl-4-hydroxybenzoate
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.5.1.39
+               R05000  all-trans-Polyprenyl diphosphate <=> 4-Hydroxy-3-polyprenylbenzoate
+                R07273  all-trans-Nonaprenyl diphosphate <=> 3-Nonaprenyl-4-hydroxybenzoate
+ORTHOLOGY   K06125  4-hydroxybenzoate polyprenyltransferase [EC:2.5.1.39]
+DBLINKS     RHEA: 17712
+///

@@ -1,0 +1,49 @@
+{
+  "source": "/home/zkyd/data1/ycy/P_world/coil/data/normalized/_v2",
+  "audit_decisions_loaded": 24319,
+  "baseline": {
+    "entities": 10756,
+    "edges": 22441,
+    "by_type": {
+      "protein": 4440,
+      "small_molecule": 1275,
+      "gene": 4505,
+      "rna": 107,
+      "complex": 429
+    }
+  },
+  "perturbagen": {
+    "entities": 4565,
+    "edges": 13,
+    "by_type": {
+      "protein": 18,
+      "small_molecule": 4539,
+      "gene": 1,
+      "complex": 7
+    }
+  },
+  "quarantine": {
+    "entities": 203,
+    "edges": 0,
+    "by_type": {
+      "small_molecule": 203
+    }
+  },
+  "dropped_from_baseline": {
+    "total": 4805,
+    "by_type": {
+      "rna": 108,
+      "complex": 873
+    },
+    "note": "Endogenous by audit, but failed the per-type inclusion rule. Folded implicitly into reaction/complex nodes per design."
+  },
+  "inclusion_rules": {
+    "gene": "all endogenous",
+    "protein": "all endogenous",
+    "rna": "sRNA-like: has an outgoing regulatory edge; drops mRNA / rRNA / tRNA by name",
+    "small_molecule": "signaling metabolites only: (a) has an outgoing regulatory edge to a protein/gene OR (b) name matches a known signaling pattern (cAMP, ppGpp, c-di-GMP, AI-2, indole, ...)",
+    "reaction": "at least one protein catalyzes it (incoming catalyzes/is_component_of edge)",
+    "complex": ">= 2 distinct protein components and non-transient complex_type"
+  },
+  "edge_split_rule": "Both endpoints must live in the same library (per user spec)."
+}

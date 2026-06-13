@@ -1,0 +1,36 @@
+ENTRY       eco03008                    Pathway
+NAME        Ribosome biogenesis in eukaryotes - Escherichia coli K-12 MG1655
+DESCRIPTION Ribosomes are the cellular factories responsible for making proteins. In eukaryotes, ribosome biogenesis involves the production and correct assembly of four rRNAs and about 80 ribosomal proteins. It requires hundreds of factors not present in the mature particle. In the absence of these proteins, ribosome biogenesis is stalled and cell growth is terminated even under optimal growth conditions. The primary pre-rRNA transcript is assembled into the 90S pre-ribosome, which contains both 40S and 60S assembly factors. Within this complex, the pre-rRNA is cleaved. pre-60S ribosomes are subjected to several sequential processing steps in the nucleoplasm involving numerous assembly intermediates before it is exported to the cytoplasm and matured into the 60S ribosomal subunit. The pre-40S ribosome is matured to the small ribosomal subunit in the cytoplasm by cleavage.
+CLASS       Genetic Information Processing; Translation
+PATHWAY_MAP eco03008  Ribosome biogenesis in eukaryotes
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b2567  rnc; RNase III [KO:K03685] [EC:3.1.26.3]
+            b4162  orn; oligoribonuclease [KO:K13288] [EC:3.1.-.-]
+REFERENCE   PMID:20174677
+  AUTHORS   Freed EF, Bleichert F, Dutca LM, Baserga SJ
+  TITLE     When ribosomes go bad: diseases of ribosome biogenesis.
+  JOURNAL   Mol Biosyst 6:481-93 (2010)
+            DOI:10.1039/b919670f
+REFERENCE   PMID:17515605
+  AUTHORS   Perez-Fernandez J, Roman A, De Las Rivas J, Bustelo XR, Dosil M
+  TITLE     The 90S preribosome is a multimodular structure that is assembled through a hierarchical mechanism.
+  JOURNAL   Mol Cell Biol 27:5414-29 (2007)
+            DOI:10.1128/MCB.00380-07
+REFERENCE   PMID:19850913
+  AUTHORS   Strunk BS, Karbstein K
+  TITLE     Powering through ribosome assembly.
+  JOURNAL   RNA 15:2083-104 (2009)
+            DOI:10.1261/rna.1792109
+REFERENCE   PMID:15120992
+  AUTHORS   Granneman S, Baserga SJ
+  TITLE     Ribosome biogenesis: of knobs and RNA processing.
+  JOURNAL   Exp Cell Res 296:43-50 (2004)
+            DOI:10.1016/j.yexcr.2004.03.016
+REFERENCE   PMID:19879902
+  AUTHORS   Kressler D, Hurt E, Bassler J
+  TITLE     Driving ribosome assembly.
+  JOURNAL   Biochim Biophys Acta 1803:673-83 (2010)
+            DOI:10.1016/j.bbamcr.2009.10.009
+REL_PATHWAY eco03010  Ribosome
+KO_PATHWAY  ko03008
+///

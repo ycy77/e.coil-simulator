@@ -1,0 +1,17 @@
+ENTRY       R07282                      Reaction
+NAME        polyribonucleotide:phosphate nucleotidyltransferase
+DEFINITION  RNA + Orthophosphate <=> RNA + NDP
+EQUATION    C00046 + C00009 <=> C00046 + C00454
+ENZYME      2.7.7.8
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.8
+                 R07282  RNA + Orthophosphate <=> RNA + NDP
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.8
+               R07282  NDP
+DBLINKS     RHEA: 22099
+///

@@ -1,0 +1,415 @@
+profile_id: glucose_log_phase
+description: >
+  Baseline profile for E. coli MG1655 growing logarithmically with glucose
+  as the primary carbon source under aerobic conditions. This profile
+  seeds both the small-molecule environment and the central carbon
+  metabolism / cAMP-CRP regulatory system so the simulator can resolve
+  realistic catabolite-repression and inducer-shift behavior.
+source: database
+confidence: medium
+notes: >
+  Conservative seed profile. It only sets a small number of environment-defining
+  molecules and lac/cAMP-related regulators; broad proteome/transcriptome
+  condition annotation can be generated later by batch LLM and reviewed into
+  this file.
+
+# ---------------------------------------------------------------------------
+# Section 1: Carbon sources and primary fermentative outputs
+# ---------------------------------------------------------------------------
+overrides:
+
+  # ----- Bulk carbon and energy cofactors (aerobic log phase) -----
+  molecule.C00031:
+    state: high
+    abundance_label: high
+    confidence: high
+    reason: Glucose is the primary supplied carbon source in this initial condition.
+  molecule.C00007:
+    state: high
+    abundance_label: high
+    confidence: medium
+    reason: Aerobic rich oxygen availability is the default in glucose log phase.
+  molecule.C00002:
+    state: high
+    abundance_label: high
+    confidence: medium
+    reason: Log-phase growth is energy-replete relative to starvation profiles.
+  molecule.C00008:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: ADP remains present during active growth.
+  molecule.C00020:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: AMP is a small but measurable pool during exponential growth.
+  molecule.C00003:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: NAD+ is held high during oxidative phosphorylation.
+  molecule.C00004:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: NADH is sustained by glycolysis and the TCA cycle.
+  molecule.C00005:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: NADPH is fed by zwf/gnd of the oxidative pentose phosphate pathway.
+  molecule.C00006:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: NADP+ accompanies the NADPH pool.
+  molecule.C00010:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: CoA is needed for acetyl-CoA formation and TCA flux.
+  molecule.C00009:
+    state: high
+    abundance_label: high
+    confidence: medium
+    reason: Orthophosphate is abundant in standard M9/glucose medium.
+  molecule.C00011:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: CO2 is produced by decarboxylation steps in the TCA cycle.
+  molecule.C00014:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Ammonia source is permissive in glucose log phase.
+  molecule.C00064:
+    state: medium
+    abundance_label: medium
+    confidence: low
+    reason: Glutamine is consumed as a nitrogen donor during active growth.
+  molecule.C00025:
+    state: medium
+    abundance_label: medium
+    confidence: low
+    reason: Glutamate pool is roughly stable in glucose log phase.
+  molecule.C00026:
+    state: medium
+    abundance_label: medium
+    confidence: low
+    reason: 2-Oxoglutarate links carbon and nitrogen metabolism.
+
+  # ----- Substrates absent in baseline glucose log phase -----
+  molecule.C00243:
+    state: absent
+    abundance_label: absent
+    confidence: high
+    reason: Lactose is absent unless explicitly added as a perturbation.
+  molecule.C05396:
+    state: absent
+    abundance_label: absent
+    confidence: medium
+    reason: Lactose phosphate is absent when lactose is absent.
+
+  # ----- Catabolite repression signature -----
+  molecule.C00575:
+    state: low
+    abundance_label: low
+    confidence: medium
+    reason: Glucose-rich conditions are treated as low-cAMP (catabolite repression).
+
+  # ----- Glycolytic intermediates (typical log-phase values) -----
+  molecule.C00092:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Glucose-6-phosphate is a major glycolytic node; sits in steady state.
+  molecule.C00085:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Fructose-6-phosphate sits at the PFK-1 branch point.
+  molecule.C00354:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Fructose-1,6-bisphosphate pools reflect PFK-1 activity.
+  molecule.C00111:
+    state: medium
+    abundance_label: medium
+    confidence: low
+    reason: Dihydroxyacetone phosphate is in equilibrium with G3P via TPI.
+  molecule.C00197:
+    state: medium
+    abundance_label: medium
+    confidence: low
+    reason: 3-Phosphoglycerate is on the lower-glycolysis branch.
+  molecule.C00022:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Pyruvate is the primary fermentative / respiratory branch point.
+  molecule.C00024:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Acetyl-CoA feeds the TCA cycle under aerobic conditions.
+  molecule.C00186:
+    state: low
+    abundance_label: low
+    confidence: medium
+    reason: Lactate is a minor side product under aerobic glucose growth.
+  molecule.C00042:
+    state: low
+    abundance_label: low
+    confidence: medium
+    reason: Succinate is produced in small amounts by the reductive TCA branch.
+
+  # ----- TCA cycle intermediates -----
+  molecule.C00036:
+    state: low
+    abundance_label: low
+    confidence: medium
+    reason: Oxaloacetate is held low by citrate synthase activity.
+  molecule.C00149:
+    state: medium
+    abundance_label: medium
+    confidence: medium
+    reason: Malate is an active TCA intermediate.
+
+  # ----- Stress / damage markers -----
+  molecule.C00027:
+    state: low
+    abundance_label: low
+    confidence: medium
+    reason: H2O2 is kept low by catalase and peroxidases in healthy cells.
+
+# ---------------------------------------------------------------------------
+# Section 2: lac operon regulators (preserved from the v0 profile)
+# ---------------------------------------------------------------------------
+
+  protein.P03023:
+    state: active
+    abundance_label: medium
+    confidence: high
+    reason: LacI is active in the no-lactose baseline; abundance is medium.
+  gene.b0344:
+    state: repressed
+    confidence: medium
+    reason: lacZ is repressed in the glucose-rich, lactose-absent baseline.
+  gene.b0343:
+    state: repressed
+    confidence: medium
+    reason: lacY is repressed in the glucose-rich, lactose-absent baseline.
+  gene.b0342:
+    state: repressed
+    confidence: medium
+    reason: lacA is repressed in the glucose-rich, lactose-absent baseline.
+
+# ---------------------------------------------------------------------------
+# Section 3: Glycolysis enzymes — held at moderate protein abundance
+# ---------------------------------------------------------------------------
+
+  protein.P0A858:
+    abundance_label: medium
+    confidence: high
+    reason: TpiA (TPI) is abundant; glycolytic upper node.
+  protein.P0A9B2:
+    abundance_label: medium
+    confidence: high
+    reason: GapA (GAPDH) is one of the most abundant E. coli proteins.
+  protein.P0A799:
+    abundance_label: medium
+    confidence: high
+    reason: Pgk is abundant on the lower-glycolysis branch.
+  protein.P0AB71:
+    abundance_label: medium
+    confidence: high
+    reason: FbaA is the dominant Class-II aldolase.
+  protein.P0A991:
+    abundance_label: medium
+    confidence: medium
+    reason: FbaB is a minor paralog; abundance held lower than FbaA.
+  protein.P37689:
+    abundance_label: medium
+    confidence: high
+    reason: GpmI is the major cofactor-independent phosphoglycerate mutase.
+  protein.P0A9C0:
+    abundance_label: medium
+    confidence: medium
+    reason: GlpA (anaerobic glycerol-3-P dehydrogenase) is not the dominant
+      aerobic enzyme but is annotated at medium baseline; GlpD is the
+      aerobic counterpart (see glpD override).
+  protein.P13035:
+    abundance_label: medium
+    confidence: high
+    reason: GlpD is the aerobic glycerol-3-phosphate dehydrogenase.
+  protein.P0A6T1:
+    abundance_label: medium
+    confidence: high
+    reason: Pgi (G6P isomerase) is abundant.
+  protein.P0A796:
+    abundance_label: medium
+    confidence: high
+    reason: PfkA is the dominant PFK-1 isoform in glucose log phase.
+  protein.P0A993:
+    abundance_label: low
+    confidence: medium
+    reason: Fbp (Fructose-1,6-bisphosphatase) is low under glucose growth.
+  protein.P0AD61:
+    abundance_label: medium
+    confidence: high
+    reason: PykF is the dominant pyruvate kinase isoform.
+  protein.P21599:
+    abundance_label: low
+    confidence: medium
+    reason: PykA is the minor pyruvate kinase isoform.
+  protein.P0A6F3:
+    abundance_label: medium
+    confidence: medium
+    reason: GlpK is the glycerol kinase; medium baseline under glucose growth.
+  protein.P0AER0:
+    abundance_label: low
+    confidence: medium
+    reason: GlpF is the glycerol facilitator; expression is induced by glycerol.
+  protein.P06999:
+    abundance_label: low
+    confidence: medium
+    reason: PfkB is the minor PFK-2 isoform.
+
+# ---------------------------------------------------------------------------
+# Section 4: TCA cycle + pyruvate dehydrogenase
+# ---------------------------------------------------------------------------
+
+  protein.P0AFG8:
+    abundance_label: medium
+    confidence: high
+    reason: AceE (E1p of PDH) is a major aerobic enzyme.
+  protein.P06959:
+    abundance_label: medium
+    confidence: high
+    reason: AceF (E2p of PDH) is a major aerobic enzyme.
+  protein.P0A9P0:
+    abundance_label: medium
+    confidence: high
+    reason: LpdA is the E3 subunit shared by PDH and 2-oxoglutarate DH.
+  protein.P0ABH7:
+    abundance_label: medium
+    confidence: high
+    reason: GltA (citrate synthase) is the TCA entry enzyme.
+  protein.P08200:
+    abundance_label: medium
+    confidence: high
+    reason: Icd (isocitrate dehydrogenase) feeds the TCA cycle.
+  protein.P25516:
+    abundance_label: low
+    confidence: medium
+    reason: AcnA is the minor aconitase; AcnB is dominant.
+  protein.P36683:
+    abundance_label: medium
+    confidence: high
+    reason: AcnB is the dominant aconitase.
+  protein.P0AFG3:
+    abundance_label: medium
+    confidence: high
+    reason: SucA (E1 of OGDH) is a major TCA enzyme.
+  protein.P0AFG6:
+    abundance_label: medium
+    confidence: high
+    reason: SucB (E2 of OGDH) is a major TCA enzyme.
+  protein.P0A836:
+    abundance_label: medium
+    confidence: high
+    reason: SucC (succinyl-CoA synthetase beta) is a major TCA enzyme.
+  protein.P0AGE9:
+    abundance_label: medium
+    confidence: high
+    reason: SucD (succinyl-CoA synthetase alpha) is a major TCA enzyme.
+  protein.P0AC41:
+    abundance_label: medium
+    confidence: high
+    reason: SdhA (succinate dehydrogenase flavoprotein) is a major TCA enzyme.
+  protein.P07014:
+    abundance_label: medium
+    confidence: high
+    reason: SdhB (succinate dehydrogenase iron-sulfur) is a major TCA enzyme.
+  protein.P0AC44:
+    abundance_label: medium
+    confidence: high
+    reason: SdhD anchors the succinate dehydrogenase membrane anchor.
+  protein.P0AC33:
+    abundance_label: medium
+    confidence: high
+    reason: FumA is the dominant aerobic fumarase.
+  protein.P14407:
+    abundance_label: low
+    confidence: medium
+    reason: FumB is induced anaerobically; low under aerobic glucose.
+  protein.P05042:
+    abundance_label: low
+    confidence: medium
+    reason: FumC is the oxidative-stress-induced fumarase; low baseline.
+  protein.P61889:
+    abundance_label: medium
+    confidence: high
+    reason: Mdh (malate dehydrogenase) is a major TCA enzyme.
+
+# ---------------------------------------------------------------------------
+# Section 5: cAMP / CRP global regulator (catabolite repression)
+# ---------------------------------------------------------------------------
+
+  protein.P0ACJ8:
+    abundance_label: medium
+    confidence: high
+    reason: CRP (catabolite activator protein) is constitutively expressed.
+  protein.P00936:
+    abundance_label: medium
+    confidence: high
+    reason: CyaA (adenylate cyclase) is expressed at medium baseline.
+  gene.b3357:
+    state: expressed
+    confidence: high
+    reason: crp is constitutively expressed.
+  gene.b3806:
+    state: expressed
+    confidence: medium
+    reason: cyaA is constitutively expressed.
+
+# ---------------------------------------------------------------------------
+# Section 6: Pentose phosphate pathway (PPP)
+# ---------------------------------------------------------------------------
+
+  protein.P0AC53:
+    abundance_label: medium
+    confidence: high
+    reason: Zwf is the PPP entry enzyme; provides NADPH for biosynthesis.
+  protein.P00350:
+    abundance_label: medium
+    confidence: high
+    reason: Gnd is the PPP NADPH-producing 6PG dehydrogenase.
+
+# ---------------------------------------------------------------------------
+# Section 7: Fermentation / mixed-acid branch (low under aerobic)
+# ---------------------------------------------------------------------------
+
+  protein.P09373:
+    abundance_label: low
+    confidence: medium
+    reason: PflB (pyruvate formate-lyase) is oxygen-sensitive; low aerobically.
+  protein.P0A6A3:
+    abundance_label: medium
+    confidence: high
+    reason: AckA (acetate kinase) is active under mixed-acid growth.
+  protein.P0A9M8:
+    abundance_label: medium
+    confidence: high
+    reason: Pta (phosphate acetyltransferase) feeds the AckA-Pta pathway.
+  protein.P52643:
+    abundance_label: low
+    confidence: medium
+    reason: LdhA (lactate dehydrogenase) is low under aerobic glucose growth.
+  protein.P0A9Q7:
+    abundance_label: medium
+    confidence: high
+    reason: AdhE is the ethanol / acetaldehyde dehydrogenase; minor aerobic flux.

@@ -1,0 +1,85 @@
+ENTRY       eco04981                    Pathway
+NAME        Folate transport and metabolism - Escherichia coli K-12 MG1655
+CLASS       Organismal Systems; Digestive system
+PATHWAY_MAP eco04981  Folate transport and metabolism
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0048  folA; dihydrofolate reductase [KO:K00287] [EC:1.5.1.3]
+            b0261  mmuM; CP4-6 prophage; homocysteine S-methyltransferase [KO:K00547] [EC:2.1.1.10]
+            b2551  glyA; serine hydroxymethyltransferase [KO:K00600] [EC:2.1.2.1]
+            b2827  thyA; thymidylate synthase [KO:K00560] [EC:2.1.1.45]
+            b2912  fau; putative 5-formyltetrahydrofolate cyclo-ligase [KO:K01934] [EC:6.3.3.2]
+            b4019  metH; cobalamin-dependent methionine synthase [KO:K00548] [EC:2.1.1.13]
+COMPOUND    C00019  S-Adenosyl-L-methionine
+            C00021  S-Adenosyl-L-homocysteine
+            C00073  L-Methionine
+            C00080  H+
+            C00101  Tetrahydrofolate
+            C00114  Choline
+            C00143  5,10-Methylenetetrahydrofolate
+            C00155  L-Homocysteine
+            C00157  Phosphatidylcholine
+            C00364  dTMP
+            C00365  dUMP
+            C00415  Dihydrofolate
+            C00440  5-Methyltetrahydrofolate
+            C00445  5,10-Methenyltetrahydrofolate
+            C00504  Folate
+            C00719  Betaine
+            C01026  N,N-Dimethylglycine
+            C01937  Methotrexate
+            C01996  Acetylcholine
+            C03479  Folinic acid
+REFERENCE   PMID:32200980
+  AUTHORS   Alam C, Kondo M, O'Connor DL, Bendayan R
+  TITLE     Clinical Implications of Folate Transport in the Central Nervous System.
+  JOURNAL   Trends Pharmacol Sci 41:349-361 (2020)
+            DOI:10.1016/j.tips.2020.02.004
+REFERENCE   PMID:36341171
+  AUTHORS   Akiyama T, Kuki I, Kim K, Yamamoto N, Yamada Y, Igarashi K, Ishihara T, Hatano Y, Kobayashi K
+  TITLE     Folic acid inhibits 5-methyltetrahydrofolate transport across the blood-cerebrospinal fluid barrier: Clinical biochemical data from two cases.
+  JOURNAL   JIMD Rep 63:529-535 (2022)
+            DOI:10.1002/jmd2.12321
+REFERENCE   PMID:24512081
+  AUTHORS   Visentin M, Diop-Bove N, Zhao R, Goldman ID
+  TITLE     The intestinal absorption of folates.
+  JOURNAL   Annu Rev Physiol 76:251-74 (2014)
+            DOI:10.1146/annurev-physiol-020911-153251
+REFERENCE   PMID:35807899
+  AUTHORS   Ledowsky C, Mahimbo A, Scarf V, Steel A
+  TITLE     Women Taking a Folic Acid Supplement in Countries with Mandatory Food Fortification Programs May Be Exceeding the Upper Tolerable Limit of Folic Acid:  A Systematic Review.
+  JOURNAL   Nutrients 14:nu14132715 (2022)
+            DOI:10.3390/nu14132715
+REFERENCE   PMID:33707653
+  AUTHORS   Zarou MM, Vazquez A, Vignir Helgason G
+  TITLE     Folate metabolism: a re-emerging therapeutic target in haematological cancers.
+  JOURNAL   Leukemia 35:1539-1551 (2021)
+            DOI:10.1038/s41375-021-01189-2
+REFERENCE   PMID:36768667
+  AUTHORS   Bekdash RA
+  TITLE     Methyl Donors, Epigenetic Alterations, and Brain Health: Understanding the Connection.
+  JOURNAL   Int J Mol Sci 24:ijms24032346 (2023)
+            DOI:10.3390/ijms24032346
+REFERENCE   PMID:19732866
+  AUTHORS   Steinfeld R, Grapp M, Kraetzner R, Dreha-Kulaczewski S, Helms G, Dechent P, Wevers R, Grosso S, Gartner J
+  TITLE     Folate receptor alpha defect causes cerebral folate transport deficiency: a treatable neurodegenerative disorder associated with disturbed myelin metabolism.
+  JOURNAL   Am J Hum Genet 85:354-63 (2009)
+            DOI:10.1016/j.ajhg.2009.08.005
+REFERENCE   PMID:33975330
+  AUTHORS   Sternbach S, West N, Singhal NK, Clements R, Basu S, Tripathi A, Dutta R, Freeman EJ, McDonough J
+  TITLE     The BHMT-betaine methylation pathway epigenetically modulates oligodendrocyte maturation.
+  JOURNAL   PLoS One 16:e0250486 (2021)
+            DOI:10.1371/journal.pone.0250486
+REFERENCE   PMID:34207319
+  AUTHORS   Shulpekova Y, Nechaev V, Kardasheva S, Sedova A, Kurbatova A, Bueverova E, Kopylov A, Malsagova K, Dlamini JC, Ivashkin V
+  TITLE     The Concept of Folic Acid in Health and Disease.
+  JOURNAL   Molecules 26:molecules26123731 (2021)
+            DOI:10.3390/molecules26123731
+REFERENCE   PMID:33105619
+  AUTHORS   Mafi S, Laroche-Raynaud C, Chazelas P, Lia AS, Derouault P, Sturtz F, Baaj Y, Froget R, Rio M, Benoist JF, Poumeaud F, Favreau F, Faye PA
+  TITLE     Pharmacoresistant Epilepsy in Childhood: Think of the Cerebral Folate Deficiency, a Treatable Disease.
+  JOURNAL   Brain Sci 10:762 (2020)
+            DOI:10.3390/brainsci10110762
+REL_PATHWAY eco00240  Pyrimidine metabolism
+            eco00670  One carbon pool by folate
+KO_PATHWAY  ko04981
+///

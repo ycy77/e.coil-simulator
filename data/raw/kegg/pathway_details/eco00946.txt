@@ -1,0 +1,70 @@
+ENTRY       eco00946                    Pathway
+NAME        Degradation of flavonoids - Escherichia coli K-12 MG1655
+DESCRIPTION Flavonoids are polyphenolic compounds with the C6-C3-C6 skeleton structure. Natural flavonoids, including their O-glycoside and C-glycoside forms, are synthesized as plant secondary metabolites and thus ubiquitously found in foods of plant origin. Because of the potential health benefits of dietary flavonoids, there has been much interest in characterizing the involvement of gut microbiome and identifying key metabolites and their interactions. For example, equol metabolized from soy products [MD:M00966] is known to have estrogenic activity.
+CLASS       Metabolism; Biosynthesis of other secondary metabolites
+PATHWAY_MAP eco00946  Degradation of flavonoids
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b2132  bglX; beta-D-glucoside glucohydrolase, periplasmic [KO:K05349] [EC:3.2.1.21]
+COMPOUND    C00036  Oxaloacetate
+            C00389  Quercetin
+            C00509  Naringenin
+            C00642  4-Hydroxyphenylacetate
+            C00774  Phloretin
+            C00974  Dihydrokaempferol
+            C01161  3,4-Dihydroxyphenylacetate
+            C01477  Apigenin
+            C01514  Luteolin
+            C01617  Taxifolin
+            C01744  Phloretate
+            C02183  Phloroglucinol
+            C05623  Isoquercitrin
+            C05625  Rutin
+            C05631  Eriodictyol
+            C05903  Kaempferol
+            C06563  Genistein
+            C09099  Naringenin 7-O-beta-D-glucoside
+            C09126  Genistin
+            C09789  Naringin
+            C10208  Daidzein
+            C10216  Daidzin
+            C10447  3,4-Dihydroxyphenylpropanoate
+            C10524  Puerarin
+            C12088  4-Hydroxycinnamoylmethane
+            C14131  Equol
+            C14458  Dihydrogenistein
+            C22552  Alphitonin
+            C22553  Maesopsin
+            C22556  (R)-Dihydrodaidzein
+            C22557  (S)-Dihydrodaidzein
+            C22558  (3S,4R)-Tetrahydrodaidzein
+            C22559  O-Desmethylangolensin
+            C22560  6'-Hydroxy-O-desmethylangolensin
+            C22567  3-Hydroxyphloretin
+            C22568  5,7,8-Trihydroxy-2-(4-hydroxyphenyl)-2,3-dihydro-4H-chromen-4-one
+            C22569  (2E,4E)-2,4-Dihydroxy-4-[6-(4-hydroxyphenyl)-2,4-dioxodihydro-2H-pyran-3(4H)-ylidene]but-2-enoate
+            C22570  5-(4-Hydroxyphenyl)-3-oxovalero-delta-lactone
+            C22571  5-Hydroxy-5-(4-hydroxyphenyl)-3-oxopentanoate
+            C22572  4-Hydroxy-4-(4-hydroxyphenyl)-butan-2-one
+REFERENCE   PMID:34444848
+  AUTHORS   Goris T, Cuadrat RRC, Braune A.
+  TITLE     Flavonoid-Modifying Capabilities of the Human Gut Microbiome-An In Silico Study.
+  JOURNAL   Nutrients 13:2688 (2021)
+            DOI:10.3390/nu13082688
+REFERENCE   PMID:22582059
+  AUTHORS   Shimada Y, Takahashi M, Miyazawa N, Abiru Y, Uchiyama S, Hishigaki H
+  TITLE     Identification of a novel dihydrodaidzein racemase essential for biosynthesis of equol from daidzein in Lactococcus sp. strain 20-92.
+  JOURNAL   Appl Environ Microbiol 78:4902-7 (2012)
+            DOI:10.1128/AEM.00410-12
+REFERENCE   PMID:27059806
+  AUTHORS   Maria Marin A, de la Torre J, Ricardo Marques Oliveira A, Barison A, Satie Chubatsu L, Adele Monteiro R, de Oliveira Pedrosa F, Maltempi de Souza E, Wassem R, Duque E, Ramos JL.
+  TITLE     Genetic and functional characterization of a novel meta-pathway for degradation of naringenin in Herbaspirillum seropedicae SmR1.
+  JOURNAL   Environ Microbiol 18:4653-4661 (2016)
+            DOI:10.1111/1462-2920.13313
+REFERENCE   PMID:31527435
+  AUTHORS   Mayo B, Vazquez L, Florez AB.
+  TITLE     Equol: A Bacterial Metabolite from The Daidzein Isoflavone and Its Presumed Beneficial Health Effects.
+  JOURNAL   Nutrients 11:E2231 (2019)
+            DOI:10.3390/nu11092231
+REL_PATHWAY eco00020  Citrate cycle (TCA cycle)
+KO_PATHWAY  ko00946
+///

@@ -1,0 +1,93 @@
+# Edge-type weights for temporal GraphRAG retrieval.
+# Add new relation types here; scheduler code reads this file at runtime.
+
+edge_weights:
+  represses: 0.90
+  activates: 0.90
+  inhibits: 0.85
+  binds: 0.80
+  transports: 0.70
+  forms_complex: 0.70
+  is_component_of: 0.65
+  is_critical_for: 0.75
+  catalyzes: 0.60
+  is_substrate_of: 0.55
+  is_product_of: 0.55
+  encodes: 0.40
+  participates_in: 0.30
+
+relation_rule_types:
+  represses: transcription_regulation
+  activates: transcription_regulation
+  inhibits: inhibition
+  binds: binding
+  transports: transport
+  forms_complex: complex_assembly
+  is_component_of: complex_assembly
+  is_critical_for: complex_assembly
+  catalyzes: catalysis
+  is_substrate_of: catalysis
+  is_product_of: catalysis
+  encodes: translation_effect
+  participates_in: environment_shift
+
+relation_default_actions:
+  represses: change_activity
+  activates: change_activity
+  inhibits: mark_inhibited
+  binds: bind
+  transports: move_between_locations
+  forms_complex: assemble_complex
+  is_component_of: assemble_complex
+  is_critical_for: assemble_complex
+  catalyzes: no_op
+  is_substrate_of: consume
+  is_product_of: produce
+  encodes: change_activity
+  participates_in: no_op
+
+priority:
+  custom: 3
+  native: 2
+  basal: 1
+
+state_distance:
+  # Heuristic change magnitudes for temporal GraphRAG scheduling.
+  # These numbers are not biochemical rates or probabilities.
+  #
+  # Scale:
+  #   0.8 = small reversible abundance step
+  #   1.0 = default/moderate unknown transition
+  #   1.2 = mild regulatory/activity shift
+  #   1.4 = strong reversible state change
+  #   1.6 = severe progression after inhibition
+  #   1.8 = major expression/genetic-context shift
+  #   2.0 = largest discrete transition in the current vocabulary
+  default: 1.0
+  active:
+    inhibited: 1.4
+    degraded: 2.0
+    sequestered: 1.2
+  inhibited:
+    active: 1.4
+    degraded: 1.6
+  expressed:
+    repressed: 1.4
+    knocked_out: 2.0
+    mutated: 1.8
+    overexpressed: 1.2
+  repressed:
+    expressed: 1.4
+    overexpressed: 1.8
+  low:
+    medium: 0.8
+    high: 1.4
+    absent: 1.0
+  medium:
+    low: 0.8
+    high: 0.8
+    absent: 1.4
+  high:
+    medium: 0.8
+    low: 1.4
+    absent: 2.0

@@ -1,0 +1,24 @@
+{
+  "input_counts": {
+    "entities": 24369,
+    "edges": 47203,
+    "families": 24203
+  },
+  "output_counts": {
+    "entities": 24203,
+    "edges": 47000,
+    "merged": 166,
+    "class_abstraction_entities": 203
+  },
+  "edge_stats": {
+    "orphan_edges_removed": 0
+  },
+  "name_uniqueness": {
+    "duplicate_display_names": {},
+    "unique_display_name_ratio": 1.0
+  },
+  "audit_coverage": {
+    "with_audit": 24153,
+    "without_audit": 50
+  }
+}

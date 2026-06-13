@@ -1,0 +1,21 @@
+ENTRY       R07766                      Reaction
+NAME        octanoyl-[acp]:protein N6-octanoyltransferase
+DEFINITION  Octanoyl-[acp] + [Lipoyl-carrier protein]-L-lysine <=> [Protein]-N6-(octanoyl)-L-lysine + Acyl-carrier protein
+EQUATION    C05752 + C16240 <=> C16236 + C00229
+RCLASS      RC00039  C00229_C05752
+            RC00992  C16236_C16240
+            RC02867  C05752_C16236
+ENZYME      2.3.1.181
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.1  Transferring groups other than aminoacyl groups
+                2.3.1.181
+                 R07766  Octanoyl-[acp] + [Lipoyl-carrier protein]-L-lysine <=> [Protein]-N6-(octanoyl)-L-lysine + Acyl-carrier protein
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.3.1.181
+               R07766  [Lipoyl-carrier protein]-L-lysine <=> [Protein]-N6-(octanoyl)-L-lysine
+ORTHOLOGY   K03801  lipoyl(octanoyl) transferase [EC:2.3.1.181]
+DBLINKS     RHEA: 17668
+///

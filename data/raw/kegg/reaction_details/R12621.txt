@@ -1,0 +1,14 @@
+ENTRY       R12621                      Reaction
+NAME        5'-deoxyadenosine ribohydrolase
+DEFINITION  5'-Deoxyadenosine + H2O <=> 5-Deoxy-D-ribose + Adenine
+EQUATION    C05198 + C00001 <=> C22288 + C00147
+RCLASS      RC00318  C05198_C22288
+ENZYME      3.2.2.9
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.2  Glycosylases
+               3.2.2  Hydrolysing N-glycosyl compounds
+                3.2.2.9
+                 R12621  5'-Deoxyadenosine + H2O <=> 5-Deoxy-D-ribose + Adenine
+DBLINKS     RHEA: 29862
+///

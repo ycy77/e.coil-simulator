@@ -1,0 +1,18 @@
+ENTRY       R00849                      Reaction
+NAME        sn-glycerol 3-phosphate:quinone oxidoreductase
+DEFINITION  sn-Glycerol 3-phosphate + Quinone <=> Glycerone phosphate + Hydroquinone
+EQUATION    C00093 + C15602 <=> C00111 + C15603
+RCLASS      RC00029  C00093_C00111
+ENZYME      1.1.5.3
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.1  Acting on the CH-OH group of donors
+               1.1.5  With a quinone or similar compound as acceptor
+                1.1.5.3
+                 R00849  sn-Glycerol 3-phosphate + Quinone <=> Glycerone phosphate + Hydroquinone
+            IUBMB reaction hierarchy [BR:br08202]
+             1. Oxidoreductase reactions
+              1.1.5.3
+               R00849  Quinone <=> Hydroquinone
+DBLINKS     RHEA: 18980
+///

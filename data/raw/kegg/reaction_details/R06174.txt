@@ -1,0 +1,16 @@
+ENTRY       R06174                      Reaction
+DEFINITION  G10556 + UDP-N-acetyl-D-glucosamine <=> G10555 + UDP
+EQUATION    G10556 + G10610 <=> G10555 + G10619
+REMARK      Same as: R05032
+ENZYME      2.4.1.227
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.1  Hexosyltransferases
+                2.4.1.227
+                 R06174  G10556 + UDP-N-acetyl-D-glucosamine <=> G10555 + UDP
+            Glycosyltransferase reactions [br08203.html]
+             N-Acetylglucosaminyltransferase reactions
+              R06174
+ORTHOLOGY   K02563  UDP-N-acetylglucosamine--N-acetylmuramyl-(pentapeptide) pyrophosphoryl-undecaprenol N-acetylglucosamine transferase [EC:2.4.1.227]
+///

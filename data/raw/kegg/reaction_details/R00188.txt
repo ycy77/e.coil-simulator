@@ -1,0 +1,26 @@
+ENTRY       R00188                      Reaction
+NAME        adenosine-3',5'-bisphosphate 3'-phosphohydrolase
+DEFINITION  Adenosine 3',5'-bisphosphate + H2O <=> AMP + Orthophosphate
+EQUATION    C00054 + C00001 <=> C00020 + C00009
+RCLASS      RC00078  C00020_C00054
+ENZYME      3.1.3.7         3.1.3.97
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.1  Acting on ester bonds
+               3.1.3  Phosphoric-monoester hydrolases
+                3.1.3.7
+                 R00188  Adenosine 3',5'-bisphosphate + H2O <=> AMP + Orthophosphate
+                3.1.3.97
+                 R00188  Adenosine 3',5'-bisphosphate + H2O <=> AMP + Orthophosphate
+            IUBMB reaction hierarchy [BR:br08202]
+             3. Hydrolase reactions
+              3.1.3.97
+               R11188  Nucleoside 3',5'-bisphosphate <=> Nucleoside 5'-phosphate
+                R00188  Adenosine 3',5'-bisphosphate <=> AMP
+ORTHOLOGY   K01082  3'(2'), 5'-bisphosphate nucleotidase [EC:3.1.3.7]
+            K06881  bifunctional oligoribonuclease and PAP phosphatase NrnA [EC:3.1.3.7 3.1.13.3]
+            K07053  3',5'-nucleoside bisphosphate phosphatase [EC:3.1.3.97]
+            K15422  3'(2'), 5'-bisphosphate nucleotidase / inositol polyphosphate 1-phosphatase [EC:3.1.3.7 3.1.3.57]
+            K15759  Golgi-resident PAP phosphatase [EC:3.1.3.7]
+DBLINKS     RHEA: 10043
+///

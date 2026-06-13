@@ -1,0 +1,15 @@
+ENTRY       R05724                      Reaction
+NAME        nitric oxide,NAD(P)H2:oxygen oxidoreductase
+DEFINITION  2 Nitric oxide + 2 Oxygen + NADH + H+ <=> 2 Nitrate + NAD+
+EQUATION    2 C00533 + 2 C00007 + C00004 + C00080 <=> 2 C00244 + C00003
+COMMENT     see R05725 (NADPH)
+RCLASS      RC00001  C00003_C00004
+ENZYME      1.14.12.17
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.14  Acting on paired donors, with incorporation or reduction of molecular oxygen
+               1.14.12  With NADH or NADPH as one donor, and incorporation of two atoms of oxygen into the other donor
+                1.14.12.17
+                 R05724  2 Nitric oxide + 2 Oxygen + NADH + H+ <=> 2 Nitrate + NAD+
+DBLINKS     RHEA: 19472
+///

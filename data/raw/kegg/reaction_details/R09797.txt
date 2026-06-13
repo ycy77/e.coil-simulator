@@ -1,0 +1,15 @@
+ENTRY       R09797                      Reaction
+NAME        N-acetyl-alpha-neuraminate 2-epimerase
+DEFINITION  N-Acetyl-alpha-neuraminate <=> N-Acetyl-beta-neuraminate
+EQUATION    C19909 <=> C19910
+COMMENT     two-step reaction (see R12769+R12770)
+RCLASS      RC02659  C19909_C19910
+ENZYME      5.1.3.24
+BRITE       Enzymatic reactions [BR:br08201]
+             5. Isomerase reactions
+              5.1  Racemases and epimerases
+               5.1.3  Acting on carbohydrates and derivatives
+                5.1.3.24
+                 R09797  N-Acetyl-alpha-neuraminate <=> N-Acetyl-beta-neuraminate
+ORTHOLOGY   K17948  N-acetylneuraminate epimerase [EC:5.1.3.24]
+///

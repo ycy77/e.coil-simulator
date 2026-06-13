@@ -1,0 +1,52 @@
+---
+entity_id: "molecule.ecocyc.Flavonol-3-O-B-D-Glucosides"
+entity_type: "small_molecule"
+name: "a flavonol-3-O-β-D-glucoside"
+source_database: "EcoCyc"
+source_id: "Flavonol-3-O-B-D-Glucosides"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+  - "a flavonol-3-O-β-D-glucoside"
+---
+
+# a flavonol-3-O-β-D-glucoside
+
+`molecule.ecocyc.Flavonol-3-O-B-D-Glucosides`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:Flavonol-3-O-B-D-Glucosides`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+EcoCyc compound Flavonol-3-O-B-D-Glucosides
+
+## Annotation
+
+EcoCyc compound Flavonol-3-O-B-D-Glucosides
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:Flavonol-3-O-B-D-Glucosides`
+- `METANETX:MNXM17810`
+- `METANETX:MNXM90417`
+- `SEED:cpd27079`
+- `SEED:cpd27078`
+- `CHEBI:16816`

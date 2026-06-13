@@ -1,0 +1,59 @@
+---
+entity_id: "molecule.C16339"
+entity_type: "small_molecule"
+name: "(+)-7-Isojasmonic acid CoA"
+source_database: "KEGG"
+source_id: "C16339"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/KEGG
+aliases:
+  - "(+)-7-Isojasmonic acid CoA"
+---
+
+# (+)-7-Isojasmonic acid CoA
+
+`molecule.C16339`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `KEGG:C16339`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+KEGG compound: (+)-7-Isojasmonic acid CoA
+
+## Enriched Pathways
+
+- `eco00592` alpha-Linolenic acid metabolism (KEGG)
+
+## Annotation
+
+KEGG compound: (+)-7-Isojasmonic acid CoA
+
+## Pathways
+
+- `eco00592` alpha-Linolenic acid metabolism (KEGG)
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `KEGG:C16339`
+
+## Notes
+
+Included because it appears in at least one E. coli KEGG pathway.

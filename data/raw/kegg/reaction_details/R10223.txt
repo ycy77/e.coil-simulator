@@ -1,0 +1,15 @@
+ENTRY       R10223                      Reaction
+NAME        tRNA(adenine34) aminohydrolase
+DEFINITION  tRNA adenine + H2O <=> tRNA hypoxanthine + Ammonia
+EQUATION    C17324 + C00001 <=> C20451 + C00014
+RCLASS      RC00477  C17324_C20451
+ENZYME      3.5.4.33
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.4  In cyclic amidines
+                3.5.4.33
+                 R10223  tRNA adenine + H2O <=> tRNA hypoxanthine + Ammonia
+ORTHOLOGY   K11991  tRNA(adenine34) deaminase [EC:3.5.4.33]
+DBLINKS     RHEA: 43171
+///

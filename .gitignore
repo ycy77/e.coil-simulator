@@ -1,0 +1,24 @@
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local run outputs and downloaded biological databases can be large.
+runs/
+logs/
+data/raw/ecocyc/
+
+# Frontend dependencies/build artifacts.
+node_modules/
+web/frontend/node_modules/
+web/frontend/.vite/
+web/frontend/dist/
+
+# Never commit local credentials or license download instructions.
+.env
+.env.*
+*credential*
+*credentials*
+*password*
+zkyd_10.102.106.53_ssh_config.txt

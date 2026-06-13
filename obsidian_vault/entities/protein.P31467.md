@@ -1,0 +1,60 @@
+---
+entity_id: "protein.P31467"
+entity_type: "protein"
+name: "yieH"
+source_database: "UniProt"
+source_id: "P31467"
+default_state: "active"
+allowed_states: "active|inhibited|degraded|sequestered"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/protein
+  - source/UniProt
+aliases:
+  - "yieH b3715 JW3693"
+---
+
+# yieH
+
+`protein.P31467`
+
+## Static
+
+- Type: `protein`
+- Source: `UniProt:P31467`
+- Default state: `active`
+- Allowed states: `active|inhibited|degraded|sequestered`
+
+## Enriched Summary
+
+FUNCTION: Catalyzes strongly the dephosphorylation of 6-phosphogluconate (6P-Glu) and slightly the dephosphorylation of dihydroxyacetone phosphate (DHAP) and phosphoenolpyruvate (PEP). Also hydrolyzes both purines (GMP and IMP) and pyrimidines as secondary substrates. {ECO:0000269|PubMed:15808744, ECO:0000269|PubMed:16990279}. YieH is a 6-phosphogluconate phosphatase belonging to the superfamily of haloacid dehalogenase (HAD)-like hydrolases. Purine and pyrimidine nucleotides are secondary substrates . The phosphatase activity of YieH was first discovered in a high-throughput screen of purified proteins .
+
+## Biological Role
+
+Catalyzes RXN0-5185 (reaction.ecocyc.RXN0-5185). Bound by Magnesium cation (molecule.C00305).
+
+## Annotation
+
+FUNCTION: Catalyzes strongly the dephosphorylation of 6-phosphogluconate (6P-Glu) and slightly the dephosphorylation of dihydroxyacetone phosphate (DHAP) and phosphoenolpyruvate (PEP). Also hydrolyzes both purines (GMP and IMP) and pyrimidines as secondary substrates. {ECO:0000269|PubMed:15808744, ECO:0000269|PubMed:16990279}.
+
+## Outgoing Edges (1)
+
+- `catalyzes` --> [[reaction.ecocyc.RXN0-5185|reaction.ecocyc.RXN0-5185]] `EcoCyc` `database` - EcoCyc enzymatic reaction
+
+## Incoming Edges (2)
+
+- `binds` <-- [[molecule.C00305|molecule.C00305]] `EcoCyc` `database` - EcoCyc enzymatic reaction cofactor
+- `encodes` <-- [[gene.b3715|gene.b3715]] `UniProt|EcoCyc` `database` - EcoCyc gene PRODUCT
+
+## External IDs
+
+- `UniProt:P31467`
+- `KEGG:ecj:JW3693;eco:b3715;ecoc:C3026_20140;`
+- `GeneID:948232;`
+- `GO:GO:0000287; GO:0016791; GO:0030145`
+- `EC:3.1.3.-`
+
+## Notes
+
+6-phosphogluconate phosphatase (EC 3.1.3.-)

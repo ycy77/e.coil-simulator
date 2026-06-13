@@ -1,0 +1,61 @@
+---
+entity_id: "molecule.C06195"
+entity_type: "small_molecule"
+name: "Imidazolone"
+source_database: "KEGG"
+source_id: "C06195"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/KEGG
+aliases:
+  - "Imidazolone"
+  - "4-Imidazolone"
+  - "Imidazol-4-one"
+---
+
+# Imidazolone
+
+`molecule.C06195`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `KEGG:C06195`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+KEGG compound: Imidazolone; 4-Imidazolone; Imidazol-4-one
+
+## Enriched Pathways
+
+- `eco00230` Purine metabolism (KEGG)
+
+## Annotation
+
+KEGG compound: Imidazolone; 4-Imidazolone; Imidazol-4-one
+
+## Pathways
+
+- `eco00230` Purine metabolism (KEGG)
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `KEGG:C06195`
+
+## Notes
+
+Included because it appears in at least one E. coli KEGG pathway.

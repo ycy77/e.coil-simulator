@@ -1,0 +1,19 @@
+ENTRY       R00393                      Reaction
+NAME        acyl-CoA:acetate CoA-transferase
+DEFINITION  Acyl-CoA + Acetate <=> Fatty acid anion + Acetyl-CoA
+EQUATION    C00040 + C00033 <=> C02403 + C00024
+RCLASS      RC00012  C00024_C00033
+            RC00281  C00040_C02403
+ENZYME      2.8.3.8
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.8  Transferring sulfur-containing groups
+               2.8.3  CoA-transferases
+                2.8.3.8
+                 R00393  Acyl-CoA + Acetate <=> Fatty acid anion + Acetyl-CoA
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.8.3.8
+               R00393  Acyl-CoA <=> Fatty acid anion
+DBLINKS     RHEA: 13384
+///

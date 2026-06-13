@@ -1,0 +1,14 @@
+ENTRY       R02622                      Reaction
+NAME        protein glutamine amidohydrolase
+DEFINITION  Protein glutamine + H2O <=> Protein glutamate + Ammonia
+EQUATION    C02583 + C00001 <=> C00614 + C00014
+RCLASS      RC00010  C00614_C02583
+ENZYME      3.5.1.44
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.5  Acting on carbon-nitrogen bonds, other than peptide bonds
+               3.5.1  In linear amides
+                3.5.1.44
+                 R02622  Protein glutamine + H2O <=> Protein glutamate + Ammonia
+DBLINKS     RHEA: 16444
+///

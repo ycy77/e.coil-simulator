@@ -1,0 +1,66 @@
+{
+  "types": {
+    "gene": {
+      "audited": 0,
+      "counters": {},
+      "decisions_path": "data/audit/decisions/gene.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/gene.jsonl",
+      "report_path": "data/audit/reports/gene.report.md"
+    },
+    "protein": {
+      "audited": 0,
+      "counters": {},
+      "decisions_path": "data/audit/decisions/protein.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/protein.jsonl",
+      "report_path": "data/audit/reports/protein.report.md"
+    },
+    "complex": {
+      "audited": 0,
+      "counters": {},
+      "decisions_path": "data/audit/decisions/complex.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/complex.jsonl",
+      "report_path": "data/audit/reports/complex.report.md"
+    },
+    "reaction": {
+      "audited": 2086,
+      "counters": {
+        "endogenous": 2025,
+        "uniqueness:unique": 2085,
+        "exogenous-chemical": 40,
+        "unsure": 3,
+        "exogenous-drug": 18,
+        "uniqueness:collides": 1
+      },
+      "decisions_path": "data/audit/decisions/reaction.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/reaction.jsonl",
+      "report_path": "data/audit/reports/reaction.report.md"
+    },
+    "small_molecule": {
+      "audited": 9900,
+      "counters": {
+        "endogenous": 5089,
+        "uniqueness:unique": 9823,
+        "exogenous-chemical": 4285,
+        "uniqueness:collides": 77,
+        "exogenous-drug": 276,
+        "class-abstraction": 209,
+        "unsure": 41
+      },
+      "decisions_path": "data/audit/decisions/small_molecule.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/small_molecule.jsonl",
+      "report_path": "data/audit/reports/small_molecule.report.md"
+    },
+    "rna": {
+      "audited": 215,
+      "counters": {
+        "endogenous": 215,
+        "uniqueness:unique": 215
+      },
+      "decisions_path": "data/audit/decisions/rna.jsonl",
+      "ambiguous_path": "data/audit/ambiguous/rna.jsonl",
+      "report_path": "data/audit/reports/rna.report.md"
+    }
+  },
+  "model": null,
+  "vllm_url": "http://127.0.0.1:8000"
+}

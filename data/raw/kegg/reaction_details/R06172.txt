@@ -1,0 +1,11 @@
+ENTRY       R06172                      Reaction
+DEFINITION  G10551 + UDP-N-acetyl-D-glucosamine <=> G10550 + UDP
+EQUATION    G10551 + G10610 <=> G10550 + G10619
+ENZYME      2.4.1.227
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.1  Hexosyltransferases
+                2.4.1.227
+                 R06172  G10551 + UDP-N-acetyl-D-glucosamine <=> G10550 + UDP
+///

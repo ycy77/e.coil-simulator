@@ -1,0 +1,110 @@
+ENTRY       eco00907                    Pathway
+NAME        Pinene, camphor and geraniol degradation - Escherichia coli K-12 MG1655
+CLASS       Metabolism; Metabolism of terpenoids and polyketides
+PATHWAY_MAP eco00907  Pinene, camphor and geraniol degradation
+DBLINKS     GO: 0033074 0019383 1903447
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b1393  paaF; putative 2,3-dehydroadipyl-CoA hydratase [KO:K01692] [EC:4.2.1.17]
+            b2341  fadJ; 3-hydroxyacyl-CoA dehydrogenase FadJ [KO:K01782] [EC:1.1.1.35 4.2.1.17 5.1.2.3]
+            b2342  fadI; 3-ketoacyl-CoA thiolase FadI [KO:K00632] [EC:2.3.1.16]
+            b3845  fadA; 3-ketoacyl-CoA thiolase [KO:K00632] [EC:2.3.1.16]
+            b3846  fadB; multifunctional enoyl-CoA hydratase, 3-hydroxyacyl-CoA epimerase, Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase, L-3-hydroxyacyl-CoA dehydrogenase [KO:K01825] [EC:1.1.1.35 4.2.1.17 5.1.2.3 5.3.3.8]
+            b4269  ahr; NADPH-dependent aldehyde reductase Ahr [KO:K12957] [EC:1.1.1.2 1.1.1.183]
+COMPOUND    C00024  Acetyl-CoA
+            C00630  2-Methylpropanoyl-CoA
+            C00808  (+)-Camphor
+            C00809  (-)-Camphor
+            C01291  3-(4-Methylpent-3-en-1-yl)pent-2-enedioyl-CoA
+            C01499  Geranial
+            C01500  Geraniol
+            C01920  Geranoyl-CoA
+            C02759  alpha-Pinene-oxide
+            C02952  5-Oxo-1,2-campholide
+            C03037  (+)-Bornane-2,5-dione
+            C03069  3-Methylcrotonyl-CoA
+            C03448  (+)-exo-5-Hydroxycamphor
+            C04435  (Z)-2-Methyl-5-isopropylhexa-2,5-dienal
+            C04675  3-Hydroxy-3-(4-methylpent-3-en-1-yl)glutaryl-CoA
+            C07160  [(1R)-2,2,3-Trimethyl-5-oxocyclopent-3-enyl]acetyl-CoA
+            C09847  cis-Citral
+            C09848  (R)-(+)-Citronellal
+            C09849  beta-Citronellol
+            C09871  Nerol
+            C09880  alpha-Pinene
+            C09884  Pinocarvone
+            C11384  (S)-(-)-Citronellal
+            C11386  (-)-Citronellol
+            C11938  Myrtenol
+            C11939  Myrtenal
+            C11940  Myrtenic acid
+            C11941  Pinocarveol
+            C11942  trans-2-Methyl-5-isopropylhexa-2,5-dienal
+            C11943  trans-2-Methyl-5-isopropylhexa-2,5-dienoic acid
+            C11944  cis-2-Methyl-5-isopropylhexa-2,5-dienoic acid
+            C11945  trans-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA
+            C11946  cis-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA
+            C11947  3-Hydroxy-2,6-dimethyl-5-methylene-heptanoyl-CoA
+            C11948  2,6-Dimethyl-5-methylene-3-oxo-heptanoyl-CoA
+            C11949  3-Isopropylbut-3-enoyl-CoA
+            C11950  3-Isopropyl-3-butenoic acid
+            C16461  Geranic acid
+            C16462  Citronellate
+            C16464  Citronellyl-CoA
+            C16465  trans-Geranyl-CoA
+            C16466  7-Methyl-3-oxo-6-octenoyl-CoA
+            C16468  (2E)-5-Methylhexa-2,4-dienoyl-CoA
+            C16469  3-Hydroxy-5-methylhex-4-enoyl-CoA
+            C16470  5-Methylhex-4-enoyl-CoA
+            C16471  5-Methyl-3-oxo-4-hexenoyl-CoA
+            C20271  [(1R)-2,2,3-Trimethyl-5-oxocyclopent-3-enyl]acetate
+            C20320  Bornane-2,6-dione
+            C20321  [(2R)-3,3,4-Trimethyl-6-oxo-3,6-dihydro-1H-pyran-2-yl]acetyl-CoA
+            C20322  (+)-6-exo-Hydroxycamphor
+            C20323  (+)-6-endo-Hydroxycamphor
+            C20324  [(1S)-4-Hydroxy-2,2,3-trimethylcyclopent-3-enyl]acetate
+            C21929  (-)-Bornane-2,5-dione
+            C21930  (-)-5-Oxo-1,2-campholide
+            C22610  (-)-3-exo-Hydroxycamphor
+REFERENCE   PMID:11778886
+  AUTHORS   Wolken WA, van der Werf MJ.
+  TITLE     Geraniol biotransformation-pathway in spores of Penicillium digitatum.
+  JOURNAL   Appl Microbiol Biotechnol 57:731-7 (2001)
+            DOI:10.1007/s002530100821
+REFERENCE   PMID:16272386
+  AUTHORS   Hoschle B, Gnau V, Jendrossek D.
+  TITLE     Methylcrotonyl-CoA and geranyl-CoA carboxylases are involved in leucine/isovalerate utilization (Liu) and acyclic terpene utilization (Atu), and are encoded by liuB/liuD and atuC/atuF, in Pseudomonas aeruginosa.
+  JOURNAL   Microbiology 151:3649-56 (2005)
+            DOI:10.1099/mic.0.28260-0
+REFERENCE   PMID:16820476
+  AUTHORS   Forster-Fromme K, Hoschle B, Mack C, Bott M, Armbruster W, Jendrossek D
+  TITLE     Identification of genes and proteins necessary for catabolism of acyclic terpenes and leucine/isovalerate in Pseudomonas aeruginosa.
+  JOURNAL   Appl Environ Microbiol 72:4819-28 (2006)
+            DOI:10.1128/AEM.00853-06
+REFERENCE   PMID:16000717
+  AUTHORS   Hoschle B, Jendrossek D.
+  TITLE     Utilization of geraniol is dependent on molybdenum in Pseudomonas aeruginosa: evidence for different metabolic routes for oxidation of geraniol and citronellol.
+  JOURNAL   Microbiology 151:2277-83 (2005)
+            DOI:10.1099/mic.0.27957-0
+REFERENCE   PMID:681275
+  AUTHORS   Cantwell SG, Lau EP, Watt DS, Fall RR.
+  TITLE     Biodegradation of acyclic isoprenoids by Pseudomonas species.
+  JOURNAL   J Bacteriol 135:324-33 (1978)
+            DOI:10.1128/JB.135.2.324-333.1978
+REFERENCE   PMID:19597963
+  AUTHORS   Chavez-Aviles M, Diaz-Perez AL, Campos-Garcia J
+  TITLE     The bifunctional role of LiuE from Pseudomonas aeruginosa, displays additionally HIHG-CoA lyase enzymatic activity.
+  JOURNAL   Mol Biol Rep 37:1787-91 (2010)
+            DOI:10.1007/s11033-009-9611-6
+REFERENCE   PMID:3667521
+  AUTHORS   Griffiths ET, Bociek SM, Harries PC, Jeffcoat R, Sissons DJ, Trudgill PW
+  TITLE     Bacterial metabolism of alpha-pinene: pathway from alpha-pinene oxide to acyclic metabolites in Nocardia sp. strain P18.3.
+  JOURNAL   J Bacteriol 169:4972-9 (1987)
+            DOI:10.1128/jb.169.11.4972-4979.1987
+REFERENCE   PMID:15346763
+  AUTHORS   Roberts GA, Grogan G, Turner NJ, Flitsch SL
+  TITLE     Nucleotide sequence of a portion of the camphor-degrading gene cluster from Rhodococcus sp. NCIMB 9784.
+  JOURNAL   DNA Seq 15:96-103 (2004)
+            DOI:10.1080/10425170310001656765
+REL_PATHWAY eco00280  Valine, leucine and isoleucine degradation
+KO_PATHWAY  ko00907
+///

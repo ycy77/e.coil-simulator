@@ -1,0 +1,47 @@
+---
+entity_id: "molecule.ecocyc.67-Dihydropterins"
+entity_type: "small_molecule"
+name: "a 6,7-dihydropterin"
+source_database: "EcoCyc"
+source_id: "67-Dihydropterins"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/small_molecule
+  - source/EcoCyc
+aliases:
+  - "a quinonoid dihydrobiopterin"
+---
+
+# a 6,7-dihydropterin
+
+`molecule.ecocyc.67-Dihydropterins`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `EcoCyc:67-Dihydropterins`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+Pterins Pterins are heterocyclic compounds based on fused CPD-26401 and PYRIMIDINE-RING rings (a CPD-15307 ring system) where the pyrimidine ring has an amino group in the 2-position and an oxo group in the 4-position, resulting in four double bonds within the ring system. When one of the double bonds is reduced the compounds is referred to as a dihydropterin (the most common form of which is CPD0-1718). When two of the double bonds are reduced, the compound is referred to as Tetrahydropterins. 67-Dihydropterins "6,7-dihydropterin" is a different form of a dihydropterin. Older literature often refers to it as quinonoid dihydrobiopterin. Pterins Pterins are heterocyclic compounds based on fused CPD-26401 and PYRIMIDINE-RING rings (a CPD-15307 ring system) where the pyrimidine ring has an amino group in the 2-position and an oxo group in the 4-position, resulting in four double bonds within the ring system. When one of the double bonds is reduced the compounds is referred to as a dihydropterin (the most common form of which is CPD0-1718). When two of the double bonds are reduced, the compound is referred to as Tetrahydropterins. 67-Dihydropterins "6,7-dihydropterin" is a different form of a dihydropterin. Older literature often refers to it as quinonoid dihydrobiopterin.
+
+## Annotation
+
+Pterins Pterins are heterocyclic compounds based on fused CPD-26401 and PYRIMIDINE-RING rings (a CPD-15307 ring system) where the pyrimidine ring has an amino group in the 2-position and an oxo group in the 4-position, resulting in four double bonds within the ring system. When one of the double bonds is reduced the compounds is referred to as a dihydropterin (the most common form of which is CPD0-1718). When two of the double bonds are reduced, the compound is referred to as Tetrahydropterins. 67-Dihydropterins "6,7-dihydropterin" is a different form of a dihydropterin. Older literature often refers to it as quinonoid dihydrobiopterin.
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `EcoCyc:67-Dihydropterins`

@@ -1,0 +1,167 @@
+old_entity_id,canonical_entity_id,family_key,reason,confidence
+molecule.ecocyc.nu-Carrageenan,molecule.ecocyc.mu-Carrageenan,sm:name:carrageenan,same family_key via deterministic merge,high
+molecule.ecocyc.4beta-Methyl-3-Oxosteroids,molecule.ecocyc.4alpha-Methyl-3-Oxosteroids,sm:name:a 4 methyl 3 oxosteroid,same family_key via deterministic merge,high
+molecule.ecocyc.beta-Acetylgalactosaminides,molecule.ecocyc.Alpha-Acetylgalactosaminides,sm:name:an n acetyl d galactosaminide,same family_key via deterministic merge,high
+molecule.ecocyc.N-Alpha-Acetylated-Amino-Acids,molecule.ecocyc.N-Acetylated-Amino-Acids,sm:name:an n acetylated amino acid,same family_key via deterministic merge,high
+molecule.ecocyc.Gamma-linolenoyl-groups,molecule.ecocyc.Alpha-linolenoyl-groups,sm:name:a glycerolipid linolenate,same family_key via deterministic merge,high
+molecule.ecocyc.Peptides,molecule.ecocyc.Peptide-Group,sm:name:a peptide,same family_key via deterministic merge,high
+molecule.ecocyc.beta-Carrageenan,molecule.ecocyc.alpha-Carrageenan,sm:name:carrageenose,same family_key via deterministic merge,high
+molecule.ecocyc.theta-Carrageenan,molecule.ecocyc.alpha-Carrageenan,sm:name:carrageenose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-427,molecule.ecocyc.CPD-21081,sm:name:an n acyl l glutamine,same family_key via deterministic merge,high
+molecule.ecocyc.3-alpha-Hydroxysteroids,molecule.ecocyc.3-Beta-Hydroxysterols,sm:name:a 3 hydroxysteroid,same family_key via deterministic merge,high
+molecule.ecocyc.L-Ribulofuranose,molecule.ecocyc.CPD-24938,sm:name:l ribulofuranose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-24959,molecule.ecocyc.CPD-24938,sm:name:l ribulofuranose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-2728,molecule.ecocyc.23S-rRNA-uridine2449,sm:name:uridine2449 in 23s rrna,same family_key via deterministic merge,high
+molecule.ecocyc.Protein-N-omega-dimethyl-arginine,molecule.ecocyc.Protein-N-Nprime-omega-dimethyl-arginine,sm:name:a protein n n dimethyl l arginine,same family_key via deterministic merge,high
+molecule.ecocyc.1-6-beta-D-Glucan,molecule.ecocyc.1-6-alpha-D-glucan,sm:name:a 1 6 d glucan,same family_key via deterministic merge,high
+molecule.ecocyc.D-idopyranuronate,molecule.ecocyc.CPD-21252,sm:name:d idopyranuronate,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-21253,molecule.ecocyc.CPD-21252,sm:name:d idopyranuronate,same family_key via deterministic merge,high
+molecule.ecocyc.Upper-case-I-antigens,molecule.ecocyc.Lower-case-i-Antigens,sm:name:an i antigen,same family_key via deterministic merge,high
+molecule.ecocyc.N-Acetyl-alpha-D-Hexosaminides,molecule.ecocyc.N-Acetyl-D-Hexosaminides,sm:name:an n acetyl d hexosaminide,same family_key via deterministic merge,high
+molecule.ecocyc.N-Acetyl-beta-D-Hexosaminides,molecule.ecocyc.N-Acetyl-D-Hexosaminides,sm:name:an n acetyl d hexosaminide,same family_key via deterministic merge,high
+molecule.ecocyc.Carotenoid-epsilon-end-group,molecule.ecocyc.Carotenoid-beta-end-group,sm:name:a carotenoid end group,same family_key via deterministic merge,high
+molecule.ecocyc.Carotenoid-psi-end-group,molecule.ecocyc.Carotenoid-beta-end-group,sm:name:a carotenoid end group,same family_key via deterministic merge,high
+molecule.ecocyc.Carotenoid-phi-end-group,molecule.ecocyc.Carotenoid-beta-end-group,sm:name:a carotenoid end group,same family_key via deterministic merge,high
+molecule.ecocyc.Carotenoid-chi-end-group,molecule.ecocyc.Carotenoid-beta-end-group,sm:name:a carotenoid end group,same family_key via deterministic merge,high
+molecule.ecocyc.Oxo-Fatty-Acids,molecule.ecocyc.OMEGA-ALDEHYDE-FATTY-ACID,sm:name:an oxo fatty acid,same family_key via deterministic merge,high
+molecule.ecocyc.N4-N-ACETYL-BETA-D-GLUCOSAMINYL-XF,molecule.ecocyc.N4-N-ACETYL-BETA-D-GLUCOSAMINYL-F,sm:name:a d glcnac 1 2 d man 1 3 d glcnac 1 2 d man 1 6 d xyl 1 2 d man 1 4 d glcnac 1 4 l fuc 1 3 d glcnac n asn protein,same family_key via deterministic merge,high
+molecule.ecocyc.BITTER-ACIDS,molecule.ecocyc.BETA-ACIDS,sm:name:a bitter acid,same family_key via deterministic merge,high
+molecule.ecocyc.N-alpha-Acylated-L-Amino-Acids,molecule.ecocyc.N-ACYL-L-AMINO-ACID,sm:name:an n acylated l amino acid,same family_key via deterministic merge,high
+molecule.ecocyc.N-gamma-Acylated-L-Amino-Acids,molecule.ecocyc.N-ACYL-L-AMINO-ACID,sm:name:an n acylated l amino acid,same family_key via deterministic merge,high
+molecule.ecocyc.N-Methyl-L-Amino-Acids,molecule.ecocyc.N-Alpha-Methyl-L-Amino-Acids,sm:name:an n methyl l amino acid,same family_key via deterministic merge,high
+molecule.ecocyc.16S-rRNA-N2methylguanine1516,molecule.ecocyc.16S-rRNA-N2-methylguanine1516,sm:name:an n2 methylguanine1516 in 16s rrna,same family_key via deterministic merge,high
+molecule.ecocyc.16S-rRNA-guanine1516,molecule.ecocyc.16S-rRNA-guanine-1516,sm:name:a guanine1516 in 16s rrna,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-21351,molecule.ecocyc.CPD-21261,sm:name:3 deoxy d manno 2 octulosonate,same family_key via deterministic merge,high
+molecule.ecocyc.Delta-lactones,molecule.ecocyc.Beta-lactones,sm:name:a lactone,same family_key via deterministic merge,high
+molecule.ecocyc.Lactones,molecule.ecocyc.Beta-lactones,sm:name:a lactone,same family_key via deterministic merge,high
+molecule.ecocyc.N-acetyl-beta-D-hexosamines,molecule.ecocyc.N-acetyl-alpha-D-hexosamines,sm:name:an n acetyl d hexosamine,same family_key via deterministic merge,high
+molecule.ecocyc.Sugar-Group,molecule.ecocyc.Sugar,sm:name:a sugar,same family_key via deterministic merge,high
+molecule.ecocyc.RNA-21,molecule.ecocyc.23S-rRNA-N1-methylguanine745,sm:name:an n1 methylguanine745 in 23s rrna,same family_key via deterministic merge,high
+molecule.ecocyc.L-Arabinosides,molecule.ecocyc.Alpha-L-Arabinosides,sm:name:an l arabinoside,same family_key via deterministic merge,high
+molecule.ecocyc.L-glucopyranose,molecule.ecocyc.CPD-3607,sm:chebi:37627,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-24859,molecule.ecocyc.CPD-17931,sm:name:a peptidoglycan internal segment with l alanyl d glutamyl meso 2 6 diaminopimeloyl d alanine tetrapeptide,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-18804,molecule.ecocyc.CPD-17931,sm:name:a peptidoglycan internal segment with l alanyl d glutamyl meso 2 6 diaminopimeloyl d alanine tetrapeptide,same family_key via deterministic merge,high
+molecule.ecocyc.RNA-Ligase-L-lysine-adenylate,molecule.ecocyc.DNA-Ligase-L-lysine-adenylate,sm:name:a dna ligase n6 5 adenylyl l lysine,same family_key via deterministic merge,high
+molecule.ecocyc.Protein-alpha-L-Glutamates,molecule.ecocyc.Protein-Glutamates,sm:name:a protein l glutamate,same family_key via deterministic merge,high
+molecule.ecocyc.Protein-gamma-glutamates,molecule.ecocyc.Protein-Glutamates,sm:name:a protein l glutamate,same family_key via deterministic merge,high
+molecule.ecocyc.1-gamma-Linolenoyl-L-Phosphatidate,molecule.ecocyc.1-Alpha-Linolenoyl-L-Phosphatidate,sm:name:a 1 linolenoyl 2 acyl sn glycerol 3 phosphate,same family_key via deterministic merge,high
+molecule.ecocyc.an-N-acetyl-beta-D-glucosaminide,molecule.ecocyc.ALPHA_ACETYLGLUCOSAMINIDES,sm:name:an n acetyl d glucosaminide,same family_key via deterministic merge,high
+molecule.ecocyc.GLUCOSE-16-DIPHOSPHATE,molecule.ecocyc.CPD-16577,sm:name:glucose 1 6 bisphosphate,same family_key via deterministic merge,high
+molecule.ecocyc.Protein-pi-phospho-L-histidines,molecule.ecocyc.Protein-phospho-L-histidines,sm:name:a protein n phospho l histidine,same family_key via deterministic merge,high
+molecule.ecocyc.Protein-tauphospho-L-histidines,molecule.ecocyc.Protein-phospho-L-histidines,sm:name:a protein n phospho l histidine,same family_key via deterministic merge,high
+molecule.ecocyc.D-RIBULOFURANOSE,molecule.ecocyc.CPD-24935,sm:name:d ribulofuranose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-24939,molecule.ecocyc.CPD-24935,sm:name:d ribulofuranose,same family_key via deterministic merge,high
+molecule.ecocyc.L-idopyranuronate,molecule.ecocyc.CPD-21254,sm:name:l idopyranuronate,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-1373,molecule.ecocyc.CPD0-1370,sm:name:2 6 anhydro 3 deoxy d arabino heptulopyranosid onate 7 phosphate,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-2499,molecule.ecocyc.CPD-16619,sm:name:methyl d glucoside 6 phosphate,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-2669,molecule.ecocyc.CPD0-2668,sm:name:1 o methyl d glucose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-2657,molecule.ecocyc.CPD0-2655,sm:name:3 dehydro 1 o methyl d glucose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD0-2658,molecule.ecocyc.CPD0-2656,sm:name:3 dehydro 1 o methyl d gulose,same family_key via deterministic merge,high
+molecule.ecocyc.CPD-22526,molecule.ecocyc.CPD-22525,sm:name:p aminophenyl d glucoside,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5103,reaction.ecocyc.3.4.21.102-RXN,reaction:eq:c47e154b5d7a,same family_key via deterministic merge,high
+reaction.ecocyc.3.4.21.107-RXN,reaction.ecocyc.3.4.21.102-RXN,reaction:eq:c47e154b5d7a,same family_key via deterministic merge,high
+reaction.ecocyc.3.4.21.87-RXN,reaction.ecocyc.3.4.21.102-RXN,reaction:eq:c47e154b5d7a,same family_key via deterministic merge,high
+reaction.ecocyc.CHERTARM-RXN,reaction.ecocyc.CHERTAPM-RXN,reaction:ec:2.1.1.80,same family_key via deterministic merge,high
+reaction.ecocyc.CHERTSRM-RXN,reaction.ecocyc.CHERTAPM-RXN,reaction:ec:2.1.1.80,same family_key via deterministic merge,high
+reaction.ecocyc.CHERTRGM-RXN,reaction.ecocyc.CHERTAPM-RXN,reaction:ec:2.1.1.80,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5205,reaction.ecocyc.ABC-63-RXN,reaction:eq:a012528f757a,same family_key via deterministic merge,high
+reaction.ecocyc.RXN-14452,reaction.ecocyc.RXN-13519,reaction:eq:a2ab79b1dfa6,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN-218,reaction.ecocyc.RXN-13519,reaction:eq:a2ab79b1dfa6,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-608,reaction.ecocyc.RXN0-7189,reaction:eq:7e34bbf781c6,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-3182,reaction.ecocyc.3.4.24.55-RXN,reaction:eq:05d2061d13bb,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5195,reaction.ecocyc.3.4.24.55-RXN,reaction:eq:05d2061d13bb,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-3221,reaction.ecocyc.3.4.24.55-RXN,reaction:eq:05d2061d13bb,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-575,reaction.ecocyc.RXN0-1741,reaction:eq:f13d1cfd9c6b,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN-344,reaction.ecocyc.TRANS-RXN-338,reaction:eq:4745fd0d24cb,same family_key via deterministic merge,high
+reaction.ecocyc.RXN-21299,reaction.ecocyc.3.4.21.53-RXN,reaction:eq:892feb31445d,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN-365,reaction.ecocyc.TRANS-RXN-352,reaction:eq:734a1e7a1fd4,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-2605,reaction.ecocyc.3.1.21.1-RXN,reaction:eq:c077b94d8f07,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-0244,reaction.ecocyc.TRANS-RXN-72,reaction:eq:e6c0471cc0ee,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-553,reaction.ecocyc.TRANS-RXN-299,reaction:eq:8c91dc39bec5,same family_key via deterministic merge,high
+reaction.ecocyc.3.4.11.9-RXN,reaction.ecocyc.3.4.11.1-RXN,reaction:eq:11996b4c900d,same family_key via deterministic merge,high
+reaction.ecocyc.MCPTAR-RXN,reaction.ecocyc.MCPTAP-RXN,reaction:ec:3.1.1.61,same family_key via deterministic merge,high
+reaction.ecocyc.MCPTSR-RXN,reaction.ecocyc.MCPTAP-RXN,reaction:ec:3.1.1.61,same family_key via deterministic merge,high
+reaction.ecocyc.MCPTRG-RXN,reaction.ecocyc.MCPTAP-RXN,reaction:ec:3.1.1.61,same family_key via deterministic merge,high
+reaction.ecocyc.CHEBTSRD-RXN,reaction.ecocyc.CHEBTAPD-RXN,reaction:ec:3.5.1.44,same family_key via deterministic merge,high
+reaction.ecocyc.CHEBTARD-RXN,reaction.ecocyc.CHEBTAPD-RXN,reaction:ec:3.5.1.44,same family_key via deterministic merge,high
+reaction.ecocyc.CHEBTRGD-RXN,reaction.ecocyc.CHEBTAPD-RXN,reaction:ec:3.5.1.44,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5268,reaction.ecocyc.RXN0-5266,reaction:eq:9b743c1f2d74,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN-498,reaction.ecocyc.TRANS-RXN-237,reaction:eq:5f13b3c8595b,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-487,reaction.ecocyc.RXN0-16,reaction:eq:3a9152402124,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-234,reaction.ecocyc.RXN0-5254,reaction:eq:08bfa50e7362,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-7433,reaction.ecocyc.RXN-23961,reaction:eq:6ceac83aff33,same family_key via deterministic merge,high
+reaction.ecocyc.RXN-24178,reaction.ecocyc.RXN-11109,reaction:eq:ea588258efb6,same family_key via deterministic merge,high
+reaction.ecocyc.RXN-24177,reaction.ecocyc.RXN-11109,reaction:eq:ea588258efb6,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5259,reaction.ecocyc.RXN-17661,reaction:eq:2d7a6051fb9d,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-585,reaction.ecocyc.TRANS-RXN-141A,reaction:eq:19586b26bf61,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-584,reaction.ecocyc.TRANS-RXN-141B,reaction:eq:8202ed39a0a6,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-237,reaction.ecocyc.RXN0-5244,reaction:eq:6ef1c007f54c,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-21,reaction.ecocyc.RXN0-11,reaction:eq:6206ebee5197,same family_key via deterministic merge,high
+reaction.ecocyc.RXN-15513,reaction.ecocyc.3PGAREARR-RXN,reaction:eq:bb5fd30e43ad,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-547,reaction.ecocyc.TRANS-RXN-145,reaction:eq:b35352ef74a4,same family_key via deterministic merge,high
+reaction.ecocyc.TRANS-RXN0-603,reaction.ecocyc.TRANS-RXN-145,reaction:eq:b35352ef74a4,same family_key via deterministic merge,high
+reaction.ecocyc.RXN0-5509,reaction.ecocyc.3.1.27.6-RXN,reaction:eq:a388bd68542d,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8274,complex.ecocyc.CHEA-CPLX,comp:28a51d671bef,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8115,complex.ecocyc.CPLX-154,comp:28542b206b52,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-2,complex.ecocyc.CPLX0-1,comp:8fd48aa233d5,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-7956,complex.ecocyc.CPLX0-1041,comp:948bda4e788d,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8253,complex.ecocyc.CPLX0-1041,comp:948bda4e788d,same family_key via deterministic merge,high
+complex.ecocyc.DSBG-CPLX,complex.ecocyc.CPLX0-10624,comp:1280ee580aeb,same family_key via deterministic merge,high
+protein.ecocyc.PHOSPHO-TORR,complex.ecocyc.CPLX0-2821,comp:ae7aab496b3b,same family_key via deterministic merge,high
+complex.ecocyc.TORR-CPLX,complex.ecocyc.CPLX0-2821,comp:ae7aab496b3b,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-7657,complex.ecocyc.CPLX0-2861,comp:fd11d3f1130c,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8117,complex.ecocyc.CPLX0-2861,comp:fd11d3f1130c,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8300,complex.ecocyc.CPLX0-3951,comp:85f784789336,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8580,complex.ecocyc.CPLX0-7787,comp:035f9e1a7928,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-ATOS,complex.ecocyc.CPLX0-7870,comp:2ba1dc28fa7e,same family_key via deterministic merge,high
+complex.ecocyc.PTSI-PHOSPHORYLATED,complex.ecocyc.CPLX0-7938,comp:e2c919ffbd1b,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8075,complex.ecocyc.CPLX0-7970,comp:0b635855157e,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-PHOQ,complex.ecocyc.CPLX0-8168,comp:ec01640a6d73,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8267,complex.ecocyc.CPLX0-8265,comp:054cbadded68,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-8268,complex.ecocyc.CPLX0-8265,comp:054cbadded68,same family_key via deterministic merge,high
+complex.ecocyc.TORS-CPLX,complex.ecocyc.CPLX0-8265,comp:054cbadded68,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-CPXA,complex.ecocyc.CPLX0-8270,comp:aeba2e6562d9,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-OMPR,complex.ecocyc.CPLX0-8285,comp:305907d5ce5e,same family_key via deterministic merge,high
+complex.ecocyc.GLNG-CPLX,complex.ecocyc.CPLX0-8566,comp:c6dbcf80c775,same family_key via deterministic merge,high
+complex.ecocyc.PIIPROTEIN-CPLX,complex.ecocyc.CPLX0-8568,comp:6bad5676691d,same family_key via deterministic merge,high
+complex.ecocyc.PII2-CPLX,complex.ecocyc.CPLX0-8570,comp:b6fd2515c464,same family_key via deterministic merge,high
+complex.ecocyc.CPLX0-9041,complex.ecocyc.CPLX0-9039,comp:8083d352c479,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-CREC,complex.ecocyc.CREC-CPLX,comp:50feebcaeb2b,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-ENVZ,complex.ecocyc.ENVZ-CPLX,comp:a2ff23b87132,same family_key via deterministic merge,high
+complex.ecocyc.PROTEIN-NRIIP,complex.ecocyc.GLNL-CPLX,comp:967444401254,same family_key via deterministic merge,high
+protein.ecocyc.ISOCITHASE-P,complex.ecocyc.ISOCITHASE-CPLX,comp:792f38f797a6,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-KDPD,complex.ecocyc.KDPD-CPLX,comp:c1a4c27fc4e3,same family_key via deterministic merge,high
+complex.ecocyc.RIBONUCLEOSIDE-TRIP-REDUCT-CPLX,complex.ecocyc.MONOMER0-2863,comp:e8d5606d288f,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-NARQ,complex.ecocyc.NARQ-CPLX,comp:394601491bfa,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-NARX,complex.ecocyc.NARX-CPLX,comp:06c93fe5e063,same family_key via deterministic merge,high
+complex.ecocyc.PHOSPHO-PHOR,complex.ecocyc.PHOR-CPLX,comp:458e2a9850f7,same family_key via deterministic merge,high
+complex.ecocyc.PYRUVFORMLY-INACTIVE-CPLX,complex.ecocyc.PYRUVFORMLY-CPLX,comp:6f6d310f3118,same family_key via deterministic merge,high
+protein.ecocyc.TAP-GLU,protein.ecocyc.TAP-GLN,comp:93890fa53945,same family_key via deterministic merge,high
+protein.ecocyc.TAP-GLUME,protein.ecocyc.TAP-GLN,comp:93890fa53945,same family_key via deterministic merge,high
+protein.ecocyc.TAR-GLU,protein.ecocyc.TAR-GLN,comp:58496e1e7efd,same family_key via deterministic merge,high
+protein.ecocyc.TAR-GLUME,protein.ecocyc.TAR-GLN,comp:58496e1e7efd,same family_key via deterministic merge,high
+protein.ecocyc.TRG-GLU,protein.ecocyc.TRG-GLN,comp:b709f4589c48,same family_key via deterministic merge,high
+protein.ecocyc.TRG-GLUME,protein.ecocyc.TRG-GLN,comp:b709f4589c48,same family_key via deterministic merge,high
+protein.ecocyc.TSR-GLU,protein.ecocyc.TSR-GLN,comp:f4390b2505e0,same family_key via deterministic merge,high
+protein.ecocyc.TSR-GLUME,protein.ecocyc.TSR-GLN,comp:f4390b2505e0,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4229,protein.ecocyc.MONOMER0-2755,protein:name:insab transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-2756,protein.ecocyc.MONOMER0-2755,protein:name:insab transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4230,protein.ecocyc.MONOMER0-2755,protein:name:insab transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-2757,protein.ecocyc.MONOMER0-2755,protein:name:insab transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4231,protein.ecocyc.MONOMER0-2755,protein:name:insab transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4585,protein.ecocyc.MONOMER0-4583,protein:name:modified rac prophage dna binding transcriptional repressor racr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4586,protein.ecocyc.MONOMER0-4583,protein:name:modified rac prophage dna binding transcriptional repressor racr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4584,protein.ecocyc.MONOMER0-4583,protein:name:modified rac prophage dna binding transcriptional repressor racr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4588,protein.ecocyc.MONOMER0-4583,protein:name:modified rac prophage dna binding transcriptional repressor racr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4587,protein.ecocyc.MONOMER0-4583,protein:name:modified rac prophage dna binding transcriptional repressor racr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4248,protein.ecocyc.MONOMER0-2748,protein:name:is3 element transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4246,protein.ecocyc.MONOMER0-2748,protein:name:is3 element transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4249,protein.ecocyc.MONOMER0-2748,protein:name:is3 element transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4247,protein.ecocyc.MONOMER0-2748,protein:name:is3 element transposase,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4259,protein.ecocyc.MONOMER0-2761,protein:name:is2 element transposase insab,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4255,protein.ecocyc.MONOMER0-2761,protein:name:is2 element transposase insab,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4258,protein.ecocyc.MONOMER0-2761,protein:name:is2 element transposase insab,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4256,protein.ecocyc.MONOMER0-2761,protein:name:is2 element transposase insab,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4257,protein.ecocyc.MONOMER0-2761,protein:name:is2 element transposase insab,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4580,protein.ecocyc.MONOMER0-4579,protein:name:modified dna binding transcriptional dual regulator rutr,same family_key via deterministic merge,high
+protein.ecocyc.MONOMER0-4581,protein.ecocyc.MONOMER0-4579,protein:name:modified dna binding transcriptional dual regulator rutr,same family_key via deterministic merge,high

@@ -1,0 +1,1292 @@
+---
+entity_id: "molecule.C00001"
+entity_type: "small_molecule"
+name: "H2O"
+source_database: "KEGG"
+source_id: "C00001"
+default_state: "low"
+allowed_states: "absent|low|medium|high"
+subcellular_location: ""
+enriched_summary_quality: "placeholder"
+tags:
+  - entity/small_molecule
+  - source/KEGG
+aliases:
+  - "H2O"
+  - "Water"
+---
+
+# H2O
+
+`molecule.C00001`
+
+## Static
+
+- Type: `small_molecule`
+- Source: `KEGG:C00001`
+- Default state: `low`
+- Allowed states: `absent|low|medium|high`
+
+## Enriched Summary
+
+KEGG compound: H2O; Water
+
+## Biological Role
+
+Consumed as substrate in 969 reaction(s). Produced in 258 reaction(s).
+
+## Enriched Pathways
+
+- `eco00190` Oxidative phosphorylation (KEGG)
+- `eco00710` Carbon fixation by Calvin cycle (KEGG)
+
+## Annotation
+
+KEGG compound: H2O; Water
+
+## Pathways
+
+- `eco00190` Oxidative phosphorylation (KEGG)
+- `eco00710` Carbon fixation by Calvin cycle (KEGG)
+
+## Outgoing Edges (1227)
+
+- `is_product_of` --> [[reaction.R00009|reaction.R00009]] `KEGG` `database` - 2 C00027 <=> C00007 + 2 C00001
+- `is_product_of` --> [[reaction.R00017|reaction.R00017]] `KEGG` `database` - C00027 + 2 C00126 <=> 2 C00125 + 2 C00001
+- `is_product_of` --> [[reaction.R00036|reaction.R00036]] `KEGG` `database` - 2 C00430 <=> C00931 + 2 C00001
+- `is_product_of` --> [[reaction.R00078|reaction.R00078]] `KEGG` `database` - C00007 + 4 C14818 + 4 C00080 <=> 4 C14819 + 2 C00001
+- `is_product_of` --> [[reaction.R00132|reaction.R00132]] `KEGG` `database` - C01353 <=> C00011 + C00001
+- `is_product_of` --> [[reaction.R00150|reaction.R00150]] `KEGG` `database` - C00002 + C00014 + C00288 <=> C00008 + C00169 + C00001
+- `is_product_of` --> [[reaction.R00177|reaction.R00177]] `KEGG` `database` - C00009 + C00013 + C00019 <=> C00002 + C00073 + C00001
+- `is_product_of` --> [[reaction.R00274|reaction.R00274]] `KEGG` `database` - C00027 + 2 C00051 <=> C00127 + 2 C00001
+- `is_product_of` --> [[reaction.R00339|reaction.R00339]] `KEGG` `database` - C00898 <=> C00036 + C00001
+- `is_product_of` --> [[reaction.R00345|reaction.R00345]] `KEGG` `database` - C00009 + C00036 <=> C00001 + C00074 + C00011
+- `is_product_of` --> [[reaction.R00351|reaction.R00351]] `KEGG` `database` - C00158 + C00010 <=> C00024 + C00001 + C00036
+- `is_product_of` --> [[reaction.R00472|reaction.R00472]] `KEGG` `database` - C00149 + C00010 <=> C00024 + C00001 + C00048
+- `is_product_of` --> [[reaction.R00590|reaction.R00590]] `KEGG` `database` - C00065 <=> C02218 + C00001
+- `is_product_of` --> [[reaction.R00602|reaction.R00602]] `KEGG` `database` - C00132 + C00027 <=> C00067 + 2 C00001
+- `is_product_of` --> [[reaction.R00658|reaction.R00658]] `KEGG` `database` - C00631 <=> C00074 + C00001
+- `is_product_of` --> [[reaction.R00674|reaction.R00674]] `KEGG` `database` - C00065 + C00463 <=> C00078 + C00001
+- `is_product_of` --> [[reaction.R00691|reaction.R00691]] `KEGG` `database` - C00826 <=> C00079 + C00001 + C00011
+- `is_product_of` --> [[reaction.R00792|reaction.R00792]] `KEGG` `database` - C00244 + 2 C06259 <=> C00088 + C00001 + 2 C06260
+- `is_product_of` --> [[reaction.R00985|reaction.R00985]] `KEGG` `database` - C00251 + C00014 <=> C00108 + C00022 + C00001
+- `is_product_of` --> [[reaction.R01325|reaction.R01325]] `KEGG` `database` - C00158 <=> C00417 + C00001
+- `is_product_of` --> [[reaction.R01540|reaction.R01540]] `KEGG` `database` - C00817 <=> C00204 + C00001
+- `is_product_of` --> [[reaction.R01724|reaction.R01724]] `KEGG` `database` - C01185 + C00013 + C00008 + C00009 <=> C00253 + C00119 + C00002 + C00001 + C00080
+- `is_product_of` --> [[reaction.R01900|reaction.R01900]] `KEGG` `database` - C00311 <=> C00417 + C00001
+- `is_product_of` --> [[reaction.R01911|reaction.R01911]] `KEGG` `database` - C00314 + C00009 <=> C00627 + C00001
+- `is_product_of` --> [[reaction.R02603|reaction.R02603]] `KEGG` `database` - C00596 + C00042 <=> C04479 + C00001
+- `is_product_of` --> [[reaction.R03165|reaction.R03165]] `KEGG` `database` - C01024 <=> C01051 + C00001
+- `is_product_of` --> [[reaction.R03457|reaction.R03457]] `KEGG` `database` - C04666 <=> C01267 + C00001
+- `is_product_of` --> [[reaction.R03774|reaction.R03774]] `KEGG` `database` - C01934 <=> C03979 + C00001
+- `is_product_of` --> [[reaction.R04137|reaction.R04137]] `KEGG` `database` - C05998 <=> C03069 + C00001
+- `is_product_of` --> [[reaction.R04424|reaction.R04424]] `KEGG` `database` - C02225 <=> C04225 + C00001
+- `is_product_of` --> [[reaction.R04425|reaction.R04425]] `KEGG` `database` - C04593 <=> C04225 + C00001
+- `is_product_of` --> [[reaction.R04428|reaction.R04428]] `KEGG` `database` - C04618 <=> C04246 + C00001
+- `is_product_of` --> [[reaction.R04965|reaction.R04965]] `KEGG` `database` - C05757 <=> C05758 + C00001
+- `is_product_of` --> [[reaction.R05838|reaction.R05838]] `KEGG` `database` - C11638 + C11437 <=> C00627 + C00009 + 2 C00001
+- `is_product_of` --> [[reaction.R09099|reaction.R09099]] `KEGG` `database` - C00065 + C01217 <=> C04377 + C00037 + C00001
+- `is_product_of` --> [[reaction.R09796|reaction.R09796]] `KEGG` `database` - C00256 <=> C00546 + C00001
+- `is_product_of` --> [[reaction.R10247|reaction.R10247]] `KEGG` `database` - C11437 + C15809 + C15814 <=> C20246 + C15810 + 2 C00001
+- `is_product_of` --> [[reaction.R11335|reaction.R11335]] `KEGG` `database` - 2 C00390 + C00007 + 8 C00080 <=> 2 C00399 + 2 C00001 + 8 C00080
+- `is_product_of` --> [[reaction.R11906|reaction.R11906]] `KEGG` `database` - C07054 + C00027 <=> C21754 + C05360 + 2 C00001
+- `is_product_of` --> [[reaction.R11911|reaction.R11911]] `KEGG` `database` - C00318 + C00005 + C00080 + C00007 <=> C21761 + C00565 + C00006 + C00001
+- `is_product_of` --> [[reaction.R12067|reaction.R12067]] `KEGG` `database` - C19859 + C00030 + C00007 <=> C21860 + C00028 + C00001
+- `is_product_of` --> [[reaction.R12152|reaction.R12152]] `KEGG` `database` - C04916 + C00014 <=> C04677 + C04666 + C00001
+- `is_product_of` --> [[reaction.R12602|reaction.R12602]] `KEGG` `database` - C16832 + C15498 <=> C16237 + C00001 + C01335
+- `is_product_of` --> [[reaction.R12603|reaction.R12603]] `KEGG` `database` - C15973 + C15498 <=> C15972 + C00001 + C01335
+- `is_product_of` --> [[reaction.ecocyc.1.11.1.15-RXN|reaction.ecocyc.1.11.1.15-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.1.7.2.2-RXN|reaction.ecocyc.1.7.2.2-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2-METHYLCITRATE-DEHYDRATASE-RXN|reaction.ecocyc.2-METHYLCITRATE-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2-OCTAPRENYL-6-METHOXYPHENOL-HYDROX-RXN|reaction.ecocyc.2-OCTAPRENYL-6-METHOXYPHENOL-HYDROX-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2-OCTAPRENYLPHENOL-HYDROX-RXN|reaction.ecocyc.2-OCTAPRENYLPHENOL-HYDROX-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2-OXOPENT-4-ENOATE-HYDRATASE-RXN|reaction.ecocyc.2-OXOPENT-4-ENOATE-HYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2.6.1.82-RXN|reaction.ecocyc.2.6.1.82-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.2PGADEHYDRAT-RXN|reaction.ecocyc.2PGADEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-DEHYDROQUINATE-DEHYDRATASE-RXN|reaction.ecocyc.3-DEHYDROQUINATE-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-HYDROXBUTYRYL-COA-DEHYDRATASE-RXN|reaction.ecocyc.3-HYDROXBUTYRYL-COA-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.3-HYDROXYDECANOYL-ACP-DEHYDR-RXN|reaction.ecocyc.3-HYDROXYDECANOYL-ACP-DEHYDR-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.4.2.1.58-RXN|reaction.ecocyc.4.2.1.58-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.4.2.1.59-RXN|reaction.ecocyc.4.2.1.59-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.4.2.1.61-RXN|reaction.ecocyc.4.2.1.61-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.4.2.1.99-RXN|reaction.ecocyc.4.2.1.99-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ACONITATEDEHYDR-RXN|reaction.ecocyc.ACONITATEDEHYDR-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ALTRODEHYDRAT-RXN|reaction.ecocyc.ALTRODEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CARBAMATE-KINASE-RXN|reaction.ecocyc.CARBAMATE-KINASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CARNDETRU-RXN|reaction.ecocyc.CARNDETRU-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.CATAL-RXN|reaction.ecocyc.CATAL-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.D--TARTRATE-DEHYDRATASE-RXN|reaction.ecocyc.D--TARTRATE-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DIHYDRODIPICSYN-RXN|reaction.ecocyc.DIHYDRODIPICSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DIHYDROXYISOVALDEHYDRAT-RXN|reaction.ecocyc.DIHYDROXYISOVALDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DIHYDROXYMETVALDEHYDRAT-RXN|reaction.ecocyc.DIHYDROXYMETVALDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.DTDPGLUCDEHYDRAT-RXN|reaction.ecocyc.DTDPGLUCDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.ENOYL-COA-HYDRAT-RXN|reaction.ecocyc.ENOYL-COA-HYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.FUMHYDR-RXN|reaction.ecocyc.FUMHYDR-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GALACTARDEHYDRA-RXN|reaction.ecocyc.GALACTARDEHYDRA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GALACTONDEHYDRAT-RXN|reaction.ecocyc.GALACTONDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GDPMANDEHYDRA-RXN|reaction.ecocyc.GDPMANDEHYDRA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUCARDEHYDRA-RXN|reaction.ecocyc.GLUCARDEHYDRA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLUTATHIONE-PEROXIDASE-RXN|reaction.ecocyc.GLUTATHIONE-PEROXIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.GLYOXIII-RXN|reaction.ecocyc.GLYOXIII-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.IGPSYN-RXN|reaction.ecocyc.IGPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.IMIDPHOSDEHYD-RXN|reaction.ecocyc.IMIDPHOSDEHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.L-RHAMNONATE-DEHYDRATASE-RXN|reaction.ecocyc.L-RHAMNONATE-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.LTARTDEHYDRA-RXN|reaction.ecocyc.LTARTDEHYDRA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.LUMAZINESYN-RXN|reaction.ecocyc.LUMAZINESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.MANNONDEHYDRAT-RXN|reaction.ecocyc.MANNONDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.MHPHYDROXY-RXN|reaction.ecocyc.MHPHYDROXY-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.NAPHTHOATE-SYN-RXN|reaction.ecocyc.NAPHTHOATE-SYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.NITRATE-REDUCTASE-CYTOCHROME-RXN|reaction.ecocyc.NITRATE-REDUCTASE-CYTOCHROME-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.O-SUCCINYLBENZOATE-COA-SYN-RXN|reaction.ecocyc.O-SUCCINYLBENZOATE-COA-SYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.OCTAPRENYL-METHYL-METHOXY-BENZOQ-OH-RXN|reaction.ecocyc.OCTAPRENYL-METHYL-METHOXY-BENZOQ-OH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PDXJ-RXN|reaction.ecocyc.PDXJ-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PEROXID-RXN|reaction.ecocyc.PEROXID-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PGLUCONDEHYDRAT-RXN|reaction.ecocyc.PGLUCONDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PORPHOBILSYNTH-RXN|reaction.ecocyc.PORPHOBILSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PREPHENATEDEHYDRAT-RXN|reaction.ecocyc.PREPHENATEDEHYDRAT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.PRPPAMIDOTRANS-RXN|reaction.ecocyc.PRPPAMIDOTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.QUINOLINATE-SYNTHA-RXN|reaction.ecocyc.QUINOLINATE-SYNTHA-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.R4-RXN|reaction.ecocyc.R4-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RIBONUCLEOSIDE-TRIP-REDUCT-RXN|reaction.ecocyc.RIBONUCLEOSIDE-TRIP-REDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-10040|reaction.ecocyc.RXN-10040]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-10656|reaction.ecocyc.RXN-10656]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-10660|reaction.ecocyc.RXN-10660]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-10720|reaction.ecocyc.RXN-10720]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11409|reaction.ecocyc.RXN-11409]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11410|reaction.ecocyc.RXN-11410]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11477|reaction.ecocyc.RXN-11477]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11481|reaction.ecocyc.RXN-11481]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11667|reaction.ecocyc.RXN-11667]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-11813|reaction.ecocyc.RXN-11813]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12440|reaction.ecocyc.RXN-12440]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12567|reaction.ecocyc.RXN-12567]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12827|reaction.ecocyc.RXN-12827]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12864|reaction.ecocyc.RXN-12864]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-12886|reaction.ecocyc.RXN-12886]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-13418|reaction.ecocyc.RXN-13418]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-13616|reaction.ecocyc.RXN-13616]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14290|reaction.ecocyc.RXN-14290]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14396|reaction.ecocyc.RXN-14396]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-14569|reaction.ecocyc.RXN-14569]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15122|reaction.ecocyc.RXN-15122]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15125|reaction.ecocyc.RXN-15125]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15139|reaction.ecocyc.RXN-15139]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15140|reaction.ecocyc.RXN-15140]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15341|reaction.ecocyc.RXN-15341]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-15581|reaction.ecocyc.RXN-15581]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16312|reaction.ecocyc.RXN-16312]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16420|reaction.ecocyc.RXN-16420]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-16457|reaction.ecocyc.RXN-16457]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17636|reaction.ecocyc.RXN-17636]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17651|reaction.ecocyc.RXN-17651]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17662|reaction.ecocyc.RXN-17662]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17752|reaction.ecocyc.RXN-17752]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17776|reaction.ecocyc.RXN-17776]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17780|reaction.ecocyc.RXN-17780]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17785|reaction.ecocyc.RXN-17785]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17789|reaction.ecocyc.RXN-17789]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17793|reaction.ecocyc.RXN-17793]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17797|reaction.ecocyc.RXN-17797]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17900|reaction.ecocyc.RXN-17900]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-17944|reaction.ecocyc.RXN-17944]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18258|reaction.ecocyc.RXN-18258]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18376|reaction.ecocyc.RXN-18376]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18605|reaction.ecocyc.RXN-18605]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-18819|reaction.ecocyc.RXN-18819]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19019|reaction.ecocyc.RXN-19019]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19020|reaction.ecocyc.RXN-19020]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19775|reaction.ecocyc.RXN-19775]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19776|reaction.ecocyc.RXN-19776]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19777|reaction.ecocyc.RXN-19777]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19778|reaction.ecocyc.RXN-19778]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-19954|reaction.ecocyc.RXN-19954]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20018|reaction.ecocyc.RXN-20018]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20675|reaction.ecocyc.RXN-20675]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20678|reaction.ecocyc.RXN-20678]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20898|reaction.ecocyc.RXN-20898]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-20900|reaction.ecocyc.RXN-20900]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21016|reaction.ecocyc.RXN-21016]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21019|reaction.ecocyc.RXN-21019]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21024|reaction.ecocyc.RXN-21024]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21025|reaction.ecocyc.RXN-21025]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21026|reaction.ecocyc.RXN-21026]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21550|reaction.ecocyc.RXN-21550]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21601|reaction.ecocyc.RXN-21601]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-21858|reaction.ecocyc.RXN-21858]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22616|reaction.ecocyc.RXN-22616]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22618|reaction.ecocyc.RXN-22618]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22711|reaction.ecocyc.RXN-22711]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22713|reaction.ecocyc.RXN-22713]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22774|reaction.ecocyc.RXN-22774]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22775|reaction.ecocyc.RXN-22775]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22776|reaction.ecocyc.RXN-22776]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22777|reaction.ecocyc.RXN-22777]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22778|reaction.ecocyc.RXN-22778]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-22790|reaction.ecocyc.RXN-22790]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-23528|reaction.ecocyc.RXN-23528]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24132|reaction.ecocyc.RXN-24132]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-24141|reaction.ecocyc.RXN-24141]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-2425|reaction.ecocyc.RXN-2425]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-25117|reaction.ecocyc.RXN-25117]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-25425|reaction.ecocyc.RXN-25425]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-25747|reaction.ecocyc.RXN-25747]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-2881|reaction.ecocyc.RXN-2881]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-3482|reaction.ecocyc.RXN-3482]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-3521|reaction.ecocyc.RXN-3521]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-5921|reaction.ecocyc.RXN-5921]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-6268|reaction.ecocyc.RXN-6268]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-6423|reaction.ecocyc.RXN-6423]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8461|reaction.ecocyc.RXN-8461]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8487|reaction.ecocyc.RXN-8487]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8667|reaction.ecocyc.RXN-8667]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8777|reaction.ecocyc.RXN-8777]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-8991|reaction.ecocyc.RXN-8991]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9520|reaction.ecocyc.RXN-9520]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9533|reaction.ecocyc.RXN-9533]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9537|reaction.ecocyc.RXN-9537]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9557|reaction.ecocyc.RXN-9557]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9559|reaction.ecocyc.RXN-9559]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9560|reaction.ecocyc.RXN-9560]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9562|reaction.ecocyc.RXN-9562]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-9655|reaction.ecocyc.RXN-9655]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN-982|reaction.ecocyc.RXN-982]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-1461|reaction.ecocyc.RXN0-1461]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-1483|reaction.ecocyc.RXN0-1483]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2042|reaction.ecocyc.RXN0-2042]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2144|reaction.ecocyc.RXN0-2144]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2382|reaction.ecocyc.RXN0-2382]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-267|reaction.ecocyc.RXN0-267]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2721|reaction.ecocyc.RXN0-2721]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-280|reaction.ecocyc.RXN0-280]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-2945|reaction.ecocyc.RXN0-2945]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-3501|reaction.ecocyc.RXN0-3501]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5220|reaction.ecocyc.RXN0-5220]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5224|reaction.ecocyc.RXN0-5224]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5242|reaction.ecocyc.RXN0-5242]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5262|reaction.ecocyc.RXN0-5262]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5263|reaction.ecocyc.RXN0-5263]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5264|reaction.ecocyc.RXN0-5264]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5265|reaction.ecocyc.RXN0-5265]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5266|reaction.ecocyc.RXN0-5266]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5268|reaction.ecocyc.RXN0-5268]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5393|reaction.ecocyc.RXN0-5393]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-5398|reaction.ecocyc.RXN0-5398]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6277|reaction.ecocyc.RXN0-6277]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6369|reaction.ecocyc.RXN0-6369]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6370|reaction.ecocyc.RXN0-6370]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6375|reaction.ecocyc.RXN0-6375]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6444|reaction.ecocyc.RXN0-6444]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6450|reaction.ecocyc.RXN0-6450]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6678|reaction.ecocyc.RXN0-6678]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6684|reaction.ecocyc.RXN0-6684]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6721|reaction.ecocyc.RXN0-6721]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6954|reaction.ecocyc.RXN0-6954]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-6973|reaction.ecocyc.RXN0-6973]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7000|reaction.ecocyc.RXN0-7000]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7041|reaction.ecocyc.RXN0-7041]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7066|reaction.ecocyc.RXN0-7066]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7080|reaction.ecocyc.RXN0-7080]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7124|reaction.ecocyc.RXN0-7124]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7187|reaction.ecocyc.RXN0-7187]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7188|reaction.ecocyc.RXN0-7188]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7196|reaction.ecocyc.RXN0-7196]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-723|reaction.ecocyc.RXN0-723]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-724|reaction.ecocyc.RXN0-724]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7325|reaction.ecocyc.RXN0-7325]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7363|reaction.ecocyc.RXN0-7363]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7367|reaction.ecocyc.RXN0-7367]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7368|reaction.ecocyc.RXN0-7368]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7398|reaction.ecocyc.RXN0-7398]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-745|reaction.ecocyc.RXN0-745]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-746|reaction.ecocyc.RXN0-746]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7485|reaction.ecocyc.RXN0-7485]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.RXN0-7493|reaction.ecocyc.RXN0-7493]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.THIAZOLSYN2-RXN|reaction.ecocyc.THIAZOLSYN2-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.THTOREDUCT-RXN|reaction.ecocyc.THTOREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN-145|reaction.ecocyc.TRANS-RXN-145]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-547|reaction.ecocyc.TRANS-RXN0-547]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRANS-RXN0-603|reaction.ecocyc.TRANS-RXN0-603]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.TRYPSYN-RXN|reaction.ecocyc.TRYPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.UROGENIIISYN-RXN|reaction.ecocyc.UROGENIIISYN-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_product_of` --> [[reaction.ecocyc.XYLONATE-DEHYDRATASE-RXN|reaction.ecocyc.XYLONATE-DEHYDRATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction RIGHT
+- `is_substrate_of` --> [[reaction.R00004|reaction.R00004]] `KEGG` `database` - C00013 + C00001 <=> 2 C00009
+- `is_substrate_of` --> [[reaction.R00010|reaction.R00010]] `KEGG` `database` - C01083 + C00001 <=> 2 C00031
+- `is_substrate_of` --> [[reaction.R00022|reaction.R00022]] `KEGG` `database` - C01674 + C00001 <=> 2 C00140
+- `is_substrate_of` --> [[reaction.R00026|reaction.R00026]] `KEGG` `database` - C00185 + C00001 <=> 2 C00221
+- `is_substrate_of` --> [[reaction.R00028|reaction.R00028]] `KEGG` `database` - C00208 + C00001 <=> 2 C00031
+- `is_substrate_of` --> [[reaction.R00084|reaction.R00084]] `KEGG` `database` - 4 C00931 + C00001 <=> C01024 + 4 C00014
+- `is_substrate_of` --> [[reaction.R00086|reaction.R00086]] `KEGG` `database` - C00002 + C00001 <=> C00008 + C00009
+- `is_substrate_of` --> [[reaction.R00087|reaction.R00087]] `KEGG` `database` - C00002 + C00001 <=> C00020 + C00013
+- `is_substrate_of` --> [[reaction.R00103|reaction.R00103]] `KEGG` `database` - C00003 + C00001 <=> C00020 + C00455
+- `is_substrate_of` --> [[reaction.R00125|reaction.R00125]] `KEGG` `database` - C01260 + C00001 <=> 2 C00008
+- `is_substrate_of` --> [[reaction.R00138|reaction.R00138]] `KEGG` `database` - C00536 + C00001 <=> C00013 + C00009
+- `is_substrate_of` --> [[reaction.R00143|reaction.R00143]] `KEGG` `database` - C00014 + C00003 + C00001 <=> C00192 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00145|reaction.R00145]] `KEGG` `database` - C05167 + C00001 + C00003 <=> C00161 + C00014 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00146|reaction.R00146]] `KEGG` `database` - C05167 + C00001 + C00006 <=> C00161 + C00014 + C00005 + C00080
+- `is_substrate_of` --> [[reaction.R00160|reaction.R00160]] `KEGG` `database` - C00016 + C00001 <=> C00020 + C00061
+- `is_substrate_of` --> [[reaction.R00164|reaction.R00164]] `KEGG` `database` - C00562 + C00001 <=> C00017 + C00009
+- `is_substrate_of` --> [[reaction.R00173|reaction.R00173]] `KEGG` `database` - C00018 + C00001 <=> C00250 + C00009
+- `is_substrate_of` --> [[reaction.R00182|reaction.R00182]] `KEGG` `database` - C00020 + C00001 <=> C00147 + C00117
+- `is_substrate_of` --> [[reaction.R00183|reaction.R00183]] `KEGG` `database` - C00020 + C00001 <=> C00212 + C00009
+- `is_substrate_of` --> [[reaction.R00188|reaction.R00188]] `KEGG` `database` - C00054 + C00001 <=> C00020 + C00009
+- `is_substrate_of` --> [[reaction.R00191|reaction.R00191]] `KEGG` `database` - C00575 + C00001 <=> C00020
+- `is_substrate_of` --> [[reaction.R00194|reaction.R00194]] `KEGG` `database` - C00021 + C00001 <=> C03539 + C00147
+- `is_substrate_of` --> [[reaction.R00195|reaction.R00195]] `KEGG` `database` - C06393 + C00001 <=> C00022 + 2 C00014
+- `is_substrate_of` --> [[reaction.R00199|reaction.R00199]] `KEGG` `database` - C00002 + C00022 + C00001 <=> C00020 + C00074 + C00009
+- `is_substrate_of` --> [[reaction.R00203|reaction.R00203]] `KEGG` `database` - C00546 + C00003 + C00001 <=> C00022 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00245|reaction.R00245]] `KEGG` `database` - C01165 + C00003 + C00001 <=> C00025 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00248|reaction.R00248]] `KEGG` `database` - C00025 + C00006 + C00001 <=> C00026 + C00014 + C00005 + C00080
+- `is_substrate_of` --> [[reaction.R00251|reaction.R00251]] `KEGG` `database` - C00002 + C01879 + 2 C00001 <=> C00008 + C00009 + C00025
+- `is_substrate_of` --> [[reaction.R00256|reaction.R00256]] `KEGG` `database` - C00064 + C00001 <=> C00025 + C00014
+- `is_substrate_of` --> [[reaction.R00269|reaction.R00269]] `KEGG` `database` - C00940 + C00001 <=> C00026 + C00014
+- `is_substrate_of` --> [[reaction.R00277|reaction.R00277]] `KEGG` `database` - C00647 + C00001 + C00007 <=> C00018 + C00014 + C00027
+- `is_substrate_of` --> [[reaction.R00284|reaction.R00284]] `KEGG` `database` - C00028 + C00014 + C00001 <=> C00192 + C00030
+- `is_substrate_of` --> [[reaction.R00286|reaction.R00286]] `KEGG` `database` - C00029 + C00001 + 2 C00003 <=> C00167 + 2 C00004 + 2 C00080
+- `is_substrate_of` --> [[reaction.R00287|reaction.R00287]] `KEGG` `database` - C00029 + C00001 <=> C00105 + C00103
+- `is_substrate_of` --> [[reaction.R00304|reaction.R00304]] `KEGG` `database` - C00103 + C00001 <=> C00031 + C00009
+- `is_substrate_of` --> [[reaction.R00306|reaction.R00306]] `KEGG` `database` - C00185 + C00001 <=> 2 C00031
+- `is_substrate_of` --> [[reaction.R00317|reaction.R00317]] `KEGG` `database` - C00227 + C00001 <=> C00033 + C00009
+- `is_substrate_of` --> [[reaction.R00335|reaction.R00335]] `KEGG` `database` - C00044 + C00001 <=> C00035 + C00009
+- `is_substrate_of` --> [[reaction.R00336|reaction.R00336]] `KEGG` `database` - C01228 + C00001 <=> C00035 + C00013
+- `is_substrate_of` --> [[reaction.R00348|reaction.R00348]] `KEGG` `database` - C02362 + C00001 <=> C00036 + C00014
+- `is_substrate_of` --> [[reaction.R00357|reaction.R00357]] `KEGG` `database` - C00049 + C00001 + C00007 <=> C00036 + C00014 + C00027
+- `is_substrate_of` --> [[reaction.R00383|reaction.R00383]] `KEGG` `database` - C00040 + C00001 <=> C00010 + C00060
+- `is_substrate_of` --> [[reaction.R00411|reaction.R00411]] `KEGG` `database` - C05931 + C00001 <=> C00025 + C00042
+- `is_substrate_of` --> [[reaction.R00414|reaction.R00414]] `KEGG` `database` - C00043 + C00001 <=> C00645 + C00015
+- `is_substrate_of` --> [[reaction.R00424|reaction.R00424]] `KEGG` `database` - C00044 + C00001 <=> C04895 + C00058
+- `is_substrate_of` --> [[reaction.R00425|reaction.R00425]] `KEGG` `database` - C00044 + 4 C00001 <=> C00058 + C01304 + 2 C00009
+- `is_substrate_of` --> [[reaction.R00426|reaction.R00426]] `KEGG` `database` - C00044 + C00001 <=> C00144 + C00013
+- `is_substrate_of` --> [[reaction.R00428|reaction.R00428]] `KEGG` `database` - C00044 + C00001 <=> C05922
+- `is_substrate_of` --> [[reaction.R00485|reaction.R00485]] `KEGG` `database` - C00152 + C00001 <=> C00049 + C00014
+- `is_substrate_of` --> [[reaction.R00494|reaction.R00494]] `KEGG` `database` - C00051 + C00001 <=> C01419 + C00025
+- `is_substrate_of` --> [[reaction.R00508|reaction.R00508]] `KEGG` `database` - C00053 + C00001 <=> C00224 + C00009
+- `is_substrate_of` --> [[reaction.R00510|reaction.R00510]] `KEGG` `database` - C00055 + C00001 <=> C00380 + C00117
+- `is_substrate_of` --> [[reaction.R00511|reaction.R00511]] `KEGG` `database` - C00055 + C00001 <=> C00475 + C00009
+- `is_substrate_of` --> [[reaction.R00515|reaction.R00515]] `KEGG` `database` - C00063 + C00001 <=> C00055 + C00013
+- `is_substrate_of` --> [[reaction.R00527|reaction.R00527]] `KEGG` `database` - C01031 + C00001 <=> C00058 + C00051
+- `is_substrate_of` --> [[reaction.R00539|reaction.R00539]] `KEGG` `database` - C02133 + C00001 <=> C00060 + C00009
+- `is_substrate_of` --> [[reaction.R00548|reaction.R00548]] `KEGG` `database` - C00061 + C00001 <=> C00255 + C00009
+- `is_substrate_of` --> [[reaction.R00573|reaction.R00573]] `KEGG` `database` - C00002 + C00075 + C00064 + C00001 <=> C00008 + C00009 + C00063 + C00025
+- `is_substrate_of` --> [[reaction.R00575|reaction.R00575]] `KEGG` `database` - 2 C00002 + C00064 + C00288 + C00001 <=> 2 C00008 + C00009 + C00025 + C00169
+- `is_substrate_of` --> [[reaction.R00578|reaction.R00578]] `KEGG` `database` - C00002 + C00049 + C00064 + C00001 <=> C00020 + C00013 + C00152 + C00025
+- `is_substrate_of` --> [[reaction.R00582|reaction.R00582]] `KEGG` `database` - C01005 + C00001 <=> C00065 + C00009
+- `is_substrate_of` --> [[reaction.R00626|reaction.R00626]] `KEGG` `database` - C01153 + C00001 <=> C00069 + C00009
+- `is_substrate_of` --> [[reaction.R00662|reaction.R00662]] `KEGG` `database` - C00075 + C00001 <=> C00105 + C00013
+- `is_substrate_of` --> [[reaction.R00669|reaction.R00669]] `KEGG` `database` - C00437 + C00001 <=> C00033 + C00077
+- `is_substrate_of` --> [[reaction.R00673|reaction.R00673]] `KEGG` `database` - C00078 + C00001 <=> C00463 + C00022 + C00014
+- `is_substrate_of` --> [[reaction.R00707|reaction.R00707]] `KEGG` `database` - C03912 + C00003 + 2 C00001 <=> C00025 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00708|reaction.R00708]] `KEGG` `database` - C03912 + C00006 + 2 C00001 <=> C00025 + C00005 + C00080
+- `is_substrate_of` --> [[reaction.R00713|reaction.R00713]] `KEGG` `database` - C00232 + C00003 + C00001 <=> C00042 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R00714|reaction.R00714]] `KEGG` `database` - C00232 + C00006 + C00001 <=> C00042 + C00005 + C00080
+- `is_substrate_of` --> [[reaction.R00719|reaction.R00719]] `KEGG` `database` - C00081 + C00001 <=> C00104 + C00009
+- `is_substrate_of` --> [[reaction.R00720|reaction.R00720]] `KEGG` `database` - C00081 + C00001 <=> C00130 + C00013
+- `is_substrate_of` --> [[reaction.R00762|reaction.R00762]] `KEGG` `database` - C00354 + C00001 <=> C00085 + C00009
+- `is_substrate_of` --> [[reaction.R00765|reaction.R00765]] `KEGG` `database` - C00352 + C00001 <=> C00085 + C00014
+- `is_substrate_of` --> [[reaction.R00782|reaction.R00782]] `KEGG` `database` - C00097 + C00001 <=> C00283 + C00022 + C00014
+- `is_substrate_of` --> [[reaction.R00787|reaction.R00787]] `KEGG` `database` - C00014 + 3 C00003 + 2 C00001 <=> C00088 + 3 C00004 + 3 C00080
+- `is_substrate_of` --> [[reaction.R00801|reaction.R00801]] `KEGG` `database` - C00089 + C00001 <=> C00095 + C00031
+- `is_substrate_of` --> [[reaction.R00802|reaction.R00802]] `KEGG` `database` - C00089 + C00001 <=> C02336 + C00267
+- `is_substrate_of` --> [[reaction.R00804|reaction.R00804]] `KEGG` `database` - C00934 + C00001 <=> C11477 + C00009
+- `is_substrate_of` --> [[reaction.R00837|reaction.R00837]] `KEGG` `database` - C00001 + C00689 <=> C00031 + C00092
+- `is_substrate_of` --> [[reaction.R00839|reaction.R00839]] `KEGG` `database` - C04534 + C00001 <=> C00031 + C00092
+- `is_substrate_of` --> [[reaction.R00999|reaction.R00999]] `KEGG` `database` - C01118 + C00001 <=> C00109 + C00042 + C00014
+- `is_substrate_of` --> [[reaction.R01010|reaction.R01010]] `KEGG` `database` - C00111 + C00001 <=> C00184 + C00009
+- `is_substrate_of` --> [[reaction.R01157|reaction.R01157]] `KEGG` `database` - C00179 + C00001 <=> C00134 + C00086
+- `is_substrate_of` --> [[reaction.R01158|reaction.R01158]] `KEGG` `database` - C00860 + 2 C00003 + C00001 <=> C00135 + 2 C00004 + 2 C00080
+- `is_substrate_of` --> [[reaction.R01163|reaction.R01163]] `KEGG` `database` - C01929 + C00001 + C00003 <=> C00135 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R01309|reaction.R01309]] `KEGG` `database` - C00157 + 2 C00001 <=> C00670 + 2 C00162
+- `is_substrate_of` --> [[reaction.R01313|reaction.R01313]] `KEGG` `database` - C00157 + C00001 <=> C04230 + C00060
+- `is_substrate_of` --> [[reaction.R01314|reaction.R01314]] `KEGG` `database` - C00157 + C00001 <=> C04233 + C00060
+- `is_substrate_of` --> [[reaction.R01315|reaction.R01315]] `KEGG` `database` - C00157 + C00001 <=> C04230 + C00162
+- `is_substrate_of` --> [[reaction.R01316|reaction.R01316]] `KEGG` `database` - C00157 + C00001 <=> C04233 + C00162
+- `is_substrate_of` --> [[reaction.R01317|reaction.R01317]] `KEGG` `database` - C00157 + C00001 <=> C04230 + C00219
+- `is_substrate_of` --> [[reaction.R01329|reaction.R01329]] `KEGG` `database` - C05400 + C00001 <=> C00159 + C00124
+- `is_substrate_of` --> [[reaction.R01532|reaction.R01532]] `KEGG` `database` - C00201 + C00001 <=> C00215 + C00013
+- `is_substrate_of` --> [[reaction.R01736|reaction.R01736]] `KEGG` `database` - C03451 + C00001 <=> C00051 + C00256
+- `is_substrate_of` --> [[reaction.R01877|reaction.R01877]] `KEGG` `database` - C01368 + C00001 <=> C00299 + C00009
+- `is_substrate_of` --> [[reaction.R01878|reaction.R01878]] `KEGG` `database` - C00475 + C00001 <=> C00299 + C00014
+- `is_substrate_of` --> [[reaction.R02108|reaction.R02108]] `KEGG` `database` - C00369 + C00001 <=> C00721 + C00369
+- `is_substrate_of` --> [[reaction.R02135|reaction.R02135]] `KEGG` `database` - C01081 + C00001 <=> C00378 + C00009
+- `is_substrate_of` --> [[reaction.R02137|reaction.R02137]] `KEGG` `database` - C00475 + C00001 <=> C00380 + C00121
+- `is_substrate_of` --> [[reaction.R02334|reaction.R02334]] `KEGG` `database` - C00461 + C00001 <=> C01674 + C00461
+- `is_substrate_of` --> [[reaction.R02362|reaction.R02362]] `KEGG` `database` - C00714 + n C00001 <=> n C00132 + C00470
+- `is_substrate_of` --> [[reaction.R02370|reaction.R02370]] `KEGG` `database` - C05822 + C00001 <=> C00475 + C00009
+- `is_substrate_of` --> [[reaction.R02382|reaction.R02382]] `KEGG` `database` - C00483 + C00001 + C00007 <=> C03765 + C00014 + C00027
+- `is_substrate_of` --> [[reaction.R02401|reaction.R02401]] `KEGG` `database` - C03273 + C00003 + C00001 <=> C00489 + C00004 + C00080
+- `is_substrate_of` --> [[reaction.R02601|reaction.R02601]] `KEGG` `database` - C00596 + C00001 <=> C03589
+- `is_substrate_of` --> [[reaction.R02613|reaction.R02613]] `KEGG` `database` - C05332 + C00007 + C00001 <=> C00601 + C00014 + C00027
+- `is_substrate_of` --> [[reaction.R02622|reaction.R02622]] `KEGG` `database` - C02583 + C00001 <=> C00614 + C00014
+- `is_substrate_of` --> [[reaction.R02624|reaction.R02624]] `KEGG` `database` - C04142 + C00001 <=> C00614 + C00132
+- `is_substrate_of` --> [[reaction.R02853|reaction.R02853]] `KEGG` `database` - C02532 + C00001 <=> C00740 + C00009
+- `is_substrate_of` --> [[reaction.R02866|reaction.R02866]] `KEGG` `database` - C01096 + C00001 <=> C00794 + C00009
+- `is_substrate_of` --> [[reaction.R02887|reaction.R02887]] `KEGG` `database` - C01898 + (n-2) C00001 <=> (n-2) C00031 + C00185
+- `is_substrate_of` --> [[reaction.R03139|reaction.R03139]] `KEGG` `database` - C00986 + C00007 + C00001 <=> C05665 + C00014 + C00027
+- `is_substrate_of` --> [[reaction.R03145|reaction.R03145]] `KEGG` `database` - C00022 + C00399 + C00001 <=> C00033 + C00390 + C00011
+- `is_substrate_of` --> [[reaction.R03409|reaction.R03409]] `KEGG` `database` - C04494 + C00001 <=> C01228 + C00009
+- `is_substrate_of` --> [[reaction.R03416|reaction.R03416]] `KEGG` `database` - C04438 + C00001 <=> C00162 + C01233
+- `is_substrate_of` --> [[reaction.R03417|reaction.R03417]] `KEGG` `database` - C05973 + C00001 <=> C00162 + C01233
+- `is_substrate_of` --> [[reaction.R03423|reaction.R03423]] `KEGG` `database` - C01240 + C00001 <=> C03419
+- `is_substrate_of` --> [[reaction.R03743|reaction.R03743]] `KEGG` `database` - C01866 + C00001 <=> C03806
+- `is_substrate_of` --> [[reaction.R04112|reaction.R04112]] `KEGG` `database` - C02999 + C00001 <=> C02713 + C00041
+- `is_substrate_of` --> [[reaction.R04120|reaction.R04120]] `KEGG` `database` - C03023 + C00343 + C00001 <=> C03895 + C00342
+- `is_substrate_of` --> [[reaction.R04162|reaction.R04162]] `KEGG` `database` - C05977 + C00001 <=> C03201 + C00009
+- `is_substrate_of` --> [[reaction.R05297|reaction.R05297]] `KEGG` `database` - C06761 + C00001 <=> C06762
+- `is_substrate_of` --> [[reaction.R05712|reaction.R05712]] `KEGG` `database` - C00014 + 2 C00001 + 6 C00125 <=> C00088 + 6 C00126 + 6 C00080
+- `is_substrate_of` --> [[reaction.R05790|reaction.R05790]] `KEGG` `database` - C11516 + C00001 <=> C11544 + C00009
+- `is_substrate_of` --> [[reaction.R06893|reaction.R06893]] `KEGG` `database` - C13636 + C00001 <=> C00530 + C00033
+- `is_substrate_of` --> [[reaction.R06942|reaction.R06942]] `KEGG` `database` - C14144 + C00001 <=> C14145
+- `is_substrate_of` --> [[reaction.R07280|reaction.R07280]] `KEGG` `database` - C04454 + C00001 <=> C04732 + C00009
+- `is_substrate_of` --> [[reaction.R07291|reaction.R07291]] `KEGG` `database` - C04230 + C00001 <=> C00670 + C00060
+- `is_substrate_of` --> [[reaction.R07807|reaction.R07807]] `KEGG` `database` - G01977 + C00001 <=> G13073 + C00124
+- `is_substrate_of` --> [[reaction.R07809|reaction.R07809]] `KEGG` `database` - G13074 + C00001 <=> G01391 + C00140
+- `is_substrate_of` --> [[reaction.R07810|reaction.R07810]] `KEGG` `database` - G13073 + C00001 <=> G01391 + C04132
+- `is_substrate_of` --> [[reaction.R08183|reaction.R08183]] `KEGG` `database` - C02249 + C00001 <=> C00010 + C00219
+- `is_substrate_of` --> [[reaction.R08210|reaction.R08210]] `KEGG` `database` - C00235 + 2 C00139 + C00001 <=> C11811 + 2 C00138 + 2 C00080
+- `is_substrate_of` --> [[reaction.R08221|reaction.R08221]] `KEGG` `database` - C16635 + C00001 <=> C12739 + C00014
+- `is_substrate_of` --> [[reaction.R08227|reaction.R08227]] `KEGG` `database` - C16630 + C00001 <=> C16631
+- `is_substrate_of` --> [[reaction.R08991|reaction.R08991]] `KEGG` `database` - C16463 + C00001 <=> C18076
+- `is_substrate_of` --> [[reaction.R09107|reaction.R09107]] `KEGG` `database` - C15532 + C00001 <=> C00033 + C00327
+- `is_substrate_of` --> [[reaction.R09136|reaction.R09136]] `KEGG` `database` - C18242 + C00001 <=> C18243
+- `is_substrate_of` --> [[reaction.R09771|reaction.R09771]] `KEGG` `database` - C19879 + C00001 <=> C19880 + C00009
+- `is_substrate_of` --> [[reaction.R09820|reaction.R09820]] `KEGG` `database` - C19946 + C00006 + C00001 <=> C19945 + C00005 + C00080
+- `is_substrate_of` --> [[reaction.R09832|reaction.R09832]] `KEGG` `database` - C19967 + C00001 <=> C19968 + C00013
+- `is_substrate_of` --> [[reaction.R10223|reaction.R10223]] `KEGG` `database` - C17324 + C00001 <=> C20451 + C00014
+- `is_substrate_of` --> [[reaction.R10859|reaction.R10859]] `KEGG` `database` - C11811 + C00001 + C02869 <=> C11453 + C02745
+- `is_substrate_of` --> [[reaction.R11372|reaction.R11372]] `KEGG` `database` - C21310 + C00001 <=> C18239 + C00013
+- `is_substrate_of` --> [[reaction.R11527|reaction.R11527]] `KEGG` `database` - C00681 + C00001 <=> C01885 + C00009
+- `is_substrate_of` --> [[reaction.R12583|reaction.R12583]] `KEGG` `database` - C22267 + C00001 <=> C22268 + C00009
+- `is_substrate_of` --> [[reaction.R12589|reaction.R12589]] `KEGG` `database` - C00700 + C00001 <=> C01337 + C00009
+- `is_substrate_of` --> [[reaction.R12621|reaction.R12621]] `KEGG` `database` - C05198 + C00001 <=> C22288 + C00147
+- `is_substrate_of` --> [[reaction.R12623|reaction.R12623]] `KEGG` `database` - C20256 + C00001 <=> C20255 + C00011 + C00014
+- `is_substrate_of` --> [[reaction.R12624|reaction.R12624]] `KEGG` `database` - C20256 + C00001 <=> C20255 + C01563
+- `is_substrate_of` --> [[reaction.R12625|reaction.R12625]] `KEGG` `database` - C20254 + C00001 <=> C20253 + C00011 + C00014
+- `is_substrate_of` --> [[reaction.R12635|reaction.R12635]] `KEGG` `database` - C22293 + C00001 <=> C00475 + C00033
+- `is_substrate_of` --> [[reaction.R13051|reaction.R13051]] `KEGG` `database` - C10216 + C00001 <=> C10208 + C00221
+- `is_substrate_of` --> [[reaction.R13052|reaction.R13052]] `KEGG` `database` - C09126 + C00001 <=> C06563 + C00221
+- `is_substrate_of` --> [[reaction.R13065|reaction.R13065]] `KEGG` `database` - C05623 + C00001 <=> C00389 + C00221
+- `is_substrate_of` --> [[reaction.R13081|reaction.R13081]] `KEGG` `database` - C09099 + C00001 <=> C00509 + C00221
+- `is_substrate_of` --> [[reaction.ecocyc.1.7.2.3-RXN|reaction.ecocyc.1.7.2.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.1.8.4.12-RXN|reaction.ecocyc.1.8.4.12-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.1.8.4.13-RXN|reaction.ecocyc.1.8.4.13-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.1.8.4.14-RXN|reaction.ecocyc.1.8.4.14-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.2-ISOPROPYLMALATESYN-RXN|reaction.ecocyc.2-ISOPROPYLMALATESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.2-METHYLCITRATE-SYNTHASE-RXN|reaction.ecocyc.2-METHYLCITRATE-SYNTHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.2.7.9.3-RXN|reaction.ecocyc.2.7.9.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.25-DIOXOVALERATE-DEHYDROGENASE-RXN|reaction.ecocyc.25-DIOXOVALERATE-DEHYDROGENASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3-CH3-2-OXOBUTANOATE-OH-CH3-XFER-RXN|reaction.ecocyc.3-CH3-2-OXOBUTANOATE-OH-CH3-XFER-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3-ISOPROPYLMALISOM-RXN|reaction.ecocyc.3-ISOPROPYLMALISOM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3-NUCLEOTID-RXN|reaction.ecocyc.3-NUCLEOTID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3-PHOSPHOGLYCERATE-PHOSPHATASE-RXN|reaction.ecocyc.3-PHOSPHOGLYCERATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.11.1-RXN|reaction.ecocyc.3.1.11.1-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.11.2-RXN|reaction.ecocyc.3.1.11.2-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.11.6-RXN|reaction.ecocyc.3.1.11.6-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.13.1-RXN|reaction.ecocyc.3.1.13.1-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.13.3-RXN|reaction.ecocyc.3.1.13.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.13.5-RXN|reaction.ecocyc.3.1.13.5-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.2.21-RXN|reaction.ecocyc.3.1.2.21-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.21.1-RXN|reaction.ecocyc.3.1.21.1-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.21.3-RXN|reaction.ecocyc.3.1.21.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.21.7-RXN|reaction.ecocyc.3.1.21.7-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.26.12-RXN|reaction.ecocyc.3.1.26.12-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.26.3-RXN|reaction.ecocyc.3.1.26.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.26.4-RXN|reaction.ecocyc.3.1.26.4-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.26.5-RXN|reaction.ecocyc.3.1.26.5-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.27.5-RXN|reaction.ecocyc.3.1.27.5-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.27.6-RXN|reaction.ecocyc.3.1.27.6-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.3.16-RXN|reaction.ecocyc.3.1.3.16-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.3.68-RXN|reaction.ecocyc.3.1.3.68-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.3.74-RXN|reaction.ecocyc.3.1.3.74-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.1.4.14-RXN|reaction.ecocyc.3.1.4.14-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.1.14-RXN|reaction.ecocyc.3.2.1.14-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.1.17-RXN|reaction.ecocyc.3.2.1.17-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.1.21-RXN|reaction.ecocyc.3.2.1.21-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.1.52-RXN|reaction.ecocyc.3.2.1.52-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.2.10-RXN|reaction.ecocyc.3.2.2.10-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.2.21-RXN|reaction.ecocyc.3.2.2.21-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.2.2.23-RXN|reaction.ecocyc.3.2.2.23-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.11.1-RXN|reaction.ecocyc.3.4.11.1-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.11.18-RXN|reaction.ecocyc.3.4.11.18-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.11.2-RXN|reaction.ecocyc.3.4.11.2-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.11.4-RXN|reaction.ecocyc.3.4.11.4-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.11.9-RXN|reaction.ecocyc.3.4.11.9-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.13.18-RXN|reaction.ecocyc.3.4.13.18-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.13.21-RXN|reaction.ecocyc.3.4.13.21-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.13.22-RXN|reaction.ecocyc.3.4.13.22-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.13.9-RXN|reaction.ecocyc.3.4.13.9-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.15.5-RXN|reaction.ecocyc.3.4.15.5-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.17.8-RXN|reaction.ecocyc.3.4.17.8-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.19.12-RXN|reaction.ecocyc.3.4.19.12-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.102-RXN|reaction.ecocyc.3.4.21.102-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.105-RXN|reaction.ecocyc.3.4.21.105-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.107-RXN|reaction.ecocyc.3.4.21.107-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.53-RXN|reaction.ecocyc.3.4.21.53-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.83-RXN|reaction.ecocyc.3.4.21.83-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.87-RXN|reaction.ecocyc.3.4.21.87-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.89-RXN|reaction.ecocyc.3.4.21.89-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.21.92-RXN|reaction.ecocyc.3.4.21.92-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.23.43-RXN|reaction.ecocyc.3.4.23.43-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.24.55-RXN|reaction.ecocyc.3.4.24.55-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.4.24.70-RXN|reaction.ecocyc.3.4.24.70-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.5.1.88-RXN|reaction.ecocyc.3.5.1.88-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.5.2.17-RXN|reaction.ecocyc.3.5.2.17-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.6.1.41-RXN|reaction.ecocyc.3.6.1.41-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.6.3.23-RXN|reaction.ecocyc.3.6.3.23-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.6.3.3-RXN|reaction.ecocyc.3.6.3.3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.6.3.39-RXN|reaction.ecocyc.3.6.3.39-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.3.6.3.53-RXN|reaction.ecocyc.3.6.3.53-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.325-BISPHOSPHATE-NUCLEOTIDASE-RXN|reaction.ecocyc.325-BISPHOSPHATE-NUCLEOTIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.4-NITROPHENYLPHOSPHATASE-RXN|reaction.ecocyc.4-NITROPHENYLPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.4.3.1.15-RXN|reaction.ecocyc.4.3.1.15-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.5-NUCLEOTID-RXN|reaction.ecocyc.5-NUCLEOTID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.5-OXOPROLINASE-ATP-HYDROLYSING-RXN|reaction.ecocyc.5-OXOPROLINASE-ATP-HYDROLYSING-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.6-PHOSPHO-BETA-GLUCOSIDASE-RXN|reaction.ecocyc.6-PHOSPHO-BETA-GLUCOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.6PGLUCONOLACT-RXN|reaction.ecocyc.6PGLUCONOLACT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-10-RXN|reaction.ecocyc.ABC-10-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-11-RXN|reaction.ecocyc.ABC-11-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-12-RXN|reaction.ecocyc.ABC-12-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-13-RXN|reaction.ecocyc.ABC-13-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-14-RXN|reaction.ecocyc.ABC-14-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-15-RXN|reaction.ecocyc.ABC-15-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-16-RXN|reaction.ecocyc.ABC-16-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-18-RXN|reaction.ecocyc.ABC-18-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-19-RXN|reaction.ecocyc.ABC-19-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-2-RXN|reaction.ecocyc.ABC-2-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-20-RXN|reaction.ecocyc.ABC-20-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-22-RXN|reaction.ecocyc.ABC-22-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-23-RXN|reaction.ecocyc.ABC-23-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-24-RXN|reaction.ecocyc.ABC-24-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-25-RXN|reaction.ecocyc.ABC-25-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-26-RXN|reaction.ecocyc.ABC-26-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-27-RXN|reaction.ecocyc.ABC-27-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-28-RXN|reaction.ecocyc.ABC-28-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-3-RXN|reaction.ecocyc.ABC-3-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-32-RXN|reaction.ecocyc.ABC-32-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-33-RXN|reaction.ecocyc.ABC-33-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-34-RXN|reaction.ecocyc.ABC-34-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-35-RXN|reaction.ecocyc.ABC-35-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-36-RXN|reaction.ecocyc.ABC-36-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-37-RXN|reaction.ecocyc.ABC-37-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-4-RXN|reaction.ecocyc.ABC-4-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-42-RXN|reaction.ecocyc.ABC-42-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-5-RXN|reaction.ecocyc.ABC-5-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-56-RXN|reaction.ecocyc.ABC-56-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-63-RXN|reaction.ecocyc.ABC-63-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-64-RXN|reaction.ecocyc.ABC-64-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-7-RXN|reaction.ecocyc.ABC-7-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-70-RXN|reaction.ecocyc.ABC-70-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-8-RXN|reaction.ecocyc.ABC-8-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ABC-9-RXN|reaction.ecocyc.ABC-9-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACETYLESTERASE-RXN|reaction.ecocyc.ACETYLESTERASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACETYLORNDEACET-RXN|reaction.ecocyc.ACETYLORNDEACET-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACID-PHOSPHATASE-RXN|reaction.ecocyc.ACID-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACONITATEHYDR-RXN|reaction.ecocyc.ACONITATEHYDR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACYL-COA-HYDROLASE-RXN|reaction.ecocyc.ACYL-COA-HYDROLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ACYLPHOSPHATASE-RXN|reaction.ecocyc.ACYLPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADDALT-RXN|reaction.ecocyc.ADDALT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADENINE-DEAMINASE-RXN|reaction.ecocyc.ADENINE-DEAMINASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADENODEAMIN-RXN|reaction.ecocyc.ADENODEAMIN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADENOSINE-NUCLEOSIDASE-RXN|reaction.ecocyc.ADENOSINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADENOSYLHOMOCYSTEINE-NUCLEOSIDASE-RXN|reaction.ecocyc.ADENOSYLHOMOCYSTEINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADPREDUCT-RXN|reaction.ecocyc.ADPREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ADPSUGPPHOSPHAT-RXN|reaction.ecocyc.ADPSUGPPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AGMATIN-RXN|reaction.ecocyc.AGMATIN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALDEHYDE-DEHYDROGENASE-NADP_-RXN|reaction.ecocyc.ALDEHYDE-DEHYDROGENASE-NADP_-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALKAPHOSPHA-RXN|reaction.ecocyc.ALKAPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALLANTOATE-DEIMINASE-RXN|reaction.ecocyc.ALLANTOATE-DEIMINASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALLANTOINASE-RXN|reaction.ecocyc.ALLANTOINASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALPHA-AMYL-RXN|reaction.ecocyc.ALPHA-AMYL-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ALPHAGALACTOSID-RXN|reaction.ecocyc.ALPHAGALACTOSID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMACETOXID-RXN|reaction.ecocyc.AMACETOXID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMINEOXID-RXN|reaction.ecocyc.AMINEOXID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMINOBUTDEHYDROG-RXN|reaction.ecocyc.AMINOBUTDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMINOCYL-TRNA-HYDROLASE-RXN|reaction.ecocyc.AMINOCYL-TRNA-HYDROLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMP-DEPHOSPHORYLATION-RXN|reaction.ecocyc.AMP-DEPHOSPHORYLATION-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.AMP-NUCLEOSID-RXN|reaction.ecocyc.AMP-NUCLEOSID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ASNSYNB-RXN|reaction.ecocyc.ASNSYNB-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ASPARAGHYD-RXN|reaction.ecocyc.ASPARAGHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ATP-PYROPHOSPHATASE-RXN|reaction.ecocyc.ATP-PYROPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ATPASE-RXN|reaction.ecocyc.ATPASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ATPSYN-RXN|reaction.ecocyc.ATPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.BADH-RXN|reaction.ecocyc.BADH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.BETA-GLUCURONID-RXN|reaction.ecocyc.BETA-GLUCURONID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.BETA-LACTAMASE-RXN|reaction.ecocyc.BETA-LACTAMASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.BETAGALACTOSID-RXN|reaction.ecocyc.BETAGALACTOSID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.BIS5-ADENOSYL-TRIPHOSPHATASE-RXN|reaction.ecocyc.BIS5-ADENOSYL-TRIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CARBOXYLATE-REDUCTASE-RXN|reaction.ecocyc.CARBOXYLATE-REDUCTASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CARBOXYLESTERASE-RXN|reaction.ecocyc.CARBOXYLESTERASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CARBPSYN-RXN|reaction.ecocyc.CARBPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CDPDIGLYPYPHOSPHA-RXN|reaction.ecocyc.CDPDIGLYPYPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CDPREDUCT-RXN|reaction.ecocyc.CDPREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBDEAMID-RXN|reaction.ecocyc.CHEBDEAMID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBDEP-RXN|reaction.ecocyc.CHEBDEP-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBTAPD-RXN|reaction.ecocyc.CHEBTAPD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBTARD-RXN|reaction.ecocyc.CHEBTARD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBTRGD-RXN|reaction.ecocyc.CHEBTRGD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEBTSRD-RXN|reaction.ecocyc.CHEBTSRD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CHEYDEPHOS-RXN|reaction.ecocyc.CHEYDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CITRATE-PRO-3S-LYASE-THIOLESTERASE-RXN|reaction.ecocyc.CITRATE-PRO-3S-LYASE-THIOLESTERASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CITSYN-RXN|reaction.ecocyc.CITSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CTPSYN-RXN|reaction.ecocyc.CTPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CYCPHOSDIESTER-RXN|reaction.ecocyc.CYCPHOSDIESTER-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CYSTATHIONINE-BETA-LYASE-RXN|reaction.ecocyc.CYSTATHIONINE-BETA-LYASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CYTDEAM-RXN|reaction.ecocyc.CYTDEAM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CYTIDEAM-RXN|reaction.ecocyc.CYTIDEAM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.CYTIDEAM2-RXN|reaction.ecocyc.CYTIDEAM2-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DAHPSYN-RXN|reaction.ecocyc.DAHPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DALADEHYDROG-RXN|reaction.ecocyc.DALADEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DCTP-DEAM-RXN|reaction.ecocyc.DCTP-DEAM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DCTP-PYROPHOSPHATASE-RXN|reaction.ecocyc.DCTP-PYROPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DCYSDESULF-RXN|reaction.ecocyc.DCYSDESULF-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DEOXYNUCLEOTIDE-3-PHOSPHATASE-RXN|reaction.ecocyc.DEOXYNUCLEOTIDE-3-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DEPHOSICITDEHASE-RXN|reaction.ecocyc.DEPHOSICITDEHASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DGTPTRIPHYDRO-RXN|reaction.ecocyc.DGTPTRIPHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DIHYDRONEOPTERIN-MONO-P-DEPHOS-RXN|reaction.ecocyc.DIHYDRONEOPTERIN-MONO-P-DEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DIHYDROOROT-RXN|reaction.ecocyc.DIHYDROOROT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DIMESULFREDUCT-RXN|reaction.ecocyc.DIMESULFREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.DUTP-PYROP-RXN|reaction.ecocyc.DUTP-PYROP-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ERYTH4PDEHYDROG-RXN|reaction.ecocyc.ERYTH4PDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN|reaction.ecocyc.EXOPOLYPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.F16BDEPHOS-RXN|reaction.ecocyc.F16BDEPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.FGAMSYN-RXN|reaction.ecocyc.FGAMSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.FORMYLTHFDEFORMYL-RXN|reaction.ecocyc.FORMYLTHFDEFORMYL-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GALACTONOLACTONASE-RXN|reaction.ecocyc.GALACTONOLACTONASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GDP-GLUCOSIDASE-RXN|reaction.ecocyc.GDP-GLUCOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GDPMANMANHYDRO-RXN|reaction.ecocyc.GDPMANMANHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GDPREDUCT-RXN|reaction.ecocyc.GDPREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUCONOLACT-RXN|reaction.ecocyc.GLUCONOLACT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUCOSAMINE-6-P-DEAMIN-RXN|reaction.ecocyc.GLUCOSAMINE-6-P-DEAMIN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUCOSE-1-PHOSPHAT-RXN|reaction.ecocyc.GLUCOSE-1-PHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUCOSE-6-PHOSPHATASE-RXN|reaction.ecocyc.GLUCOSE-6-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUTAMIN-RXN|reaction.ecocyc.GLUTAMIN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLUTDEHYD-RXN|reaction.ecocyc.GLUTDEHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYCEROL-1-PHOSPHATASE-RXN|reaction.ecocyc.GLYCEROL-1-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYCEROL-2-PHOSPHATASE-RXN|reaction.ecocyc.GLYCEROL-2-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYCOLALD-DEHYDROG-RXN|reaction.ecocyc.GLYCOLALD-DEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYCPDIESTER-RXN|reaction.ecocyc.GLYCPDIESTER-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYOHMETRANS-RXN|reaction.ecocyc.GLYOHMETRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GLYOXII-RXN|reaction.ecocyc.GLYOXII-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GMP-SYN-GLUT-RXN|reaction.ecocyc.GMP-SYN-GLUT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GPH-RXN|reaction.ecocyc.GPH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GSPAMID-RXN|reaction.ecocyc.GSPAMID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GTP-CYCLOHYDRO-I-RXN|reaction.ecocyc.GTP-CYCLOHYDRO-I-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GTP-CYCLOHYDRO-II-RXN|reaction.ecocyc.GTP-CYCLOHYDRO-II-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GUANINE-DEAMINASE-RXN|reaction.ecocyc.GUANINE-DEAMINASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.GUANOSINE-DIPHOSPHATASE-RXN|reaction.ecocyc.GUANOSINE-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.H2NEOPTERINP3PYROPHOSPHOHYDRO-RXN|reaction.ecocyc.H2NEOPTERINP3PYROPHOSPHOHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HEMEOSYN-RXN|reaction.ecocyc.HEMEOSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HISTALDEHYD-RXN|reaction.ecocyc.HISTALDEHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HISTCYCLOHYD-RXN|reaction.ecocyc.HISTCYCLOHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HISTIDPHOS-RXN|reaction.ecocyc.HISTIDPHOS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HISTPRATPHYD-RXN|reaction.ecocyc.HISTPRATPHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HYDGLUTSYN-RXN|reaction.ecocyc.HYDGLUTSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.HYDROXYLAMINE-REDUCTASE-RXN|reaction.ecocyc.HYDROXYLAMINE-REDUCTASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.IMP-DEHYDROG-RXN|reaction.ecocyc.IMP-DEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.IMPCYCLOHYDROLASE-RXN|reaction.ecocyc.IMPCYCLOHYDROLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.INORGPYROPHOSPHAT-RXN|reaction.ecocyc.INORGPYROPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.INOSINATE-NUCLEOSIDASE-RXN|reaction.ecocyc.INOSINATE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.INOSINE-NUCLEOSIDASE-RXN|reaction.ecocyc.INOSINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.ISOCHORMAT-RXN|reaction.ecocyc.ISOCHORMAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.KDO-8PPHOSPHAT-RXN|reaction.ecocyc.KDO-8PPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.KDO-8PSYNTH-RXN|reaction.ecocyc.KDO-8PSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.LACTALDDEHYDROG-RXN|reaction.ecocyc.LACTALDDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.LCYSDESULF-RXN|reaction.ecocyc.LCYSDESULF-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.LIPIDXSYNTHESIS-RXN|reaction.ecocyc.LIPIDXSYNTHESIS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.LYSOPHOSPHOLIPASE-RXN|reaction.ecocyc.LYSOPHOSPHOLIPASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MALSYN-RXN|reaction.ecocyc.MALSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MALTODEXGLUCOSID-RXN|reaction.ecocyc.MALTODEXGLUCOSID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MANNITOL-1-PHOSPHATASE-RXN|reaction.ecocyc.MANNITOL-1-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MCPMETEST-RXN|reaction.ecocyc.MCPMETEST-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MCPTAP-RXN|reaction.ecocyc.MCPTAP-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MCPTAR-RXN|reaction.ecocyc.MCPTAR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MCPTRG-RXN|reaction.ecocyc.MCPTRG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MCPTSR-RXN|reaction.ecocyc.MCPTSR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.METBALT-RXN|reaction.ecocyc.METBALT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.METHENYLTHFCYCLOHYDRO-RXN|reaction.ecocyc.METHENYLTHFCYCLOHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.METHYLTHIOADENOSINE-NUCLEOSIDASE-RXN|reaction.ecocyc.METHYLTHIOADENOSINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.MHPCHYDROL-RXN|reaction.ecocyc.MHPCHYDROL-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NAD-SYNTH-GLN-RXN|reaction.ecocyc.NAD-SYNTH-GLN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NADPYROPHOSPHAT-RXN|reaction.ecocyc.NADPYROPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NAG6PDEACET-RXN|reaction.ecocyc.NAG6PDEACET-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NICOTINAMID-RXN|reaction.ecocyc.NICOTINAMID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NICOTINATEPRIBOSYLTRANS-RXN|reaction.ecocyc.NICOTINATEPRIBOSYLTRANS-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NMNAMIDOHYDRO-RXN|reaction.ecocyc.NMNAMIDOHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NMNNUCLEOSID-RXN|reaction.ecocyc.NMNNUCLEOSID-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NUCLEOSIDE-DIPHOSPHATASE-RXN|reaction.ecocyc.NUCLEOSIDE-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.NUCLEOTIDE-PYROPHOSPHATASE-RXN|reaction.ecocyc.NUCLEOTIDE-PYROPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.OHMETHYLBILANESYN-RXN|reaction.ecocyc.OHMETHYLBILANESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PALMITOYL-COA-HYDROLASE-RXN|reaction.ecocyc.PALMITOYL-COA-HYDROLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PEPSYNTH-RXN|reaction.ecocyc.PEPSYNTH-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PGPPHOSPHA-RXN|reaction.ecocyc.PGPPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PHENDEHYD-RXN|reaction.ecocyc.PHENDEHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PHOSPHOAMIDASE-RXN|reaction.ecocyc.PHOSPHOAMIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PHOSPHOENOLPYRUVATE-PHOSPHATASE-RXN|reaction.ecocyc.PHOSPHOENOLPYRUVATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PHOSPHOGLYCERATE-PHOSPHATASE-RXN|reaction.ecocyc.PHOSPHOGLYCERATE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PMPOXI-RXN|reaction.ecocyc.PMPOXI-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PPGPPSYN-RXN|reaction.ecocyc.PPGPPSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PPPGPPHYDRO-RXN|reaction.ecocyc.PPPGPPHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PROTEIN-TYROSINE-PHOSPHATASE-RXN|reaction.ecocyc.PROTEIN-TYROSINE-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PYRAZIN-RXN|reaction.ecocyc.PYRAZIN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.PYRROLINECARBDEHYDROG-RXN|reaction.ecocyc.PYRROLINECARBDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.R303-RXN|reaction.ecocyc.R303-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RIBOFLAVINSYNDEAM-RXN|reaction.ecocyc.RIBOFLAVINSYNDEAM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RIBONUCLEOSIDE-DIP-REDUCTI-RXN|reaction.ecocyc.RIBONUCLEOSIDE-DIP-REDUCTI-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RIBONUCLEOSIDE-DIP-REDUCTII-RXN|reaction.ecocyc.RIBONUCLEOSIDE-DIP-REDUCTII-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RIBOPHOSPHAT-RXN|reaction.ecocyc.RIBOPHOSPHAT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RIBOSYLPYRIMIDINE-NUCLEOSIDASE-RXN|reaction.ecocyc.RIBOSYLPYRIMIDINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-10017|reaction.ecocyc.RXN-10017]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-10018|reaction.ecocyc.RXN-10018]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-10715|reaction.ecocyc.RXN-10715]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-10817|reaction.ecocyc.RXN-10817]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-10940|reaction.ecocyc.RXN-10940]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11109|reaction.ecocyc.RXN-11109]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11135|reaction.ecocyc.RXN-11135]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11152|reaction.ecocyc.RXN-11152]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11193|reaction.ecocyc.RXN-11193]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11277|reaction.ecocyc.RXN-11277]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11396|reaction.ecocyc.RXN-11396]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11397|reaction.ecocyc.RXN-11397]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11483|reaction.ecocyc.RXN-11483]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11496|reaction.ecocyc.RXN-11496]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-11776|reaction.ecocyc.RXN-11776]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12070|reaction.ecocyc.RXN-12070]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12104|reaction.ecocyc.RXN-12104]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12195|reaction.ecocyc.RXN-12195]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12246|reaction.ecocyc.RXN-12246]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12402|reaction.ecocyc.RXN-12402]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12618|reaction.ecocyc.RXN-12618]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12753|reaction.ecocyc.RXN-12753]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12754|reaction.ecocyc.RXN-12754]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12816|reaction.ecocyc.RXN-12816]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12862|reaction.ecocyc.RXN-12862]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12894|reaction.ecocyc.RXN-12894]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12895|reaction.ecocyc.RXN-12895]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-12896|reaction.ecocyc.RXN-12896]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13031|reaction.ecocyc.RXN-13031]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13072|reaction.ecocyc.RXN-13072]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13182|reaction.ecocyc.RXN-13182]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13329|reaction.ecocyc.RXN-13329]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13548|reaction.ecocyc.RXN-13548]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13605|reaction.ecocyc.RXN-13605]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13853|reaction.ecocyc.RXN-13853]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13854|reaction.ecocyc.RXN-13854]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-13859|reaction.ecocyc.RXN-13859]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14002|reaction.ecocyc.RXN-14002]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14014|reaction.ecocyc.RXN-14014]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14025|reaction.ecocyc.RXN-14025]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14026|reaction.ecocyc.RXN-14026]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14064|reaction.ecocyc.RXN-14064]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14065|reaction.ecocyc.RXN-14065]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14073|reaction.ecocyc.RXN-14073]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14090|reaction.ecocyc.RXN-14090]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14091|reaction.ecocyc.RXN-14091]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14112|reaction.ecocyc.RXN-14112]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14113|reaction.ecocyc.RXN-14113]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14115|reaction.ecocyc.RXN-14115]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14116|reaction.ecocyc.RXN-14116]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14124|reaction.ecocyc.RXN-14124]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14126|reaction.ecocyc.RXN-14126]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14136|reaction.ecocyc.RXN-14136]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14139|reaction.ecocyc.RXN-14139]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14142|reaction.ecocyc.RXN-14142]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14143|reaction.ecocyc.RXN-14143]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14160|reaction.ecocyc.RXN-14160]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14161|reaction.ecocyc.RXN-14161]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14181|reaction.ecocyc.RXN-14181]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14188|reaction.ecocyc.RXN-14188]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14251|reaction.ecocyc.RXN-14251]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14255|reaction.ecocyc.RXN-14255]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14281|reaction.ecocyc.RXN-14281]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14282|reaction.ecocyc.RXN-14282]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14283|reaction.ecocyc.RXN-14283]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14455|reaction.ecocyc.RXN-14455]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14473|reaction.ecocyc.RXN-14473]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14477|reaction.ecocyc.RXN-14477]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14478|reaction.ecocyc.RXN-14478]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14479|reaction.ecocyc.RXN-14479]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14483|reaction.ecocyc.RXN-14483]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14505|reaction.ecocyc.RXN-14505]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14509|reaction.ecocyc.RXN-14509]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14510|reaction.ecocyc.RXN-14510]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14511|reaction.ecocyc.RXN-14511]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14512|reaction.ecocyc.RXN-14512]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14513|reaction.ecocyc.RXN-14513]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14514|reaction.ecocyc.RXN-14514]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14521|reaction.ecocyc.RXN-14521]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14522|reaction.ecocyc.RXN-14522]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14523|reaction.ecocyc.RXN-14523]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14524|reaction.ecocyc.RXN-14524]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14525|reaction.ecocyc.RXN-14525]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14534|reaction.ecocyc.RXN-14534]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14552|reaction.ecocyc.RXN-14552]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-14722|reaction.ecocyc.RXN-14722]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15041|reaction.ecocyc.RXN-15041]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15123|reaction.ecocyc.RXN-15123]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15127|reaction.ecocyc.RXN-15127]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15292|reaction.ecocyc.RXN-15292]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15293|reaction.ecocyc.RXN-15293]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15294|reaction.ecocyc.RXN-15294]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15312|reaction.ecocyc.RXN-15312]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15761|reaction.ecocyc.RXN-15761]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15878|reaction.ecocyc.RXN-15878]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15892|reaction.ecocyc.RXN-15892]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-15952|reaction.ecocyc.RXN-15952]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16009|reaction.ecocyc.RXN-16009]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16225|reaction.ecocyc.RXN-16225]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16381|reaction.ecocyc.RXN-16381]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16649|reaction.ecocyc.RXN-16649]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16664|reaction.ecocyc.RXN-16664]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16788|reaction.ecocyc.RXN-16788]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-16938|reaction.ecocyc.RXN-16938]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17104|reaction.ecocyc.RXN-17104]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17330|reaction.ecocyc.RXN-17330]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17362|reaction.ecocyc.RXN-17362]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17489|reaction.ecocyc.RXN-17489]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17490|reaction.ecocyc.RXN-17490]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17493|reaction.ecocyc.RXN-17493]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17495|reaction.ecocyc.RXN-17495]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17630|reaction.ecocyc.RXN-17630]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17632|reaction.ecocyc.RXN-17632]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17634|reaction.ecocyc.RXN-17634]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17652|reaction.ecocyc.RXN-17652]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17663|reaction.ecocyc.RXN-17663]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17700|reaction.ecocyc.RXN-17700]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17701|reaction.ecocyc.RXN-17701]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17724|reaction.ecocyc.RXN-17724]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17725|reaction.ecocyc.RXN-17725]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17726|reaction.ecocyc.RXN-17726]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17745|reaction.ecocyc.RXN-17745]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17754|reaction.ecocyc.RXN-17754]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17911|reaction.ecocyc.RXN-17911]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-17955|reaction.ecocyc.RXN-17955]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-18241|reaction.ecocyc.RXN-18241]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-18435|reaction.ecocyc.RXN-18435]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-18678|reaction.ecocyc.RXN-18678]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-18710|reaction.ecocyc.RXN-18710]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19004|reaction.ecocyc.RXN-19004]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19249|reaction.ecocyc.RXN-19249]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19253|reaction.ecocyc.RXN-19253]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19256|reaction.ecocyc.RXN-19256]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19311|reaction.ecocyc.RXN-19311]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19312|reaction.ecocyc.RXN-19312]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19407|reaction.ecocyc.RXN-19407]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19618|reaction.ecocyc.RXN-19618]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19619|reaction.ecocyc.RXN-19619]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19659|reaction.ecocyc.RXN-19659]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19726|reaction.ecocyc.RXN-19726]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19727|reaction.ecocyc.RXN-19727]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19728|reaction.ecocyc.RXN-19728]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19729|reaction.ecocyc.RXN-19729]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19753|reaction.ecocyc.RXN-19753]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19780|reaction.ecocyc.RXN-19780]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19793|reaction.ecocyc.RXN-19793]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-19920|reaction.ecocyc.RXN-19920]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20023|reaction.ecocyc.RXN-20023]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20024|reaction.ecocyc.RXN-20024]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20025|reaction.ecocyc.RXN-20025]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20079|reaction.ecocyc.RXN-20079]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20084|reaction.ecocyc.RXN-20084]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20410|reaction.ecocyc.RXN-20410]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20426|reaction.ecocyc.RXN-20426]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20429|reaction.ecocyc.RXN-20429]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-2043|reaction.ecocyc.RXN-2043]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20456|reaction.ecocyc.RXN-20456]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20457|reaction.ecocyc.RXN-20457]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20478|reaction.ecocyc.RXN-20478]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20706|reaction.ecocyc.RXN-20706]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-20757|reaction.ecocyc.RXN-20757]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21027|reaction.ecocyc.RXN-21027]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21067|reaction.ecocyc.RXN-21067]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21072|reaction.ecocyc.RXN-21072]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21077|reaction.ecocyc.RXN-21077]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21204|reaction.ecocyc.RXN-21204]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21250|reaction.ecocyc.RXN-21250]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21261|reaction.ecocyc.RXN-21261]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21266|reaction.ecocyc.RXN-21266]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21270|reaction.ecocyc.RXN-21270]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21299|reaction.ecocyc.RXN-21299]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21304|reaction.ecocyc.RXN-21304]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21305|reaction.ecocyc.RXN-21305]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21308|reaction.ecocyc.RXN-21308]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21350|reaction.ecocyc.RXN-21350]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21400|reaction.ecocyc.RXN-21400]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21525|reaction.ecocyc.RXN-21525]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-21728|reaction.ecocyc.RXN-21728]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22326|reaction.ecocyc.RXN-22326]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22427|reaction.ecocyc.RXN-22427]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22575|reaction.ecocyc.RXN-22575]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22576|reaction.ecocyc.RXN-22576]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22577|reaction.ecocyc.RXN-22577]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22655|reaction.ecocyc.RXN-22655]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22696|reaction.ecocyc.RXN-22696]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22956|reaction.ecocyc.RXN-22956]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-22964|reaction.ecocyc.RXN-22964]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23584|reaction.ecocyc.RXN-23584]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23850|reaction.ecocyc.RXN-23850]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23862|reaction.ecocyc.RXN-23862]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23945|reaction.ecocyc.RXN-23945]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23948|reaction.ecocyc.RXN-23948]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23952|reaction.ecocyc.RXN-23952]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23955|reaction.ecocyc.RXN-23955]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23958|reaction.ecocyc.RXN-23958]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-23961|reaction.ecocyc.RXN-23961]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24038|reaction.ecocyc.RXN-24038]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24042|reaction.ecocyc.RXN-24042]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24043|reaction.ecocyc.RXN-24043]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24044|reaction.ecocyc.RXN-24044]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24047|reaction.ecocyc.RXN-24047]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24048|reaction.ecocyc.RXN-24048]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24050|reaction.ecocyc.RXN-24050]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24136|reaction.ecocyc.RXN-24136]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24137|reaction.ecocyc.RXN-24137]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24138|reaction.ecocyc.RXN-24138]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24139|reaction.ecocyc.RXN-24139]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24143|reaction.ecocyc.RXN-24143]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24169|reaction.ecocyc.RXN-24169]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24170|reaction.ecocyc.RXN-24170]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24177|reaction.ecocyc.RXN-24177]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24178|reaction.ecocyc.RXN-24178]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24399|reaction.ecocyc.RXN-24399]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24479|reaction.ecocyc.RXN-24479]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24977|reaction.ecocyc.RXN-24977]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-24978|reaction.ecocyc.RXN-24978]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-25001|reaction.ecocyc.RXN-25001]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-25091|reaction.ecocyc.RXN-25091]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-25221|reaction.ecocyc.RXN-25221]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-25312|reaction.ecocyc.RXN-25312]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-4821|reaction.ecocyc.RXN-4821]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-5647|reaction.ecocyc.RXN-5647]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-5822|reaction.ecocyc.RXN-5822]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-6321|reaction.ecocyc.RXN-6321]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-6622|reaction.ecocyc.RXN-6622]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-7253|reaction.ecocyc.RXN-7253]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-7607|reaction.ecocyc.RXN-7607]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-7609|reaction.ecocyc.RXN-7609]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-7682|reaction.ecocyc.RXN-7682]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-7948|reaction.ecocyc.RXN-7948]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8001|reaction.ecocyc.RXN-8001]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8182|reaction.ecocyc.RXN-8182]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8342|reaction.ecocyc.RXN-8342]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8638|reaction.ecocyc.RXN-8638]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8668|reaction.ecocyc.RXN-8668]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8770|reaction.ecocyc.RXN-8770]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-8899|reaction.ecocyc.RXN-8899]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9311|reaction.ecocyc.RXN-9311]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9549|reaction.ecocyc.RXN-9549]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9550|reaction.ecocyc.RXN-9550]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9555|reaction.ecocyc.RXN-9555]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9597|reaction.ecocyc.RXN-9597]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9628|reaction.ecocyc.RXN-9628]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN-9771|reaction.ecocyc.RXN-9771]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1001|reaction.ecocyc.RXN0-1001]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1061|reaction.ecocyc.RXN0-1061]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1081|reaction.ecocyc.RXN0-1081]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-11|reaction.ecocyc.RXN0-11]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1441|reaction.ecocyc.RXN0-1441]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1602|reaction.ecocyc.RXN0-1602]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1603|reaction.ecocyc.RXN0-1603]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1661|reaction.ecocyc.RXN0-1661]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1882|reaction.ecocyc.RXN0-1882]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-1922|reaction.ecocyc.RXN0-1922]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2061|reaction.ecocyc.RXN0-2061]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-21|reaction.ecocyc.RXN0-21]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2281|reaction.ecocyc.RXN0-2281]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2584|reaction.ecocyc.RXN0-2584]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2601|reaction.ecocyc.RXN0-2601]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2605|reaction.ecocyc.RXN0-2605]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2621|reaction.ecocyc.RXN0-2621]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2661|reaction.ecocyc.RXN0-2661]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-275|reaction.ecocyc.RXN0-275]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-279|reaction.ecocyc.RXN0-279]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2941|reaction.ecocyc.RXN0-2941]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-2942|reaction.ecocyc.RXN0-2942]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3|reaction.ecocyc.RXN0-3]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-301|reaction.ecocyc.RXN0-301]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-312|reaction.ecocyc.RXN0-312]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3182|reaction.ecocyc.RXN0-3182]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3201|reaction.ecocyc.RXN0-3201]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3221|reaction.ecocyc.RXN0-3221]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3241|reaction.ecocyc.RXN0-3241]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3261|reaction.ecocyc.RXN0-3261]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3364|reaction.ecocyc.RXN0-3364]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3461|reaction.ecocyc.RXN0-3461]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3542|reaction.ecocyc.RXN0-3542]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3543|reaction.ecocyc.RXN0-3543]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-361|reaction.ecocyc.RXN0-361]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-363|reaction.ecocyc.RXN0-363]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3741|reaction.ecocyc.RXN0-3741]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-383|reaction.ecocyc.RXN0-383]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-384|reaction.ecocyc.RXN0-384]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-385|reaction.ecocyc.RXN0-385]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3921|reaction.ecocyc.RXN0-3921]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3922|reaction.ecocyc.RXN0-3922]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3942|reaction.ecocyc.RXN0-3942]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-3962|reaction.ecocyc.RXN0-3962]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4121|reaction.ecocyc.RXN0-4121]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4181|reaction.ecocyc.RXN0-4181]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4222|reaction.ecocyc.RXN0-4222]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4223|reaction.ecocyc.RXN0-4223]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4261|reaction.ecocyc.RXN0-4261]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4361|reaction.ecocyc.RXN0-4361]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4401|reaction.ecocyc.RXN0-4401]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4522|reaction.ecocyc.RXN0-4522]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4621|reaction.ecocyc.RXN0-4621]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4641|reaction.ecocyc.RXN0-4641]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4701|reaction.ecocyc.RXN0-4701]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-4961|reaction.ecocyc.RXN0-4961]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5001|reaction.ecocyc.RXN0-5001]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5038|reaction.ecocyc.RXN0-5038]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5039|reaction.ecocyc.RXN0-5039]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5040|reaction.ecocyc.RXN0-5040]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5051|reaction.ecocyc.RXN0-5051]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5052|reaction.ecocyc.RXN0-5052]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5065|reaction.ecocyc.RXN0-5065]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5073|reaction.ecocyc.RXN0-5073]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5074|reaction.ecocyc.RXN0-5074]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5103|reaction.ecocyc.RXN0-5103]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5107|reaction.ecocyc.RXN0-5107]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5108|reaction.ecocyc.RXN0-5108]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5114|reaction.ecocyc.RXN0-5114]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5146|reaction.ecocyc.RXN0-5146]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5181|reaction.ecocyc.RXN0-5181]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5183|reaction.ecocyc.RXN0-5183]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5185|reaction.ecocyc.RXN0-5185]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5186|reaction.ecocyc.RXN0-5186]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5187|reaction.ecocyc.RXN0-5187]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5189|reaction.ecocyc.RXN0-5189]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5195|reaction.ecocyc.RXN0-5195]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5204|reaction.ecocyc.RXN0-5204]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5205|reaction.ecocyc.RXN0-5205]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5214|reaction.ecocyc.RXN0-5214]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5216|reaction.ecocyc.RXN0-5216]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5225|reaction.ecocyc.RXN0-5225]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5226|reaction.ecocyc.RXN0-5226]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5227|reaction.ecocyc.RXN0-5227]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5292|reaction.ecocyc.RXN0-5292]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5295|reaction.ecocyc.RXN0-5295]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5297|reaction.ecocyc.RXN0-5297]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5390|reaction.ecocyc.RXN0-5390]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5395|reaction.ecocyc.RXN0-5395]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5407|reaction.ecocyc.RXN0-5407]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5408|reaction.ecocyc.RXN0-5408]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5409|reaction.ecocyc.RXN0-5409]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5414|reaction.ecocyc.RXN0-5414]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5418|reaction.ecocyc.RXN0-5418]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5455|reaction.ecocyc.RXN0-5455]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5462|reaction.ecocyc.RXN0-5462]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5507|reaction.ecocyc.RXN0-5507]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5509|reaction.ecocyc.RXN0-5509]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-5510|reaction.ecocyc.RXN0-5510]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6368|reaction.ecocyc.RXN0-6368]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6371|reaction.ecocyc.RXN0-6371]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6382|reaction.ecocyc.RXN0-6382]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6427|reaction.ecocyc.RXN0-6427]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6435|reaction.ecocyc.RXN0-6435]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6445|reaction.ecocyc.RXN0-6445]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6452|reaction.ecocyc.RXN0-6452]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6460|reaction.ecocyc.RXN0-6460]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6478|reaction.ecocyc.RXN0-6478]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6480|reaction.ecocyc.RXN0-6480]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6485|reaction.ecocyc.RXN0-6485]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6511|reaction.ecocyc.RXN0-6511]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6521|reaction.ecocyc.RXN0-6521]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6522|reaction.ecocyc.RXN0-6522]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6523|reaction.ecocyc.RXN0-6523]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6524|reaction.ecocyc.RXN0-6524]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6525|reaction.ecocyc.RXN0-6525]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6526|reaction.ecocyc.RXN0-6526]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6527|reaction.ecocyc.RXN0-6527]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6528|reaction.ecocyc.RXN0-6528]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6529|reaction.ecocyc.RXN0-6529]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6550|reaction.ecocyc.RXN0-6550]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6562|reaction.ecocyc.RXN0-6562]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6566|reaction.ecocyc.RXN0-6566]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6708|reaction.ecocyc.RXN0-6708]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6710|reaction.ecocyc.RXN0-6710]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6720|reaction.ecocyc.RXN0-6720]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6725|reaction.ecocyc.RXN0-6725]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6733|reaction.ecocyc.RXN0-6733]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6938|reaction.ecocyc.RXN0-6938]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6944|reaction.ecocyc.RXN0-6944]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6952|reaction.ecocyc.RXN0-6952]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6957|reaction.ecocyc.RXN0-6957]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6974|reaction.ecocyc.RXN0-6974]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6975|reaction.ecocyc.RXN0-6975]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6976|reaction.ecocyc.RXN0-6976]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6977|reaction.ecocyc.RXN0-6977]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6978|reaction.ecocyc.RXN0-6978]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6979|reaction.ecocyc.RXN0-6979]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6980|reaction.ecocyc.RXN0-6980]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6981|reaction.ecocyc.RXN0-6981]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6982|reaction.ecocyc.RXN0-6982]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6983|reaction.ecocyc.RXN0-6983]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6984|reaction.ecocyc.RXN0-6984]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6985|reaction.ecocyc.RXN0-6985]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6987|reaction.ecocyc.RXN0-6987]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6988|reaction.ecocyc.RXN0-6988]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-6994|reaction.ecocyc.RXN0-6994]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7013|reaction.ecocyc.RXN0-7013]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7023|reaction.ecocyc.RXN0-7023]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7046|reaction.ecocyc.RXN0-7046]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7068|reaction.ecocyc.RXN0-7068]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7078|reaction.ecocyc.RXN0-7078]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7079|reaction.ecocyc.RXN0-7079]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7081|reaction.ecocyc.RXN0-7081]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7083|reaction.ecocyc.RXN0-7083]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7100|reaction.ecocyc.RXN0-7100]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7103|reaction.ecocyc.RXN0-7103]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7104|reaction.ecocyc.RXN0-7104]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7105|reaction.ecocyc.RXN0-7105]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7173|reaction.ecocyc.RXN0-7173]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7185|reaction.ecocyc.RXN0-7185]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7186|reaction.ecocyc.RXN0-7186]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7198|reaction.ecocyc.RXN0-7198]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7219|reaction.ecocyc.RXN0-7219]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-722|reaction.ecocyc.RXN0-722]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7249|reaction.ecocyc.RXN0-7249]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7250|reaction.ecocyc.RXN0-7250]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7251|reaction.ecocyc.RXN0-7251]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7275|reaction.ecocyc.RXN0-7275]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7283|reaction.ecocyc.RXN0-7283]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7291|reaction.ecocyc.RXN0-7291]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7297|reaction.ecocyc.RXN0-7297]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7299|reaction.ecocyc.RXN0-7299]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7309|reaction.ecocyc.RXN0-7309]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7318|reaction.ecocyc.RXN0-7318]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7329|reaction.ecocyc.RXN0-7329]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7339|reaction.ecocyc.RXN0-7339]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7346|reaction.ecocyc.RXN0-7346]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7348|reaction.ecocyc.RXN0-7348]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7352|reaction.ecocyc.RXN0-7352]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7362|reaction.ecocyc.RXN0-7362]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7366|reaction.ecocyc.RXN0-7366]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7388|reaction.ecocyc.RXN0-7388]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7391|reaction.ecocyc.RXN0-7391]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7392|reaction.ecocyc.RXN0-7392]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7395|reaction.ecocyc.RXN0-7395]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7429|reaction.ecocyc.RXN0-7429]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7430|reaction.ecocyc.RXN0-7430]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7431|reaction.ecocyc.RXN0-7431]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7432|reaction.ecocyc.RXN0-7432]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7433|reaction.ecocyc.RXN0-7433]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7434|reaction.ecocyc.RXN0-7434]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7435|reaction.ecocyc.RXN0-7435]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7444|reaction.ecocyc.RXN0-7444]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7445|reaction.ecocyc.RXN0-7445]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7461|reaction.ecocyc.RXN0-7461]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7463|reaction.ecocyc.RXN0-7463]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-747|reaction.ecocyc.RXN0-747]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7473|reaction.ecocyc.RXN0-7473]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7476|reaction.ecocyc.RXN0-7476]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7477|reaction.ecocyc.RXN0-7477]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7478|reaction.ecocyc.RXN0-7478]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7479|reaction.ecocyc.RXN0-7479]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-748|reaction.ecocyc.RXN0-748]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7480|reaction.ecocyc.RXN0-7480]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7481|reaction.ecocyc.RXN0-7481]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7482|reaction.ecocyc.RXN0-7482]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7483|reaction.ecocyc.RXN0-7483]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7495|reaction.ecocyc.RXN0-7495]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-7496|reaction.ecocyc.RXN0-7496]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-901|reaction.ecocyc.RXN0-901]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-961|reaction.ecocyc.RXN0-961]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN0-963|reaction.ecocyc.RXN0-963]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN185E-10|reaction.ecocyc.RXN185E-10]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXN66-526|reaction.ecocyc.RXN66-526]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXNMETA-12671|reaction.ecocyc.RXNMETA-12671]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.RXNMETA-12672|reaction.ecocyc.RXNMETA-12672]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.S-ADENMETSYN-RXN|reaction.ecocyc.S-ADENMETSYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.S-FORMYLGLUTATHIONE-HYDROLASE-RXN|reaction.ecocyc.S-FORMYLGLUTATHIONE-HYDROLASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SORBITOL-6-PHOSPHATASE-RXN|reaction.ecocyc.SORBITOL-6-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SPONTPRO-RXN|reaction.ecocyc.SPONTPRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCARGDIHYDRO-RXN|reaction.ecocyc.SUCCARGDIHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCDIAMINOPIMDESUCC-RXN|reaction.ecocyc.SUCCDIAMINOPIMDESUCC-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCGLUALDDEHYD-RXN|reaction.ecocyc.SUCCGLUALDDEHYD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCGLUDESUCC-RXN|reaction.ecocyc.SUCCGLUDESUCC-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCINATE-SEMIALDEHYDE-DEHYDROGENASE-RXN|reaction.ecocyc.SUCCINATE-SEMIALDEHYDE-DEHYDROGENASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUCCSEMIALDDEHYDROG-RXN|reaction.ecocyc.SUCCSEMIALDDEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SUGAR-PHOSPHATASE-RXN|reaction.ecocyc.SUGAR-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.SULFITE-REDUCT-RXN|reaction.ecocyc.SULFITE-REDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TETHYDPICSUCC-RXN|reaction.ecocyc.TETHYDPICSUCC-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.THIOESTER-RXN|reaction.ecocyc.THIOESTER-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.THRESYN-RXN|reaction.ecocyc.THRESYN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.THYMIDYLATE-5-PHOSPHATASE-RXN|reaction.ecocyc.THYMIDYLATE-5-PHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-145|reaction.ecocyc.TRANS-RXN-145]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-1540|reaction.ecocyc.TRANS-RXN-1540]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-1594|reaction.ecocyc.TRANS-RXN-1594]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-2|reaction.ecocyc.TRANS-RXN-2]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-236|reaction.ecocyc.TRANS-RXN-236]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-237|reaction.ecocyc.TRANS-RXN-237]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-238|reaction.ecocyc.TRANS-RXN-238]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-250|reaction.ecocyc.TRANS-RXN-250]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-283|reaction.ecocyc.TRANS-RXN-283]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-290|reaction.ecocyc.TRANS-RXN-290]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-291|reaction.ecocyc.TRANS-RXN-291]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-296|reaction.ecocyc.TRANS-RXN-296]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-297|reaction.ecocyc.TRANS-RXN-297]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-298|reaction.ecocyc.TRANS-RXN-298]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-312|reaction.ecocyc.TRANS-RXN-312]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-320|reaction.ecocyc.TRANS-RXN-320]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-324|reaction.ecocyc.TRANS-RXN-324]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-328|reaction.ecocyc.TRANS-RXN-328]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-366|reaction.ecocyc.TRANS-RXN-366]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-371|reaction.ecocyc.TRANS-RXN-371]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-372|reaction.ecocyc.TRANS-RXN-372]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-377|reaction.ecocyc.TRANS-RXN-377]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-378|reaction.ecocyc.TRANS-RXN-378]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-383|reaction.ecocyc.TRANS-RXN-383]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-424|reaction.ecocyc.TRANS-RXN-424]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-452|reaction.ecocyc.TRANS-RXN-452]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-498|reaction.ecocyc.TRANS-RXN-498]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN-510|reaction.ecocyc.TRANS-RXN-510]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-162|reaction.ecocyc.TRANS-RXN0-162]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-202|reaction.ecocyc.TRANS-RXN0-202]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-222|reaction.ecocyc.TRANS-RXN0-222]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-224|reaction.ecocyc.TRANS-RXN0-224]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-268|reaction.ecocyc.TRANS-RXN0-268]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-454|reaction.ecocyc.TRANS-RXN0-454]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-478|reaction.ecocyc.TRANS-RXN0-478]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-479|reaction.ecocyc.TRANS-RXN0-479]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-491|reaction.ecocyc.TRANS-RXN0-491]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-492|reaction.ecocyc.TRANS-RXN0-492]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-503|reaction.ecocyc.TRANS-RXN0-503]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-504|reaction.ecocyc.TRANS-RXN0-504]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-508|reaction.ecocyc.TRANS-RXN0-508]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-510|reaction.ecocyc.TRANS-RXN0-510]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-511|reaction.ecocyc.TRANS-RXN0-511]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-513|reaction.ecocyc.TRANS-RXN0-513]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-541|reaction.ecocyc.TRANS-RXN0-541]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-547|reaction.ecocyc.TRANS-RXN0-547]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-573|reaction.ecocyc.TRANS-RXN0-573]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-593|reaction.ecocyc.TRANS-RXN0-593]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-603|reaction.ecocyc.TRANS-RXN0-603]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-617|reaction.ecocyc.TRANS-RXN0-617]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-630|reaction.ecocyc.TRANS-RXN0-630]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-636|reaction.ecocyc.TRANS-RXN0-636]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-637|reaction.ecocyc.TRANS-RXN0-637]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRANS-RXN0-638|reaction.ecocyc.TRANS-RXN0-638]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRE6PHYDRO-RXN|reaction.ecocyc.TRE6PHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TREHALA-RXN|reaction.ecocyc.TREHALA-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TREHALOSEPHOSPHA-RXN|reaction.ecocyc.TREHALOSEPHOSPHA-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRIPHOSPHATASE-RXN|reaction.ecocyc.TRIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.TRYPTOPHAN-RXN|reaction.ecocyc.TRYPTOPHAN-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UDPACYLGLCNACDEACETYL-RXN|reaction.ecocyc.UDPACYLGLCNACDEACETYL-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UDPMANNACADEHYDROG-RXN|reaction.ecocyc.UDPMANNACADEHYDROG-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UDPREDUCT-RXN|reaction.ecocyc.UDPREDUCT-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UDPSUGARHYDRO-RXN|reaction.ecocyc.UDPSUGARHYDRO-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UGD-RXN|reaction.ecocyc.UGD-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.UNDECAPRENYL-DIPHOSPHATASE-RXN|reaction.ecocyc.UNDECAPRENYL-DIPHOSPHATASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.URIDINE-NUCLEOSIDASE-RXN|reaction.ecocyc.URIDINE-NUCLEOSIDASE-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.URIDYLREM-RXN|reaction.ecocyc.URIDYLREM-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+- `is_substrate_of` --> [[reaction.ecocyc.URUR-RXN|reaction.ecocyc.URUR-RXN]] `EcoCyc` `database` - EcoCyc reaction LEFT
+
+## Incoming Edges (0)
+
+_None._
+
+## External IDs
+
+- `KEGG:C00001`
+
+## Notes
+
+Included because it appears in at least one E. coli KEGG pathway.

@@ -1,0 +1,120 @@
+ENTRY       eco00720                    Pathway
+NAME        Other carbon fixation pathways - Escherichia coli K-12 MG1655
+DESCRIPTION Carbon fixation is an important pathway for autotrophs living in various environments. Plants and cyanobacteria fix CO2 as organic compounds using solar energy mainly by the reductive pentose phosphate cycle (also called Calvin cycle, Calvin-Benson cycle, or Calvin-Benson-Bassham cycle) [MD:M00165]. There are, at least, five additional carbon fixation pathways known to exist in autotrophic bacteria and archaea, which differ in reducing compounds, energy source, and oxygen sensitivity of enzymes. (i) The reductive citric acid cycle (Arnon-Buchanan cycle) [MD:M00173] is found in microaerophiles and anaerobes, such as green sulfur bacteria. In one complete turn of this cycle, four molecules of CO2 are fixed by the enzymes that are sensitive to oxygen, resulting in the production of one molecule of oxaloacetate, which is itself an intermediate of the cycle. (ii) The reductive acetyl-CoA pathway (Wood-Ljungdahl pathway) [MD:M00377] is found in strictly anaerobic bacteria and archaea (Proteobacteria, Planctomycetes, Spirochaetes, and Euryarchaeota), some of which are methane-forming. A bifunctional enzyme, carbon monoxide dehydrogenase/acetyl-CoA synthase, catalyzes the reactions from CO2 to CO and from CO2 to a methyl group, and then to generate acetyl-CoA. (iii) The 3-hydroxypropionate bicycle [MD:M00376] is found in some green non-sulphur bacteria of the family Chloroflexaceae. In one complete turn of this bicycle, three molecules of bicarbonate are converted into one molecule of pyruvate. In addition, this bicycle provides the secondary benefit of useful intermediates for biosynthesis: acetyl-CoA, glyoxylate, and succinyl-CoA. (iv) The hydroxypropionate-hydroxybutyrate cycle [MD:M00375] is found in aerobic Crenarchaeota, Acidianus, Metallosphaera, and Sulfolobales. Some of the intermediates and the carboxylation reactions are the same as in the 3-hydroxypropionate bicycle. One complete turn of this cycle generates two molecules of acetyl-CoA, one of which is reutilized in the the cycle and the other is removed for cell material biosynthesis. (v) The dicarboxylate-hydroxybutyrate cycle [MD:M00374] was named after its intermediates: succinate (a kind of dicarboxylate) and hydroxybutyrate. This cycle has been found only in Ignicoccus hospitals, a strictly anaerobic hyperthermophilic archaea. Recent genome study suggests that this cycle may exist in Desulfurococcales (to which Ignicoccus belongs) and Thermoproteales (a taxon close to the origin of archaea). The first half of the cycle, from acetyl-CoA to succinate-CoA, corresponds to the reductive citric acid cycle and the latter half of the cycle, from succinate-CoA to two molecules of acetyl-CoA, corresponds to the hydroxypropionate-hydroxybutyrate cycle.
+CLASS       Metabolism; Energy metabolism
+PATHWAY_MAP eco00720  Other carbon fixation pathways
+MODULE      eco_M00579  Phosphate acetyltransferase-acetate kinase pathway, acetyl-CoA => acetate [PATH:eco00720]
+DBLINKS     GO: 0015977
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0118  acnB; AcnB [KO:K01682] [EC:4.2.1.3 4.2.1.99]
+            b0185  accA; acetyl-CoA carboxyltransferase subunit alpha [KO:K01962] [EC:6.4.1.2 2.1.3.15]
+            b0529  folD; bifunctional methylenetetrahydrofolate dehydrogenase/methenyltetrahydrofolate cyclohydrolase [KO:K01491] [EC:1.5.1.5 3.5.4.9]
+            b0721  sdhC; succinate:quinone oxidoreductase, membrane protein SdhC [KO:K00241]
+            b0722  sdhD; succinate:quinone oxidoreductase, membrane protein SdhD [KO:K00242]
+            b0723  sdhA; succinate:quinone oxidoreductase, FAD binding protein [KO:K00239] [EC:1.3.5.1]
+            b0724  sdhB; succinate:quinone oxidoreductase, iron-sulfur cluster binding protein [KO:K00240] [EC:1.3.5.1]
+            b0728  sucC; succinyl-CoA synthetase subunit beta [KO:K01903] [EC:6.2.1.5]
+            b0729  sucD; succinyl-CoA synthetase subunit alpha [KO:K01902] [EC:6.2.1.5]
+            b1136  icd; isocitrate dehydrogenase [KO:K00031] [EC:1.1.1.42]
+            b1276  acnA; aconitate hydratase 1 [KO:K27802]
+            b1378  ydbK; putative pyruvate-flavodoxin oxidoreductase [KO:K03737] [EC:1.2.7.1 1.2.8.1]
+            b1611  fumC; fumarase C [KO:K01679] [EC:4.2.1.2]
+            b1612  fumA; fumarase A [KO:K01676] [EC:4.2.1.2]
+            b1675  fumD; fumarase D [KO:K01675]
+            b1702  ppsA; phosphoenolpyruvate synthetase [KO:K01007] [EC:2.7.9.2]
+            b2224  atoB; acetyl-CoA acetyltransferase [KO:K00626] [EC:2.3.1.9]
+            b2296  ackA; acetate kinase [KO:K00925] [EC:2.7.2.1]
+            b2297  pta; phosphate acetyltransferase [KO:K13788] [EC:2.3.1.8]
+            b2316  accD; acetyl-CoA carboxyltransferase subunit beta [KO:K01963] [EC:6.4.1.2 2.1.3.15]
+            b2844  yqeF; putative acyltransferase [KO:K00626] [EC:2.3.1.9]
+            b2917  scpA; methylmalonyl-CoA mutase [KO:K01847] [EC:5.4.99.2]
+            b2929  fumE; fumarase E [KO:K01774]
+            b3236  mdh; malate dehydrogenase [KO:K00024] [EC:1.1.1.37]
+            b3255  accB; biotin carboxyl carrier protein [KO:K02160]
+            b3256  accC; biotin carboxylase [KO:K01961] [EC:6.4.1.2 6.3.4.14]
+            b3941  metF; 5,10-methylenetetrahydrofolate reductase [KO:K00297] [EC:1.5.1.54]
+            b3956  ppc; phosphoenolpyruvate carboxylase [KO:K01595] [EC:4.1.1.31]
+            b4069  acs; acetyl-CoA synthetase (AMP-forming) [KO:K01895] [EC:6.2.1.1]
+            b4079  fdhF; formate dehydrogenase H [KO:K22015] [EC:1.17.98.4 1.17.98.5]
+            b4122  fumB; fumarase B [KO:K01676] [EC:4.2.1.2]
+            b4151  frdD; fumarate reductase membrane protein FrdD [KO:K00247]
+            b4152  frdC; fumarate reductase membrane protein FrdC [KO:K00246]
+            b4153  frdB; fumarate reductase iron-sulfur protein [KO:K00245] [EC:1.3.5.1]
+            b4154  frdA; fumarate reductase flavoprotein subunit [KO:K00244] [EC:1.3.5.1]
+COMPOUND    C00011  CO2
+            C00022  Pyruvate
+            C00024  Acetyl-CoA
+            C00026  2-Oxoglutarate
+            C00033  Acetate
+            C00036  Oxaloacetate
+            C00042  Succinate
+            C00048  Glyoxylate
+            C00058  Formate
+            C00074  Phosphoenolpyruvate
+            C00083  Malonyl-CoA
+            C00091  Succinyl-CoA
+            C00100  Propanoyl-CoA
+            C00101  Tetrahydrofolate
+            C00122  Fumarate
+            C00143  5,10-Methylenetetrahydrofolate
+            C00149  (S)-Malate
+            C00158  Citrate
+            C00222  3-Oxopropanoate
+            C00227  Acetyl phosphate
+            C00232  Succinate semialdehyde
+            C00234  10-Formyltetrahydrofolate
+            C00237  CO
+            C00288  HCO3-
+            C00311  Isocitrate
+            C00332  Acetoacetyl-CoA
+            C00417  cis-Aconitate
+            C00440  5-Methyltetrahydrofolate
+            C00445  5,10-Methenyltetrahydrofolate
+            C00566  (3S)-Citryl-CoA
+            C00683  (S)-Methylmalonyl-CoA
+            C00877  Crotonoyl-CoA
+            C00894  Propenoyl-CoA
+            C00989  4-Hydroxybutanoic acid
+            C01011  (3S)-Citramalyl-CoA
+            C01013  3-Hydroxypropanoate
+            C01144  (S)-3-Hydroxybutanoyl-CoA
+            C01213  (R)-Methylmalonyl-CoA
+            C04348  L-Malyl-CoA
+            C05668  3-Hydroxypropionyl-CoA
+            C06027  L-erythro-3-Methylmalyl-CoA
+            C06028  2-Methylfumaryl-CoA
+            C11062  4-Hydroxybutyryl-CoA
+            C18323  3-Methylfumaryl-CoA
+REFERENCE   PMID:19955419
+  AUTHORS   Zarzycki J, Brecht V, Muller M, Fuchs G
+  TITLE     Identifying the missing steps of the autotrophic 3-hydroxypropionate CO2 fixation cycle in Chloroflexus aurantiacus.
+  JOURNAL   Proc Natl Acad Sci U S A 106:21317-22 (2009)
+            DOI:10.1073/pnas.0908356106
+REFERENCE   PMID:19429610
+  AUTHORS   Teufel R, Kung JW, Kockelkorn D, Alber BE, Fuchs G
+  TITLE     3-hydroxypropionyl-coenzyme A dehydratase and acryloyl-coenzyme A reductase, enzymes of the autotrophic 3-hydroxypropionate/4-hydroxybutyrate cycle in the Sulfolobales.
+  JOURNAL   J Bacteriol 191:4572-81 (2009)
+            DOI:10.1128/JB.00068-09
+REFERENCE   PMID:18511565
+  AUTHORS   Huber H, Gallenberger M, Jahn U, Eylert E, Berg IA, Kockelkorn D, Eisenreich W, Fuchs G
+  TITLE     A dicarboxylate/4-hydroxybutyrate autotrophic carbon assimilation cycle in the hyperthermophilic Archaeum Ignicoccus hospitalis.
+  JOURNAL   Proc Natl Acad Sci U S A 105:7851-6 (2008)
+            DOI:10.1073/pnas.0801043105
+REFERENCE   PMID:15838028
+  AUTHORS   Hugler M, Wirsen CO, Fuchs G, Taylor CD, Sievert SM
+  TITLE     Evidence for autotrophic CO2 fixation via the reductive tricarboxylic acid cycle by members of the epsilon subdivision of proteobacteria.
+  JOURNAL   J Bacteriol 187:3020-7 (2005)
+            DOI:10.1128/JB.187.9.3020-3027.2005
+REFERENCE   PMID:11827525
+  AUTHORS   Seravalli J, Kumar M, Ragsdale SW
+  TITLE     Rapid kinetic studies of acetyl-CoA synthesis: evidence supporting the catalytic intermediacy of a paramagnetic NiFeC species in the autotrophic Wood-Ljungdahl pathway.
+  JOURNAL   Biochemistry 41:1807-19 (2002)
+            DOI:10.1021/bi011687i
+REFERENCE   PMID:3096193
+  AUTHORS   Ljungdahl LG
+  TITLE     The autotrophic pathway of acetate synthesis in acetogenic bacteria.
+  JOURNAL   Annu Rev Microbiol 40:415-50 (1986)
+            DOI:10.1146/annurev.mi.40.100186.002215
+REL_PATHWAY eco00710  Carbon fixation by Calvin cycle
+KO_PATHWAY  ko00720
+///

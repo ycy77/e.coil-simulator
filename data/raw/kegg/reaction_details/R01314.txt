@@ -1,0 +1,19 @@
+ENTRY       R01314                      Reaction
+NAME        phosphatidylcholine 1-acylhydrolase
+DEFINITION  Phosphatidylcholine + H2O <=> 2-Acyl-sn-glycero-3-phosphocholine + Carboxylate
+EQUATION    C00157 + C00001 <=> C04233 + C00060
+RCLASS      RC00020  C00060_C00157
+            RC00041  C00157_C04233
+ENZYME      3.1.1.32
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.1  Acting on ester bonds
+               3.1.1  Carboxylic-ester hydrolases
+                3.1.1.32
+                 R01314  Phosphatidylcholine + H2O <=> 2-Acyl-sn-glycero-3-phosphocholine + Carboxylate
+            IUBMB reaction hierarchy [BR:br08202]
+             3. Hydrolase reactions
+              3.1.1.32
+               R01314  Carboxylate
+DBLINKS     RHEA: 18692
+///

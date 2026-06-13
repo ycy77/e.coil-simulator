@@ -1,0 +1,22 @@
+{
+  "entity_count": 24369,
+  "note_count": 24369,
+  "filename_collision_groups": [
+    {
+      "casefolded_filename": "molecule.ecocyc.galactose",
+      "entity_ids": [
+        "molecule.ecocyc.GALACTOSE",
+        "molecule.ecocyc.Galactose"
+      ]
+    },
+    {
+      "casefolded_filename": "molecule.ecocyc.rhamnose",
+      "entity_ids": [
+        "molecule.ecocyc.RHAMNOSE",
+        "molecule.ecocyc.Rhamnose"
+      ]
+    }
+  ],
+  "filename_collision_group_count": 2,
+  "missing_note_count": 0
+}

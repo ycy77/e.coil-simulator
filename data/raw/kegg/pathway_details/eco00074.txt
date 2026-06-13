@@ -1,0 +1,207 @@
+ENTRY       eco00074                    Pathway
+NAME        Mycolic acid biosynthesis - Escherichia coli K-12 MG1655
+DESCRIPTION Mycolic acids are alpha-alkyl, beta-hydroxy long-chain fatty acids, which are essential components of the cell walls of mycobacteria and related bacteria such as Nocardia and Rhodococcus. The structures of mycolic acids are composed of a meromycolic chain and an alpha-branch. Functional groups and carbon chain lengths vary depending on the genus, species and strain levels of bacteria. Corynebacteria also synthesize mycolic acids, called corynomycolic acids, which are shorter and less modified than mycobacterial mycolic acids. In mycobacteria, the biosynthetic pathway starts with de novo synthesis and elongation of fatty acids by FAS I and FAS II, respectively. FAS II products undergo further elongation, desaturation and modification to produce meromycolic acids, while carboxylation of very-long-chain acyl-CoA further elongated by FAS I yields carboxyacyl-CoA (alpha-branch). Mycolic beta-ketoester formed by condensation of the activated meromycolic chain and the carboxylated acyl chain, upon reduction, leads to the mature mycolate, TMM (trehalose monomycolate). Mycolyltransferase (Ag85) then catalyzes the transfer of a mycolate from TMM to the cell wall arabinogalactan and to other TMMs to form mAGP and TDM (trehalose dimycolate), respectively.
+CLASS       Metabolism; Lipid metabolism
+PATHWAY_MAP eco00074  Mycolic acid biosynthesis
+ORGANISM    Escherichia coli K-12 MG1655 [GN:eco]
+GENE        b0583  entD; phosphopantetheinyl transferase EntD [KO:K02362] [EC:6.3.2.14 2.7.8.7]
+            b1092  fabD; [acyl-carrier-protein] S-malonyltransferase [KO:K00645] [EC:2.3.1.39]
+            b2563  acpS; holo-[acyl-carrier-protein] synthase [KO:K00997] [EC:2.7.8.7]
+COMPOUND    C00024  Acetyl-CoA
+            C00031  D-Glucose
+            C00083  Malonyl-CoA
+            C00229  Acyl-carrier protein
+            C01083  alpha,alpha-Trehalose
+            C01209  Malonyl-[acyl-carrier protein]
+            C02843  Long-chain acyl-CoA
+            C03688  Apo-[acyl-carrier protein]
+            C20683  Long-chain acyl-[acyl-carrier protein]
+            C20876  Very-long-chain acyl-CoA
+            C22855  Glucose monomycolate
+            C22857  Very-long-chain alpha-carboxyacyl-CoA
+            C22858  Long-chain 3-oxoacyl-[acyl-carrier protein]
+            C22859  Long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein]
+            C22860  Long-chain trans-2-enoyl-[acyl-carrier protein]
+            C22861  Very-long-chain acyl-[acyl-carrier protein]
+            C22862  Very-long-chain 3-oxoacyl-[acyl-carrier protein]
+            C22863  Very-long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein]
+            C22864  Very-long-chain trans-2-enoyl-[acyl-carrier protein]
+            C22865  Ultra-long-chain mono-unsaturated acyl-[acyl-carrier protein]
+            C22866  Ultra-long-chain mono-unsaturated 3-oxo-fatty acyl-[acyl-carrier protein]
+            C22867  Ultra-long-chain mono-unsaturated (3R)-3-hydroxyacyl-[acyl-carrier protein]
+            C22868  Ultra-long-chain mono-unsaturated trans-2-enoyl-[acyl-carrier protein]
+            C22869  Ultra-long-chain di-unsaturated acyl-[acyl-carrier protein]
+            C22870  Ultra-long-chain di-unsaturated 3-oxo-fatty acyl-[acyl-carrier protein]
+            C22871  Ultra-long-chain di-unsaturated (3R)-3-hydroxyacyl-[acyl-carrier protein]
+            C22872  Ultra-long-chain di-unsaturated trans-2-enoyl-[acyl-carrier protein]
+            C22873  Meromycolic acid
+            C22874  Meromycoloyl-[acp Pks13]
+            C22875  Trehalose mycolic-beta-ketoester
+            C22876  Trehalose monomycolate
+            C22877  Trehalose dimycolate
+            C22878  Mycolic acid
+            C22879  mAGP
+REFERENCE   PMID:15653820
+  AUTHORS   Takayama K, Wang C, Besra GS.
+  TITLE     Pathway to synthesis and processing of mycolic acids in Mycobacterium tuberculosis.
+  JOURNAL   Clin Microbiol Rev 18:81-101 (2005)
+            DOI:10.1128/CMR.18.1.81-101.2005
+REFERENCE   PMID:26104214
+  AUTHORS   PaweLczyk J, Kremer L
+  TITLE     The Molecular Genetics of Mycolic Acid Biosynthesis.
+  JOURNAL   Microbiol Spectr 2:MGM2-0003-2013 (2014)
+            DOI:10.1128/microbiolspec.MGM2-0003-2013
+REFERENCE   PMID:24374164
+  AUTHORS   Marrakchi H, Laneelle MA, Daffe M.
+  TITLE     Mycolic acids: structures, biosynthesis, and beyond.
+  JOURNAL   Chem Biol 21:67-85 (2014)
+            DOI:10.1016/j.chembiol.2013.11.011
+REFERENCE   PMID:27268593
+  AUTHORS   Quemard A.
+  TITLE     New Insights into the Mycolate-Containing Compound Biosynthesis and Transport in  Mycobacteria.
+  JOURNAL   Trends Microbiol 24:725-738 (2016)
+            DOI:10.1016/j.tim.2016.04.009
+REFERENCE   PMID:35862962
+  AUTHORS   Di Capua CB, Belardinelli JM, Carignano HA, Buchieri MV, Suarez CA, Morbidoni HR
+  TITLE     Unveiling the Biosynthetic Pathway for Short Mycolic Acids in Nontuberculous Mycobacteria: Mycobacterium smegmatis MSMEG_4301 and Its Ortholog Mycobacterium  abscessus MAB_1915 Are Essential for the Synthesis of alpha'-Mycolic Acids.
+  JOURNAL   Microbiol Spectr 10:e0128822 (2022)
+            DOI:10.1128/spectrum.01288-22
+REFERENCE   PMID:21204864
+  AUTHORS   Gago G, Diacovich L, Arabolaza A, Tsai SC, Gramajo H.
+  TITLE     Fatty acid biosynthesis in actinomycetes.
+  JOURNAL   FEMS Microbiol Rev 35:475-97 (2011)
+            DOI:10.1111/j.1574-6976.2010.00259.x
+REFERENCE   PMID:32470138
+  AUTHORS   Batt SM, Minnikin DE, Besra GS
+  TITLE     The thick waxy coat of mycobacteria, a protective layer against antibiotics and the host's immune system.
+  JOURNAL   Biochem J 477:1983-2006 (2020)
+            DOI:10.1042/BCJ20200194
+REFERENCE   PMID:22216317
+  AUTHORS   Cantaloube S, Veyron-Churlet R, Haddache N, Daffe M, Zerbib D.
+  TITLE     The Mycobacterium tuberculosis FAS-II dehydratases and methyltransferases define  the specificity of the mycolic acid elongation complexes.
+  JOURNAL   PLoS One 6:e29564 (2011)
+            DOI:10.1371/journal.pone.0029564
+REFERENCE   PMID:17804795
+  AUTHORS   Sacco E, Covarrubias AS, O'Hare HM, Carroll P, Eynard N, Jones TA, Parish T, Daffe M, Backbro K, Quemard A
+  TITLE     The missing piece of the type II fatty acid synthase system from Mycobacterium tuberculosis.
+  JOURNAL   Proc Natl Acad Sci U S A 104:14628-33 (2007)
+            DOI:10.1073/pnas.0704132104
+REFERENCE   PMID:26538472
+  AUTHORS   Slama N, Jamet S, Frigui W, Pawlik A, Bottai D, Laval F, Constant P, Lemassu A, Cam K, Daffe M, Brosch R, Eynard N, Quemard A.
+  TITLE     The changes in mycolic acid structures caused by hadC mutation have a dramatic  effect on the virulence of Mycobacterium tuberculosis.
+  JOURNAL   Mol Microbiol 99:794-807 (2016)
+            DOI:10.1111/mmi.13266
+REFERENCE   PMID:12464486
+  AUTHORS   Slayden RA, Barry CE 3rd
+  TITLE     The role of KasA and KasB in the biosynthesis of meromycolic acids and isoniazid resistance in Mycobacterium tuberculosis.
+  JOURNAL   Tuberculosis (Edinb) 82:149-60 (2002)
+            DOI:10.1054/tube.2002.0333
+REFERENCE   PMID:29662082
+  AUTHORS   Lefebvre C, Boulon R, Ducoux M, Gavalda S, Laval F, Jamet S, Eynard N, Lemassu A, Cam K, Bousquet MP, Bardou F, Burlet-Schiltz O, Daffe M, Quemard A
+  TITLE     HadD, a novel fatty acid synthase type II protein, is essential for alpha- and epoxy-mycolic acid biosynthesis and mycobacterial fitness.
+  JOURNAL   Sci Rep 8:6034 (2018)
+            DOI:10.1038/s41598-018-24380-5
+REFERENCE   PMID:32034201
+  AUTHORS   Lefebvre C, Frigui W, Slama N, Lauzeral-Vizcaino F, Constant P, Lemassu A, Parish T, Eynard N, Daffe M, Brosch R, Quemard A
+  TITLE     Discovery of a novel dehydratase of the fatty acid synthase type II critical for ketomycolic acid biosynthesis and virulence of Mycobacterium tuberculosis.
+  JOURNAL   Sci Rep 10:2112 (2020)
+            DOI:10.1038/s41598-020-58967-8
+REFERENCE   PMID:38501584
+  AUTHORS   Bories P, Rima J, Tranier S, Marcoux J, Grimoire Y, Tomaszczyk M, Launay A, Fata K, Marrakchi H, Burlet-Schiltz O, Mourey L, Ducoux-Petit M, Bardou F, Bon C, Quemard A
+  TITLE     HadBD dehydratase from Mycobacterium tuberculosis fatty acid synthase type II: A singular structure for a unique function.
+  JOURNAL   Protein Sci 33:e4964 (2024)
+            DOI:10.1002/pro.4964
+REFERENCE   PMID:25467124
+  AUTHORS   Gavalda S, Bardou F, Laval F, Bon C, Malaga W, Chalut C, Guilhot C, Mourey L, Daffe M, Quemard A.
+  TITLE     The polyketide synthase Pks13 catalyzes a novel mechanism of lipid transfer in  mycobacteria.
+  JOURNAL   Chem Biol 21:1660-9 (2014)
+            DOI:10.1016/j.chembiol.2014.10.011
+REFERENCE   PMID:14695899
+  AUTHORS   Portevin D, De Sousa-D'Auria C, Houssin C, Grimaldi C, Chami M, Daffe M, Guilhot C.
+  TITLE     A polyketide synthase catalyzes the last condensation step of mycolic acid biosynthesis in mycobacteria and related organisms.
+  JOURNAL   Proc Natl Acad Sci U S A 101:314-9 (2004)
+            DOI:10.1073/pnas.0305439101
+REFERENCE   PMID:25028517
+  AUTHORS   Backus KM, Dolan MA, Barry CS, Joe M, McPhie P, Boshoff HI, Lowary TL, Davis BG, Barry CE 3rd.
+  TITLE     The three Mycobacterium tuberculosis antigen 85 isoforms have unique substrates  and activities determined by non-active site regions.
+  JOURNAL   J Biol Chem 289:25041-53 (2014)
+            DOI:10.1074/jbc.M114.581579
+REFERENCE   PMID:12010501
+  AUTHORS   Puech V, Guilhot C, Perez E, Tropis M, Armitige LY, Gicquel B, Daffe M
+  TITLE     Evidence for a partial redundancy of the fibronectin-binding proteins for the transfer of mycoloyl residues onto the cell wall arabinogalactan termini of  Mycobacterium tuberculosis.
+  JOURNAL   Mol Microbiol 44:1109-22 (2002)
+            DOI:10.1046/j.1365-2958.2002.02953.x
+REFERENCE   PMID:18703502
+  AUTHORS   Matsunaga I, Naka T, Talekar RS, McConnell MJ, Katoh K, Nakao H, Otsuka A, Behar SM, Yano I, Moody DB, Sugita M.
+  TITLE     Mycolyltransferase-mediated glycolipid exchange in Mycobacteria.
+  JOURNAL   J Biol Chem 283:28835-41 (2008)
+            DOI:10.1074/jbc.M805776200
+REFERENCE   PMID:10200974
+  AUTHORS   Jackson M, Raynaud C, Laneelle MA, Guilhot C, Laurent-Winter C, Ensergueix D, Gicquel B, Daffe M
+  TITLE     Inactivation of the antigen 85C gene profoundly affects the mycolate content and alters the permeability of the Mycobacterium tuberculosis cell envelope.
+  JOURNAL   Mol Microbiol 31:1573-87 (1999)
+            DOI:10.1046/j.1365-2958.1999.01310.x
+REFERENCE   PMID:18006503
+  AUTHORS   Laval F, Haites R, Movahedzadeh F, Lemassu A, Wong CY, Stoker N, Billman-Jacobe H, Daffe M
+  TITLE     Investigating the function of the putative mycolic acid methyltransferase UmaA: divergence between the Mycobacterium smegmatis and Mycobacterium tuberculosis  proteins.
+  JOURNAL   J Biol Chem 283:1419-1427 (2008)
+            DOI:10.1074/jbc.M708859200
+REFERENCE   PMID:27741286
+  AUTHORS   Singh A, Varela C, Bhatt K, Veerapen N, Lee OY, Wu HH, Besra GS, Minnikin DE, Fujiwara N, Teramoto K, Bhatt A
+  TITLE     Identification of a Desaturase Involved in Mycolic Acid Biosynthesis in Mycobacterium smegmatis.
+  JOURNAL   PLoS One 11:e0164253 (2016)
+            DOI:10.1371/journal.pone.0164253
+REFERENCE   PMID:35484172
+  AUTHORS   Bailo R, Radhakrishnan A, Singh A, Nakaya M, Fujiwara N, Bhatt A
+  TITLE     The mycobacterial desaturase DesA2 is associated with mycolic acid biosynthesis.
+  JOURNAL   Sci Rep 12:6943 (2022)
+            DOI:10.1038/s41598-022-10589-y
+REFERENCE   PMID:20472794
+  AUTHORS   Barkan D, Rao V, Sukenick GD, Glickman MS
+  TITLE     Redundant function of cmaA2 and mmaA2 in Mycobacterium tuberculosis cis cyclopropanation of oxygenated mycolates.
+  JOURNAL   J Bacteriol 192:3661-8 (2010)
+            DOI:10.1128/JB.00312-10
+REFERENCE   PMID:28859976
+  AUTHORS   Defelipe LA, Osman F, Marti MA, Turjanski AG
+  TITLE     Structural and mechanistic comparison of the Cyclopropane Mycolic Acid Synthases (CMAS) protein family of Mycobacterium tuberculosis.
+  JOURNAL   Biochem Biophys Res Commun 498:288-295 (2018)
+            DOI:10.1016/j.bbrc.2017.08.119
+REFERENCE   PMID:8917504
+  AUTHORS   Yuan Y, Barry CE 3rd
+  TITLE     A common mechanism for the biosynthesis of methoxy and cyclopropyl mycolic acids in Mycobacterium tuberculosis.
+  JOURNAL   Proc Natl Acad Sci U S A 93:12828-33 (1996)
+            DOI:10.1073/pnas.93.23.12828
+REFERENCE   PMID:24349169
+  AUTHORS   Purwantini E, Mukhopadhyay B
+  TITLE     Rv0132c of Mycobacterium tuberculosis encodes a coenzyme F420-dependent hydroxymycolic acid dehydrogenase.
+  JOURNAL   PLoS One 8:e81985 (2013)
+            DOI:10.1371/journal.pone.0081985
+REFERENCE   PMID:28222482
+  AUTHORS   Bazet Lyonnet B, Diacovich L, Gago G, Spina L, Bardou F, Lemassu A, Quemard A, Gramajo H
+  TITLE     Functional reconstitution of the Mycobacterium tuberculosis long-chain acyl-CoA carboxylase from multiple acyl-CoA subunits.
+  JOURNAL   FEBS J 284:1110-1125 (2017)
+            DOI:10.1111/febs.14046
+REFERENCE   PMID:24113823
+  AUTHORS   Laneelle MA, Tropis M, Daffe M
+  TITLE     Current knowledge on mycolic acids in Corynebacterium glutamicum and their relevance for biotechnological processes.
+  JOURNAL   Appl Microbiol Biotechnol 97:9923-30 (2013)
+            DOI:10.1007/s00253-013-5265-3
+REFERENCE   PMID:15308633
+  AUTHORS   Gande R, Gibson KJ, Brown AK, Krumbach K, Dover LG, Sahm H, Shioyama S, Oikawa T, Besra GS, Eggeling L
+  TITLE     Acyl-CoA carboxylases (accD2 and accD3), together with a unique polyketide synthase (Cg-pks), are key to mycolic acid biosynthesis in Corynebacterianeae such as Corynebacterium glutamicum and Mycobacterium tuberculosis.
+  JOURNAL   J Biol Chem 279:44847-57 (2004)
+            DOI:10.1074/jbc.M408648200
+REFERENCE   PMID:17483212
+  AUTHORS   Gande R, Dover LG, Krumbach K, Besra GS, Sahm H, Oikawa T, Eggeling L
+  TITLE     The two carboxylases of Corynebacterium glutamicum essential for fatty acid and mycolic acid synthesis.
+  JOURNAL   J Bacteriol 189:5257-64 (2007)
+            DOI:10.1128/JB.00254-07
+REFERENCE   PMID:12055308
+  AUTHORS   Watanabe M, Aoyagi Y, Mitome H, Fujita T, Naoki H, Ridell M, Minnikin DE
+  TITLE     Location of functional groups in mycobacterial meromycolate chains; the recognition of new structural principles in mycolic acids.
+  JOURNAL   Microbiology (Reading) 148:1881-1902 (2002)
+            DOI:10.1099/00221287-148-6-1881
+REL_PATHWAY eco00061  Fatty acid biosynthesis
+            eco00500  Starch and sucrose metabolism
+KO_PATHWAY  ko00074
+///

@@ -1,0 +1,49 @@
+{
+  "input_records": {
+    "genes": 4688,
+    "proteins": 5949,
+    "compounds": 7675,
+    "reactions": 3327,
+    "enzrxns": 3057,
+    "pathways": 478,
+    "regulation": 9412,
+    "protligandcplxes": 131,
+    "protcplxs_col": 1210,
+    "transporters_col": 549
+  },
+  "outputs": {
+    "entities": 11224,
+    "edges": 33391,
+    "pathways": 478,
+    "id_mappings": 21935
+  },
+  "entities_by_type": {
+    "small_molecule": 6469,
+    "reaction": 3327,
+    "complex": 1352,
+    "protein": 76
+  },
+  "edges_by_relation": {
+    "encodes": 4290,
+    "is_substrate_of": 5829,
+    "is_product_of": 6545,
+    "participates_in": 3479,
+    "catalyzes": 3057,
+    "binds": 956,
+    "is_component_of": 4349,
+    "transports": 491,
+    "represses": 3376,
+    "activates": 1019
+  },
+  "id_map_methods": {
+    "ACCESSION-1": 4506,
+    "EcoCyc compound fallback": 6469,
+    "DBLINKS LIGAND-CPD": 1206,
+    "DBLINKS UNIPROT": 4389,
+    "EcoCyc protein complex": 1338,
+    "EcoCyc gene PRODUCT to existing encodes": 132,
+    "EcoCyc protein fallback": 90,
+    "EcoCyc reaction": 3327,
+    "EcoCyc pathway": 478
+  }
+}

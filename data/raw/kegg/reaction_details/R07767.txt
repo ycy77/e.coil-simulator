@@ -1,0 +1,15 @@
+ENTRY       R07767                      Reaction
+NAME        [protein]-N6-(octanoyl)-L-lysine:an [Fe-S] cluster scaffold protein carrying a [4Fe-4S]2+ cluster sulfurtransferase
+DEFINITION  [Protein]-N6-(octanoyl)-L-lysine + [Fe-S] cluster scaffold protein carrying a [4Fe-4S]2+ cluster + 2 S-Adenosyl-L-methionine + 2 Reduced [2Fe-2S] ferredoxin + 8 H+ <=> [Protein]-N6-[(R)-dihydrolipoyl]-L-lysine + [Fe-S] cluster scaffold protein + 2 Hydrogen sulfide + 4 Fe2+ + 2 L-Methionine + 2 5'-Deoxyadenosine + 2 Oxidized [2Fe-2S] ferredoxin
+EQUATION    C16236 + C22154 + 2 C00019 + 2 C22150 + 8 C00080 <=> C16832 + C22155 + 2 C00283 + 4 C14818 + 2 C00073 + 2 C05198 + 2 C22151
+RCLASS      RC00021  C00019_C00073
+ENZYME      2.8.1.8
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.8  Transferring sulfur-containing groups
+               2.8.1  Sulfurtransferases
+                2.8.1.8
+                 R07767  [Protein]-N6-(octanoyl)-L-lysine + [Fe-S] cluster scaffold protein carrying a [4Fe-4S]2+ cluster + 2 S-Adenosyl-L-methionine + 2 Reduced [2Fe-2S] ferredoxin + 8 H+ <=> [Protein]-N6-[(R)-dihydrolipoyl]-L-lysine + [Fe-S] cluster scaffold protein + 2 Hydrogen sulfide + 4 Fe2+ + 2 L-Methionine + 2 5'-Deoxyadenosine + 2 Oxidized [2Fe-2S] ferredoxin
+ORTHOLOGY   K03644  lipoyl synthase [EC:2.8.1.8]
+DBLINKS     RHEA: 16588
+///

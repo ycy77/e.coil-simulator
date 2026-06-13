@@ -1,0 +1,15 @@
+ENTRY       R12589                      Reaction
+NAME        xanthosine 5'-triphosphate phosphohydrolase
+DEFINITION  XTP + H2O <=> XDP + Orthophosphate
+EQUATION    C00700 + C00001 <=> C01337 + C00009
+RCLASS      RC00002  C00700_C01337
+ENZYME      3.6.1.73
+PATHWAY     rn01232  Nucleotide metabolism
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.6  Acting on acid anhydrides
+               3.6.1  In phosphorus-containing anhydrides
+                3.6.1.73
+                 R12589  XTP + H2O <=> XDP + Orthophosphate
+ORTHOLOGY   K01529  inosine/xanthosine triphosphatase [EC:3.6.1.73]
+///

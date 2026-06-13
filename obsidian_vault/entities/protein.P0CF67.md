@@ -1,0 +1,54 @@
+---
+entity_id: "protein.P0CF67"
+entity_type: "protein"
+name: "insE2"
+source_database: "UniProt"
+source_id: "P0CF67"
+default_state: "active"
+allowed_states: "active|inhibited|degraded|sequestered"
+subcellular_location: ""
+enriched_summary_quality: "informative"
+tags:
+  - entity/protein
+  - source/UniProt
+aliases:
+  - "insE2 b0373 JW5050"
+---
+
+# insE2
+
+`protein.P0CF67`
+
+## Static
+
+- Type: `protein`
+- Source: `UniProt:P0CF67`
+- Default state: `active`
+- Allowed states: `active|inhibited|degraded|sequestered`
+
+## Enriched Summary
+
+FUNCTION: Involved in the transposition of the insertion sequence IS3.
+
+## Annotation
+
+FUNCTION: Involved in the transposition of the insertion sequence IS3.
+
+## Outgoing Edges (0)
+
+_None._
+
+## Incoming Edges (1)
+
+- `encodes` <-- [[gene.b0373|gene.b0373]] `UniProt|EcoCyc` `database` - EcoCyc gene PRODUCT
+
+## External IDs
+
+- `UniProt:P0CF67`
+- `KEGG:ecj:JW5050;eco:b0298;eco:b0373;eco:b0540;eco:b1027;eco:b2088;ecoc:C3026_01465;ecoc:C3026_02655;ecoc:C3026_06255;ecoc:C3026_11725;ecoc:C3026_24095;ecoc:C3026_24185;ecoc:C3026_24640;`
+- `GeneID:946900;`
+- `GO:GO:0003677; GO:0004803; GO:0006313`
+
+## Notes
+
+Transposase InsE for insertion sequence IS3B

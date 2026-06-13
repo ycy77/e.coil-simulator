@@ -1,0 +1,18 @@
+ENTRY       R00439                      Reaction
+NAME        polyribonucleotide:phosphate guanylyltransferase
+DEFINITION  RNA + Orthophosphate <=> RNA + GDP
+EQUATION    C00046 + C00009 <=> C00046 + C00035
+RCLASS      RC02795  C00035_C00046
+ENZYME      2.7.7.8
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.8
+                 R00439  RNA + Orthophosphate <=> RNA + GDP
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.8
+               R07282  NDP
+                R00439  GDP
+///

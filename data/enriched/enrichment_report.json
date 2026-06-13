@@ -1,0 +1,100 @@
+{
+  "entity_count": 24369,
+  "entity_types": {
+    "protein": 4479,
+    "small_molecule": 9900,
+    "reaction": 3917,
+    "gene": 4506,
+    "rna": 215,
+    "complex": 1352
+  },
+  "quality_before": {
+    "informative": 9974,
+    "placeholder": 14395
+  },
+  "quality_after": {
+    "informative": 15595,
+    "placeholder": 8774
+  },
+  "placeholder_or_empty_before_by_type": {
+    "protein": 1011,
+    "small_molecule": 7850,
+    "reaction": 340,
+    "gene": 4506,
+    "rna": 215,
+    "complex": 473
+  },
+  "placeholder_or_empty_after_by_type": {
+    "protein": 62,
+    "small_molecule": 7844,
+    "reaction": 180,
+    "rna": 215,
+    "complex": 473
+  },
+  "gene_cards_with_encoded_protein_annotation": 4290,
+  "cards_with_ecocyc_raw_records": 21269,
+  "example_cards": [
+    {
+      "entity_id": "protein.P03023",
+      "entity_type": "protein",
+      "display_name": "lacI",
+      "summary": "FUNCTION: Repressor of the lactose operon. Binds allolactose as an inducer. The Lactose inhibitor,\" LacI, is a DNA-binding transcription factor that represses transcription of the operon involved in transport and catabolism of lactose . In the absence of allolactose, LacI represses the lac operon by preventing open promoter complex formation for transcription . In this repression system, LacI binds to three operators, and formation of a repressor loop between two of them is critical . This repre",
+      "quality": {
+        "raw_annotation_quality": "informative",
+        "enriched_summary_quality": "informative",
+        "enrichment_sources": [
+          "ecocyc_records",
+          "normalized_annotation",
+          "normalized_notes"
+        ]
+      }
+    },
+    {
+      "entity_id": "protein.P0A752",
+      "entity_type": "protein",
+      "display_name": "nadD",
+      "summary": "FUNCTION: Catalyzes the reversible adenylation of nicotinate mononucleotide (NaMN) to nicotinic acid adenine dinucleotide (NaAD). {ECO:0000269|PubMed:10894752}. Nicotinate-mononucleotide adenylyltransferase (NadD) is an essential enzyme involved in both de novo biosynthesis and salvage of NAD+ . Its essentiality makes it a target for the development of antibacterial agents . Both nicotinic acid mononucleotide (NaMN) and nicotinamide mononucleotide (NMN) are substrates, but the rate of adenylatio",
+      "quality": {
+        "raw_annotation_quality": "informative",
+        "enriched_summary_quality": "informative",
+        "enrichment_sources": [
+          "ecocyc_records",
+          "normalized_annotation",
+          "normalized_notes"
+        ]
+      }
+    },
+    {
+      "entity_id": "gene.b0639",
+      "entity_type": "gene",
+      "display_name": "nadD",
+      "summary": "nadD (gene.b0639) is a gene entity. It encodes nadD (protein.P0A752). Encoded protein function: FUNCTION: Catalyzes the reversible adenylation of nicotinate mononucleotide (NaMN) to nicotinic acid adenine dinucleotide (NaAD). {ECO:0000269|PubMed:10894752}. EcoCyc product frame: NICONUCADENYLYLTRAN-MONOMER. EcoCyc synonyms: ybeN, fusB. Genomic coordinates: 669931-670572. EcoCyc protein note: Nicotinate-mononucleotide adenylyltransferase (NadD) is an essential enzyme involved in both de novo biosy",
+      "quality": {
+        "raw_annotation_quality": "placeholder",
+        "enriched_summary_quality": "informative",
+        "enrichment_sources": [
+          "ecocyc_records",
+          "encoded_protein_annotation",
+          "encoded_protein_ecocyc_records",
+          "normalized_annotation",
+          "normalized_notes"
+        ]
+      }
+    },
+    {
+      "entity_id": "reaction.ecocyc.NICONUCADENYLYLTRAN-RXN",
+      "entity_type": "reaction",
+      "display_name": "NICONUCADENYLYLTRAN-RXN",
+      "summary": "This reaction is known in Salmonella and a gene has been identified. It is assumed to be present in E. coli as well but no gene has yet been identified. It is the first of two reactions that synthesize NAD from nicotinic acid mononucleotide. A second reaction is catalyzed, part of the recycling pathway, which produces NAD by another route. This reaction is nicotinamide mononucleotide + ATP = NAD + PPi, E.C. 2.7.7.1. EcoCyc reaction equation: PROTON + ATP + NICOTINATE_NUCLEOTIDE -> PPI + DEAMIDO-",
+      "quality": {
+        "raw_annotation_quality": "informative",
+        "enriched_summary_quality": "informative",
+        "enrichment_sources": [
+          "ecocyc_records",
+          "normalized_annotation",
+          "normalized_notes"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+ENTRY       R00094                      Reaction
+NAME        glutathione:NAD+ oxidoreductase
+DEFINITION  2 Glutathione + NAD+ <=> Glutathione disulfide + NADH + H+
+EQUATION    2 C00051 + C00003 <=> C00127 + C00004 + C00080
+COMMENT     NADP+ (see R00115)
+RCLASS      RC00001  C00003_C00004
+            RC00011  C00051_C00127
+ENZYME      1.8.1.7
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.8  Acting on a sulfur group of donors
+               1.8.1  With NAD+ or NADP+ as acceptor
+                1.8.1.7
+                 R00094  2 Glutathione + NAD+ <=> Glutathione disulfide + NADH + H+
+ORTHOLOGY   K00383  glutathione reductase (NADPH) [EC:1.8.1.7]
+DBLINKS     RHEA: 75702
+///

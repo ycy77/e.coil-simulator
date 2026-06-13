@@ -1,0 +1,24 @@
+ENTRY       R00379                      Reaction
+NAME        deoxynucleoside triphosphate:DNA deoxynucleotidyltransferase
+DEFINITION  Deoxynucleoside triphosphate + DNA(n) <=> Diphosphate + DNA(n+1)
+EQUATION    C00677 + C00039(n) <=> C00013 + C00039(n+1)
+COMMENT     DNA-directed (ec 2.7.7.7)
+            RNA-directed (ec 2.7.7.49)
+            non-template (ec 2.7.7.31)
+ENZYME      2.7.7.7         2.7.7.31        2.7.7.49
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.7  Transferring phosphorus-containing groups
+               2.7.7  Nucleotidyltransferases
+                2.7.7.7
+                 R00379  Deoxynucleoside triphosphate + DNA(n) <=> Diphosphate + DNA(n+1)
+                2.7.7.31
+                 R00379  Deoxynucleoside triphosphate + DNA(n) <=> Diphosphate + DNA(n+1)
+                2.7.7.49
+                 R00379  Deoxynucleoside triphosphate + DNA(n) <=> Diphosphate + DNA(n+1)
+            IUBMB reaction hierarchy [BR:br08202]
+             2. Transferase reactions
+              2.7.7.7
+               R00379  Deoxynucleoside triphosphate
+DBLINKS     RHEA: 22511
+///

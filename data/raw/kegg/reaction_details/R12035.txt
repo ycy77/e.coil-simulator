@@ -1,0 +1,14 @@
+ENTRY       R12035                      Reaction
+NAME        N,N-dimethyl-1,4-phenylenediamine,anthranilate:NAD+ oxidoreductase
+DEFINITION  Anthranilate + N,N-Dimethyl-1,4-phenylenediamine + 2 NAD+ <=> Methyl red + 2 NADH + 2 H+
+EQUATION    C00108 + C04203 + 2 C00003 <=> C19459 + 2 C00004 + 2 C00080
+RCLASS      RC00252  C00108_C19459  C04203_C19459
+ENZYME      1.7.1.17
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.7  Acting on other nitrogenous compounds as donors
+               1.7.1  With NAD+ or NADP+ as acceptor
+                1.7.1.17
+                 R12035  Anthranilate + N,N-Dimethyl-1,4-phenylenediamine + 2 NAD+ <=> Methyl red + 2 NADH + 2 H+
+DBLINKS     RHEA: 55875
+///

@@ -1,0 +1,17 @@
+ENTRY       R09774                      Reaction
+NAME        4-amino-4-deoxy-alpha-L-arabinopyranosyl ditrans,octacis-undecaprenyl phosphate:KDO2-lipid IVA 4-amino-4-deoxy-beta-L-arabinopyranosyltransferase
+DEFINITION  Undecaprenyl phosphate alpha-L-Ara4N + KDO2-lipid IVA <=> alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-[4-P-L-Ara4N]-lipid IVA + di-trans,poly-cis-Undecaprenyl phosphate
+EQUATION    C16157 + C06025 <=> C19883 + C17556
+RCLASS      RC00005  C06025_C19883  C16157_C17556
+ENZYME      2.4.2.43
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.4  Glycosyltransferases
+               2.4.2  Pentosyltransferases
+                2.4.2.43
+                 R09774  Undecaprenyl phosphate alpha-L-Ara4N + KDO2-lipid IVA <=> alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-[4-P-L-Ara4N]-lipid IVA + di-trans,poly-cis-Undecaprenyl phosphate
+            Glycosyltransferase reactions [br08203.html]
+             Other reactions
+              R09774
+ORTHOLOGY   K07264  4-amino-4-deoxy-L-arabinose transferase [EC:2.4.2.43]
+///

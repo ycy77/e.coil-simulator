@@ -1,0 +1,20 @@
+ENTRY       R00360                      Reaction
+NAME        (S)-malate:oxygen oxidoreductase
+DEFINITION  (S)-Malate + Oxygen <=> Oxaloacetate + Hydrogen peroxide
+EQUATION    C00149 + C00007 <=> C00036 + C00027
+RCLASS      RC00031  C00036_C00149
+            RC02755  C00007_C00027
+ENZYME      1.1.5.4
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.1  Acting on the CH-OH group of donors
+               1.1.5  With a quinone or similar compound as acceptor
+                1.1.5.4
+                 R00360  (S)-Malate + Oxygen <=> Oxaloacetate + Hydrogen peroxide
+            IUBMB reaction hierarchy [BR:br08202]
+             1. Oxidoreductase reactions
+              1.1.5.4
+               R00361  Quinone <=> Hydroquinone
+                R00360  Oxygen <=> Hydrogen peroxide
+ORTHOLOGY   K00116  malate dehydrogenase (quinone) [EC:1.1.5.4]
+///

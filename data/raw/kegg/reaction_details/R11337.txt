@@ -1,0 +1,14 @@
+ENTRY       R11337                      Reaction
+NAME        (R)-2-hydroxyglutarate:NAD+ 2-oxidireductase
+DEFINITION  (R)-2-Hydroxyglutarate + NAD+ <=> 2-Oxoglutarate + NADH + H+
+EQUATION    C01087 + C00003 <=> C00026 + C00004 + C00080
+RCLASS      RC00031  C00026_C01087
+ENZYME      1.1.1.399
+BRITE       Enzymatic reactions [BR:br08201]
+             1. Oxidoreductase reactions
+              1.1  Acting on the CH-OH group of donors
+               1.1.1  With NAD+ or NADP+ as acceptor
+                1.1.1.399
+                 R11337  (R)-2-Hydroxyglutarate + NAD+ <=> 2-Oxoglutarate + NADH + H+
+DBLINKS     RHEA: 49615
+///

@@ -1,0 +1,18 @@
+ENTRY       R01532                      Reaction
+NAME        nucleoside-triphosphate diphosphohydrolase
+DEFINITION  Nucleoside triphosphate + H2O <=> Nucleotide + Diphosphate
+EQUATION    C00201 + C00001 <=> C00215 + C00013
+COMMENT     general reaction
+ENZYME      3.6.1.9
+BRITE       Enzymatic reactions [BR:br08201]
+             3. Hydrolase reactions
+              3.6  Acting on acid anhydrides
+               3.6.1  In phosphorus-containing anhydrides
+                3.6.1.9
+                 R01532  Nucleoside triphosphate + H2O <=> Nucleotide + Diphosphate
+            IUBMB reaction hierarchy [BR:br08202]
+             3. Hydrolase reactions
+              3.6.1.9
+               R01532  Nucleoside triphosphate <=> Nucleotide
+DBLINKS     RHEA: 23999
+///

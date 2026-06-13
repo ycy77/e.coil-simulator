@@ -1,0 +1,20 @@
+ENTRY       R12996                      Reaction
+NAME        6-deoxy-6-sulfo-D-glucopyranose isomerase (2-epimerizing);
+            6-sulfo-beta-D-quinovose isomerase (2-epimerizing)
+DEFINITION  6-Sulfo-beta-D-quinovose <=> 6-Sulfo-D-rhamnose
+EQUATION    C22078 <=> C22507
+RCLASS      RC00289  C22078_C22507
+ENZYME      5.3.1.31
+BRITE       Enzymatic reactions [BR:br08201]
+             5. Isomerase reactions
+              5.3  Intramolecular oxidoreductases
+               5.3.1  Interconverting aldoses and ketoses, and related compounds
+                5.3.1.31
+                 R12996  6-Sulfo-beta-D-quinovose <=> 6-Sulfo-D-rhamnose
+ORTHOLOGY   K18479  sulfoquinovose isomerase [EC:5.3.1.31]
+REFERENCE   1  [PMID:33791429]
+  AUTHORS   Sharma M, Abayakoon P, Epa R, Jin Y, Lingford JP, Shimada T, Nakano M, Mui JW, Ishihama A, Goddard-Borger ED, Davies GJ, Williams SJ.
+  TITLE     Molecular Basis of Sulfosugar Selectivity in Sulfoglycolysis.
+  JOURNAL   ACS Cent Sci 7:476-487 (2021)
+            DOI:10.1021/acscentsci.0c01285
+///

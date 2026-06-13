@@ -1,0 +1,15 @@
+ENTRY       R02616                      Reaction
+NAME        acyl-CoA:beta-D-galactoside 6-acetyltransferase
+DEFINITION  Acetyl-CoA + beta-D-Galactoside <=> CoA + 6-Acetyl-beta-D-galactoside
+EQUATION    C00024 + C00602 <=> C00010 + C03773
+RCLASS      RC00004  C00010_C00024
+            RC00041  C00602_C03773
+ENZYME      2.3.1.18
+BRITE       Enzymatic reactions [BR:br08201]
+             2. Transferase reactions
+              2.3  Acyltransferases
+               2.3.1  Transferring groups other than aminoacyl groups
+                2.3.1.18
+                 R02616  Acetyl-CoA + beta-D-Galactoside <=> CoA + 6-Acetyl-beta-D-galactoside
+DBLINKS     RHEA: 15716
+///
