@@ -301,7 +301,7 @@ class Reporter:
         results = []
         for pattern_id, spec in self.phenotype_db.items():
             expected = spec.get("expected_states", {}) if isinstance(spec, dict) else {}
-            if not expected:
+            if not isinstance(expected, dict) or not expected:
                 continue
             matched = 0
             checked = 0

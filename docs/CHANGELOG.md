@@ -3,6 +3,56 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-13 — runnability fixes + engine↔baseline reconciliation
+
+### Fixed (foundation — the project did not run out of the box)
+* `requirements.txt` added (was missing). Core: PyYAML + httpx; web:
+  fastapi + uvicorn; tests: pytest.
+* `ecoil_sim/config.py` — `load_yaml_like` previously fell back to a
+  hand-rolled mini-parser when PyYAML was absent, which silently
+  *corrupted* nested config (block scalars, flow maps, lists became
+  garbage; e.g. `expected_states: {}` parsed to the string `"{}"`,
+  crashing the reporter). PyYAML is now a hard dependency and config
+  loading fails loudly — in line with the #1 hard rule (no silent
+  fallback).
+* `ecoil_sim/report/reporter.py` — `_response_pattern_match` guards
+  non-dict `expected_states`.
+* `ecoil_sim/llm/response_parser.py` — truncated-JSON recovery rewritten.
+  The old `rfind("{")` grabbed an inner action fragment and dropped the
+  whole decision; now we balance brackets from the *outer* wrapper and
+  drop only a dangling partial element. This is the #1 vLLM failure mode
+  at high concurrency with small `decision_max_tokens`.
+
+### Changed (cell rules — use the curated, STRING-dense baseline)
+* `configs/simulation.yaml` — simulator now runs on
+  `data/normalized/simulation` + `data/registry/simulation` (the curated
+  baseline: endogenous-only, STRING PPIs integrated, reactions folded
+  into produces/consumes). Density 4.6 edges/entity vs 1.9; isolated
+  nodes 2% vs 20%; STRING was previously absent from the simulated graph.
+* Engine now understands the baseline relation vocabulary
+  (`interacts`, `produces`, `consumes`, `transcribed_as`, `paralog_of`,
+  `bound_by`) across `configs/edge_weights.yaml`,
+  `ecoil_sim/llm/signal_direction.py`, `configs/fallback_rules.yaml`,
+  `ecoil_sim/agents/prompt_builder.py` (decision_policy), and
+  `scripts/build_rule_registry.py`. Previously these 6 relation types
+  (53% of baseline edges, all STRING PPIs) got a flat 0.1 noise weight.
+* `ecoil_sim/models.py::Edge` now loads per-edge `edge_weight`
+  (STRING confidence) + `string_channel`; `TemporalGraphRAG` scales the
+  relation-type weight by per-edge confidence so a high-confidence PPI
+  wakes its partner strongly and a weak one barely registers.
+* PPI relations (`interacts`, `paralog_of`, `bound_by`) deliberately have
+  NO deterministic fallback: a physical interaction carries no fixed
+  direction, so the LLM is the sole decision-maker (decisions to the
+  model; rules to the cell).
+
+### Added
+* `tests/test_engine_integration.py` — end-to-end lac-operon derepression
+  on the baseline + glucose-log-phase profile, and a negative control.
+* `tests/test_retrieval_ppi.py` — STRING PPI partners are woken on
+  perturbation, with retrieval scores modulated by STRING confidence.
+* `data/registry/simulation/native_rules.jsonl` — rule registry rebuilt
+  from the baseline edges (49,742 rules).
+
 ## session-2026-06-10 — workspace governance + vLLM audit pipeline
 
 ### Added

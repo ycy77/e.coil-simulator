@@ -63,7 +63,7 @@ class TemporalGraphRAG:
                 candidate = edge.target_id if edge.source_id == changed_id else edge.source_id
                 if candidate not in self.graph.entities or candidate == changed_id:
                     continue
-                edge_weight = float(self.edge_weights.get(edge.relation_type, 0.1))
+                edge_weight = self._edge_weight(edge)
                 rounds_unchanged = self._rounds_unchanged(state, candidate)
                 decay = self.decay_base ** rounds_unchanged
                 recent_changes = self._recent_changes(state, candidate)
@@ -91,6 +91,23 @@ class TemporalGraphRAG:
         ]
         ranked.sort(key=lambda item: (-item.score, item.entity_id))
         return ranked[:max_agents]
+
+    def _edge_weight(self, edge: Edge) -> float:
+        """Retrieval weight for an edge.
+
+        Relation type sets the base weight (configs/edge_weights.yaml). When an
+        edge carries its own confidence (``edge_weight`` column, e.g. STRING
+        score-derived), we scale the relation-type weight by it so a
+        high-confidence physical interaction wakes its neighbour strongly while
+        a weak association barely registers. Unknown relations fall back to a
+        small non-zero weight so the signal still propagates for the LLM.
+        """
+        base = float(self.edge_weights.get(edge.relation_type, 0.1))
+        if edge.edge_weight and edge.edge_weight > 0:
+            # edge.edge_weight is a 0..1 confidence; blend so confidence
+            # modulates but never fully zeroes a known relation.
+            return base * edge.edge_weight
+        return base
 
     def _recent_changes(self, state: TemporalState, entity_id: str) -> int:
         cutoff = max(0, state.current_round - self.recent_window)

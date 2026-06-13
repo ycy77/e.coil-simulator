@@ -197,6 +197,27 @@ class PromptBuilder:
                 "is_substrate_of": {
                     "when_consumer_active": {"action_type": "consume", "direction": "down", "strength": 1},
                 },
+                # simulation-baseline relation vocabulary
+                "produces": {
+                    "when_producer_active": {"action_type": "produce", "direction": "up", "strength": 1},
+                    "when_producer_inactive": {"action_type": "produce", "direction": "down", "strength": 1},
+                },
+                "consumes": {
+                    "when_consumer_active": {"action_type": "consume", "direction": "down", "strength": 1},
+                    "when_consumer_inactive": {"action_type": "consume", "direction": "up", "strength": 1},
+                },
+                "transcribed_as": {
+                    "when_source_active": {"action_type": "change_abundance", "direction": "up", "strength": 1},
+                    "when_source_inhibited": {"action_type": "change_abundance", "direction": "down", "strength": 1},
+                },
+                "interacts": {
+                    "note": (
+                        "Physical/functional protein-protein interaction (STRING). It has NO "
+                        "fixed direction: a partner's change may activate, inhibit, sequester or "
+                        "not affect you. Decide from your annotation and the partner's state. If "
+                        "the interaction is not functionally relevant to you, return no action."
+                    ),
+                },
             },
             "changed_neighbors": public_neighbors,
             "candidate_rules": public_rules,
@@ -388,10 +409,12 @@ class PromptBuilder:
             effect_hint = first_effect.get("effect_hint", "") or first_effect.get("relation_type", "")
         if relation in {"represses", "activates"}:
             return f"{source_public} {relation} {target_public} ({effect_hint or relation})"
-        if relation == "encodes":
-            return f"{source_public} encodes {target_public}"
-        if relation in {"is_product_of", "is_substrate_of", "catalyzes"}:
-            return f"{source_public} participates in {relation} with {target_public}"
+        if relation in {"encodes", "transcribed_as"}:
+            return f"{source_public} {relation} {target_public}"
+        if relation in {"is_product_of", "is_substrate_of", "catalyzes", "produces", "consumes"}:
+            return f"{source_public} {relation} {target_public}"
+        if relation == "interacts":
+            return f"{source_public} physically interacts with {target_public} (direction undecided — you decide)"
         if relation:
             return f"{source_public} {relation} {target_public}"
         return rule.notes or rule.rule_id

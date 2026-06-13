@@ -161,10 +161,11 @@ def _direction_for(relation_type: str, state: str, abundance: str) -> tuple[str,
             return ("up", "activator_active_pushes_up")
         if is_inactive:
             return ("down", "activator_lost_pushes_down")
-    if relation_type == "encodes":
-        if is_high_abundance:
+    if relation_type in {"encodes", "transcribed_as"}:
+        # encodes: gene -> protein abundance; transcribed_as: gene -> RNA abundance.
+        if is_active or is_high_abundance:
             return ("abundance_up", "gene_active_pushes_abundance_up")
-        if is_low_abundance:
+        if is_inactive or is_low_abundance:
             return ("abundance_down", "gene_low_pushes_abundance_down")
     if relation_type in {"is_product_of", "produces"}:
         if is_active or is_high_abundance:

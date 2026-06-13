@@ -6,53 +6,33 @@ from typing import Any, Dict
 
 
 def load_yaml_like(path: Path) -> Dict[str, Any]:
-    """Tiny YAML reader for the simple config files used here.
+    """Load a project YAML config via PyYAML.
 
-    It prefers PyYAML when available. The fallback supports nested dicts and
-    scalar values used by this project, so the core simulator has no hard
-    dependency on PyYAML.
+    PyYAML is a hard dependency (see requirements.txt). The project config,
+    initial-condition, phenotype and perturbation files use block scalars,
+    flow mappings and lists that a hand-rolled mini-parser cannot read
+    correctly. Per the project's #1 hard rule ("no silent fallback"), this
+    refuses to guess: if PyYAML is missing we raise instead of returning a
+    silently corrupted dict.
     """
     try:
         import yaml  # type: ignore
-    except ImportError:
-        yaml = None
-    if yaml is not None:
-        with path.open(encoding="utf-8") as handle:
-            return yaml.safe_load(handle) or {}
+    except ImportError as exc:  # pragma: no cover - environment guard
+        raise RuntimeError(
+            "PyYAML is required to load config files but is not installed. "
+            "Install it with `pip install -r requirements.txt` (or `pip install PyYAML`). "
+            f"Tried to load: {path}"
+        ) from exc
 
-    root: Dict[str, Any] = {}
-    stack: list[tuple[int, Dict[str, Any]]] = [(-1, root)]
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.split("#", 1)[0].rstrip()
-        if not line.strip():
-            continue
-        indent = len(line) - len(line.lstrip(" "))
-        key, _, value = line.strip().partition(":")
-        while stack and indent <= stack[-1][0]:
-            stack.pop()
-        parent = stack[-1][1]
-        if value.strip() == "":
-            node: Dict[str, Any] = {}
-            parent[key] = node
-            stack.append((indent, node))
-        else:
-            parent[key] = _parse_scalar(value.strip())
-    return root
-
-
-def _parse_scalar(value: str) -> Any:
-    if value in {"true", "True"}:
-        return True
-    if value in {"false", "False"}:
-        return False
-    if value in {"null", "None"}:
-        return None
-    try:
-        if "." in value:
-            return float(value)
-        return int(value)
-    except ValueError:
-        return value.strip('"').strip("'")
+    with path.open(encoding="utf-8") as handle:
+        loaded = yaml.safe_load(handle)
+    if loaded is None:
+        return {}
+    if not isinstance(loaded, dict):
+        raise ValueError(
+            f"Expected a YAML mapping at the top level of {path}, got {type(loaded).__name__}."
+        )
+    return loaded
 
 
 def dump_json(path: Path, data: Any) -> None:

@@ -1,6 +1,11 @@
 graph:
-  normalized_dir: data/normalized
-  registry_dir: data/registry
+  # The curated simulation baseline (build_simulation_baseline.py): endogenous
+  # entities only, STRING PPIs integrated, reactions folded into produces/
+  # consumes edges. ~4.6 edges/entity vs ~1.9 for the full graph, and 2% vs 20%
+  # isolated nodes. To run on the full audited graph instead, point these at
+  # data/normalized and data/registry.
+  normalized_dir: data/normalized/simulation
+  registry_dir: data/registry/simulation
   edge_weights: configs/edge_weights.yaml
 
 simulation:

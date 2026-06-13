@@ -1,0 +1,11 @@
+# E.coil — runtime dependencies
+# Core simulator (main.py + ecoil_sim/)
+PyYAML>=6.0          # config / initial-condition / phenotype YAML parsing (REQUIRED — see ecoil_sim/config.py)
+httpx>=0.24          # AsyncVLLMClient -> remote vLLM OpenAI-compatible endpoint
+
+# Diagnostic web UI (web/backend/)
+fastapi>=0.110
+uvicorn>=0.27
+
+# Tests
+pytest>=7.4

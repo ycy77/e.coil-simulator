@@ -13,6 +13,7 @@ DEFAULT_RULE_TYPES = {
     "activates": "transcription_regulation",
     "inhibits": "inhibition",
     "binds": "binding",
+    "bound_by": "binding",
     "transports": "transport",
     "forms_complex": "complex_assembly",
     "is_component_of": "complex_assembly",
@@ -20,7 +21,13 @@ DEFAULT_RULE_TYPES = {
     "catalyzes": "catalysis",
     "is_substrate_of": "catalysis",
     "is_product_of": "catalysis",
+    # simulation-baseline relation vocabulary
+    "produces": "catalysis",
+    "consumes": "catalysis",
+    "interacts": "ppi",
+    "paralog_of": "ppi",
     "encodes": "translation_effect",
+    "transcribed_as": "translation_effect",
     "participates_in": "environment_shift",
 }
 

@@ -159,6 +159,8 @@ runs/                          # simulation run history (timestamped dirs)
 
 ## Where to read next
 
+* `docs/REMOTE_WORK_PLAN.md` — the forward plan for the agent working on
+  the vLLM host: measure decisions → improve them → scale → cell-rule quality.
 * `docs/PROJECT_OVERVIEW.md` — one-paragraph recap of the simulation
   semantics, agent model, and design constraints.
 * `docs/ARCHITECTURE.md` — module map and data flow.

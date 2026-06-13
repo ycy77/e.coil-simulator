@@ -13,8 +13,15 @@ edge_weights:
   catalyzes: 0.60
   is_substrate_of: 0.55
   is_product_of: 0.55
+  # simulation-baseline relation vocabulary -------------------------------
+  bound_by: 0.80          # reverse of binds
+  consumes: 0.55          # baseline rename of is_substrate_of
+  produces: 0.55          # baseline rename of is_product_of
+  interacts: 0.50         # STRING PPI; base weight, scaled per-edge by STRING confidence
   encodes: 0.40
+  transcribed_as: 0.40    # gene -> RNA (abundance axis, like encodes)
   participates_in: 0.30
+  paralog_of: 0.20        # weak evolutionary/structural association
 
 relation_rule_types:
   represses: transcription_regulation
@@ -28,8 +35,14 @@ relation_rule_types:
   catalyzes: catalysis
   is_substrate_of: catalysis
   is_product_of: catalysis
+  bound_by: binding
+  consumes: catalysis
+  produces: catalysis
+  interacts: ppi
   encodes: translation_effect
+  transcribed_as: translation_effect
   participates_in: environment_shift
+  paralog_of: ppi
 
 relation_default_actions:
   represses: change_activity
@@ -43,8 +56,14 @@ relation_default_actions:
   catalyzes: no_op
   is_substrate_of: consume
   is_product_of: produce
+  bound_by: bind
+  consumes: consume
+  produces: produce
+  interacts: no_op        # PPI effect is the LLM's call, not a deterministic rule
   encodes: change_activity
+  transcribed_as: change_abundance
   participates_in: no_op
+  paralog_of: no_op       # paralogy is a hint, not a forced action
 
 priority:
   custom: 3

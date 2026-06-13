@@ -79,9 +79,20 @@ class Edge:
     source_database: str
     source_record_id: str
     notes: str = ""
+    # Optional per-edge confidence (0..1), present on the simulation baseline
+    # (e.g. STRING score-derived weights). 0.0 means "use the relation-type
+    # default weight". ``string_channel`` records the STRING evidence channel
+    # (experimental / database / coexpression) when applicable.
+    edge_weight: float = 0.0
+    string_channel: str = ""
 
     @classmethod
     def from_row(cls, row: Dict[str, str]) -> "Edge":
+        raw_weight = (row.get("edge_weight") or "").strip()
+        try:
+            edge_weight = float(raw_weight) if raw_weight else 0.0
+        except ValueError:
+            edge_weight = 0.0
         return cls(
             source_id=row.get("source_id", ""),
             relation_type=row.get("relation_type", ""),
@@ -91,6 +102,8 @@ class Edge:
             source_database=row.get("source_database", ""),
             source_record_id=row.get("source_record_id", ""),
             notes=row.get("notes", ""),
+            edge_weight=edge_weight,
+            string_channel=(row.get("string_channel") or "").strip(),
         )
 
 

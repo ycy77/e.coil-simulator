@@ -148,6 +148,60 @@ rules:
       strength: 1
       reason: "deterministic fallback: inactive consumer restores substrate"
 
+  # --- simulation-baseline relation renames -------------------------------
+  # The curated baseline emits produces/consumes/transcribed_as instead of
+  # is_product_of/is_substrate_of/encodes->rna. These mirror the rules above.
+  # PPI relations (interacts, paralog_of, bound_by) deliberately have NO
+  # fallback: a physical interaction carries no deterministic direction, so
+  # the LLM is the only decision-maker (decisions to the model).
+  - name: producer_propagation_to_metabolite
+    relation: produces
+    target_entity_type: small_molecule
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: produce
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: active producer raises metabolite abundance"
+    inactive_source:
+      action_type: produce
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: inactive producer lowers metabolite abundance"
+
+  - name: consumer_propagation_from_metabolite
+    relation: consumes
+    target_entity_type: small_molecule
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: consume
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: active consumer drains substrate"
+    inactive_source:
+      action_type: consume
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: inactive consumer restores substrate"
+
+  - name: gene_to_rna_transcription
+    relation: transcribed_as
+    target_entity_type: rna
+    requires_target_role: downstream
+    conflict_free_only: true
+    active_source:
+      action_type: change_mrna_abundance
+      direction: up
+      strength: 1
+      reason: "deterministic fallback: expressed gene raises transcript abundance"
+    inactive_source:
+      action_type: change_mrna_abundance
+      direction: down
+      strength: 1
+      reason: "deterministic fallback: repressed gene lowers transcript abundance"
+
   - name: inhibition_target_activity
     relation: inhibits
     requires_target_role: downstream

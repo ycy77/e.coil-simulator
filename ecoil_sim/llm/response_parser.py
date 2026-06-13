@@ -69,16 +69,30 @@ def parse_llm_output(text: str) -> Tuple[Dict[str, Any], ParseDiagnostics]:
     if parsed is not None:
         return _finalize(parsed, diag)
 
-    parsed = _scan_objects(cleaned, diag)
-    if parsed is not None:
-        return _finalize(parsed, diag)
+    # Object scan handles trailing prose and multiple objects. But when the
+    # output is truncated mid-wrapper, scanning only recovers an inner action
+    # fragment (no top-level "actions" key) -- in that case we fall through to
+    # truncation repair, which rebuilds the outer wrapper. We therefore prefer
+    # whichever candidate actually carries an "actions" list.
+    scanned = _scan_objects(cleaned, diag)
+    if _has_actions_list(scanned):
+        return _finalize(scanned, diag)
 
-    parsed = _try_repair_truncated(cleaned, diag)
-    if parsed is not None:
-        return _finalize(parsed, diag)
+    repaired = _try_repair_truncated(cleaned, diag)
+    if _has_actions_list(repaired):
+        return _finalize(repaired, diag)
+
+    if scanned is not None:
+        return _finalize(scanned, diag)
+    if repaired is not None:
+        return _finalize(repaired, diag)
 
     diag.notes.append("no_valid_json_found")
     return {"actions": []}, diag
+
+
+def _has_actions_list(value: Optional[Dict[str, Any]]) -> bool:
+    return isinstance(value, dict) and isinstance(value.get("actions"), list)
 
 
 def _strip_think(text: str) -> Tuple[str, bool]:
@@ -139,44 +153,88 @@ def _scan_objects(text: str, diag: ParseDiagnostics) -> Optional[Dict[str, Any]]
 
 
 def _try_repair_truncated(text: str, diag: ParseDiagnostics) -> Optional[Dict[str, Any]]:
-    last_brace = text.rfind("{")
-    if last_brace < 0:
+    """Rebuild a wrapper object from output that was cut off mid-emit.
+
+    Starting from the *outer* ``{`` (the wrapper, not the last fragment), we
+    close any dangling string and unbalanced brackets. If the tail holds an
+    incomplete element (``..., {"action_type": "ch``), we retry from each
+    earlier closing bracket so the complete actions are kept and only the
+    partial trailing element is dropped.
+    """
+    start = text.find("{")
+    if start < 0:
         return None
-    candidate = text[last_brace:].rstrip()
-    diag.trimmed_trailing_prose = True
-    closing_string, _ = _detect_open_string(candidate)
-    if closing_string is not None:
-        candidate = candidate + closing_string
-    closers = ("]}}", "}}", "]", "}")
-    for closer in closers:
-        repaired = candidate + closer
+    body = text[start:].rstrip()
+
+    candidates = [_balance(body)]
+    for cut in _close_boundaries(body):
+        chunk = body[:cut].rstrip().rstrip(",").rstrip()
+        if chunk:
+            candidates.append(_balance(chunk))
+
+    for candidate in candidates:
         try:
-            value = json.loads(repaired)
+            value = json.loads(candidate)
         except json.JSONDecodeError:
             continue
         if isinstance(value, dict):
             diag.repaired_truncated = True
+            diag.trimmed_trailing_prose = True
             diag.final_method = "truncated_repair"
             return value
     return None
 
 
-def _detect_open_string(text: str) -> Tuple[Optional[str], bool]:
-    """Return a closing quote if ``text`` ends mid-string."""
+def _balance(chunk: str) -> str:
+    """Append the closers needed to make ``chunk`` syntactically complete."""
+    stack: list = []
     in_string = False
     escape = False
-    for ch in text:
-        if escape:
-            escape = False
-            continue
-        if ch == "\\":
-            escape = True
+    for ch in chunk:
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
             continue
         if ch == '"':
-            in_string = not in_string
-    if in_string:
-        return '"', True
-    return None, False
+            in_string = True
+        elif ch in "{[":
+            stack.append(ch)
+        elif ch in "}]":
+            if stack:
+                stack.pop()
+    suffix = '"' if in_string else ""
+    for opener in reversed(stack):
+        suffix += "}" if opener == "{" else "]"
+    return chunk + suffix
+
+
+def _close_boundaries(chunk: str) -> list:
+    """Indices just after each closing bracket (ignoring strings), descending.
+
+    Used as retry cut points so a truncated trailing element can be dropped
+    while keeping every element that was fully emitted before it.
+    """
+    boundaries = []
+    in_string = False
+    escape = False
+    for idx, ch in enumerate(chunk):
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+        elif ch in "}]":
+            boundaries.append(idx + 1)
+    return [b for b in sorted(set(boundaries), reverse=True) if b < len(chunk)]
 
 
 def _finalize(parsed: Dict[str, Any], diag: ParseDiagnostics) -> Tuple[Dict[str, Any], ParseDiagnostics]:
