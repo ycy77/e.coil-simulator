@@ -1,5 +1,29 @@
 # Remote work plan — for the vLLM-equipped agent
 
+> **Workflow (current): LOCAL drives everything over SSH.** The git-baton
+> two-AI loop (former `HANDOFF.md` / `LOOP_PROTOCOL.md`) is retired. The local
+> agent now: edits code locally → `git push` to GitHub (has write access) →
+> `ssh zkyd@10.102.106.53` into the GPU host → `git pull` (read-only access is
+> enough) → runs the vLLM experiments → reads the result files back over SSH.
+> The host's GitHub key (NHNQNHNQ) has no push access, so the host never pushes;
+> results come back via SSH, not git. The sections below are the running backlog.
+>
+> **Cycle-2 backlog (from cycle-1 findings, docs/reports/REPORT_cycle1.md):**
+> 1. `ara_dual_signal_arabinose_absent` regressed 0.667→0.333 after guided_json
+>    (6b606a4b) — check the AraC (`protein.P0A9E0`) trace: is guided_json forcing
+>    a `down` action where the model should emit none (activator occluded by the
+>    active repressor)? Schema/prompt fix.
+> 2. Co-aligned `strength: 2` under-escalation (`ara_induction_full` 0.0,
+>    `glucose_to_lactose_shift` 0.5) — add a worked few-shot to the `encodes`
+>    section of `prompts/agent_decision.system.md`.
+> 3. `scripts/aggregate_scorecards.py` — aggregate `runs/_scorecard/*/scorecard.json`
+>    into one mock-vs-llm headline table (per-pattern runs don't aggregate).
+> 4. `score_phenotypes.py` shutdown hygiene — `try/finally` to drain in-flight vLLM
+>    requests + write partial scorecards (a `--repeat 3` crash orphaned 24 requests).
+> 5. `parse_perturbation.py` silent failure — exits 0 with empty stdout; reproduce
+>    and fix (likely a swallowed ImportError when no vLLM at module load).
+> 6. Then run B (benchmark), C (co-expression), E (report agent) end-to-end.
+
 This document is written for an agent (or engineer) working **on the remote
 server where the vLLM Qwen3.5-9B endpoint is reachable**. The local laptop
 sessions cannot reach the model (`base_url` is `http://localhost:8000/v1` on the
