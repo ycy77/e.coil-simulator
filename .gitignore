@@ -8,6 +8,7 @@ __pycache__/
 runs/
 logs/
 data/raw/ecocyc/
+data/raw/transcriptome_compendium/   # Tjaden 2023 compendium (fetched on the GPU host)
 
 # Frontend dependencies/build artifacts.
 node_modules/

@@ -254,6 +254,30 @@ RegulonDB sign. Run: `python scripts/benchmark_perturbation.py --mode both --max
   alone. **This is the missing piece for the headline claim:** plug in an
   expression compendium.
 
+### 6.2b Independent co-expression validation — Tjaden 2023 compendium
+A third, independent check that does NOT reuse RegulonDB. The Tjaden 2023
+compendium (Harvard Dataverse `doi:10.7910/DVN/QBMC9D`, RNA Biology) gives TPM
+expression for every E. coli gene across **3,376 RNA-seq samples** plus operon /
+co-transcription tables. If the graph says X *activates* Y, X and Y should be
+positively correlated across the compendium; *represses* should be negative.
+
+```bash
+# on the GPU host (needs network egress; the dev laptop sandbox has none):
+python scripts/fetch_transcriptome_compendium.py --list      # inspect files
+python scripts/fetch_transcriptome_compendium.py             # grab expression + operon tables
+python scripts/validate_coexpression.py \
+    --matrix data/raw/transcriptome_compendium/<expression_file>
+# -> docs/COEXPRESSION_VALIDATION.md: activates mean_r vs represses mean_r, sign agreement
+```
+Acceptance: activates `mean_r` clearly above represses `mean_r` (ideally
+activates > 0 > represses). This converts "is the regulatory layer real?" into a
+number from data the graph never saw. The loader auto-detects orientation; check
+the file header on first run and pass `--orient/--gene-col/--delimiter` if needed.
+
+Follow-up (higher impact on recall): import the compendium's operon /
+co-transcription table to fill the operon-structure gap KG validation flagged
+(raises the 58.8% recall and enables true L3 AND/OR patterns).
+
 ### 6.3 The headline experiment (do this for the paper)
 1. Get a public E. coli expression compendium with perturbation labels:
    **PRECISE-1K / iModulons** (knockouts, media shifts) or GEO/EcoMAC.

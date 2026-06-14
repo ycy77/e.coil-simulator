@@ -3,6 +3,30 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-14b — independent co-expression validation (Tjaden 2023)
+
+Added an external validation track that does not reuse RegulonDB, using the
+Tjaden 2023 transcriptome compendium (Harvard Dataverse doi:10.7910/DVN/QBMC9D —
+TPM for every E. coli gene across 3,376 RNA-seq samples + operon tables).
+
+* `scripts/fetch_transcriptome_compendium.py` — runtime Dataverse-API discovery +
+  download into `data/raw/transcriptome_compendium/` (gitignored). Must run on a
+  networked machine (the dev laptop sandbox has no egress, so the data could not
+  be fetched here — only the pipeline was built).
+* `scripts/validate_coexpression.py` — for every graph regulatory edge, correlate
+  the regulator's and target's expression across the compendium; report mean r
+  by sign (activates should be > represses) and sign agreement. Independent of
+  RegulonDB → genuine external validation of regulatory direction. Pure-Python
+  Pearson + a robust auto-orienting matrix loader.
+* Tests: `tests/test_coexpression.py` (pearson + loader on synthetic matrices).
+  Suite 60 → 65.
+* REMOTE_WORK_PLAN Phase 6.2b documents the fetch+validate commands and the
+  operon-import follow-up (raises KG recall, enables true L3).
+
+Decision recorded: the compendium has no per-sample perturbation labels, so it is
+used for co-expression validation + operon import rather than paired
+control/perturbation fold-change (which still needs PRECISE/iModulons, Phase 6.3).
+
 ## session-2026-06-14 — validation layer for a Q1 paper
 
 The simulator's accuracy is bounded by the graph, and the phenotype battery is
