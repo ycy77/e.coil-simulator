@@ -3,6 +3,32 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-14 — validation layer for a Q1 paper
+
+The simulator's accuracy is bounded by the graph, and the phenotype battery is
+self-authored. Added external-gold-standard validation (the credibility layer a
+top-tier paper needs), producing real numbers offline.
+
+### Added
+* `scripts/validate_kg.py` — validates the graph's regulatory layer against the
+  RegulonDB gold standard. **Result: 58.8% recall, 100% sign accuracy** (the
+  graph has ~59% of curated E. coli regulation, all with correct direction).
+  Writes `docs/KG_VALIDATION_*.md`. (Caught and fixed a mapping bug mid-build —
+  regulators map to BOTH gene and TF-protein; the graph routes regulation through
+  the protein.)
+* `scripts/benchmark_perturbation.py` — RegulonDB-grounded perturbation
+  benchmark: knock out each regulator, predict each target's direction, score vs
+  the RegulonDB sign. **mock = 97% direction accuracy** on scorable
+  single-regulator cases (1008 cases; direction folds the two-axis efficiency so
+  activator-loss = expressed-but-low-efficiency = down). 1637 multi-regulator
+  conflict targets are explicitly deferred — they need an expression compendium
+  to score, which is the headline LLM-vs-rules experiment (see REMOTE_WORK_PLAN
+  Phase 6).
+* Tests: `tests/test_benchmarks.py` (two-axis direction logic + gold parsing).
+  Suite 57 → 60.
+* `docs/REMOTE_WORK_PLAN.md` Phase 6: the path to Q1 (KG coverage, expression-
+  grounded conflict benchmark, baselines: FBA/Boolean/GNN).
+
 ## session-2026-06-13d — bug fixes (P1/P2) + global-view report agent
 
 ### Fixed

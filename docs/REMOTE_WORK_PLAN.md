@@ -222,6 +222,51 @@ Remote work to finish it:
 4. The offline `--dry-run` token preview is noisy on multi-word concepts (it has
    no LLM to clean mentions); that is preview-only and not the production path.
 
+## Phase 6 — Validation for a Q1 paper (the credibility layer)
+
+The simulator's accuracy is bounded by the graph, and the phenotype battery is
+self-authored (circular). A top-tier paper needs the graph and the predictions
+validated against external gold standards. Two harnesses are built and produce
+real numbers offline:
+
+### 6.1 KG validation vs RegulonDB — `scripts/validate_kg.py`
+Run: `python scripts/validate_kg.py --date <YYYYMMDD>` → `docs/KG_VALIDATION_*.md`.
+Current result (simulation baseline vs RegulonDB `NetworkRegulatorGene`):
+- **Recall 58.8%** (4325/7352) — the graph contains ~59% of curated E. coli
+  regulation; the missing ~41% is the accuracy ceiling to raise.
+- **Sign accuracy 100%** (4072/4072) — every present regulatory edge has the
+  correct activator/repressor direction.
+- ~362 interactions are routed through regulators a gene→gene graph cannot
+  represent (sigma factors, sRNAs, ppGpp) — the structural gap behind the
+  missing L3.
+To raise recall: re-import RegulonDB with weaker-evidence edges + operon/promoter
+structure (`scripts/build_regulondb_edges.py`), and add iML1515 GPR.
+
+### 6.2 Perturbation benchmark vs RegulonDB — `scripts/benchmark_perturbation.py`
+Knock out each regulator, predict each target's direction, score against the
+RegulonDB sign. Run: `python scripts/benchmark_perturbation.py --mode both --max-tfs 80`.
+- **Single-regulator targets** (1008 cases) have an unambiguous expected
+  direction; mock scores **97% direction accuracy** on the scorable subset
+  (folding the two-axis efficiency: activator-loss = expressed-but-low-efficiency
+  = down). This validates propagation fidelity on real topology.
+- **Multi-regulator targets** (1637) are the conflict set where the LLM should
+  beat the rules — but their *net* direction cannot be scored from topology
+  alone. **This is the missing piece for the headline claim:** plug in an
+  expression compendium.
+
+### 6.3 The headline experiment (do this for the paper)
+1. Get a public E. coli expression compendium with perturbation labels:
+   **PRECISE-1K / iModulons** (knockouts, media shifts) or GEO/EcoMAC.
+2. Extend `benchmark_perturbation.py` to score the multi-regulator/conflict set
+   against measured fold-changes (add an `--expression <file>` ground-truth path).
+3. Report LLM vs mock vs a real baseline (FBA/iML1515 flux-direction, a Boolean
+   network, or a GNN) on direction/magnitude accuracy. The claim "local LLM
+   agents resolve regulatory conflicts better than deterministic rules and beat
+   FBA on transcriptional response" must be backed by this table with statistics.
+4. Improve the KG (6.1) and re-measure — show accuracy tracks coverage.
+
+Until 6.3 lands, the work is a strong methods preprint, not yet Q1.
+
 ## Guardrails (do not violate)
 
 - **No silent fallback.** If the LLM/endpoint is unreachable, fail loudly. Do not
