@@ -43,12 +43,45 @@ class LLMReportAgent:
         self.max_entities = max_entities
 
     def write_report(self, structured_report: Dict) -> str:
-        """Produce a Markdown biological report from the run summary."""
+        """Produce a Markdown biological report from the whole-run summary."""
         if not structured_report.get("changed_events"):
             return "No changes propagated from the perturbation; nothing to report."
         system = self._system_prompt()
         user = json.dumps(self._build_context(structured_report), ensure_ascii=False)
         return (self.complete(system, user, None) or "").strip()
+
+    def write_round_report(self, round_summary: Dict) -> str:
+        """Narrate a single propagation round (the cascade step by step).
+
+        ``round_summary`` is one entry from ``Reporter.per_round_summaries``.
+        Names are resolved and annotations attached so the per-round narrative is
+        grounded. Flags a feedback closure when the round re-touched a perturbed
+        node — the loop coming back on itself.
+        """
+        if not round_summary.get("changes"):
+            return f"Round {round_summary.get('round')}: no changes."
+        ctx = {
+            "round": round_summary.get("round"),
+            "changes": [
+                {**c, "name": self._name(c["entity_id"]), "annotation": self._annotation(c["entity_id"])}
+                for c in round_summary.get("changes", [])[: self.max_entities]
+            ],
+            "propagation_edges": round_summary.get("propagation_edges", []),
+            "feedback_closure": [self._name(e) for e in round_summary.get("feedback_closure", [])],
+        }
+        system = self._round_system_prompt()
+        return (self.complete(system, json.dumps(ctx, ensure_ascii=False), None) or "").strip()
+
+    def _round_system_prompt(self) -> str:
+        return (
+            "You narrate ONE propagation round of an E. coli regulatory cascade. You are "
+            "given only the entities that changed THIS round, the edges that carried the "
+            "signal, and (if any) a feedback_closure list naming originally-perturbed nodes "
+            "the cascade looped back onto. Write 2-4 sentences: what changed this round and "
+            "why (the mechanism via the edges), grounded in the given annotations. If "
+            "feedback_closure is non-empty, call out that the cascade has fed back to its "
+            "origin. Do not invent entities or effects beyond the input. Be concise."
+        )
 
     # ---------------------------------------------------------------- helpers
     def _build_context(self, report: Dict) -> Dict:

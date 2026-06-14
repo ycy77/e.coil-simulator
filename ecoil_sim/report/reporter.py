@@ -91,10 +91,12 @@ class Reporter:
         perturbation_sources = [item["entity_id"] for item in events if item.get("round") == 0]
         response_pattern_match = self._response_pattern_match(state)
         inflection_points = self._inflection_points(events, propagation_edges)
+        feedback = self._feedback_events(events, perturbation_sources)
         return {
             "rounds": state.current_round,
             "changed_events": len(events),
             "perturbation_sources": perturbation_sources,
+            "feedback_loops": feedback,
             "events_by_round": dict(sorted(by_round.items())),
             "propagation_edges": propagation_edges[:limit],
             "causal_chains": self._causal_chains(perturbation_sources, propagation_edges, limit=limit),
@@ -112,6 +114,69 @@ class Reporter:
             "inflection_points": inflection_points,
             "events": events[:limit],
         }
+
+    @staticmethod
+    def _feedback_events(events: List[Dict], perturbation_sources: List[str]) -> Dict:
+        """Detect cascades that loop back — the reason a run counts by rounds, not convergence.
+
+        In a regulatory network with feedback (a gene product that re-regulates an
+        upstream TF), propagation can return to a node that already changed,
+        including the originally perturbed one. We surface two signals:
+          * ``closed_on_source`` — a perturbation source re-changed in a later round
+            (the loop closed back on the origin).
+          * ``reactivations`` — any entity that changed in more than one round
+            (oscillation / sustained feedback).
+        These never stop the run; the human-set round budget does.
+        """
+        source_set = set(perturbation_sources)
+        rounds_by_entity: Dict[str, set] = {}
+        for item in events:
+            rounds_by_entity.setdefault(item["entity_id"], set()).add(item.get("round", 0))
+        closed_on_source = [
+            {"entity_id": eid, "rounds": sorted(rs)}
+            for eid, rs in rounds_by_entity.items()
+            if eid in source_set and any(r > 0 for r in rs)
+        ]
+        reactivations = [
+            {"entity_id": eid, "rounds": sorted(rs)}
+            for eid, rs in rounds_by_entity.items()
+            if len(rs) > 1
+        ]
+        return {
+            "closed_on_source": sorted(closed_on_source, key=lambda x: x["entity_id"]),
+            "reactivations": sorted(reactivations, key=lambda x: x["entity_id"]),
+            "has_feedback": bool(closed_on_source or reactivations),
+        }
+
+    def per_round_summaries(self, summary: Dict) -> List[Dict]:
+        """Slice a run summary into per-round views for round-by-round reporting.
+
+        Each entry is the changes that landed in that propagation round plus the
+        edges that carried them and whether the round re-touched a perturbation
+        source (a feedback closure). Feeds the report agent's per-round mode.
+        """
+        sources = set(summary.get("perturbation_sources", []))
+        edges_by_round: Dict[int, List[Dict]] = {}
+        for edge in summary.get("propagation_edges", []):
+            edges_by_round.setdefault(edge.get("round", 0), []).append(edge)
+        changes_by_round: Dict[int, List[Dict]] = {}
+        for ev in summary.get("events", []):
+            changes_by_round.setdefault(ev.get("round", 0), []).append(
+                {"entity_id": ev["entity_id"], "state": ev.get("state"),
+                 "abundance_label": ev.get("abundance_label"), "efficiency": ev.get("efficiency"),
+                 "reason": ev.get("reason", "")}
+            )
+        rounds = sorted(set(changes_by_round) | set(edges_by_round))
+        out = []
+        for r in rounds:
+            changed_ids = {c["entity_id"] for c in changes_by_round.get(r, [])}
+            out.append({
+                "round": r,
+                "changes": changes_by_round.get(r, []),
+                "propagation_edges": edges_by_round.get(r, []),
+                "feedback_closure": sorted(changed_ids & sources) if r > 0 else [],
+            })
+        return out
 
     def render_narrative(self, summary: Dict) -> str:
         rounds = summary.get("rounds", 0)

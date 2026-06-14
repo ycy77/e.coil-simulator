@@ -1,3 +1,12 @@
+# ⚠️ DEV-ONLY / NOT A VALIDATION BENCHMARK.
+# These patterns are SELF-AUTHORED (we wrote both the scenario and the expected
+# answer), so scores on them are circular and must NOT be reported as evidence of
+# model quality. They are kept only as fast deterministic smoke-tests during
+# development. The real, externally-grounded battery is being built from
+# literature (docs/LITERATURE_EVIDENCE_2023_2026.md -> data/literature/) and from
+# RegulonDB (scripts/benchmark_perturbation.py) / co-expression
+# (scripts/validate_coexpression.py). See docs/REMOTE_WORK_PLAN.md.
+#
 # Optional response-pattern database used by ReportAgent and the offline
 # evaluation baseline.
 #

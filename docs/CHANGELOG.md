@@ -3,6 +3,38 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-14c — literature-grounded edges + feedback/round reporting
+
+Replaces the self-authored phenotype battery's role with externally-grounded,
+literature-cited evidence, under strict anti-circularity rules; adds feedback-loop
+awareness to reporting.
+
+### Added — literature evidence ingest (5 integrity rules enforced in code)
+* `data/literature/regulatory_edges.jsonl` — curated, DOI/PMID-cited edges from
+  `docs/LITERATURE_EVIDENCE_2023_2026.md`, each tagged evidence_tier / peer_reviewed / strain.
+* `scripts/ingest_literature_edges.py` — verifies endpoint b-number/UniProt against
+  the KG canonical ids (no guessing → UNRESOLVED), enforces evidence gating
+  (only direct + peer-reviewed + K-12 is a hard edge; preprint/review/omics/non-K12
+  GATED_OUT), flags direction CONFLICTs without overwriting, and writes eligible
+  edges to a SEPARATE overlay (`data/literature/literature_edges.overlay.csv`,
+  source_database=Literature) so RegulonDB-recall validation stays frozen and
+  un-inflated. Ledger: `docs/LITERATURE_INGEST_LEDGER.md`.
+  First run: ADD 5 (4 novel vs RegulonDB), CONFIRM 4, CONFLICT 1 (CRP→lacI, Lin2025
+  preprint vs graph), GATED_OUT 1 (H-NS, ATCC non-K12), UNRESOLVED 2 (sRNAs).
+* `data/phenotypes/phenotype_db.yaml` — marked **DEV-ONLY / not a validation
+  benchmark** (self-authored ⇒ circular). Real battery comes from literature +
+  RegulonDB + co-expression.
+
+### Added — feedback-aware reporting (the cascade can loop back)
+* `Reporter._feedback_events` + `feedback_loops` in the run summary: detects when a
+  cascade re-touches a perturbation source (`closed_on_source`) or any entity
+  re-changes across rounds (`reactivations`) — the reason runs count by rounds, not
+  convergence. `Reporter.per_round_summaries` slices a run for round-by-round narration.
+* `LLMReportAgent.write_round_report` — narrate one propagation round (human sets the
+  round budget); flags feedback closures.
+
+### Tests: 65 → 72 (literature gating/overlay, feedback detection, per-round, report agent).
+
 ## session-2026-06-14b — independent co-expression validation (Tjaden 2023)
 
 Added an external validation track that does not reuse RegulonDB, using the
