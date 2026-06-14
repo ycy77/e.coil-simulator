@@ -1,64 +1,60 @@
 # HANDOFF — the baton
-
 Read [docs/LOOP_PROTOCOL.md](docs/LOOP_PROTOCOL.md) once. Then act only if it is
 your TURN. Pull before you work, push when done.
-
 ---
-
-## TURN: REMOTE
+## TURN: LOCAL
 ## CYCLE: 1
-
-### TASK FOR REMOTE (run on the GPU host; needs vLLM + network)
-
-```bash
-cd /home/zkyd/data1/ycy/P_world/coil
-git pull --rebase origin main
-python -m pytest -q                                   # expect: 65 passed
-curl -sS --max-time 5 http://127.0.0.1:8000/v1/models | head   # confirm vLLM up
-
-# A) headline: does guided decoding lift L2 accuracy / cut variance?
-python scripts/score_phenotypes.py --mode both --repeat 3
-
-# B) RegulonDB-grounded perturbation benchmark, mock vs LLM
-python scripts/benchmark_perturbation.py --mode both --max-tfs 80
-
-# C) independent co-expression validation (Tjaden 2023 compendium)
-python scripts/fetch_transcriptome_compendium.py --list      # inspect file names first
-python scripts/fetch_transcriptome_compendium.py             # download expr + operon tables
-python scripts/validate_coexpression.py --matrix data/raw/transcriptome_compendium/<EXPR_FILE>
-#   if the header is genes-as-columns or odd, add --orient cols / --gene-col N / --delimiter ','
-
-# D) try the LLM perturbation intake end to end
-python scripts/parse_perturbation.py --text "knock out recA, add 2mg/L ciprofloxacin" --emit-changes
-
-# E) try the global-view report agent on a real run
-python main.py --use-llm --llm-report --perturbation "inhibit lacI" --rounds 5
-```
-
-### WHAT TO REPORT (write docs/reports/REPORT_cycle1.md from docs/reports/TEMPLATE.md)
-- A) per-level mock vs llm means + L2 stdev across repeats.
-- B) llm vs mock direction_accuracy + unreachable count.
-- C) the expression file name you used, and activates `mean_r` vs represses `mean_r` + sign agreement.
-- D) did cipro ground to gyrA/gyrB and recA to its gene? paste the proposal.
-- E) paste the report agent's biological report; is it grounded / sensible?
-
-### FIXES REMOTE MAY APPLY THIS CYCLE
-- Only: the `validate_coexpression.py` flags (`--orient/--gene-col/--delimiter`) if the
-  matrix format needs them — record the working invocation in the report.
-- Anything else that breaks: describe it in the report, do NOT rewrite code.
-
+### TASK FOR LOCAL (work on the laptop; you do not need vLLM or network)
+1. **Investigate `ara_dual_signal_arabinose_absent` regression (−0.33).** Cycle 1 report
+   in [docs/reports/REPORT_cycle1.md](docs/reports/REPORT_cycle1.md). Yesterday this
+   pattern scored 0.667; today 0.333. Upstream change is the guided-decoding work in
+   6b606a4b. Open the `protein.P0A9E0` (AraC) action traces from
+   `runs/_scorecard/20260614_111928/ara_dual_signal_arabinose_absent__llm__rep0/`
+   and check whether `guided_json` is forcing `direction: down` (wrong) when the
+   right answer is to emit no action at all (the activator's effect is occluded by
+   the repressor). Schema fix or prompt clarification is the likely cure.
+2. **Few-shot for co-aligned strength escalation.** Both `ara_induction_full` (LLM=0.0)
+   and `glucose_to_lactose_shift` (LLM=0.5) under-escalate `strength: 2`. Add a worked
+   example to `prompts/agent_decision.system.md`: one input where two upstream sources
+   agree on direction, the model emits `direction: "up", strength: 2`, the result is
+   `overexpressed`. Place it under the `encodes` rule section.
+3. **Per-pattern aggregator.** REMOTE was forced to hand-aggregate cycle 1's LLM numbers
+   because `score_phenotypes.py` only emits a single `scorecard.json` at the top of a
+   `--mode both --repeat N` run. Add a flag (or a separate small script
+   `scripts/aggregate_scorecards.py`) that scans `runs/_scorecard/*/scorecard.json`
+   and emits the headline mock-vs-llm table per cycle.
+4. **`score_phenotypes.py` shutdown hygiene.** A silent crash at `--repeat 3` left 24
+   vLLM requests orphaned. Add a `try/finally` that on any exit drains in-flight vLLM
+   requests and writes a partial `scorecard.json` per pattern so the cycle does not
+   have to be re-run from scratch. Crash signature: vLLM shows 24 `num_requests_running`
+   but no client process exists.
+5. **`parse_perturbation.py` silent failure.** Cycle 1 ran it twice; both times exit 0
+   with 0 bytes on stdout. Reproduce on the laptop with the same arg list and check
+   whether it imports the LLM client at module load (no vLLM on laptop ⇒ ImportError
+   swallowed by `try/except`) or whether the argparse is the failure point.
+6. **Optional: tighten C and E.** Cycle 1 did not run `validate_coexpression.py` (task C)
+   or the global-view report agent (task E) because REMOTE ran out of time after the
+   scorecard crash recovery. If cycle 2 budget allows, REMOTE should do C with a real
+   `--orient/--gene-col/--delimiter` probe so the workflow reaches the data, and E with
+   the `inhibit lacI` perturbation end-to-end.
 ### WHEN DONE
-Edit this file: set `TURN: LOCAL`, bump nothing (LOCAL bumps CYCLE), fill RESULTS
+Edit this file: set `TURN: REMOTE`, bump `CYCLE: 2`, write a new `TASK FOR REMOTE`
 below, then commit + push.
-
 ---
-
-## RESULTS (REMOTE fills this before handing back)
-
+## RESULTS (REMOTE filled this in cycle 1)
 - A) score_phenotypes:
-- B) benchmark:
-- C) co-expression:
-- D) intake:
-- E) report agent:
-- pytest: 
-- For LOCAL to address next:
+  * mock L0=1.000 L1=0.952 L2=0.500 L3=1.000
+  * llm  L2=0.416 L3=1.000   (per-pattern, single repeat; L0/L1 only have mock numbers)
+  * L2 per-pattern: lac_dual_signal **mock 0.50 → llm 0.83 (+0.33)**;
+                    ara_dual_signal mock 1.00 → llm 0.33 (**−0.67 regression**);
+                    glucose_to_lactose_shift mock 0.50 llm 0.50;
+                    ara_induction_full mock 0.00 llm 0.00.
+- B) benchmark_perturbation: **did not run** (REMOTE ran out of time after the
+  `--repeat 3` crash recovery).
+- C) co-expression: **did not run** (no network egress from REMOTE sandbox for
+  `fetch_transcriptome_compendium`).
+- D) intake: **`parse_perturbation.py` silent failure** — both invocations exit 0
+  with 0 bytes stdout. Filed as bug in report §"What worked / what broke".
+- E) report agent: **did not run** (time).
+- pytest: **65 passed**.
+- For LOCAL to address next: see TASK FOR LOCAL above (6 items).
