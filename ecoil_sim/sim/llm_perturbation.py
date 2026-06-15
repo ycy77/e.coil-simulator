@@ -264,8 +264,13 @@ class VLLMJsonCompleter:
             "max_tokens": self.max_tokens,
             "chat_template_kwargs": {"enable_thinking": False},
         }
+        # Schema-constrained decoding via response_format (works on the deployed
+        # vLLM and suppresses <think>); top-level guided_json was ignored there.
         if guided_json:
-            payload["guided_json"] = guided_json
+            payload["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {"name": "ecoil_intake", "schema": guided_json},
+            }
         headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
         with httpx.Client(timeout=self.timeout) as client:
             resp = client.post(f"{self.base_url}/chat/completions", json=payload, headers=headers)

@@ -273,11 +273,12 @@ class AsyncVLLMClient:
     def _build_payload(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
         """Build the chat-completions request body.
 
-        vLLM's OpenAI-compatible server reads extension fields
-        (``chat_template_kwargs``, ``guided_json``) as TOP-LEVEL request keys.
-        A nested ``extra_body`` only works through the OpenAI Python SDK, which
-        flattens it; a raw POST (what we do) would have vLLM ignore it. So these
-        go at the top level.
+        Schema-constrained decoding uses OpenAI-style ``response_format`` with a
+        ``json_schema``. On the deployed vLLM this is what actually works AND it
+        suppresses the model's ``<think>`` block — verified directly: top-level
+        ``guided_json`` was silently IGNORED (output kept a <think> block and did
+        not match the schema), which wasted the token budget on reasoning and
+        truncated the action. ``response_format`` returns pure schema-valid JSON.
         """
         payload: Dict[str, Any] = {
             "model": self.model,
@@ -288,9 +289,10 @@ class AsyncVLLMClient:
             "chat_template_kwargs": {"enable_thinking": self.enable_thinking},
         }
         if self.guided_json:
-            payload["guided_json"] = self.guided_json
-            if self.guided_decoding_backend:
-                payload["guided_decoding_backend"] = self.guided_decoding_backend
+            payload["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {"name": "ecoil_action", "schema": self.guided_json},
+            }
         return payload
 
     async def batch_chat(self, batches: Iterable[List[Dict[str, str]]]) -> List[Dict[str, Any]]:

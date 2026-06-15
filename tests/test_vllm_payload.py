@@ -29,15 +29,19 @@ def test_payload_without_guided_json():
     assert payload["chat_template_kwargs"] == {"enable_thinking": False}
     assert "extra_body" not in payload
     assert "guided_json" not in payload
+    assert "response_format" not in payload
 
 
-def test_payload_with_guided_json():
+def test_payload_with_guided_json_uses_response_format():
+    # Schema-constrained decoding goes through response_format/json_schema (what
+    # the deployed vLLM honors), NOT a top-level guided_json (silently ignored).
     schema = {"type": "object", "required": ["actions"]}
-    client = AsyncVLLMClient(base_url="http://x", model="m", guided_json=schema,
-                             guided_decoding_backend="outlines")
+    client = AsyncVLLMClient(base_url="http://x", model="m", guided_json=schema)
     payload = client._build_payload(MESSAGES)
-    assert payload["guided_json"] == schema
-    assert payload["guided_decoding_backend"] == "outlines"
+    assert "guided_json" not in payload
+    rf = payload["response_format"]
+    assert rf["type"] == "json_schema"
+    assert rf["json_schema"]["schema"] == schema
 
 
 def test_load_guided_json_disabled():
