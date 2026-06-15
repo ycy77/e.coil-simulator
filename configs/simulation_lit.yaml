@@ -1,0 +1,36 @@
+# Literature-AUGMENTED graph config — for literature-grounded phenotype runs ONLY.
+# Uses data/normalized/simulation_lit (baseline + verified literature overlay) and
+# its registry. The frozen data/normalized/simulation is kept literature-free for
+# RegulonDB-recall validation (integrity rule 1: separate accounting).
+# Build/refresh with: python scripts/build_literature_graph.py
+graph:
+  normalized_dir: data/normalized/simulation_lit
+  registry_dir: data/registry/simulation_lit
+  edge_weights: configs/edge_weights.yaml
+
+simulation:
+  max_rounds: 6
+  initial_profile: data/initial_conditions/glucose_log_phase.yaml
+  steady_state_patience: 2
+  retrieval_radius: 2
+  min_retrieval_score: 0.20
+  store_root: runs
+
+resources:
+  default_gpus: 2
+  agents_per_gpu: 50
+
+llm:
+  enabled: false
+  max_concurrency_per_gpu: 50
+  timeout_seconds: 120
+  max_retries: 2
+
+fallback:
+  policy: configs/fallback_rules.yaml
+
+report:
+  phenotype_db: data/phenotypes/phenotype_db_literature.yaml
+
+perturbation:
+  knowledge_base: data/perturbations/perturbation_knowledge.yaml

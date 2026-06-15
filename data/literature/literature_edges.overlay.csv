@@ -2,5 +2,4 @@ source_id,relation_type,target_id,direction,evidence,source_database,source_reco
 protein.P0A7G6,represses,gene.b4043,directed,literature_direct,Literature,10.1038/s41594-024-01317-3,Cory 2024 Nat Struct Mol Biol: RecA* filament triggers LexA autoproteolysis -> LexA activity down -> SOS derepressed,,
 protein.P0A7C2,represses,gene.b0958,directed,literature_direct,Literature,10.1038/s41594-024-01317-3,Cory 2024 Nat Struct Mol Biol: LexA represses canonical SOS gene sulA; derepressed on LexA cleavage,,
 protein.P0C054,represses,gene.b3461,directed,literature_direct,Literature,10.1073/pnas.2304841120,Miwa & Taguchi 2023 PNAS: IbpA represses rpoH (sigma32) translation; negative feedback,,
-protein.P13445,activates,gene.b3235,directed,literature_direct,Literature,10.1371/journal.pgen.1011059,Bouillet 2024 PLoS Genet: RpoS activates rssB; RssB then promotes RpoS degradation (negative feedback loop),,
 protein.P0AEV1,represses,gene.b2741,directed,literature_direct,Literature,10.1371/journal.pgen.1011059,Bouillet 2024 PLoS Genet: RssB targets RpoS for ClpXP degradation -> closes a negative feedback loop with the RpoS->rssB edge,,

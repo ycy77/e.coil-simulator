@@ -3,6 +3,37 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-15 — literature-grounded phenotype battery + literature graph
+
+Turns the verified literature edges into runnable, externally-cited phenotype
+patterns on a SEPARATE literature-augmented graph; deepens the ingest's id checks.
+
+### Added
+* `scripts/build_literature_graph.py` — builds `data/normalized/simulation_lit/`
+  (baseline + literature overlay) + its registry, kept separate from the frozen
+  validation graph (rule 1). `configs/simulation_lit.yaml` points at it. Generated
+  dirs are gitignored (regenerable).
+* `data/phenotypes/phenotype_db_literature.yaml` — 3 cited patterns
+  (SOS derepression / Cory 2024; Cra dual-output / Huang 2024 + RegulonDB; RpoS–RssB
+  negative feedback / Bouillet 2024). Each carries DOI + evidence_tier + a resting
+  `initial_overrides` control state. Expected outcomes are the papers' conclusions,
+  not reverse-engineered. **Honesty note in-file:** these validate graph-reproduction
+  of literature mechanisms (mock-solvable cascades), not mock-vs-LLM conflict
+  discrimination — single-node literature conflicts are the next refinement.
+* `score_phenotypes.py` — added the **efficiency axis** (`expected_efficiency`):
+  activator-driven genes raise transcription rate, not the expressed/repressed
+  state (two-axis model), so they're now scorable. Added per-pattern
+  `initial_overrides` (biological control state merged onto the base profile).
+
+### Hardened — ingest rule 4 (id verification)
+* `ingest_literature_edges.py` now cross-checks the stated b-number/UniProt against
+  the gene/protein NAME; a disagreement is flagged `ID_MISMATCH` (not guessed).
+  **This caught a real error**: the evidence table listed RssB as b3235, but b3235
+  is degS (rssB is b1235) — the ingest flagged it instead of silently wiring
+  RpoS→degS. Data corrected; re-run is clean.
+
+### Tests: 72 → 75.
+
 ## session-2026-06-14c — literature-grounded edges + feedback/round reporting
 
 Replaces the self-authored phenotype battery's role with externally-grounded,

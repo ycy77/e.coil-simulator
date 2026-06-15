@@ -1,0 +1,113 @@
+# Literature-grounded phenotype battery — the externally-cited replacement for the
+# self-authored phenotype_db.yaml (which is now DEV-ONLY).
+#
+# Integrity rules honored:
+#   - Each pattern cites a real paper (DOI/PMID) for BOTH the perturbation and the
+#     expected outcome direction. The expected_states are the paper's experimental
+#     conclusion — NOT reverse-engineered from what the simulator outputs (rule 2).
+#   - `initial_overrides` is the biological CONTROL/resting state (e.g. SOS off,
+#     glucose-on), part of the experimental setup, applied on top of the base
+#     initial profile before the perturbation. It is not the answer.
+#   - Runs use the literature-AUGMENTED graph (configs/simulation_lit.yaml); the
+#     frozen validation graph is untouched (rule 1).
+#   - `evidence_tier` is recorded; preprint/non-K12 patterns are flagged.
+#
+# Run:  python scripts/score_phenotypes.py --config configs/simulation_lit.yaml \
+#           --phenotype-db data/phenotypes/phenotype_db_literature.yaml --mode both --repeat 3
+#
+# SCOPE / honesty: these patterns validate that the graph REPRODUCES the cited
+# literature mechanisms (cascades / dual-output / feedback). They are largely
+# solvable by the deterministic mock (each target gets one consistent signal), so
+# they are graph-validation, NOT mock-vs-LLM discriminators. A literature-grounded
+# SINGLE-NODE CONFLICT battery (a target receiving opposing signals, where mock
+# must opt out) is the next refinement — see docs/REMOTE_WORK_PLAN.md.
+
+# ===========================================================================
+# SOS derepression — LexA cleavage releases the SOS regulon
+# Cory 2024 Nat Struct Mol Biol 10.1038/s41594-024-01317-3 (PMID 38755298):
+# RecA* triggers LexA autoproteolysis -> LexA down -> >40 SOS genes derepressed.
+# ===========================================================================
+sos_lexA_derepression:
+  signal_level: L1
+  citation: "Cory 2024 Nat Struct Mol Biol; 10.1038/s41594-024-01317-3; PMID 38755298"
+  evidence_tier: direct
+  strain: K-12
+  description: |
+    Resting cells keep SOS off (LexA represses recA/sulA/umuC/lexA). DNA damage
+    activates RecA, which drives LexA cleavage; with LexA inhibited the SOS genes
+    derepress. Tests the derepression cascade through a single strong repressor.
+  initial_overrides:           # biological control: SOS off in unstressed cells
+    gene.b2699: repressed      # recA
+    gene.b0958: repressed      # sulA
+    gene.b1184: repressed      # umuC
+    gene.b4043: repressed      # lexA (autorepressed)
+  signals:                     # perturbation: LexA cleaved -> inhibited
+    gene.b2699:
+      - {from: protein.P0A7C2, edge: represses, state: inhibited}
+    gene.b0958:
+      - {from: protein.P0A7C2, edge: represses, state: inhibited}
+    gene.b1184:
+      - {from: protein.P0A7C2, edge: represses, state: inhibited}
+  expected_states:             # paper outcome: SOS regulon derepressed
+    gene.b2699: expressed      # recA up
+    gene.b0958: expressed      # sulA up
+    gene.b1184: expressed      # umuC up
+
+# ===========================================================================
+# Cra: one regulator, opposite directions on two gene sets (genuine L2)
+# Huang 2024 Appl Environ Microbiol 10.1128/aem.01228-24 (regulatory logic;
+# the edges themselves are RegulonDB-curated, not taken from the review):
+# active Cra (gluconeogenic, low F1P) represses glycolysis AND activates
+# gluconeogenesis.
+# ===========================================================================
+cra_glycolysis_vs_gluconeogenesis:
+  signal_level: L2
+  citation: "Huang 2024 Appl Environ Microbiol; 10.1128/aem.01228-24; PMID 39494897 (logic). Edges: RegulonDB."
+  evidence_tier: review   # scenario from a review; the EDGES are RegulonDB-curated
+  strain: K-12
+  description: |
+    On glucose Cra is released (glycolysis on, gluconeogenesis off). A
+    gluconeogenic shift activates Cra, which must push glycolysis DOWN and
+    gluconeogenesis UP simultaneously — a single regulator emitting opposite
+    directions on two target sets.
+  signals:                     # perturbation: Cra active (gluconeogenic)
+    gene.b3916:
+      - {from: protein.P0ACP1, edge: represses, state: active}   # pfkA
+    gene.b1676:
+      - {from: protein.P0ACP1, edge: represses, state: active}   # pykF
+    gene.b1702:
+      - {from: protein.P0ACP1, edge: activates, state: active}   # ppsA
+  # Two-axis model: repression flips the permissibility STATE; activation raises
+  # transcription EFFICIENCY. So the repressed glycolysis genes are scored on
+  # state, the activated gluconeogenic gene on efficiency.
+  expected_states:
+    gene.b3916: repressed      # pfkA down (glycolysis)
+    gene.b1676: repressed      # pykF down (glycolysis)
+  expected_efficiency:
+    gene.b1702: high           # ppsA transcription rate up (gluconeogenesis, activated by Cra)
+
+# ===========================================================================
+# RpoS negative feedback loop — RpoS->rssB-|RpoS
+# Bouillet 2024 PLoS Genet 10.1371/journal.pgen.1011059:
+# RpoS activates rssB; RssB then targets RpoS for degradation (negative feedback).
+# Demonstrates a cascade that loops back to its origin (feedback_closure).
+# Literature-added edge RssB-|rpoS (overlay); RpoS->rssB is RegulonDB.
+# ===========================================================================
+rpoS_rssB_negative_feedback:
+  signal_level: L2
+  citation: "Bouillet 2024 PLoS Genet; 10.1371/journal.pgen.1011059"
+  evidence_tier: direct
+  strain: K-12
+  description: |
+    Stress raises RpoS; RpoS activates rssB; RssB (an adaptor for ClpXP) then
+    promotes RpoS degradation — a negative feedback loop. The cascade should
+    reach rssB (up) and then feed back onto rpoS (feedback_closure in the run
+    report). Tests both the activation arm and the loop-back.
+  signals:                     # perturbation: stress raises RpoS
+    gene.b1235:
+      - {from: protein.P13445, edge: activates, state: overexpressed}   # RpoS -> rssB
+  # RpoS ACTIVATES rssB -> efficiency axis (two-axis model). The negative-feedback
+  # loop-back (RssB -| rpoS) is checked via the run report's feedback_loops, not a
+  # fixed expected state.
+  expected_efficiency:
+    gene.b1235: high           # rssB transcription rate up, induced by RpoS

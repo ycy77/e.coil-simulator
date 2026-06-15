@@ -77,26 +77,42 @@ def build_indexes(graph: StaticGraph):
     return name_idx, reg
 
 
+def _name_to(prefix, name, name_idx):
+    for cand in sorted(name_idx.get((name or "").lower(), set())):
+        if cand.startswith(prefix):
+            return cand
+    return None
+
+
 def resolve_regulator(row, graph, name_idx):
-    """Regulator -> its PROTEIN canonical id (graph routes regulation protein->gene).
-    Verified against the KG; no guessing."""
+    """Regulator -> its PROTEIN canonical id. Cross-checks the stated UniProt id
+    against the name; if they disagree, FLAG (no guessing — rule 4)."""
     up = (row.get("regulator_uniprot") or "").strip()
-    if up and f"protein.{up}" in graph.entities:
-        return f"protein.{up}", f"uniprot:{up}"
-    for cand in sorted(name_idx.get((row.get("regulator") or "").lower(), set())):
-        if cand.startswith("protein."):
-            return cand, "name:protein"
+    by_up = f"protein.{up}" if up and f"protein.{up}" in graph.entities else None
+    by_name = _name_to("protein.", row.get("regulator"), name_idx)
+    if by_up and by_name and by_up != by_name:
+        return None, f"mismatch: uniprot->{by_up} but name->{by_name}"
+    if by_name:
+        return by_name, "name:protein"
+    if by_up:
+        return by_up, f"uniprot:{up}"
     return None, "unresolved"
 
 
 def resolve_target(row, graph, name_idx):
-    """Target -> its GENE canonical id, verified against the KG; no guessing."""
+    """Target -> its GENE canonical id. Cross-checks the stated b-number against
+    the gene name; if they point to different genes, FLAG (no guessing — rule 4).
+    Caught e.g. 'rssB b3235' where b3235 is actually degS."""
     bnum = (row.get("target_bnum") or "").strip()
-    if bnum and f"gene.{bnum}" in graph.entities:
-        return f"gene.{bnum}", f"bnum:{bnum}"
-    for cand in sorted(name_idx.get((row.get("target") or "").lower(), set())):
-        if cand.startswith("gene."):
-            return cand, "name:gene"
+    by_bnum = f"gene.{bnum}" if bnum and f"gene.{bnum}" in graph.entities else None
+    by_name = _name_to("gene.", row.get("target"), name_idx)
+    if by_bnum and by_name and by_bnum != by_name:
+        bnum_name = graph.entities[by_bnum].name
+        return None, f"mismatch: name '{row.get('target')}'->{by_name} but b-number {bnum}->{by_bnum} ({bnum_name})"
+    if by_name:
+        return by_name, "name:gene"
+    if by_bnum:
+        return by_bnum, f"bnum:{bnum}"
     return None, "unresolved"
 
 
@@ -135,7 +151,11 @@ def main() -> int:
         src, src_how = resolve_regulator(row, graph, name_idx)
         tgt, tgt_how = resolve_target(row, graph, name_idx)
 
-        # (4) id verification — no guessing
+        # (4) id verification — no guessing; name vs b-number/UniProt must agree
+        if "mismatch" in src_how or "mismatch" in tgt_how:
+            cat["ID_MISMATCH"] += 1
+            ledger.append(("ID_MISMATCH", row, (src_how if "mismatch" in src_how else tgt_how)))
+            continue
         if src is None or tgt is None:
             cat["UNRESOLVED"] += 1
             ledger.append(("UNRESOLVED", row, f"regulator={src_how} target={tgt_how}"))
@@ -194,6 +214,7 @@ def main() -> int:
         f"| ALREADY_IN_GRAPH_CONFIRM | {cat['ALREADY_IN_GRAPH_CONFIRM']} | literature agrees with an edge already present |",
         f"| CONFLICT | {cat['CONFLICT']} | literature direction != graph; flagged for human, NOT changed |",
         f"| GATED_OUT | {cat['GATED_OUT']} | preprint / review / omics / non-K12 -> not a hard edge |",
+        f"| ID_MISMATCH | {cat['ID_MISMATCH']} | stated b-number/UniProt disagrees with the name -> flagged, not guessed (rule 4) |",
         f"| UNRESOLVED | {cat['UNRESOLVED']} | endpoint id not in KG canonical set -> not guessed |",
         "",
         f"**Circularity guard:** of {cat['ADD']} ADDed edges, **{add_in_gold} already exist in RegulonDB** and "
@@ -205,7 +226,7 @@ def main() -> int:
         "| Category | Edge | Paper | Tier | Detail |",
         "| --- | --- | --- | --- | --- |",
     ]
-    order = {"ADD": 0, "CONFLICT": 1, "ALREADY_IN_GRAPH_CONFIRM": 2, "GATED_OUT": 3, "UNRESOLVED": 4}
+    order = {"ADD": 0, "CONFLICT": 1, "ID_MISMATCH": 2, "ALREADY_IN_GRAPH_CONFIRM": 3, "GATED_OUT": 4, "UNRESOLVED": 5}
     for c, r, detail in sorted(ledger, key=lambda x: order.get(x[0], 9)):
         edge = f"{r.get('regulator')}->{r.get('target')} ({r.get('relation')})"
         tier = f"{r.get('evidence_tier')}{'' if r.get('peer_reviewed') else '/preprint'}/{r.get('strain')}"

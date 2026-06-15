@@ -190,7 +190,8 @@ def make_llm_client(deps: Dict):
     )
 
 
-async def run_once(deps: Dict, perturbations: List[Dict], mode: str, store_root: Path, args) -> TemporalState:
+async def run_once(deps: Dict, perturbations: List[Dict], mode: str, store_root: Path, args,
+                   initial_profile: Dict | None = None) -> TemporalState:
     client = RuleBasedMockLLM() if mode == "mock" else make_llm_client(deps)
     store_root.mkdir(parents=True, exist_ok=True)
     engine = SimulationEngine(
@@ -209,8 +210,27 @@ async def run_once(deps: Dict, perturbations: List[Dict], mode: str, store_root:
         max_rounds=args.rounds,
         max_active_agents=args.max_active_agents,
         steady_state_patience=int(deps["sim_cfg"].get("steady_state_patience", 2)),
-        initial_profile=deps["initial_profile"],
+        initial_profile=initial_profile if initial_profile is not None else deps["initial_profile"],
     )
+
+
+def effective_profile(deps: Dict, spec: Dict) -> Dict:
+    """Base initial profile + the pattern's resting-state ``initial_overrides``.
+
+    The resting (control) state is part of the biological experimental setup, so
+    a literature pattern can declare it (e.g. SOS off / glucose-on) without that
+    being reverse-engineering of the expected answer (rule 2).
+    """
+    overrides = spec.get("initial_overrides")
+    if not isinstance(overrides, dict) or not overrides:
+        return deps["initial_profile"]
+    base = deps["initial_profile"] or {}
+    merged = dict(base)
+    merged_overrides = dict(base.get("overrides", {}))
+    for eid, st in overrides.items():
+        merged_overrides[eid] = st if isinstance(st, dict) else {"state": st}
+    merged["overrides"] = merged_overrides
+    return merged
 
 
 # --------------------------------------------------------------------------- #
@@ -220,9 +240,10 @@ def score_run(spec: Dict, state: TemporalState) -> Dict:
     level = spec.get("signal_level", "L1")
     expected_states = spec.get("expected_states", {}) or {}
     expected_abundance = spec.get("expected_abundance", {}) or {}
+    expected_efficiency = spec.get("expected_efficiency", {}) or {}
 
     # L0 negative control: any change is a failure.
-    if level == "L0" and not expected_states and not expected_abundance:
+    if level == "L0" and not expected_states and not expected_abundance and not expected_efficiency:
         changed = [
             eid for eid, hist in state.history.items()
             if any(item.get("changed") for item in hist)
@@ -257,16 +278,30 @@ def score_run(spec: Dict, state: TemporalState) -> Dict:
         ab_matched += int(ok)
         ab_detail[eid] = {"expected": want, "observed": got, "match": ok}
 
-    total = state_total + ab_total
-    matched = state_matched + ab_matched
+    # efficiency axis: activator-driven genes raise transcription RATE (efficiency),
+    # not the expressed/repressed permissibility state (two-axis model).
+    eff_total = len(expected_efficiency)
+    eff_matched = 0
+    eff_detail = {}
+    for eid, want in expected_efficiency.items():
+        obs = state.states.get(eid)
+        got = obs.efficiency if obs else None
+        ok = got == want
+        eff_matched += int(ok)
+        eff_detail[eid] = {"expected": want, "observed": got, "match": ok}
+
+    total = state_total + ab_total + eff_total
+    matched = state_matched + ab_matched + eff_matched
     return {
         "scored": True,
         "kind": "phenotype",
         "pattern_score": round(matched / total, 3) if total else 0.0,
         "state_acc": round(state_matched / state_total, 3) if state_total else None,
         "abundance_acc": round(ab_matched / ab_total, 3) if ab_total else None,
+        "efficiency_acc": round(eff_matched / eff_total, 3) if eff_total else None,
         "state_detail": state_detail,
         "abundance_detail": ab_detail,
+        "efficiency_detail": eff_detail,
     }
 
 
@@ -296,7 +331,8 @@ async def score_pattern(deps: Dict, pid: str, spec: Dict, mode: str, args, out_d
     repeats_detail = []
     for i in range(max(1, args.repeat) if mode == "llm" else 1):
         store_root = out_dir / f"{pid}__{mode}__rep{i}"
-        state = await run_once(deps, runnable_perts, mode, store_root, args)
+        state = await run_once(deps, runnable_perts, mode, store_root, args,
+                               initial_profile=effective_profile(deps, spec))
         result = score_run(spec, state)
         scores.append(result["pattern_score"])
         repeats_detail.append(result)

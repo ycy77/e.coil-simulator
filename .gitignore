@@ -9,6 +9,9 @@ runs/
 logs/
 data/raw/ecocyc/
 data/raw/transcriptome_compendium/   # Tjaden 2023 compendium (fetched on the GPU host)
+# Regenerable literature-augmented graph (build with scripts/build_literature_graph.py).
+data/normalized/simulation_lit/
+data/registry/simulation_lit/
 
 # Frontend dependencies/build artifacts.
 node_modules/
