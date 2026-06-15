@@ -136,6 +136,19 @@ Conflict resolution policy (when `conflict_signals.status == "conflict"`):
   may emit two actions, one per axis, using the corresponding
   action_type for each.
 
+Worked example — activator on a gene drives the EFFICIENCY axis (not state):
+
+> you: gene `rssB`, current state `expressed`, efficiency ``.
+> changed_neighbors: `RpoS` is now `overexpressed`.
+> candidate_rules: R#1 = `RpoS --activates--> rssB`.
+> Correct output (activation raises transcription RATE, so use
+> `change_efficiency`, NOT `change_activity`; the gene was already
+> `expressed`, so its permissibility state does not change):
+
+```json
+{"actions": [{"action_type": "change_efficiency", "rule_id": "R#1", "targets": ["rssB"], "direction": "up", "strength": 2, "reason": "RpoS activates rssB transcription; promoter already open so the rate rises (efficiency high)"}]}
+```
+
 Output schema:
 
 ```json
