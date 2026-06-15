@@ -4,10 +4,10 @@
 This is an EXTERNAL check that does not reuse RegulonDB: if the graph says TF X
 *activates* gene Y, then across a large, heterogeneous expression compendium X
 and Y should tend to be positively correlated; *represses* should tend negative.
-Using the Tjaden 2023 compendium (3,376 RNA-seq samples), we measure whether the
-graph's regulatory signs agree with co-expression — a quantitative,
-reviewer-grade signal that the regulatory layer is real, not just internally
-consistent.
+Run against any large, heterogeneous E. coli expression compendium (the source
+is recorded in the report via --source-name), and we measure whether the graph's
+regulatory signs agree with co-expression — a quantitative, reviewer-grade signal
+that the regulatory layer is real, not just internally consistent.
 
     # after scripts/fetch_transcriptome_compendium.py
     python scripts/validate_coexpression.py --matrix data/raw/transcriptome_compendium/<expr.tsv>
@@ -134,7 +134,9 @@ def main() -> int:
     ap.add_argument("--orient", choices=("auto", "rows", "cols"), default="auto")
     ap.add_argument("--no-log", action="store_true")
     ap.add_argument("--strong", type=float, default=0.3, help="|r| threshold for a 'strong' call")
+    ap.add_argument("--source-name", default="", help="label for the expression source in the report")
     args = ap.parse_args()
+    source_label = args.source_name or f"expression compendium ({args.matrix.name})"
 
     graph = StaticGraph.from_normalized_dir(PROJECT_ROOT / args.graph)
     reg_edges = [(e.source_id, e.target_id, e.relation_type)
@@ -185,7 +187,7 @@ def main() -> int:
     lines = [
         f"# Co-expression validation of regulatory edges ({args.graph})",
         "",
-        f"External data: Tjaden 2023 compendium — {n_samples} samples, "
+        f"External data: {source_label} — {n_samples} samples, "
         f"{len(expr)} mapped gene keys.",
         f"Regulatory edges scored (both endpoints have expression): **{scored}** / {len(reg_edges)}.",
         "",
