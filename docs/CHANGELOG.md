@@ -3,6 +3,32 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-15b — vLLM decoding fix + overflow spill (cap = throughput only)
+
+Two root-cause fixes found by driving the remote over SSH.
+
+### Fixed — schema-constrained decoding never actually worked
+* `ecoil_sim/llm/client.py` + `VLLMJsonCompleter`: the cycle-1 top-level
+  `guided_json` was **silently ignored** by the deployed vLLM (probed directly —
+  output kept a `<think>` block and ignored the schema), so the model spent its
+  token budget on reasoning and the action got truncated. Switched to OpenAI-style
+  `response_format: {type: json_schema}`, which the vLLM honors AND which
+  suppresses `<think>`. Likely explains much of the L2/efficiency variance since
+  cycle-1. (Remaining LLM-reliability issue diagnosed: the model emits invalid
+  `rule_id`s — next fix is per-agent rule_id-enum schemas.)
+
+### Fixed — max_active_agents dropped overflow instead of spilling it
+* `ecoil_sim/sim/engine.py`: the retriever capped at `max_active_agents` and the
+  rest were **dropped** (only neighbours of last round's changes were considered
+  next round). A perturbed hub with > budget targets silently lost the overflow —
+  the real cause of the "Cra budget artifact". Now the engine retrieves all
+  eligible candidates and **carries the overflow to the next round**, so the cap
+  is a pure per-round throughput knob: a tight budget over more rounds covers the
+  same agents as a large budget (verified: Cra reaches 1.0 at budget 32/6 rounds
+  and budget 8/14 rounds). Regression test `tests/test_engine_spill.py`.
+
+### Tests: 75 → 80.
+
 ## session-2026-06-15 — literature-grounded phenotype battery + literature graph
 
 Turns the verified literature edges into runnable, externally-cited phenotype

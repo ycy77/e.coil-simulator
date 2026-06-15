@@ -37,6 +37,8 @@ from ecoil_sim.state import TemporalState
 from ecoil_sim.storage import SimulationStore
 from ecoil_sim.validation import ActionValidator
 
+_UNCAPPED = 10 ** 9  # retrieve all eligible candidates; the engine caps + carries overflow
+
 
 class SimulationEngine:
     def __init__(
@@ -105,13 +107,29 @@ class SimulationEngine:
         )
 
         stable_rounds = 0
+        carryover: List = []   # eligible candidates that overflowed max_active_agents last round
         for _ in range(max_rounds):
             previous_changed = state.changed_entities()
             state.begin_round()
             contexts: List = []
             changed_count = 0
-            if previous_changed:
-                contexts = self.retriever.retrieve(state, previous_changed, max_agents=max_active_agents)
+            if previous_changed or carryover:
+                # Discrete turn-based: a round wakes the neighbours of last round's
+                # changes PLUS whatever overflowed the agent budget last round.
+                # max_active_agents is purely a per-round throughput cap; nothing is
+                # dropped — overflow spills to the next round.
+                fresh = (
+                    self.retriever.retrieve(state, previous_changed, max_agents=_UNCAPPED)
+                    if previous_changed else []
+                )
+                pool = {}
+                for ctx in list(carryover) + list(fresh):  # fresh (newer score) wins ties
+                    if ctx.entity_id in state.states:
+                        if ctx.entity_id not in pool or ctx.score > pool[ctx.entity_id].score:
+                            pool[ctx.entity_id] = ctx
+                ranked = sorted(pool.values(), key=lambda c: (-c.score, c.entity_id))
+                contexts = ranked[:max_active_agents]
+                carryover = ranked[max_active_agents:]
                 prompt_results = [self.prompt_builder.build(self.graph, state, context) for context in contexts]
                 prompts = [result.messages for result in prompt_results]
                 hint_maps = [result.rule_hint_map for result in prompt_results]

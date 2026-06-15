@@ -48,5 +48,9 @@ export const api = {
   runTimeline(runId) { return request('/api/runs/' + encodeURIComponent(runId) + '/timeline') },
   runAgent(runId, entityId) {
     return request('/api/runs/' + encodeURIComponent(runId) + '/agents/' + encodeURIComponent(entityId))
-  }
+  },
+  literatureEdges() { return request('/api/literature/edges') },
+  kgValidation() { return request('/api/validation/kg') },
+  scorecards() { return request('/api/scorecard') },
+  scorecard(ts = 'latest') { return request('/api/scorecard/' + encodeURIComponent(ts)) }
 }

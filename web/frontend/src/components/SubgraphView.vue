@@ -31,11 +31,11 @@
 import { Network } from "vis-network/standalone/esm/vis-network"
 import { api } from "../api.js"
 
-# Reactions are no longer entities -- they were flattened into
-# ``produces`` / ``consumes`` edge payloads by
-# scripts/flatten_reactions.py. The graph now shows
-# protein-catalyst -> product / substrate directly, so we omit
-# "reaction" from the per-type filter here.
+// Reactions are no longer entities -- they were flattened into
+// ``produces`` / ``consumes`` edge payloads by
+// scripts/flatten_reactions.py. The graph now shows
+// protein-catalyst -> product / substrate directly, so we omit
+// "reaction" from the per-type filter here.
 const TYPES = ["gene", "protein", "small_molecule", "rna", "complex", "regulatory_region"]
 
 const RELATION_COLORS = {

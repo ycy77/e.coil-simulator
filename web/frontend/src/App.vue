@@ -96,7 +96,17 @@ export default {
       if (v && this.perturbagens.length === 0) this.loadPerturbagens()
     }
   },
+  mounted() {
+    this.loadStats()
+  },
   methods: {
+    async loadStats() {
+      try {
+        this.stats = await api.stats()
+      } catch (err) {
+        console.error('failed to load stats', err)
+      }
+    },
     async loadPerturbagens() {
       try {
         const data = await api.perturbagens(200)
@@ -106,16 +116,47 @@ export default {
         this.perturbagens = []
       }
     },
-
-  async mounted() {
-    try {
-      this.stats = await api.stats()
-    } catch (err) {
-      console.error('failed to load stats', err)
+    async onSelect(id) {
+      if (!id) return
+      this.center = id
+      try {
+        this.detail = await api.entityDetail(id)
+      } catch (err) {
+        console.error('entity detail failed', err)
+        this.detail = null
+      }
+      if (this.run && this.run.run_id) {
+        await this.loadAgentHistory(id)
+      } else {
+        this.agentHistory = null
+      }
+    },
+    async onRunSelect(payload) {
+      // RunTimeline emits either a run object (the run picker) or an
+      // entity id string (the "→ 看实体" buttons inside a round detail).
+      if (typeof payload === 'string') {
+        await this.onSelect(payload)
+        return
+      }
+      if (payload && payload.run_id) {
+        this.run = payload
+        if (this.center) await this.loadAgentHistory(this.center)
+      }
+    },
+    async loadAgentHistory(entityId) {
+      if (!this.run || !this.run.run_id || !entityId) {
+        this.agentHistory = null
+        return
+      }
+      try {
+        this.agentHistory = await api.runAgent(this.run.run_id, entityId)
+      } catch (err) {
+        // Not every entity has agent history in a given run; that's fine.
+        this.agentHistory = null
+      }
     }
-  },
-  methods: {
-
+  }
+}
 </script>
 
 <style>

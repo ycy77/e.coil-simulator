@@ -32,6 +32,7 @@ from web.backend.data_loader import DataLoader
 from web.backend.enriched_loader import EnrichedLoader
 from web.backend.graph_service import GraphService
 from web.backend.run_service import RunService
+from web.backend import insights
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -222,6 +223,32 @@ def create_app() -> FastAPI:
             raise HTTPException(status_code=404, detail="agent history not found")
         final_state = runs.get_final_state(run_id, entity_id)
         return {"run_id": run_id, "entity_id": entity_id, "history": history, "final_state": final_state}
+
+    # ------------------------------------------------------------------
+    # Insight endpoints (literature overlay / KG validation / scorecard).
+    # All degrade gracefully when their backing artifact is absent so the
+    # local diagnostic stays usable even before the GPU host has produced
+    # the corresponding files.
+    # ------------------------------------------------------------------
+
+    @app.get("/api/literature/edges")
+    def literature_edges() -> dict:
+        return insights.literature_overview(PROJECT_ROOT, loader)
+
+    @app.get("/api/validation/kg")
+    def validation_kg() -> dict:
+        return insights.kg_validation_report(PROJECT_ROOT)
+
+    @app.get("/api/scorecard")
+    def scorecard_list() -> dict:
+        return {"scorecards": insights.scorecard_index(PROJECT_ROOT)}
+
+    @app.get("/api/scorecard/{ts}")
+    def scorecard_get(ts: str) -> dict:
+        payload = insights.scorecard_payload(PROJECT_ROOT, ts)
+        if payload is None:
+            raise HTTPException(status_code=404, detail=f"scorecard {ts} not found")
+        return payload
 
     return app
 
