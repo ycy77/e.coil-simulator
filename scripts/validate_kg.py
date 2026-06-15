@@ -51,8 +51,9 @@ def load_gold(path: Path):
             if len(cols) < 6:
                 continue
             regulator, target, sign = cols[1], cols[4], cols[5]
+            evidence = cols[6] if len(cols) > 6 else ""   # W = weak/inferred, S = strong
             if regulator and target:
-                rows.append((regulator, target, sign))
+                rows.append((regulator, target, sign, evidence))
     return rows
 
 
@@ -84,19 +85,24 @@ def main() -> int:
         if edge.relation_type in ("activates", "represses"):
             graph_reg[(edge.source_id, edge.target_id)] = edge.relation_type
 
-    gold_unique = set()  # dedup identical (reg, target, sign)
-    for r, t, s in gold:
-        gold_unique.add((r.lower(), t.lower(), s))
+    gold_map = {}  # (reg, target, sign) -> strongest evidence (S beats W)
+    for r, t, s, ev in gold:
+        key = (r.lower(), t.lower(), s)
+        if key not in gold_map or ev == "S":
+            gold_map[key] = ev or "?"
 
-    total = len(gold_unique)
+    total = len(gold_map)
     reg_mappable = tgt_mappable = both_mappable = 0
     present = 0
     sign_checked = sign_agree = 0
     unmapped_regulators = Counter()
     sign_dist = Counter()
+    by_tier = {"S": [0, 0], "W": [0, 0], "?": [0, 0]}   # evidence -> [present, total]
 
-    for reg_name, tgt_name, sign in gold_unique:
+    for (reg_name, tgt_name, sign), evidence in gold_map.items():
         sign_dist[sign or "?"] += 1
+        tier = evidence if evidence in by_tier else "?"
+        by_tier[tier][1] += 1
         reg_ids = name_index.get(reg_name, set())
         tgt_ids = name_index.get(tgt_name, set())
         reg_mappable += bool(reg_ids)
@@ -118,6 +124,7 @@ def main() -> int:
                     break
             if rel:
                 present += 1
+                by_tier[tier][0] += 1
                 if sign in ("+", "-"):
                     sign_checked += 1
                     gold_rel = "activates" if sign == "+" else "represses"
@@ -138,6 +145,17 @@ def main() -> int:
         f"- Both endpoints mappable: **{pct(both_mappable, total)}** ({both_mappable}/{total})",
         f"- **Interactions present as a graph edge: {pct(present, total)} of all gold ({present}/{total}); "
         f"{pct(present, both_mappable)} of the mappable subset ({present}/{both_mappable})**",
+        "",
+        "### Recall by evidence tier (the honest read)",
+        "",
+        "RegulonDB tags each interaction Strong (direct experiment) or Weak (inferred).",
+        "The graph import keeps Strong by default; Weak is excluded by design, so overall",
+        "recall is dragged down by Weak interactions we deliberately do not import.",
+        "",
+        f"- **Strong (S): {pct(by_tier['S'][0], by_tier['S'][1])} ({by_tier['S'][0]}/{by_tier['S'][1]})** "
+        "— this is the meaningful completeness number for high-confidence regulation.",
+        f"- Weak (W): {pct(by_tier['W'][0], by_tier['W'][1])} ({by_tier['W'][0]}/{by_tier['W'][1]}) "
+        "— excluded by default; run `build_regulondb_edges.py --include-weak` to add them (tagged).",
         "",
         "## Sign accuracy (precision of direction)",
         "",
