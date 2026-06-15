@@ -1,0 +1,5 @@
+# perturbation_id -> how to set up the simulation (entity name/id + state).
+# Example only: a real run converts PRECISE-1K / GEO contrasts into example_de.tsv
+# and lists each experiment's perturbed entity here.
+cra_active:
+  - {entity: cra, state: active}

@@ -1,0 +1,4 @@
+perturbation_id	gene	log2fc	padj
+cra_active	b3916	-2.4	1e-9
+cra_active	b1676	-1.8	1e-6
+cra_active	b1702	2.9	1e-7

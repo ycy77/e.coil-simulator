@@ -213,10 +213,12 @@ async def score_mode(deps, cases, mode, args, out_dir):
     }
 
 
-def main() -> int:
-    args = parse_args()
-    config = load_yaml_like(PROJECT_ROOT / args.config)
-    model_config = load_yaml_like(PROJECT_ROOT / args.model_config)
+def build_deps(config: dict, model_config: dict) -> dict:
+    """Build the shared simulation dependencies (graph/registry/retriever/etc.).
+
+    Reused by benchmark_expression.py so both benchmarks share one wiring.
+    """
+    from ecoil_sim.state import TemporalState
     gcfg = config.get("graph", {})
     sim_cfg = config.get("simulation", {})
     graph = StaticGraph.from_normalized_dir(PROJECT_ROOT / gcfg.get("normalized_dir", "data/normalized"))
@@ -226,12 +228,9 @@ def main() -> int:
     fb = FallbackPolicy.from_config(PROJECT_ROOT / config.get("fallback", {}).get("policy", "configs/fallback_rules.yaml"))
     profile_path = PROJECT_ROOT / sim_cfg.get("initial_profile", "data/initial_conditions/glucose_log_phase.yaml")
     initial_profile = load_yaml_like(profile_path) if profile_path.exists() else {}
-    # baseline (default) gene states, to detect "did it move"
-    from ecoil_sim.state import TemporalState
     base_state = TemporalState.initialize(graph.entities.values(), initial_profile)
     baseline_states = {eid: state_signature(s) for eid, s in base_state.states.items()}
-
-    deps = {
+    return {
         "graph": graph, "registry": registry,
         "retriever": TemporalGraphRAG(graph, registry, edge_cfg.get("edge_weights", {}),
                                       edge_cfg.get("state_distance", {}),
@@ -244,6 +243,14 @@ def main() -> int:
         "model_config": model_config, "llm_cfg": model_config.get("llm", {}),
         "run_cfg": config.get("llm", {}),
     }
+
+
+def main() -> int:
+    args = parse_args()
+    config = load_yaml_like(PROJECT_ROOT / args.config)
+    model_config = load_yaml_like(PROJECT_ROOT / args.model_config)
+    deps = build_deps(config, model_config)
+    graph = deps["graph"]
 
     cases, multi = build_cases(graph, load_gold(PROJECT_ROOT / args.gold))
     cases = dict(sorted(cases.items(), key=lambda kv: -len(kv[1])))  # most-targets first

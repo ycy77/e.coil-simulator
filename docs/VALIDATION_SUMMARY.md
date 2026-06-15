@@ -60,9 +60,16 @@ CONFLICT (a gene receiving opposing signals, where the rules must opt out and on
 the model can decide). The graph has the conflict STRUCTURE (1005 dual-regulated
 genes), but the net-direction ANSWER cannot be hand-set without it being
 self-authored again — it must come from MEASURED data: a labeled expression
-compendium (PRECISE-1K / iModulons) with knockout/condition contrasts. Building
-that DE-grounded conflict benchmark is the path to the "LLM beats rules / beats
-FBA" claim. See `docs/REMOTE_WORK_PLAN.md` Phase 6.3.
+compendium (PRECISE-1K / iModulons) with knockout/condition contrasts.
+
+**Scaffold built** (`scripts/benchmark_expression.py`, tested): it consumes a
+generic DE table (`perturbation_id, gene, log2fc, padj`) + a perturbation map,
+runs the sim per experiment, and scores predicted gene directions against the
+measured significant DEGs — reporting the **conflict-gene subset** (dual-regulated
+genes) separately, where the LLM-vs-mock gap is the headline. Example format in
+`data/expression/`. Remaining remote step: convert PRECISE-1K contrasts into the
+DE table (especially multi-regulator/media-shift conditions, which create real
+single-node conflicts) and run `--mode both`. See `docs/REMOTE_WORK_PLAN.md` Phase 6.3.
 
 ## 6. LLM decoding/action reliability (fixed; pending real-LLM confirmation)
 
