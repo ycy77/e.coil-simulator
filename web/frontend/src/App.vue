@@ -27,6 +27,9 @@
                 v-if="stats.perturbagen">
           {{ showPerturbagens ? '隐藏' : '查看' }} 扰动池
         </button>
+        <button class="insights-btn" @click="showInsights = !showInsights">
+          {{ showInsights ? '隐藏' : '查看' }} 验证看板
+        </button>
       </div>
     </header>
     <div class="grid">
@@ -36,6 +39,7 @@
       <RunTimeline class="col-timeline" :run="run" :center="center" @select="onRunSelect" />
     </div>
     <DuplicateReport :visible="showDuplicates" @close="showDuplicates = false" @select="onSelect" />
+    <InsightsPanel :visible="showInsights" @close="showInsights = false" @select="onInsightSelect" />
     <div v-if="showPerturbagens" class="perturbagen-overlay" @click.self="showPerturbagens = false">
       <div class="perturbagen-modal">
         <header>
@@ -64,10 +68,11 @@ import SubgraphView from './components/SubgraphView.vue'
 import EntityDetail from './components/EntityDetail.vue'
 import RunTimeline from './components/RunTimeline.vue'
 import DuplicateReport from './components/DuplicateReport.vue'
+import InsightsPanel from './components/InsightsPanel.vue'
 
 export default {
   name: 'App',
-  components: { EntitySearch, SubgraphView, EntityDetail, RunTimeline, DuplicateReport },
+  components: { EntitySearch, SubgraphView, EntityDetail, RunTimeline, DuplicateReport, InsightsPanel },
   data() {
     return {
       stats: null,
@@ -77,6 +82,7 @@ export default {
       agentHistory: null,
       showDuplicates: false,
       showPerturbagens: false,
+      showInsights: false,
       perturbagens: []
     }
   },
@@ -130,6 +136,10 @@ export default {
       } else {
         this.agentHistory = null
       }
+    },
+    async onInsightSelect(id) {
+      this.showInsights = false
+      await this.onSelect(id)
     },
     async onRunSelect(payload) {
       // RunTimeline emits either a run object (the run picker) or an
@@ -262,6 +272,18 @@ body, html, #app {
   margin-left: 8px;
 }
 .perturbagen-btn:hover { background: #5a4a4a; }
+.insights-btn {
+  background: #2a4a3a;
+  color: #7ad7a3;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.insights-btn:hover { background: #36604a; }
 .perturbagen-overlay {
   position: fixed;
   inset: 0;

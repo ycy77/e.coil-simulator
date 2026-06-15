@@ -36,6 +36,17 @@ dev services.
 | GET | `/api/runs/{id}` | Run metadata |
 | GET | `/api/runs/{id}/timeline` | Per-round new changes |
 | GET | `/api/runs/{id}/agents/{entity_id}` | Per-Agent history |
+| GET | `/api/literature/edges` | Literature-overlay edges + DOI/notes + overlap-vs-base-graph split |
+| GET | `/api/validation/kg` | Parsed headline numbers from latest `docs/KG_VALIDATION_*.md` |
+| GET | `/api/scorecard` | Newest-first list of scorecard timestamps |
+| GET | `/api/scorecard/{ts}` | One scorecard.json (`ts=latest` → newest) |
+
+The last four are **insight endpoints** (`web/backend/insights.py`): read-only
+surfaces over artifacts produced by the GPU-host pipeline (literature ingest,
+`validate_kg.py`, `score_phenotypes.py`). Each returns `{"available": false, …}`
+rather than erroring when its backing file is absent, so the local diagnostic
+stays usable before those files exist. The frontend renders them in the
+**验证看板** panel (`InsightsPanel.vue`).
 
 ## How uniqueness is guaranteed end-to-end
 
