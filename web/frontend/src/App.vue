@@ -30,6 +30,9 @@
         <button class="insights-btn" @click="showInsights = !showInsights">
           {{ showInsights ? '隐藏' : '查看' }} 验证看板
         </button>
+        <button class="intake-btn" @click="showIntake = !showIntake">
+          + 扰动
+        </button>
       </div>
     </header>
     <div class="grid">
@@ -40,6 +43,7 @@
     </div>
     <DuplicateReport :visible="showDuplicates" @close="showDuplicates = false" @select="onSelect" />
     <InsightsPanel :visible="showInsights" @close="showInsights = false" @select="onInsightSelect" />
+    <PerturbationPanel :visible="showIntake" @close="showIntake = false" @select="onInsightSelect" />
     <div v-if="showPerturbagens" class="perturbagen-overlay" @click.self="showPerturbagens = false">
       <div class="perturbagen-modal">
         <header>
@@ -69,10 +73,11 @@ import EntityDetail from './components/EntityDetail.vue'
 import RunTimeline from './components/RunTimeline.vue'
 import DuplicateReport from './components/DuplicateReport.vue'
 import InsightsPanel from './components/InsightsPanel.vue'
+import PerturbationPanel from './components/PerturbationPanel.vue'
 
 export default {
   name: 'App',
-  components: { EntitySearch, SubgraphView, EntityDetail, RunTimeline, DuplicateReport, InsightsPanel },
+  components: { EntitySearch, SubgraphView, EntityDetail, RunTimeline, DuplicateReport, InsightsPanel, PerturbationPanel },
   data() {
     return {
       stats: null,
@@ -83,6 +88,7 @@ export default {
       showDuplicates: false,
       showPerturbagens: false,
       showInsights: false,
+      showIntake: false,
       perturbagens: []
     }
   },
@@ -284,6 +290,18 @@ body, html, #app {
   margin-left: 8px;
 }
 .insights-btn:hover { background: #36604a; }
+.intake-btn {
+  background: var(--accent);
+  color: #1e1e2e;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.intake-btn:hover { background: #9bb4ff; }
 .perturbagen-overlay {
   position: fixed;
   inset: 0;
