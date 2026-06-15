@@ -15,6 +15,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from ecoil_sim.llm import AsyncVLLMClient, load_guided_json  # noqa: E402
+from ecoil_sim.llm.client import _with_rule_id_enum  # noqa: E402
 
 MESSAGES = [{"role": "user", "content": "hi"}]
 
@@ -37,7 +38,7 @@ def test_payload_with_guided_json_uses_response_format():
     # the deployed vLLM honors), NOT a top-level guided_json (silently ignored).
     schema = {"type": "object", "required": ["actions"]}
     client = AsyncVLLMClient(base_url="http://x", model="m", guided_json=schema)
-    payload = client._build_payload(MESSAGES)
+    payload = client._build_payload(MESSAGES, client.guided_json)
     assert "guided_json" not in payload
     rf = payload["response_format"]
     assert rf["type"] == "json_schema"
@@ -54,6 +55,35 @@ def test_load_guided_json_enabled_loads_action_schema():
     schema = load_guided_json(cfg, PROJECT_ROOT)
     assert isinstance(schema, dict)
     assert "actions" in schema["properties"]
+
+
+def test_rule_id_enum_constrains_schema():
+    base = load_guided_json(
+        {"structured_output": {"require_json": True, "schema_file": "schemas/action.schema.json"}},
+        PROJECT_ROOT,
+    )
+    allow = ["R#1", "R#2", "native.represses.x.y.z"]
+    constrained = _with_rule_id_enum(base, allow)
+    rid = constrained["properties"]["actions"]["items"]["properties"]["rule_id"]
+    assert rid["enum"] == sorted(set(allow))
+    # base schema is untouched (deep copy)
+    assert "enum" not in base["properties"]["actions"]["items"]["properties"]["rule_id"]
+    # empty allowlist or no base -> unchanged
+    assert _with_rule_id_enum(base, []) is base
+    assert _with_rule_id_enum(None, allow) is None
+
+
+def test_batch_chat_builds_per_agent_rule_id_schema():
+    # The vLLM client must accept per-prompt rule_id allowlists (the engine passes
+    # them); here we check the schema wiring without hitting the network.
+    schema = load_guided_json(
+        {"structured_output": {"require_json": True, "schema_file": "schemas/action.schema.json"}},
+        PROJECT_ROOT,
+    )
+    client = AsyncVLLMClient(base_url="http://x", model="m", guided_json=schema)
+    payload = client._build_payload(MESSAGES, _with_rule_id_enum(schema, ["R#1"]))
+    enum = payload["response_format"]["json_schema"]["schema"]["properties"]["actions"]["items"]["properties"]["rule_id"]["enum"]
+    assert enum == ["R#1"]
 
 
 def test_action_schema_covers_validator_action_types():

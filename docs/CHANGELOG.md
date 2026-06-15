@@ -3,6 +3,24 @@
 Each entry is signed "session-N" so future contributors can diff
 chunks at a glance.
 
+## session-2026-06-15c — per-agent rule_id enum (LLM cannot invent rule_ids)
+
+Second half of the LLM-reliability root cause: even with response_format working,
+the model emitted invalid `rule_id`s (e.g. `gene_rssB`) that the interpreter
+rejected -> the action vanished -> the agent didn't change.
+
+* `ecoil_sim/llm/client.py`: `batch_chat` now takes per-prompt `rule_id_allowlists`;
+  `_with_rule_id_enum` builds a per-agent response_format schema whose `rule_id`
+  is constrained to that agent's valid ids (its R#k hints + canonical ids), so the
+  model physically cannot emit a rule_id the interpreter would reject. `_build_payload`
+  takes the per-request schema. Mock/Null clients accept and ignore the allowlists.
+* `ecoil_sim/sim/engine.py`: passes each agent's rule_id allowlist (from the prompt
+  hint map) to `batch_chat`.
+* Tests: per-agent enum schema wiring (`tests/test_vllm_payload.py`). Suite 80 → 82.
+
+NOTE: needs a real-vLLM run to confirm rssB reliability rises from ~40% (deferred —
+remote sync paused while the parallel web session works; verify on next sync).
+
 ## session-2026-06-15b — vLLM decoding fix + overflow spill (cap = throughput only)
 
 Two root-cause fixes found by driving the remote over SSH.

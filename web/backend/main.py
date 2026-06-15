@@ -27,15 +27,28 @@ if str(_PROJECT_ROOT) not in sys.path:
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 from web.backend.data_loader import DataLoader
 from web.backend.enriched_loader import EnrichedLoader
 from web.backend.graph_service import GraphService
 from web.backend.run_service import RunService
 from web.backend import insights
+from web.backend.perturbation_service import PerturbationService
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+class ParseRequest(BaseModel):
+    text: str
+    dry_run: bool = False
+
+
+class RunRequest(BaseModel):
+    changes: List[Dict[str, Any]]
+    rounds: int = 5
+    use_llm: bool = True
 
 
 def create_app() -> FastAPI:
@@ -70,6 +83,7 @@ def create_app() -> FastAPI:
     loader.attach_enriched(enriched._by_id)  # type: ignore[attr-defined]
     graph = GraphService(loader)
     runs = RunService(PROJECT_ROOT / "runs")
+    perturbation = PerturbationService(PROJECT_ROOT)
 
     # Optional perturbagen-pool loader, only used by endpoints
     # that explicitly ask for it. Built lazily so the diagnostic
@@ -249,6 +263,32 @@ def create_app() -> FastAPI:
         if payload is None:
             raise HTTPException(status_code=404, detail=f"scorecard {ts} not found")
         return payload
+
+    # ------------------------------------------------------------------
+    # Perturbation intake front door. parse() proposes (LLM grounding or
+    # an offline preview); the user confirms in the UI; run() then launches
+    # a real simulation over the confirmed changes. Nothing auto-runs.
+    # ------------------------------------------------------------------
+
+    @app.post("/api/perturbation/parse")
+    def perturbation_parse(req: ParseRequest) -> dict:
+        if not req.text.strip():
+            raise HTTPException(status_code=400, detail="empty perturbation text")
+        try:
+            if req.dry_run:
+                return perturbation.ground_preview(req.text)
+            return perturbation.parse(req.text)
+        except HTTPException:
+            raise
+        except Exception as exc:  # vLLM unreachable, schema error, etc.
+            raise HTTPException(status_code=503, detail=f"perturbation parse failed: {exc}")
+
+    @app.post("/api/perturbation/run")
+    def perturbation_run(req: RunRequest) -> dict:
+        try:
+            return perturbation.run(req.changes, rounds=req.rounds, use_llm=req.use_llm)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc))
 
     return app
 

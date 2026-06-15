@@ -133,7 +133,12 @@ class SimulationEngine:
                 prompt_results = [self.prompt_builder.build(self.graph, state, context) for context in contexts]
                 prompts = [result.messages for result in prompt_results]
                 hint_maps = [result.rule_hint_map for result in prompt_results]
-                llm_outputs = await self.llm_client.batch_chat(prompts)
+                # Per-agent allowlist of rule_ids the interpreter will accept (the
+                # R#k hints + their canonical ids), used to schema-constrain the LLM.
+                rule_id_allowlists = [
+                    list(hm.keys()) + list(hm.values()) for hm in hint_maps
+                ]
+                llm_outputs = await self.llm_client.batch_chat(prompts, rule_id_allowlists=rule_id_allowlists)
                 updates = self._outputs_to_states(state, contexts, llm_outputs, hint_maps)
                 changed_count = state.apply_changes(updates, reason_prefix=f"round_{state.current_round}")
             else:

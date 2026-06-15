@@ -28,6 +28,23 @@ async function request(path, params) {
   return response.json()
 }
 
+async function post(path, body) {
+  const response = await fetch(base + path, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(body || {})
+  })
+  if (!response.ok) {
+    let detail = response.statusText
+    try {
+      const b = await response.json()
+      detail = b.detail || detail
+    } catch (e) { /* keep statusText */ }
+    throw new Error(detail)
+  }
+  return response.json()
+}
+
 export const api = {
   health() { return request('/api/health') },
   stats() { return request('/api/stats') },
@@ -52,5 +69,9 @@ export const api = {
   literatureEdges() { return request('/api/literature/edges') },
   kgValidation() { return request('/api/validation/kg') },
   scorecards() { return request('/api/scorecard') },
-  scorecard(ts = 'latest') { return request('/api/scorecard/' + encodeURIComponent(ts)) }
+  scorecard(ts = 'latest') { return request('/api/scorecard/' + encodeURIComponent(ts)) },
+  perturbationParse(text, dryRun = false) { return post('/api/perturbation/parse', { text, dry_run: dryRun }) },
+  perturbationRun(changes, rounds = 5, useLlm = true) {
+    return post('/api/perturbation/run', { changes, rounds, use_llm: useLlm })
+  }
 }

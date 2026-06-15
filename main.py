@@ -32,6 +32,7 @@ def main() -> int:
     parser.add_argument("--entity", action="append", default=[], help="Perturbed entity id, can repeat")
     parser.add_argument("--state", default="inhibited", help="State to assign to perturbed entities")
     parser.add_argument("--perturbation", action="append", default=[], help="Natural-language perturbation, can repeat")
+    parser.add_argument("--perturbation-json", type=Path, default=None, help="Path to a JSON list of pre-grounded engine changes (from the LLM intake front door)")
     parser.add_argument("--rounds", type=int, default=None)
     parser.add_argument("--initial-profile", type=Path, default=None, help="Initial condition YAML profile")
     parser.add_argument("--resume-run", type=Path, default=None, help="Use a previous run directory as the new round_0 baseline")
@@ -141,6 +142,16 @@ def main() -> int:
         parsed = parser_nl.parse(text)
         perturbations.extend(parsed.changes)
         unresolved.extend(parsed.unresolved)
+
+    # Pre-grounded changes from the LLM intake front door (web confirm UI).
+    # These are already resolved to canonical ids + valid states by
+    # LLMPerturbationParser, so they bypass the deterministic NL parser.
+    if args.perturbation_json is not None:
+        changes_path = _project_path(args.perturbation_json)
+        loaded = json.loads(changes_path.read_text(encoding="utf-8"))
+        if not isinstance(loaded, list):
+            raise ValueError("--perturbation-json must contain a JSON list of changes")
+        perturbations.extend(loaded)
 
     fallback_path = PROJECT_ROOT / config.get("fallback", {}).get("policy", "configs/fallback_rules.yaml")
     fallback_policy = FallbackPolicy.from_config(fallback_path)

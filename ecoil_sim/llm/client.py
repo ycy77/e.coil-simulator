@@ -46,8 +46,29 @@ def load_guided_json(model_config: Dict[str, Any], project_root: Path) -> Option
     return json.loads(schema_path.read_text(encoding="utf-8"))
 
 
+def _with_rule_id_enum(base_schema: Optional[Dict[str, Any]], rule_ids: List[str]) -> Optional[Dict[str, Any]]:
+    """Return a copy of the action schema with ``rule_id`` constrained to ``rule_ids``.
+
+    Forces schema-constrained decoding to pick a rule_id the interpreter will
+    actually accept (the agent's R#k hints + canonical ids), instead of letting
+    the model invent one that gets rejected.
+    """
+    import copy
+
+    if not base_schema or not rule_ids:
+        return base_schema
+    try:
+        schema = copy.deepcopy(base_schema)
+        props = schema["properties"]["actions"]["items"]["properties"]
+        props["rule_id"] = {"type": "string", "enum": sorted(set(rule_ids))}
+        return schema
+    except (KeyError, TypeError):
+        return base_schema
+
+
 class NullLLMClient:
-    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]]) -> List[Dict[str, Any]]:
+    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]],
+                         rule_id_allowlists: Optional[List[List[str]]] = None) -> List[Dict[str, Any]]:
         return [{"actions": []} for _ in batches]
 
 
@@ -58,7 +79,8 @@ class RuleBasedMockLLM:
     candidate rules already retrieved from the registry.
     """
 
-    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]]) -> List[Dict[str, Any]]:
+    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]],
+                         rule_id_allowlists: Optional[List[List[str]]] = None) -> List[Dict[str, Any]]:
         validator = ActionValidator()
         return [validator.validate(self._respond(messages)) for messages in batches]
 
@@ -270,7 +292,7 @@ class AsyncVLLMClient:
         self.guided_decoding_backend = guided_decoding_backend
         self.enable_thinking = enable_thinking
 
-    def _build_payload(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
+    def _build_payload(self, messages: List[Dict[str, str]], schema: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """Build the chat-completions request body.
 
         Schema-constrained decoding uses OpenAI-style ``response_format`` with a
@@ -288,18 +310,25 @@ class AsyncVLLMClient:
             "top_p": self.top_p,
             "chat_template_kwargs": {"enable_thinking": self.enable_thinking},
         }
-        if self.guided_json:
+        if schema:
             payload["response_format"] = {
                 "type": "json_schema",
-                "json_schema": {"name": "ecoil_action", "schema": self.guided_json},
+                "json_schema": {"name": "ecoil_action", "schema": schema},
             }
         return payload
 
-    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]]) -> List[Dict[str, Any]]:
+    async def batch_chat(self, batches: Iterable[List[Dict[str, str]]],
+                         rule_id_allowlists: Optional[List[List[str]]] = None) -> List[Dict[str, Any]]:
         prompts = list(batches)
+        # Per-agent schema: constrain rule_id to that agent's valid rule ids so the
+        # model cannot cite a made-up rule_id (which the interpreter would reject).
+        schemas: List[Optional[Dict[str, Any]]] = []
+        for i in range(len(prompts)):
+            allow = rule_id_allowlists[i] if rule_id_allowlists and i < len(rule_id_allowlists) else None
+            schemas.append(_with_rule_id_enum(self.guided_json, allow) if (self.guided_json and allow) else self.guided_json)
         semaphore = asyncio.Semaphore(self.max_concurrency)
         async with self._client() as client:
-            tasks = [self._one(client, semaphore, messages) for messages in prompts]
+            tasks = [self._one(client, semaphore, m, s) for m, s in zip(prompts, schemas)]
             return await asyncio.gather(*tasks)
 
     def _client(self):
@@ -307,9 +336,10 @@ class AsyncVLLMClient:
 
         return httpx.AsyncClient(timeout=self.timeout_seconds)
 
-    async def _one(self, client, semaphore: asyncio.Semaphore, messages: List[Dict[str, str]]) -> Dict[str, Any]:
+    async def _one(self, client, semaphore: asyncio.Semaphore, messages: List[Dict[str, str]],
+                   schema: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         async with semaphore:
-            payload = self._build_payload(messages)
+            payload = self._build_payload(messages, schema if schema is not None else self.guided_json)
             headers = {
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
