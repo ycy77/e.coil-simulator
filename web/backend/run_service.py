@@ -72,6 +72,14 @@ class RunService:
             )
         return timeline
 
+    def get_report(self, run_id: str) -> Optional[Dict]:
+        """The run's full structured report (narrative, causal chains, phenotype
+        matches, feedback_loops) saved by main.py. None for older runs."""
+        run_dir = self._safe_run_dir(run_id)
+        if not run_dir:
+            return None
+        return self._read_json(run_dir / "report.json")
+
     def get_agent_history(self, run_id: str, entity_id: str) -> Optional[Dict]:
         run_dir = self._safe_run_dir(run_id)
         if not run_dir:

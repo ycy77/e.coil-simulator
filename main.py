@@ -185,6 +185,13 @@ def main() -> int:
     reporter = Reporter(graph=graph, phenotype_db=phenotype_db, name_resolver=name_resolver)
     report = reporter.summarize_changes(state)
     narrative = reporter.render_narrative(report)
+    # Persist the full report so the run is self-describing (the diagnostic UI and
+    # any later analysis can read feedback_loops, causal chains, phenotype matches
+    # without re-running). Previously this was only printed to stdout and lost.
+    (store_root / "report.json").write_text(
+        json.dumps({"narrative": narrative, **report}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     print(f"run_store={store_root}")
     print(f"resource_budget={{'gpus': {gpu_count}, 'agents_per_gpu': {agents_per_gpu}, 'max_active_agents': {max_active_agents}}}")
     if unresolved:

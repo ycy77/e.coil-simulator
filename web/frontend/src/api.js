@@ -63,6 +63,7 @@ export const api = {
   runs() { return request('/api/runs') },
   runMeta(runId) { return request('/api/runs/' + encodeURIComponent(runId)) },
   runTimeline(runId) { return request('/api/runs/' + encodeURIComponent(runId) + '/timeline') },
+  runReport(runId) { return request('/api/runs/' + encodeURIComponent(runId) + '/report') },
   runAgent(runId, entityId) {
     return request('/api/runs/' + encodeURIComponent(runId) + '/agents/' + encodeURIComponent(entityId))
   },

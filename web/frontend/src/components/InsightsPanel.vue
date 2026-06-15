@@ -24,6 +24,27 @@
         <!-- Phenotype scorecard -->
         <section>
           <h4>表型 scorecard <span v-if="scorecard" class="doc">{{ scorecard.timestamp }} · {{ scorecard.config || '' }}</span></h4>
+          <div v-if="scoreChart" class="score-chart">
+            <div class="legend">
+              <span v-for="lg in scoreChart.legend" :key="lg.m" class="lg">
+                <span class="sw" :style="{ background: lg.color }"></span>{{ lg.m }}
+              </span>
+              <span class="thesis">L2 = conflict = 论点：模型在此应胜过规则</span>
+            </div>
+            <svg :viewBox="'0 0 ' + scoreChart.W + ' ' + scoreChart.H" width="100%" role="img"
+                 aria-label="phenotype accuracy by signal level, mock vs LLM">
+              <line v-for="g in scoreChart.grid" :key="'g'+g.v" :x1="scoreChart.padL" :x2="scoreChart.W"
+                    :y1="g.y" :y2="g.y" stroke="var(--border)" stroke-width="1" />
+              <text v-for="g in scoreChart.grid" :key="'gt'+g.v" :x="scoreChart.padL - 6" :y="g.y + 3"
+                    text-anchor="end" class="ax">{{ g.v.toFixed(1) }}</text>
+              <rect v-for="b in scoreChart.bars" :key="b.key" :x="b.x" :y="b.y" :width="b.w" :height="b.h"
+                    :fill="b.color" rx="2" />
+              <text v-for="b in scoreChart.bars" :key="'t'+b.key" :x="b.lx" :y="b.ly" text-anchor="middle"
+                    class="bval">{{ b.label }}</text>
+              <text v-for="l in scoreChart.labels" :key="'l'+l.text" :x="l.x" :y="l.y" text-anchor="middle"
+                    class="ax">{{ l.text }}</text>
+            </svg>
+          </div>
           <table v-if="scoreRows.length" class="score-table">
             <thead>
               <tr><th>level</th><th v-for="mode in scoreModes" :key="mode">{{ mode }}</th></tr>
@@ -113,6 +134,33 @@ export default {
         }
         return row
       })
+    },
+    scoreChart() {
+      const rows = this.scoreRows, modes = this.scoreModes
+      if (!rows.length || !modes.length) return null
+      const W = 800, H = 196, padL = 34, padB = 30, padT = 16
+      const baseY = H - padB, plotH = H - padB - padT
+      const groupW = (W - padL) / rows.length
+      const barW = Math.min(30, (groupW - 14) / modes.length)
+      const palette = { mock: '#8a9099', rules: '#8a9099', llm: 'var(--accent)' }
+      const colorFor = (m, i) => palette[m] || (i === 0 ? '#8a9099' : 'var(--accent)')
+      const bars = [], labels = []
+      rows.forEach((row, gi) => {
+        const gx = padL + gi * groupW + (groupW - barW * modes.length) / 2
+        modes.forEach((m, mi) => {
+          const cell = row[m]
+          const mean = cell ? cell.mean : 0
+          const h = Math.max(0, mean * plotH)
+          const x = gx + mi * barW
+          bars.push({ key: row.level + m, x, y: baseY - h, w: Math.max(2, barW - 2), h,
+                      color: colorFor(m, mi), label: cell ? mean.toFixed(2) : '',
+                      lx: x + (barW - 2) / 2, ly: baseY - h - 3 })
+        })
+        labels.push({ text: row.level, x: padL + gi * groupW + groupW / 2, y: baseY + 14 })
+      })
+      const grid = [0, 0.5, 1].map(v => ({ v, y: baseY - v * plotH }))
+      const legend = modes.map((m, i) => ({ m, color: colorFor(m, i) }))
+      return { W, H, padL, baseY, bars, labels, grid, legend }
     }
   },
   watch: {
@@ -168,6 +216,13 @@ section h4 .doc { text-transform: none; color: #8fe0d0; font-family: monospace; 
 .metric-val.good { color: #7ad7a3; }
 .metric-label { font-size: 11px; color: var(--text); margin-top: 2px; }
 .metric-frac { font-size: 10px; color: var(--muted); font-family: monospace; margin-top: 2px; }
+.score-chart { margin-bottom: 10px; }
+.score-chart .legend { display: flex; align-items: center; gap: 14px; font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+.score-chart .legend .lg { display: inline-flex; align-items: center; gap: 5px; }
+.score-chart .legend .sw { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+.score-chart .legend .thesis { margin-left: auto; color: #8fe0d0; }
+.score-chart .ax { fill: var(--muted); font-size: 11px; font-family: monospace; }
+.score-chart .bval { fill: var(--text); font-size: 11px; font-family: monospace; }
 .score-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 .score-table th, .score-table td { padding: 4px 8px; text-align: left; border-bottom: 1px solid var(--border); }
 .score-table th { color: var(--muted); font-weight: 500; }

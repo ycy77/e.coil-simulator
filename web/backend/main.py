@@ -230,6 +230,13 @@ def create_app() -> FastAPI:
     def runs_timeline(run_id: str) -> dict:
         return {"run_id": run_id, "timeline": runs.get_timeline(run_id)}
 
+    @app.get("/api/runs/{run_id}/report")
+    def runs_report(run_id: str) -> dict:
+        report = runs.get_report(run_id)
+        if report is None:
+            raise HTTPException(status_code=404, detail="report not found (older run or not saved)")
+        return report
+
     @app.get("/api/runs/{run_id}/agents/{entity_id}")
     def runs_agent_history(run_id: str, entity_id: str) -> dict:
         history = runs.get_agent_history(run_id, entity_id)

@@ -13,6 +13,14 @@
         合计变化 {{ totalChanges }} 个 agent
       </span>
     </div>
+    <div v-if="feedback" class="feedback-banner">
+      <span class="fb-icon">↺</span>
+      <span v-if="feedback.closed.length">
+        反馈闭合：级联绕回了被扰动的
+        <code v-for="(id, i) in feedback.closed" :key="id" class="fb-node" @click="selectEntity(id)">{{ id }}</code>
+      </span>
+      <span v-else>检测到 {{ feedback.reactivated }} 个节点多轮重复激活（震荡/反馈）</span>
+    </div>
     <div class="chart">
       <div v-for="(point, idx) in timeline" :key="idx"
            class="point"
@@ -55,7 +63,8 @@ export default {
       selectedRunId: '',
       timeline: [],
       selectedRound: null,
-      selectedRoundData: null
+      selectedRoundData: null,
+      report: null
     }
   },
   computed: {
@@ -64,6 +73,14 @@ export default {
     },
     maxChanges() {
       return this.timeline.reduce((m, p) => Math.max(m, p.new_changed_agents), 0) || 1
+    },
+    feedback() {
+      const fb = this.report && this.report.feedback_loops
+      if (!fb || !fb.has_feedback) return null
+      return {
+        closed: (fb.closed_on_source || []).map(x => x.entity_id),
+        reactivated: (fb.reactivations || []).length
+      }
     }
   },
   watch: {
@@ -109,6 +126,7 @@ export default {
       } catch (err) {
         console.error('timeline load failed', err)
       }
+      this.report = await api.runReport(this.selectedRunId).catch(() => null)
     },
     toggleRound(point) {
       if (this.selectedRound === point.round) {
@@ -128,6 +146,14 @@ export default {
 
 <style scoped>
 .timeline { display: flex; flex-direction: column; height: 100%; }
+.feedback-banner {
+  display: flex; align-items: center; gap: 8px; margin: 6px 0;
+  padding: 6px 10px; border-radius: 4px; font-size: 12px;
+  background: #3a2e1a; color: #f0c987; border: 1px solid #5a4422;
+}
+.feedback-banner .fb-icon { font-size: 14px; }
+.feedback-banner .fb-node { cursor: pointer; color: #f0a36b; margin-left: 4px; }
+.feedback-banner .fb-node:hover { text-decoration: underline; }
 .toolbar {
   display: flex;
   align-items: center;
