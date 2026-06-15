@@ -159,6 +159,9 @@ runs/                          # simulation run history (timestamped dirs)
 
 ## Where to read next
 
+* `docs/VALIDATION_SUMMARY.md` — what is validated against external standards
+  (RegulonDB 94.4% strong recall / 100% sign; co-expression; literature patterns),
+  with current numbers and the honest remaining gap.
 * `docs/REMOTE_WORK_PLAN.md` — the forward plan for the agent working on
   the vLLM host: measure decisions → improve them → scale → cell-rule quality.
 * `docs/PROJECT_OVERVIEW.md` — one-paragraph recap of the simulation
